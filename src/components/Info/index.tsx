@@ -13,24 +13,24 @@ export const Info: FC<InfoProps> = ({
     <div
       className={
         full
-          ? `${styles.container} col m12 l12`
-          : `${styles.container} col m6 l6`
+          ? `${styles.container} col s12 m12 l12 info`
+          : `${styles.container} col s12 m6 l6 info`
       }
     >
       {!title?.link ? (
-        <p className={styles.title}>{title?.text}</p>
+        <p className={`${styles.title} title`}>{title?.text}</p>
       ) : (
         <a
           href={title?.link}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={title?.ariaLabel}
-          className={styles.title}
+          className={`${styles.title} title`}
         >
           {title?.text}
         </a>
       )}
-      <p>{time}</p>
+      <p className={`${styles.date} date`}>{time}</p>
       {!description?.link ? (
         <p>{description?.text}</p>
       ) : (

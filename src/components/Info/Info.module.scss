@@ -6,20 +6,22 @@
     margin-bottom: 10px;
   }
 
-
-  p:nth-of-type(2n){
-    font-family: Inconsolata, monospace;
-    font-size: 16px;
-    line-height: 20px;
+  a{
+    display: block !important;
   }
+}
+
+.date{
+  font-family: Inconsolata, monospace;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 5px;
 }
 
 .title{
   color: var(--primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-weight: bold;
   font-size: 16px;
+  
 }
 

@@ -1,9 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
+        <noscript>
+          <link rel="stylesheet" href="/noJs.css" />
+          <title>Rafael Santana</title>
+        </noscript>
         {/* Import Google Icon Font */}
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
@@ -16,7 +21,6 @@ export default function Document() {
           rel="stylesheet"
           media="all"
         />
-        <link rel="stylesheet" href="./style/styles.css" />
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
         {/* Import materialize.css */}
         <link
@@ -63,6 +67,21 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" />
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5ZDT9GT11E"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+           window.dataLayer = window.dataLayer || [];
+           function gtag() { dataLayer.push(arguments); }
+           gtag('js', new Date());
+       
+           gtag('config', 'G-5ZDT9GT11E');
+        `}
+        </Script>
       </body>
     </Html>
   );

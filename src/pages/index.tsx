@@ -1,5 +1,7 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
+import { BackToTheTop } from '@/components/BackToTheTop';
+import { Carrousel } from '@/components/Carrousel';
 import { GithubIcon } from '@/components/GithubIcon';
 import { ImageProfile } from '@/components/ImageProfile';
 import { Info } from '@/components/Info';
@@ -8,14 +10,20 @@ import { LinkedinIcon } from '@/components/LinkedinIcon';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { useTranslations } from 'next-intl';
 import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import styles from '@/styles/Home.module.scss';
 
 export default function Home() {
+  const { locale } = useRouter();
+
+  const [color, setColor] = useState('#3bbbe8');
   const t = useTranslations('Home');
 
-  const handleChangeColor = useCallback((color: string) => {
-    document.documentElement.style.setProperty('--primary', color);
+  const handleChangeColor = useCallback((colorValue: string) => {
+    setColor(colorValue);
+    document.documentElement.style.setProperty('--primary', colorValue);
   }, []);
 
   return (
@@ -23,21 +31,21 @@ export default function Home() {
       <Head>
         <title>Rafael Santana</title>
       </Head>
-      <main className={styles.main}>
-        <div className={`${styles.languages}`}>
+      <main className={`${styles.main} mainHome`}>
+        <div className={`${styles.languages} languages`}>
           <LanguageIcon language="pt-br" alt={t('ptLanguage')} />
           <LanguageIcon language="en-US" alt={t('enLanguage')} />
         </div>
-        <div className={`${styles.content} row container`}>
+        <div className={`${styles.content} row container content`}>
           <div className="col s6 m6 l6">
             <ImageProfile />
           </div>
 
           <div className="col s6 m6 l6 white-text">
             <h1>Rafael Santana</h1>
-            <p className={styles.city}>{t('city')}</p>
-            <p className={styles.desc}>{t('description')}</p>
-            <div className={styles.links}>
+            <p className={`${styles.city} city`}>{t('city')}</p>
+            <p className={`${styles.desc} desc`}>{t('description')}</p>
+            <div className={`${styles.links} links`}>
               <a
                 href="https://github.com/rafalmeida73"
                 target="_blank"
@@ -63,7 +71,7 @@ export default function Home() {
                 <LinkedinIcon />
               </a>
             </div>
-            <div className={styles.contact}>
+            <div className={`${styles.contact} contact`}>
               <a
                 className="waves-effect waves-light btn"
                 href="mailto:contato@rafaelsantana.dev"
@@ -78,17 +86,17 @@ export default function Home() {
       </main>
 
       <div className="container">
-        <section className={styles.me}>
+        <section className={`${styles.me} me`}>
           <h2>{t('aboutMe')}</h2>
           <p>{t('aboutMeDescription')}</p>
         </section>
 
-        <section className={`${styles.infos} col s12 m12 l6`}>
-          <h3>FORMAÇÃO ACADÊMICA</h3>
+        <section className={`${styles.infos} col s12 m12 l6 infos`}>
+          <h3>{t('academicFormation')}</h3>
           <div className="row">
             <Info
               title={{
-                text: 'Análise e Desenvolvimento de Sistemas',
+                text: t('ads'),
               }}
               time="2019 - 2021"
               description={{ text: 'Uninove' }}
@@ -108,7 +116,7 @@ export default function Home() {
           <div className="row">
             <Info
               title={{
-                text: 'Desenvolvedor Full Stack',
+                text: t('fullStackDeveloper'),
               }}
               time="Fev/2021 - Set/2021"
               description={{
@@ -119,9 +127,9 @@ export default function Home() {
             />
             <Info
               title={{
-                text: 'Desenvolvedor Mobile',
+                text: t('mobileDeveloper'),
               }}
-              time="Set/2021 - Atual"
+              time={`Set/2021 - ${t('current')}`}
               description={{
                 text: 'Web Jump',
                 ariaLabel: 'Web Jump',
@@ -130,22 +138,22 @@ export default function Home() {
             />
           </div>
 
-          <h3>CURSOS COMPLEMENTARES</h3>
+          <h3>{t('courses')}</h3>
           <div className="row">
             <Info
               title={{
                 text: 'Web Full Stack Node',
                 link: 'https://drive.google.com/file/d/1i-797GuLtIlLSNEbPE6gFIU9RRjS1JIv/view?usp=sharing',
-                ariaLabel: 'Certificado Web Full Stack Node',
+                ariaLabel: `${t('certificate')} Web Full Stack Node`,
               }}
-              time="185 horas"
+              time={`185 ${t('hours')}`}
               description={{
                 text: 'Digital House',
               }}
             />
             <Info
               title={{
-                text: 'Inglês',
+                text: t('english'),
               }}
               time="2016-2018"
               description={{
@@ -156,100 +164,97 @@ export default function Home() {
               title={{
                 text: 'Microsoft Excel',
                 link: 'https://www.udemy.com/certificate/UC-J026Q6DE/',
-                ariaLabel: 'Certificado Microsoft Excel',
+                ariaLabel: `${t('certificate')} Microsoft Excel`,
               }}
-              time="11 horas"
+              time={`11 ${t('hours')}`}
               description={{
                 text: 'Udemy',
               }}
             />
             <Info
               title={{
-                text: 'HTML e CSS na prática',
+                text: t('htmlAndCss'),
                 link: 'https://drive.google.com/file/d/1b9UyZWeGBx43Gm_q0H6wvBbE9eLNOjwl/view?usp=sharing',
-                ariaLabel: 'Certificado HTML e CSS na prática',
+                ariaLabel: `${t('certificate')} ${t('htmlAndCss')}`,
               }}
-              time="24 horas"
+              time={`24 ${t('hours')}`}
               description={{
                 text: 'Fundação Bradesco',
               }}
             />
             <Info
               title={{
-                text: 'Web Moderno com JavaScript',
+                text: t('modernWeb'),
                 link: 'https://www.udemy.com/certificate/UC-N4JLM3OE/',
-                ariaLabel: 'Certificado Web Moderno com JavaScript',
+                ariaLabel: `${t('certificate')} ${t('modernWeb')}`,
               }}
-              time="76 horas"
+              time={`76 ${t('hours')}`}
               description={{
                 text: 'Udemy',
               }}
             />
             <Info
               title={{
-                text: 'Banco de dados SQL',
+                text: t('sql'),
                 link: 'https://www.udemy.com/certificate/UC-6RK781ZN/',
-                ariaLabel: 'Certificado Banco de dados SQL',
+                ariaLabel: `${t('certificate')} ${t('sql')}`,
               }}
-              time="36 horas"
+              time={`36 ${t('hours')}`}
               description={{
                 text: 'Udemy',
               }}
             />
             <Info
               title={{
-                text: 'React Js do zero ao avançado na pratica',
+                text: t('reactInPractive'),
                 link: 'https://www.udemy.com/certificate/UC-0YQZQZ7Y/',
-                ariaLabel:
-                  'Certificado React Js do zero ao avançado na pratica',
+                ariaLabel: `${t('certificate')} ${t('reactInPractive')}`,
               }}
-              time="18 horas"
+              time={`18 ${t('hours')}`}
               description={{
                 text: 'Udemy',
               }}
             />
             <Info
               title={{
-                text: 'Aplicativos mobile do zero com React Native e Redux',
+                text: t('mobileApps'),
                 link: 'https://www.udemy.com/certificate/UC-fec333ae-cced-400f-ad23-e734934d4f71/',
-                ariaLabel:
-                  'Certificado Aplicativos mobile do zero com React Native e Redux',
+                ariaLabel: `${t('certificate')} ${t('mobileApps')}`,
               }}
-              time="31 horas"
+              time={`31 ${t('hours')}`}
               description={{
                 text: 'Udemy',
               }}
             />
             <Info
               title={{
-                text: 'Aprenda NextJS, GraphQL e Leaflet na prática!',
+                text: t('learnNext'),
                 link: 'https://www.udemy.com/certificate/UC-408ca299-98c6-4653-a05e-8d4a6fb61b21/',
-                ariaLabel:
-                  'Certificado Aprenda NextJS, GraphQL e Leaflet na prática!',
+                ariaLabel: `${t('certificate')} ${t('learnNext')}`,
               }}
-              time="9 horas"
+              time={`9 ${t('hours')}`}
               description={{
                 text: 'Udemy',
               }}
             />
             <Info
               title={{
-                text: 'Trilha React Native do programa Ignite',
+                text: t('igniteRn'),
                 link: 'https://app.rocketseat.com.br/api/certificates/pdf/fece1ed0-e703-4253-9b39-b667120b0a32',
-                ariaLabel: 'Certificado Trilha React Native do programa Ignite',
+                ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
               }}
-              time="100 horas"
+              time={`100 ${t('hours')}`}
               description={{
                 text: 'Rocketseat',
               }}
             />
             <Info
               title={{
-                text: 'Trilha ReactJS do programa Ignite',
+                text: t('igniteR'),
                 link: 'https://app.rocketseat.com.br/api/certificates/pdf/14a5304c-b6bb-43aa-9d97-db267aa8c405',
-                ariaLabel: 'Certificado Trilha ReactJS do programa Ignite',
+                ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
               }}
-              time="100 horas"
+              time={`100 ${t('hours')}`}
               description={{
                 text: 'Rocketseat',
               }}
@@ -258,10 +263,221 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <h3>PROJETOS</h3>
+        <section className={`${styles.projects} projects`}>
+          <h3>{t('projects')}</h3>
+
+          <Carrousel
+            title="Broto"
+            description={t('broto')}
+            app
+            android="https://play.google.com/store/apps/details?id=broto.mobile.app"
+            ios="https://apps.apple.com/br/app/broto/id1619769755"
+            images={[
+              {
+                image: '/img/broto.png',
+                title: 'Broto logo',
+              },
+            ]}
+          />
+
+          <Carrousel
+            title="Natural da terra"
+            description={t('nt')}
+            app
+            android="https://play.google.com/store/apps/details?id=br.com.naturaldaterra.app"
+            ios="https://apps.apple.com/br/app/natural-da-terra-novo/id1583935893"
+            images={[
+              {
+                image: '/img/nt.png',
+                title: 'Natural da terra logo',
+              },
+            ]}
+          />
+
+          <Carrousel
+            title="Hortifruti"
+            description={t('ht')}
+            app
+            android="https://play.google.com/store/apps/details?id=br.com.hortifruti.app"
+            ios="https://apps.apple.com/br/app/hortifruti-novo/id1583936154"
+            images={[
+              {
+                image: '/img/ht.png',
+                title: 'Hortifruti Logo',
+              },
+            ]}
+          />
+
+          <Carrousel
+            title="Broken Out"
+            description={t('brokenOut')}
+            link="https://brokenout.herokuapp.com"
+            images={[
+              {
+                image: '/img/brokenOut1.png',
+                title: t('initialPage'),
+              },
+              {
+                image: '/img/brokenOut2.png',
+                title: t('aboutPage'),
+              },
+              {
+                image: '/img/brokenOut3.png',
+                title: t('gamesPage'),
+              },
+              {
+                image: '/img/brokenOut4.png',
+                title: t('selectedGamePage'),
+              },
+              {
+                image: '/img/brokenOut5.png',
+                title: t('signInPage'),
+              },
+              {
+                image: '/img/brokenOut6.png',
+                title: t('signUpPage'),
+              },
+            ]}
+          />
+
+          <Carrousel
+            title="High Performance"
+            description={t('highPerformance')}
+            link="https://highperformance.herokuapp.com"
+            images={[
+              {
+                image: '/img/high1.png',
+                title: t('initialPage'),
+              },
+              {
+                image: '/img/high2.png',
+                title: t('aboutPage'),
+              },
+              {
+                image: '/img/high5.png',
+                title: t('reportsPage'),
+              },
+              {
+                image: '/img/high4.png',
+                title: t('signUpPage'),
+              },
+              {
+                image: '/img/high3.png',
+                title: t('signInPage'),
+              },
+            ]}
+          />
+
+          <Carrousel
+            title="Rafael's Trips"
+            description={t('rafaels')}
+            link="https://rafaels-trips.vercel.app"
+            images={[
+              {
+                image: '/img/trip1.png',
+                title: t('initialPage'),
+              },
+              {
+                image: '/img/trip2.png',
+                title: t('salvadorPage'),
+              },
+              {
+                image: '/img/trip3.png',
+                title: t('saoPauloPage'),
+              },
+            ]}
+          />
+
+          <Carrousel
+            title="Estética Rhoades"
+            description={t('rhoades')}
+            link="https://estetica-rhoades.vercel.app"
+            images={[
+              {
+                image: '/img/rhoades1.png',
+                title: t('initialPage'),
+              },
+              {
+                image: '/img/rhoades2.png',
+                title: t('aboutPage'),
+              },
+              {
+                image: '/img/rhoades4.png',
+                title: t('blogPage'),
+              },
+              {
+                image: '/img/rhoades5.png',
+                title: t('signInPage'),
+              },
+              {
+                image: '/img/rhoades3.png',
+                title: t('postsPage'),
+              },
+            ]}
+          />
         </section>
       </div>
+
+      <section className={`${styles.tech} tech`}>
+        <h4 className="center-align">{t('techs')}</h4>
+        <div className={`${styles.icons} icons`}>
+          <Image
+            src="/img/postgresql.webp"
+            width="40"
+            height="40"
+            alt="PostgreSQL"
+          />
+          <Image src="/img/html.webp" width="40" height="40" alt="Html" />
+          <Image src="/img/git.webp" width="40" height="40" alt="Git" />
+          <Image src="/img/mysql.webp" width="40" height="40" alt="MySql" />
+          <Image
+            src="/img/react.webp"
+            width="40"
+            height="40"
+            alt={`React ${t('and')} React Native`}
+          />
+          <Image
+            src="/img/firebase.webp"
+            width="40"
+            height="40"
+            alt="Firebase"
+          />
+          <Image src="/img/css.webp" width="40" height="40" alt="Css" />
+        </div>
+      </section>
+
+      <footer className={`${styles.footer} footer`}>
+        <p className="center">Developed by Rafael Santana</p>
+        <div>
+          <input
+            id="color"
+            type="color"
+            value={color}
+            onChange={e => {
+              handleChangeColor(e.target.value);
+            }}
+            aria-labelledby="color"
+            aria-label={t('changeColor')}
+          />
+        </div>
+        <noscript>
+          <div className="enableJs">
+            <a
+              href={`https://www.enable-javascript.com/${
+                locale === 'en-US' ? '' : 'pt'
+              }`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Site que explica como habilitar o JavaScript no seu navegador"
+              className="primaryColor"
+            >
+              habilite o JavaScript para trocar de cor.
+            </a>
+          </div>
+        </noscript>
+      </footer>
+
+      <BackToTheTop />
     </>
   );
 }

@@ -8,7 +8,7 @@ export const ImageProfile: FC<ImageProfileProps> = ({
 }) => {
   return (
     <svg
-      className={styles.image}
+      className={`${styles.image} imageProfile`}
       width="567"
       height="870"
       viewBox="0 0 567 870"

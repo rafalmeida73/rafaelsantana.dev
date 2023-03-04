@@ -11,7 +11,7 @@ export const GithubIcon: FC<IconProps> = ({ color = '#fff' }) => {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={styles.icon}
+      className={`${styles.icon} icon`}
     >
       <g id="github">
         <path
