@@ -51,10 +51,10 @@
 
 .me{
   margin: 80px 0;
-  background-color: var(--black);
+  background-color: var(--dark);
   border-radius: 20px;
   padding: 15px;
-  color: #fff;
+  color: var(--light);
 
   h2 {
     text-align: center;
@@ -62,6 +62,18 @@
 
   p {
     text-align: center;
+  }
+}
+
+.infos{
+  color: var(--light);
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 80px;
+
+  h3 {
+    font-size: 20px;
   }
 }
 
@@ -124,6 +136,12 @@
 
   .languages {
     width: 8%;
+  }
+
+  .infos {
+    h3 {
+      font-size: 30px;
+    }
   }
 }
 
