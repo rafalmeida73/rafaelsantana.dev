@@ -1,0 +1,13 @@
+.icon {
+  &:hover {
+    path {
+      fill: var(--primary);
+    }
+  }
+
+  &:focus {
+    path {
+      fill: var(--primary);
+    }
+  }
+}
