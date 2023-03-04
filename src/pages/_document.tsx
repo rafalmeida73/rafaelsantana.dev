@@ -67,7 +67,10 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" />
+        <script
+          defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        />
         {/* Global site tag (gtag.js) - Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5ZDT9GT11E"

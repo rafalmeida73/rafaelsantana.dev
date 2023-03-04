@@ -266,8 +266,27 @@ h3 {
   border: none;
 }
 
-.primaryColor{
+.primaryColor {
   color: var(--primary);
+}
+
+.notFound {
+  height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.lottieImg {
+  height: 200px;
+  width: 300px;
 }
 
 @media (max-height: 300px) {
@@ -281,6 +300,13 @@ h3 {
 
   .city {
     font-size: 10px;
+  }
+
+  .notFound {
+    height: 250px;
+  }
+  .notFoundh1 {
+    font-size: 15px;
   }
 }
 
@@ -315,10 +341,25 @@ h3 {
     margin-bottom: 50px;
     font-size: 2.92rem;
   }
+
+  .notFound h1 {
+    font-size: 30px;
+  }
+
+  .lottieImg {
+    height: 600px;
+    width: 1000px;
+  }
 }
 
 @media (min-width: 1000px) {
   .languages {
     width: 4%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .notFound h1 {
+    font-size: 30px;
   }
 }

@@ -46,5 +46,8 @@
     "techs": "Algumas tecnologias que utilizo",
     "and": "e",
     "changeColor": "Alterar cor principal do site"
+  },
+  "Notfound": {
+    "notFound": "Página não encontrada"
   }
 }

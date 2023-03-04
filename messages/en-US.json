@@ -46,5 +46,8 @@
     "techs": "Some technologies that I use",
     "and": "and",
     "changeColor": "Change main site color"
+  },
+  "Notfound": {
+    "notFound": "Page not found"
   }
 }
