@@ -3,7 +3,9 @@ import { FC } from 'react';
 import styles from './ImageProfile.module.scss';
 import { ImageProfileProps } from './types';
 
-export const ImageProfile: FC<ImageProfileProps> = ({ color = '#3BBBE8' }) => {
+export const ImageProfile: FC<ImageProfileProps> = ({
+  color = 'var(--primary)',
+}) => {
   return (
     <svg
       className={styles.image}

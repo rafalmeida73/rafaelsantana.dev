@@ -1,5 +1,6 @@
 :root {
   --primary: #3bbbe8;
+  --black: #363636;
 }
 
 * {
@@ -21,6 +22,10 @@ body {
   background-attachment: fixed;
   background-size: cover;
   /* background by SVGBackgrounds.com */
+}
+
+::selection {
+  background: var(--primary);
 }
 
 a {

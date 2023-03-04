@@ -25,7 +25,6 @@ export default function Document() {
           media="all"
         />
         {/* Let browser know website is optimized for mobile */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de desafios e projeto para ter um aprendizado constante."

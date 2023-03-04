@@ -1,0 +1,11 @@
+{
+  "Home": {
+    "city": "Southern area of Sao Paulo",
+    "description": "Mobile Developer, passionate about technology, always looking for challenges and project to have constant learning. Currently focused on mobile development which is an area with a lot of news and knowledge that I intend to learn.",
+    "email": "Send email",
+    "ptLanguage": "Change language to portuguese",
+    "enLanguage": "Change language to english",
+    "aboutMe": "ABOUT ME",
+    "aboutMeDescription": "I'm Rafael Santana, Mobile Developer and graduated in Systems Analysis and Development. Focused on mobile development, I always try to write well-designed, testable, efficient code using current best practices in web development and learn new technologies. Currently, I'm studying some technologies like React, React Native, Magento, Firebase, Node, Express, Materialize, Sequelize, among others."
+  }
+}

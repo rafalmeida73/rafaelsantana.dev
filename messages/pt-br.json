@@ -1,0 +1,11 @@
+{
+  "Home": {
+    "city": "Zona Sul, São Paulo",
+    "description": "Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de desafios e projeto para ter um aprendizado constante. Focado atualmente em desenvolvimento mobile que é uma área com bastante novidades e diversos conhecimentos que pretendo aprender.",
+    "email": "Enviar e-mail",
+    "ptLanguage": "Alterar idioma para português",
+    "enLanguage": "Alterar idioma para inglês",
+    "aboutMe": "SOBRE MIM",
+    "aboutMeDescription": "Eu sou o Rafael Santana, Desenvolvedor Mobile e formado em Análise e Desenvolvimento de Sistemas. Focado em desenvolvimento mobile procuro sempre escrever código bem projetado, testável, eficiente usando as melhores práticas atuais em desenvolvimento web e aprender novas tecnologias. Atualmente, estou estudando algumas tecnologias como o React, React Native, Magento, Firebase, Node, Express, Materialize, Sequelize, entre outros."
+  }
+}
