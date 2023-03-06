@@ -1,6 +1,6 @@
 # [Portfólio Rafael Santana](https://rafaelsantana.dev/)
 
-<img src="https://rafaelsantana.dev/assets/img/index.png" />
+<img src="https://rafaelsantana.dev/img/index.png" />
 
 ####  Tecnologias utilizadas
 - Next
