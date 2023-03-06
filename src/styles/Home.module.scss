@@ -78,6 +78,8 @@
 }
 
 .languages {
+  position: absolute;
+  right: 0;
   display: flex;
   justify-content: space-between;
   float: right;
