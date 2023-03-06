@@ -32,6 +32,7 @@ export const Carrousel: FC<CarrouselProps> = ({
               width="200"
               height="200"
               alt={image?.title}
+              loading="lazy"
             />
           </a>
         ))}
@@ -73,6 +74,7 @@ export const Carrousel: FC<CarrouselProps> = ({
               width="50"
               height="50"
               alt="Robô android (Logo Android)"
+              loading="lazy"
             />
             <a
               href={android}
@@ -90,6 +92,7 @@ export const Carrousel: FC<CarrouselProps> = ({
               width="45"
               height="39"
               alt="Maça mordida (Logo Apple)"
+              loading="lazy"
             />
             <a
               href={ios}

@@ -426,23 +426,50 @@ export default function Home() {
             width="40"
             height="40"
             alt="PostgreSQL"
+            loading="lazy"
           />
-          <Image src="/img/html.webp" width="40" height="40" alt="Html" />
-          <Image src="/img/git.webp" width="40" height="40" alt="Git" />
-          <Image src="/img/mysql.webp" width="40" height="40" alt="MySql" />
+          <Image
+            src="/img/html.webp"
+            width="40"
+            height="40"
+            alt="Html"
+            loading="lazy"
+          />
+          <Image
+            src="/img/git.webp"
+            width="40"
+            height="40"
+            alt="Git"
+            loading="lazy"
+          />
+          <Image
+            src="/img/mysql.webp"
+            width="40"
+            height="40"
+            alt="MySql"
+            loading="lazy"
+          />
           <Image
             src="/img/react.webp"
             width="40"
             height="40"
             alt={`React ${t('and')} React Native`}
+            loading="lazy"
           />
           <Image
             src="/img/firebase.webp"
             width="40"
             height="40"
             alt="Firebase"
+            loading="lazy"
           />
-          <Image src="/img/css.webp" width="40" height="40" alt="Css" />
+          <Image
+            src="/img/css.webp"
+            width="40"
+            height="40"
+            alt="Css"
+            loading="lazy"
+          />
         </div>
       </section>
 
