@@ -46,7 +46,7 @@
     "techs": "Some technologies that I use",
     "and": "and",
     "changeColor": "Change main site color",
-    "enanbleJs": "Enable JavaScript to change color",
+    "enableJs": "Enable JavaScript to change color",
     "enableJsSite": "Website that explains how to enable JavaScript in your browser"
   },
   "Notfound": {
