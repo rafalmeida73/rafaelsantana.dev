@@ -7,7 +7,6 @@ export default function Document() {
       <Head>
         <noscript>
           <link rel="stylesheet" href="/noJs.css" />
-          <title>Rafael Santana</title>
         </noscript>
         {/* Import Google Icon Font */}
         <link
