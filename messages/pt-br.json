@@ -6,7 +6,7 @@
     "ptLanguage": "Alterar idioma para português",
     "enLanguage": "Alterar idioma para inglês",
     "aboutMe": "SOBRE MIM",
-    "aboutMeDescription": "Eu sou o Rafael Santana, Desenvolvedor Mobile e formado em Análise e Desenvolvimento de Sistemas. Focado em desenvolvimento mobile procuro sempre escrever código bem projetado, testável, eficiente usando as melhores práticas atuais em desenvolvimento web e aprender novas tecnologias. Atualmente, estou estudando algumas tecnologias como o React, React Native, Magento, Firebase, Node, Express, Materialize, Sequelize, entre outros.",
+    "aboutMeDescription": "Eu sou o Rafael Santana, Desenvolvedor Mobile e formado em Análise e Desenvolvimento de Sistemas. Focado em desenvolvimento mobile procuro sempre escrever código bem projetado, testável, eficiente usando as melhores práticas atuais em desenvolvimento web e aprender novas tecnologias. Se você está procurando um desenvolvedor mobile talentoso e dedicado para ajudar a levar sua ideia de aplicativo para o próximo nível, estou pronto para conversar com você!",
     "academicFormation": "FORMAÇÃO ACADÊMICA",
     "ads": "Análise e Desenvolvimento de Sistemas",
     "fullStackDeveloper": "Desenvolvedor Full Stack",
@@ -45,7 +45,9 @@
     "postsPage": "Página de Post",
     "techs": "Algumas tecnologias que utilizo",
     "and": "e",
-    "changeColor": "Alterar cor principal do site"
+    "changeColor": "Alterar cor principal do site",
+    "enableJs": "Habilite o JavaScript para trocar de cor.",
+    "enableJsSite": "Site que explica como habilitar o JavaScript no seu navegador"
   },
   "Notfound": {
     "notFound": "Página não encontrada"

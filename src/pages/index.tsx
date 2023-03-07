@@ -495,10 +495,11 @@ export default function Home() {
               }`}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Site que explica como habilitar o JavaScript no seu navegador"
+              aria-label={t('enableJsSite')}
               className="primaryColor"
             >
-              habilite o JavaScript para trocar de cor.
+              <i className="material-icons">report_problem</i> {t('enableJs')}{' '}
+              <i className="material-icons">report_problem</i>
             </a>
           </div>
         </noscript>

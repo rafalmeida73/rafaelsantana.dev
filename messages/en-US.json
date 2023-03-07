@@ -1,12 +1,12 @@
 {
   "Home": {
-    "city": "Southern area of Sao Paulo, Brazil",
+    "city": "Sao Paulo, Brazil",
     "description": "Mobile Developer, passionate about technology, always seeking challenges and projects for constant learning. Currently focused on mobile development, which is an area with many novelties and diverse knowledge that I intend to learn.",
     "email": "Send email",
     "ptLanguage": "Change language to Portuguese",
     "enLanguage": "Change language to English",
     "aboutMe": "ABOUT ME",
-    "aboutMeDescription": "I am Rafael Santana, a Mobile Developer with a degree in Systems Analysis and Development. Focused on mobile development, I always strive to write well-designed, testable, and efficient code using current best practices in web development and learn new technologies. Currently, I am studying technologies such as React, React Native, Magento, Firebase, Node, Express, Materialize, Sequelize, among others.",
+    "aboutMeDescription": "I am Rafael Santana, a Mobile Developer with a degree in Systems Analysis and Development. Focused on mobile development, I always strive to write well-designed, testable, and efficient code using the best current practices in web development and learn new technologies. If you're looking for a talented and dedicated mobile developer to help take your app idea to the next level, I'm ready to talk with you!",
     "academicFormation": "ACADEMIC FORMATION",
     "ads": "Systems Analysis and Development",
     "fullStackDeveloper": "Full Stack Developer",
@@ -45,7 +45,9 @@
     "postsPage": "Post Page",
     "techs": "Some technologies that I use",
     "and": "and",
-    "changeColor": "Change main site color"
+    "changeColor": "Change main site color",
+    "enanbleJs": "Enable JavaScript to change color",
+    "enableJsSite": "Website that explains how to enable JavaScript in your browser"
   },
   "Notfound": {
     "notFound": "Page not found"
