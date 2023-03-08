@@ -198,6 +198,24 @@ h3 {
   align-items: center;
 }
 
+.slides-item {
+  margin: 0 6rem;
+}
+
+.slides-item img {
+  width: 143px;
+  height: 143px;
+}
+
+.centerImg {
+  position: absolute;
+}
+
+.centerImg img {
+  width: 200px;
+  height: 200px;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -289,18 +307,35 @@ h3 {
   width: 300px;
 }
 
-.enableJs a{
+.enableJs{
+  background: #ffee9c;
+  padding: 12px 20px 12px 24px;
+  border-radius: 5px;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
+  color: var(--dark);
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.enableJs p{
+  font-size: 14px;
+}
+
+.enableJs strong{
+  font-weight: 700 !important;
 }
 
 .enableJs i{
-  color: #eed202;
+  color: var(--dark);
   margin: 0 5px;
-  
 }
+
+#color{
+  display: none;
+}
+
 @media (max-height: 300px) {
   .mainHome {
     height: 250px;

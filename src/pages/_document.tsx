@@ -16,9 +16,8 @@ export default function Document() {
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
           rel="stylesheet"
-          media="all"
         />
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
         {/* Import materialize.css */}

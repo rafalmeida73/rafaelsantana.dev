@@ -475,9 +475,8 @@ export default function Home() {
 
       <footer className={`${styles.footer} footer`}>
         <p className="center">Developed by Rafael Santana</p>
-        <div>
+        <div id="color">
           <input
-            id="color"
             type="color"
             value={color}
             onChange={e => {
@@ -488,20 +487,20 @@ export default function Home() {
           />
         </div>
         <noscript>
-          <div className="enableJs">
-            <a
-              href={`https://www.enable-javascript.com/${
-                locale === 'en-US' ? '' : 'pt'
-              }`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t('enableJsSite')}
-              className="primaryColor"
-            >
-              <i className="material-icons">report_problem</i> {t('enableJs')}{' '}
-              <i className="material-icons">report_problem</i>
-            </a>
-          </div>
+          <a
+            href={`https://www.enable-javascript.com/${
+              locale === 'en-US' ? '' : 'pt'
+            }`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t('enableJsSite')}
+            className="enableJs"
+          >
+            <i className="material-icons">report_problem</i>
+            <p>
+              <strong>{t('enableJs1')}</strong> <span>{t('enableJs2')}</span>
+            </p>
+          </a>
         </noscript>
       </footer>
 

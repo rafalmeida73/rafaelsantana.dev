@@ -40,14 +40,34 @@ export const Carrousel: FC<CarrouselProps> = ({
         <noscript>
           <section className="carouselSecondary">
             <div className="slides">
-              <div className="slides-item">
-                <img
+              {images?.[1] && (
+                <div className="slides-item">
+                  <Image
+                    src={images?.[1]?.image}
+                    width={200}
+                    height={200}
+                    alt={images?.[1]?.title}
+                  />
+                </div>
+              )}
+              <div className="slides-item centerImg">
+                <Image
                   src={images?.[0]?.image}
-                  width="200"
-                  height="200"
-                  alt={images[0]?.title}
+                  width={200}
+                  height={200}
+                  alt={images?.[0]?.title}
                 />
               </div>
+              {images?.[1] && (
+                <div className="slides-item">
+                  <Image
+                    src={images?.[2]?.image}
+                    width={200}
+                    height={200}
+                    alt={images?.[2]?.title}
+                  />
+                </div>
+              )}
             </div>
           </section>
         </noscript>

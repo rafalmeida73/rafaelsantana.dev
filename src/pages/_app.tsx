@@ -9,10 +9,13 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const carousel = document.querySelectorAll('.carousel');
     const tooltip = document.querySelectorAll('.tooltipped');
+    const changeColor = document?.getElementById?.('color');
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).M.Carousel.init(carousel);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).M.Tooltip.init(tooltip);
+
+    if (changeColor) changeColor.style.display = 'flex';
   }, []);
 
   return (
@@ -20,7 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-
       <Component {...pageProps} />
     </NextIntlProvider>
   );
