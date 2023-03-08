@@ -284,10 +284,6 @@ h3 {
   border: none;
 }
 
-.primaryColor {
-  color: var(--primary);
-}
-
 .notFound {
   height: 100vh;
   display: flex !important;
