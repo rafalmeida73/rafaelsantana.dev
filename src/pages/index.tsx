@@ -311,6 +311,38 @@ export default function Home() {
           />
 
           <Carrousel
+            hasMockup
+            title="Todo List"
+            description={t('todoList')}
+            images={[
+              {
+                image: '/img/todo1.png',
+                title: t('initialPage'),
+              },
+              {
+                image: '/img/todo2.png',
+                title: t('signInPage'),
+              },
+              {
+                image: '/img/todo3.png',
+                title: t('signUpPage'),
+              },
+              {
+                image: '/img/todo4.png',
+                title: t('emptyListPage'),
+              },
+              {
+                image: '/img/todo6.png',
+                title: t('listPage'),
+              },
+              {
+                image: '/img/todo5.png',
+                title: t('profilePage'),
+              },
+            ]}
+          />
+
+          <Carrousel
             title="Broken Out"
             description={t('brokenOut')}
             link="https://brokenout.herokuapp.com"

@@ -29,7 +29,11 @@
     "nt": "O Natural da terra é um aplicativo de ecommerce do ramo de hortifrutigranjeiro, desenvolvido com React native.",
     "ht": "O Hortifruti é um aplicativo de ecommerce do ramo de hortifrutigranjeiro, desenvolvido com React native.",
     "brokenOut": "O Broken Out é um site que visa facilitar o acesso a informações de jogos, seja do celular, console ou desktop. Disponibilizamos uma imensa variedade de jogos cadastrados. Contudo, você pode adicionar qualquer jogo que não esteja cadastrado. Ajudando assim, outros usuários a encontrar o jogo desejado no site. Link do projeto:",
+    "todoList": "O Todo List é um aplicativo desenvolvido com React native que tem como objetivo principal, criar uma lista de tarefas, onde o usuário pode adicionar, editar, excluir e marcar como concluída",
     "initialPage": "Página inical",
+    "emptyListPage": "Página com lista vazia",
+    "listPage": "Página com lista com tarefas",
+    "profilePage": "Página de perfil",
     "aboutPage": "Página sobre",
     "gamesPage": "Página jogos",
     "selectedGamePage": "Página jogo selecionado",
@@ -53,7 +57,7 @@
   "Notfound": {
     "notFound": "Página não encontrada"
   },
-  "Document":{
+  "Document": {
     "description": "Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de desafios e projeto para ter um aprendizado constante.",
     "developer": "Desenvolvedor"
   }

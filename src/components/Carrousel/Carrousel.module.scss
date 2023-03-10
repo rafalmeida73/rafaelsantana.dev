@@ -27,3 +27,19 @@
 .link {
   color: var(--primary);
 }
+
+.carousel {
+  height: 500px !important;
+
+  img {
+    height: 405.02px !important;
+  }
+
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    height: 580px !important;
+  }
+}

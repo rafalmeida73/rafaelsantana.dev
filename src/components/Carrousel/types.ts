@@ -9,4 +9,5 @@ export interface CarrouselProps {
   app?: boolean;
   android?: string;
   ios?: string;
+  hasMockup?: boolean;
 }

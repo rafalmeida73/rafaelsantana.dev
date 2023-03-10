@@ -11,30 +11,29 @@ export const Carrousel: FC<CarrouselProps> = ({
   description,
   link,
   app = false,
+  hasMockup = false,
   android,
   ios,
 }) => {
   return (
     <div className={`${styles.container} carouselContent`}>
       <p>{title}</p>
-      <div className="carousel">
+      <div
+        className={`${
+          hasMockup ? `${styles.carousel} hasMockup` : ''
+        } carousel`}
+      >
         {images?.map((image, index) => (
-          <a
-            className="carousel-item"
-            href={`${index}`}
-            title={image?.title}
-            aria-label={image?.title}
+          <Image
             // eslint-disable-next-line react/no-array-index-key
             key={index.toString()}
-          >
-            <Image
-              src={image?.image}
-              width="200"
-              height="200"
-              alt={image?.title}
-              loading="lazy"
-            />
-          </a>
+            className="carousel-item"
+            src={image?.image}
+            width="200"
+            height={hasMockup ? 405.02 : 200}
+            alt={image?.title}
+            loading="lazy"
+          />
         ))}
 
         <noscript>
@@ -45,7 +44,7 @@ export const Carrousel: FC<CarrouselProps> = ({
                   <Image
                     src={images?.[1]?.image}
                     width={200}
-                    height={200}
+                    height={hasMockup ? 405.02 : 200}
                     alt={images?.[1]?.title}
                   />
                 </div>
@@ -54,7 +53,7 @@ export const Carrousel: FC<CarrouselProps> = ({
                 <Image
                   src={images?.[0]?.image}
                   width={200}
-                  height={200}
+                  height={hasMockup ? 405.02 : 200}
                   alt={images?.[0]?.title}
                 />
               </div>
@@ -63,7 +62,7 @@ export const Carrousel: FC<CarrouselProps> = ({
                   <Image
                     src={images?.[2]?.image}
                     width={200}
-                    height={200}
+                    height={hasMockup ? 405.02 : 200}
                     alt={images?.[2]?.title}
                   />
                 </div>
