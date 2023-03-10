@@ -3,6 +3,7 @@ import { useCallback, useState } from 'react';
 import { BackToTheTop } from '@/components/BackToTheTop';
 import { Carrousel } from '@/components/Carrousel';
 import { GithubIcon } from '@/components/GithubIcon';
+import { HeadTags } from '@/components/HeadTags';
 import { ImageProfile } from '@/components/ImageProfile';
 import { Info } from '@/components/Info';
 import { LanguageIcon } from '@/components/LanguageIcon';
@@ -31,6 +32,7 @@ export default function Home() {
       <Head>
         <title>Rafael Santana</title>
       </Head>
+      <HeadTags />
       <main className={`${styles.main} mainHome`}>
         <div className={`${styles.languages} languages`}>
           <LanguageIcon language="pt-br" alt={t('ptLanguage')} />
@@ -427,6 +429,9 @@ export default function Home() {
             height="40"
             alt="PostgreSQL"
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="PostgreSQL"
           />
           <Image
             src="/img/html.webp"
@@ -434,6 +439,9 @@ export default function Home() {
             height="40"
             alt="Html"
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Html"
           />
           <Image
             src="/img/git.webp"
@@ -441,6 +449,9 @@ export default function Home() {
             height="40"
             alt="Git"
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Git"
           />
           <Image
             src="/img/mysql.webp"
@@ -448,6 +459,9 @@ export default function Home() {
             height="40"
             alt="MySql"
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="MySql"
           />
           <Image
             src="/img/react.webp"
@@ -455,6 +469,9 @@ export default function Home() {
             height="40"
             alt={`React ${t('and')} React Native`}
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip={`React ${t('and')} React Native`}
           />
           <Image
             src="/img/firebase.webp"
@@ -462,6 +479,9 @@ export default function Home() {
             height="40"
             alt="Firebase"
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Firebase"
           />
           <Image
             src="/img/css.webp"
@@ -469,6 +489,9 @@ export default function Home() {
             height="40"
             alt="Css"
             loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Css"
           />
         </div>
       </section>

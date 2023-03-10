@@ -52,5 +52,9 @@
   },
   "Notfound": {
     "notFound": "Page not found"
+  },
+  "Document":{
+    "description": "Mobile Developer, passionate about technology, always looking for challenges and project to have constant learning.",
+    "developer": "Developer"
   }
 }

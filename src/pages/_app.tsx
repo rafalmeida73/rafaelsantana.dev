@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import '@/styles/globals.scss';
 import { useEffect } from 'react';
 
@@ -10,10 +11,12 @@ export default function App({ Component, pageProps }: AppProps) {
     const carousel = document.querySelectorAll('.carousel');
     const tooltip = document.querySelectorAll('.tooltipped');
     const changeColor = document?.getElementById?.('color');
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).M.Carousel.init(carousel);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).M.Tooltip.init(tooltip);
+    if (carousel && (window as any).M.Carousel) {
+      (window as any).M.Carousel.init(carousel);
+    }
+    if (tooltip && (window as any).M.Tooltip) {
+      (window as any).M.Tooltip.init(tooltip);
+    }
 
     if (changeColor) changeColor.style.display = 'flex';
   }, []);
