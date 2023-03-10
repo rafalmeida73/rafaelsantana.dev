@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import Image from 'next/image';
 
@@ -14,6 +14,16 @@ export const Carrousel: FC<CarrouselProps> = ({
   android,
   ios,
 }) => {
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const carousel = document.querySelectorAll('.carousel');
+      if (carousel) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).M.Carousel.init(carousel);
+      }
+    }
+  }, []);
+
   return (
     <div className={`${styles.container} carouselContent`}>
       <p>{title}</p>
