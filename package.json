@@ -14,6 +14,7 @@
     "@types/react-dom": "18.0.11",
     "eslint": "^8.0.1",
     "eslint-config-next": "13.2.3",
+    "materialize-css": "^1.0.0-rc.2",
     "next": "13.2.4",
     "next-intl": "^2.10.4",
     "react": "18.2.0",
@@ -23,6 +24,7 @@
     "typescript": "*"
   },
   "devDependencies": {
+    "@types/materialize-css": "^1.0.11",
     "@types/react-lottie": "^1.2.6",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.0",

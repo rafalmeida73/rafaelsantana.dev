@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { BackToTheTop } from '@/components/BackToTheTop';
 import { Carrousel } from '@/components/Carrousel';
@@ -25,19 +25,6 @@ export default function Home() {
   const handleChangeColor = useCallback((colorValue: string) => {
     setColor(colorValue);
     document.documentElement.style.setProperty('--primary', colorValue);
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      const changeColor = document?.getElementById?.('color');
-      if (changeColor) changeColor.style.display = 'flex';
-
-      const tooltip = document.querySelectorAll('.tooltipped');
-      if (tooltip) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (window as any).M.Tooltip.init(tooltip);
-      }
-    }
   }, []);
 
   return (
