@@ -11,11 +11,11 @@ export default function App({ Component, pageProps }: AppProps) {
     const carousel = document.querySelectorAll('.carousel');
     const tooltip = document.querySelectorAll('.tooltipped');
     const changeColor = document?.getElementById?.('color');
-    if (carousel && (window as any).M.Carousel) {
-      (window as any).M.Carousel.init(carousel);
+    if (carousel && (window as any)?.M?.Carousel) {
+      (window as any)?.M?.Carousel?.init?.(carousel);
     }
-    if (tooltip && (window as any).M.Tooltip) {
-      (window as any).M.Tooltip.init(tooltip);
+    if (tooltip && (window as any)?.M?.Tooltip) {
+      (window as any)?.M?.Tooltip?.init?.(tooltip);
     }
 
     if (changeColor) changeColor.style.display = 'flex';
