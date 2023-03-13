@@ -12,7 +12,7 @@
     "@types/node": "18.15.1",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "eslint": "^8.0.1",
+    "eslint": "^8.36.0",
     "eslint-config-next": "13.2.4",
     "materialize-css": "^1.0.0-rc.2",
     "next": "13.2.4",
