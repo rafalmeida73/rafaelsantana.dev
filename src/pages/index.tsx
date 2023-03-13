@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 
 import { BackToTheTop } from '@/components/BackToTheTop';
 import { Carrousel } from '@/components/Carrousel';
+import { ChangeTheme } from '@/components/ChangeTheme';
 import { GithubIcon } from '@/components/GithubIcon';
 import { HeadTags } from '@/components/HeadTags';
 import { ImageProfile } from '@/components/ImageProfile';
@@ -35,6 +36,7 @@ export default function Home() {
       <HeadTags />
       <main className={`${styles.main} mainHome`}>
         <div className={`${styles.languages} languages`}>
+          <ChangeTheme />
           <LanguageIcon language="pt-br" alt={t('ptLanguage')} />
           <LanguageIcon language="en-US" alt={t('enLanguage')} />
         </div>
@@ -88,12 +90,16 @@ export default function Home() {
       </main>
 
       <div className="container">
-        <section className={`${styles.me} me`}>
+        <section
+          className={`${styles.me} ${styles.contentSquare} contentSquare me`}
+        >
           <h2>{t('aboutMe')}</h2>
           <p>{t('aboutMeDescription')}</p>
         </section>
 
-        <section className={`${styles.infos} col s12 m12 l6 infos`}>
+        <section
+          className={`${styles.infos}  ${styles.contentSquare} col s12 m12 l6 contentSquare infos`}
+        >
           <h3>{t('academicFormation')}</h3>
           <div className="row">
             <Info
@@ -265,7 +271,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.projects} projects`}>
+        <section
+          className={`${styles.projects} ${styles.contentSquare} contentSquare  projects`}
+        >
           <h3>{t('projects')}</h3>
 
           <Carrousel
@@ -476,14 +484,14 @@ export default function Home() {
             data-tooltip="Html"
           />
           <Image
-            src="/img/git.webp"
+            src="/img/css.webp"
             width="40"
             height="40"
-            alt="Git"
+            alt="Css"
             loading="lazy"
             className="tooltipped"
             data-position="bottom"
-            data-tooltip="Git"
+            data-tooltip="Css"
           />
           <Image
             src="/img/mysql.webp"
@@ -491,19 +499,49 @@ export default function Home() {
             height="40"
             alt="MySql"
             loading="lazy"
-            className="tooltipped"
+            className="tooltipped darkImage"
             data-position="bottom"
             data-tooltip="MySql"
+          />
+          <Image
+            src="/img/js.png"
+            width="40"
+            height="40"
+            alt="Javascript"
+            loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Javascript"
           />
           <Image
             src="/img/react.webp"
             width="40"
             height="40"
-            alt={`React ${t('and')} React Native`}
+            alt="React"
             loading="lazy"
             className="tooltipped"
             data-position="bottom"
-            data-tooltip={`React ${t('and')} React Native`}
+            data-tooltip="React"
+          />
+          <Image
+            src="/img/reactNative.png"
+            width="40"
+            height="40"
+            alt="React Native"
+            loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="React Native"
+          />
+          <Image
+            src="/img/ts.png"
+            width="40"
+            height="40"
+            alt="Typescript"
+            loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Typescript"
           />
           <Image
             src="/img/firebase.webp"
@@ -516,14 +554,34 @@ export default function Home() {
             data-tooltip="Firebase"
           />
           <Image
-            src="/img/css.webp"
+            src="/img/git.webp"
             width="40"
             height="40"
-            alt="Css"
+            alt="Git"
             loading="lazy"
             className="tooltipped"
             data-position="bottom"
-            data-tooltip="Css"
+            data-tooltip="Git"
+          />
+          <Image
+            src="/img/jira.png"
+            width="40"
+            height="40"
+            alt="Jira"
+            loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Jira"
+          />
+          <Image
+            src="/img/figma.png"
+            width="40"
+            height="40"
+            alt="Figma"
+            loading="lazy"
+            className="tooltipped"
+            data-position="bottom"
+            data-tooltip="Figma"
           />
         </div>
       </section>

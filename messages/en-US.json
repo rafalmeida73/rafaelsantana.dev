@@ -52,7 +52,8 @@
     "changeColor": "Change main site color",
     "enableJs1": "JavaScript appears to be disabled in your browser.",
     "enableJs2": "For a better experience on our website, please be sure to enable javascript in your browser.",
-    "enableJsSite": "Website that explains how to enable JavaScript in your browser"
+    "enableJsSite": "Website that explains how to enable JavaScript in your browser",
+    "theme": "Change theme"
   },
   "Notfound": {
     "notFound": "Page not found"

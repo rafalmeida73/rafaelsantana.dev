@@ -51,7 +51,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script
+        <Script
           defer
           src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
         />
@@ -67,6 +67,12 @@ export default function Document() {
            gtag('js', new Date());
        
            gtag('config', '${analyticsId}');
+        `}
+        </Script>
+        <Script strategy="beforeInteractive">
+          {`
+           const hasTheme = localStorage.getItem('theme');
+           if (hasTheme) document.documentElement.setAttribute('theme', 'light');
         `}
         </Script>
       </body>

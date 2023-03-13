@@ -49,11 +49,14 @@
   }
 }
 
-.me {
-  margin: 80px 0;
+.contentSquare {
   background-color: var(--dark);
   border-radius: 20px;
   padding: 15px;
+}
+
+.me {
+  margin: 80px 0;
   color: var(--light);
 
   h2 {
@@ -67,9 +70,6 @@
 
 .infos {
   color: var(--light);
-  background-color: #363636;
-  border-radius: 20px;
-  padding: 15px;
   margin-bottom: 80px;
 
   h3 {
@@ -86,12 +86,13 @@
   width: 10%;
   margin-right: 30px;
   padding-top: 30px;
+
+  button {
+    margin-right: 20px;
+  }
 }
 
 .projects {
-  background-color: var(--dark);
-  border-radius: 20px;
-  padding: 15px;
   color: var(--light);
 
   h3 {
@@ -112,8 +113,11 @@
 
 .icons {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 25px 15px;
 }
 
 .footer {
@@ -210,5 +214,17 @@
 @media (min-width: 1000px) {
   .languages {
     width: 4%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .contentSquare {
+    background-color: var(--light-secondary);
+  }
+
+  .contact {
+    a {
+      color: var(--dark);
+    }
   }
 }

@@ -11,3 +11,11 @@
     }
   }
 }
+
+@media (prefers-color-scheme: light) {
+  .icon {
+    path {
+      fill: var(--dark);
+    }
+  }
+}
