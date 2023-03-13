@@ -31,17 +31,17 @@ export const ChangeTheme: NextPage = () => {
         window.matchMedia('(prefers-color-scheme: dark)').matches
       ) {
         setThemeImage('/img/sun.png');
-      } else {
-        setThemeImage('/img/moon.png');
+        return;
       }
-    }
-
-    if (theme === 'light') {
       setThemeImage('/img/moon.png');
       return;
     }
 
-    setThemeImage('/img/sun.png');
+    if (theme === 'light') {
+      setThemeImage('/img/moon.png');
+    } else {
+      setThemeImage('/img/sun.png');
+    }
   }, []);
 
   return (
