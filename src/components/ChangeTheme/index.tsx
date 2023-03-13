@@ -14,29 +14,34 @@ export const ChangeTheme: NextPage = () => {
   const handleChangeTheme = useCallback(() => {
     if (themeImage === '/img/sun.png') {
       document.documentElement.setAttribute('theme', 'light');
-      setThemeImage('/img/moon.png');
       localStorage.setItem('theme', 'light');
+      setThemeImage('/img/moon.png');
     } else {
-      document.documentElement.removeAttribute('theme');
+      document.documentElement.setAttribute('theme', 'dark');
+      localStorage.setItem('theme', 'dark');
       setThemeImage('/img/sun.png');
-      localStorage.removeItem('theme');
     }
   }, [themeImage]);
 
   useEffect(() => {
-    const hasTheme = localStorage.getItem('theme');
-    if (hasTheme) {
+    const theme = localStorage.getItem('theme');
+    if (!theme) {
+      if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        setThemeImage('/img/sun.png');
+      } else {
+        setThemeImage('/img/moon.png');
+      }
+    }
+
+    if (theme === 'light') {
       setThemeImage('/img/moon.png');
       return;
     }
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      setThemeImage('/img/sun.png');
-    } else {
-      setThemeImage('/img/moon.png');
-    }
+
+    setThemeImage('/img/sun.png');
   }, []);
 
   return (

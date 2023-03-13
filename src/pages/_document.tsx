@@ -71,8 +71,8 @@ export default function Document() {
         </Script>
         <Script strategy="beforeInteractive">
           {`
-           const hasTheme = localStorage.getItem('theme');
-           if (hasTheme) document.documentElement.setAttribute('theme', 'light');
+           const theme = localStorage.getItem('theme');
+           if (theme) document.documentElement.setAttribute('theme', theme);
         `}
         </Script>
       </body>
