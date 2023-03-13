@@ -73,6 +73,16 @@ a {
   width: 20px;
 }
 
+.material-tooltip {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .material-tooltip {
+    display: block;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   body {
     background-color: #eeeeee;
