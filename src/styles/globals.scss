@@ -77,6 +77,10 @@ a {
   display: none;
 }
 
+#color {
+  display: flex;
+}
+
 @media (min-width: 768px) {
   .material-tooltip {
     display: block;

@@ -24,9 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         M.Tooltip.init(tooltip);
       }
-
-      const changeColor = document?.getElementById?.('color');
-      if (changeColor) changeColor.style.display = 'flex';
     }
   }, []);
 
