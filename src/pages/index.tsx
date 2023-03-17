@@ -78,7 +78,7 @@ export default function Home() {
             <div className={`${styles.contact} contact`}>
               <a
                 className="waves-effect waves-light btn"
-                href="mailto:contato@rafaelsantana.dev"
+                href={`mailto:${t('contact')}@rafaelsantana.dev`}
                 aria-label={t('email')}
               >
                 <i className="material-icons left">email</i>
