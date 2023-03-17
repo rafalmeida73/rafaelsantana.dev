@@ -6,7 +6,7 @@ const nextConfig = {
     defaultLocale: 'pt-br',
     domains: [
       {
-        domain: 'example.com',
+        domain: 'rafaelsantana.dev',
         defaultLocale: 'pt-br',
       },
     ],
