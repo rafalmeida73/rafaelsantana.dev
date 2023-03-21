@@ -46,7 +46,7 @@ export default function Document() {
           content="https://rafaelsantana.dev/img/index.png"
         />
         {/* SEO */}
-        <link rel="canonical" href="https://rafaelsantana.dev/</meta>" />
+        <link rel="canonical" href="https://rafaelsantana.dev/" />
       </Head>
       <body>
         <Main />
