@@ -57,7 +57,8 @@
     "theme": "Change theme"
   },
   "Notfound": {
-    "notFound": "Page not found"
+    "notFound": "Page not found",
+    "goBack": "Back to the previous page"
   },
   "Document": {
     "description": "Mobile Developer, passionate about technology, always looking for challenges and project to have constant learning.",

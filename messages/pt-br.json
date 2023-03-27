@@ -57,7 +57,8 @@
     "theme": "Alterar tema"
   },
   "Notfound": {
-    "notFound": "Página não encontrada"
+    "notFound": "Página não encontrada",
+    "goBack": "Voltar para a página anterior"
   },
   "Document": {
     "description": "Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de desafios e projeto para ter um aprendizado constante.",

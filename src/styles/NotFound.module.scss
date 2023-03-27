@@ -10,11 +10,30 @@
     font-weight: bold;
     color: var(--light);
   }
+
+  button{
+    background: none;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 5px;
+    padding-bottom: 4px;
+    cursor: pointer;
+  }
+
+  i{
+    color: var(--primary);
+  }
 }
 
 .lottieImg {
   height: 200px;
 }
+
+
+
 
 @media (min-width: 768px) {
   .container {

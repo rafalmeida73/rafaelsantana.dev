@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Lottie from 'react-lottie';
 
 import * as animationData from '../../public/lottie/404.json';
@@ -9,6 +10,7 @@ import styles from '../styles/NotFound.module.scss';
 
 const NotFound = () => {
   const t = useTranslations('Notfound');
+  const router = useRouter();
 
   const defaultOptions = {
     loop: true,
@@ -36,6 +38,9 @@ const NotFound = () => {
           />
         </noscript>
         <h1>{t('notFound')}</h1>
+        <button type="button" onClick={() => router.back()}>
+          <i className="material-icons">arrow_back</i> {t('goBack')}
+        </button>
       </main>
     </>
   );
