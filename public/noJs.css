@@ -334,11 +334,30 @@ h3 {
 }
 
 #color {
-  display: none;
+  display: none !important;
 }
 
 .theme-button {
   display: none;
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* for vertical scrollbar */
+  height: 15px; /* for horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-button {
+  width: 20px;
 }
 
 @media (max-height: 300px) {
@@ -347,7 +366,7 @@ h3 {
   }
 
   h1 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .city {
@@ -357,7 +376,7 @@ h3 {
   .notFound {
     height: 250px;
   }
-  .notFoundh1 {
+  .notFound h1 {
     font-size: 15px;
   }
 }
@@ -370,7 +389,7 @@ h3 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .mainHome p {
@@ -434,6 +453,10 @@ h3 {
   a,
   h4 {
     color: var(--dark);
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--light-secondary);
   }
 
   .darkImage {
