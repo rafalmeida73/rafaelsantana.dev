@@ -338,7 +338,7 @@ h3 {
 }
 
 .theme-button {
-  display: none;
+  display: none !important;
 }
 
 *::-webkit-scrollbar {
