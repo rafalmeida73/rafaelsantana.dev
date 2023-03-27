@@ -56,17 +56,3 @@ export const ChangeTheme: NextPage = () => {
     </button>
   );
 };
-
-export async function getStaticProps(context: {
-  locale: string;
-  defaultLocale: string;
-}) {
-  const language = (await import(`../../../messages/${context.locale}.json`))
-    .default;
-
-  return {
-    props: {
-      messages: language,
-    },
-  };
-}

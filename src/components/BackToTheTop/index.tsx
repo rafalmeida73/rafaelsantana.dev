@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-expressions */
 import { useEffect } from 'react';
 
+import { useTranslations } from 'next-intl';
+
 export const BackToTheTop = () => {
+  const t = useTranslations('Home');
+
   useEffect(() => {
     const handleScroll = () => {
       const mybutton = document?.getElementById?.('backToTheTop');
@@ -27,7 +31,7 @@ export const BackToTheTop = () => {
         id="backToTheTop"
         className="btn tooltipped"
         data-position="left"
-        data-tooltip="Voltar ao topo"
+        data-tooltip={t('backToTheTop')}
       >
         <i className="material-icons topIcon">arrow_upward</i>
       </button>

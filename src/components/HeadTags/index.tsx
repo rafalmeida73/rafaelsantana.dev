@@ -14,7 +14,7 @@ export const HeadTags = () => {
         name="keywords"
         content={`${t(
           'developer',
-        )}, Mobile, React Js, React Native, Rafael Santana `}
+        )}, Mobile, React Js, React Native, Rafael Santana, developer, mobile developer, web developer, front-end developer, back-end developer, full-stack developer `}
       />
     </Head>
   );

@@ -54,7 +54,8 @@
     "enableJs1": "O JavaScript parece estar desabilitado no seu navegador.",
     "enableJs2": " Para ter uma melhor experiência em nosso site, certifique-se de ativar o javascript em seu navegador.",
     "enableJsSite": "Site que explica como habilitar o JavaScript no seu navegador",
-    "theme": "Alterar tema"
+    "theme": "Alterar tema",
+    "backToTheTop": "Voltar ao topo"
   },
   "Notfound": {
     "notFound": "Página não encontrada",

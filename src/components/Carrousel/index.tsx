@@ -72,7 +72,7 @@ export const Carrousel: FC<CarrouselProps> = ({
         </noscript>
       </div>
       <p className="center-align">
-        {description}{' '}
+        {description}
         {link && (
           <a
             href={link}
@@ -92,14 +92,14 @@ export const Carrousel: FC<CarrouselProps> = ({
               src="/img/android.png"
               width="50"
               height="50"
-              alt="Robô android (Logo Android)"
+              alt="Android Logo"
               loading="lazy"
             />
             <a
               href={android}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Link do(a) ${title} na Play Store`}
+              aria-label="Play Store link"
               className="link"
             >
               Play Store
@@ -110,14 +110,14 @@ export const Carrousel: FC<CarrouselProps> = ({
               src="/img/ios.png"
               width="45"
               height="39"
-              alt="Maça mordida (Logo Apple)"
+              alt="Apple logo"
               loading="lazy"
             />
             <a
               href={ios}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Link do(a) ${title} na  App Store`}
+              aria-label="App Store link"
               className="link"
             >
               App Store
