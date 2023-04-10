@@ -353,7 +353,7 @@ export default function Home() {
           <Carrousel
             title="Broken Out"
             description={t('brokenOut')}
-            link="https://brokenoutt.herokuapp.com/"
+            link="https://broken-out.vercel.app"
             images={[
               {
                 image: '/img/brokenOut1.png',
