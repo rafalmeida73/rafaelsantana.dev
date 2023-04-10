@@ -1,5 +1,6 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import styles from './Carrousel.module.scss';
@@ -15,6 +16,13 @@ export const Carrousel: FC<CarrouselProps> = ({
   android,
   ios,
 }) => {
+  const [mounted, setMounted] = useState(false);
+  const t = useTranslations('Home');
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className={`${styles.container} carouselContent`}>
       <p>{title}</p>
@@ -73,16 +81,19 @@ export const Carrousel: FC<CarrouselProps> = ({
       </div>
       <p className="center-align">
         {description}
-        {link && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={title}
-            className={`${styles.link} link`}
-          >
-            {title}
-          </a>
+        {link && mounted && (
+          <p>
+            {t('projectLink')}
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={title}
+              className={`${styles.link} link`}
+            >
+              {title}
+            </a>
+          </p>
         )}
       </p>
       {app && (

@@ -353,7 +353,7 @@ export default function Home() {
           <Carrousel
             title="Broken Out"
             description={t('brokenOut')}
-            link="https://brokenout.herokuapp.com"
+            link="https://brokenoutt.herokuapp.com/"
             images={[
               {
                 image: '/img/brokenOut1.png',
@@ -385,7 +385,7 @@ export default function Home() {
           <Carrousel
             title="High Performance"
             description={t('highPerformance')}
-            link="https://highperformance.herokuapp.com"
+            link="https://highperformance.herokuapp.com/"
             images={[
               {
                 image: '/img/high1.png',
@@ -413,7 +413,6 @@ export default function Home() {
           <Carrousel
             title="Rafael's Trips"
             description={t('rafaels')}
-            link="https://rafaels-trips.vercel.app"
             images={[
               {
                 image: '/img/trip1.png',

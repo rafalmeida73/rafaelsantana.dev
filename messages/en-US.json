@@ -29,7 +29,7 @@
     "broto": "Broto is an application where you can find machines, implements, energy equipment, irrigation and storage, services, inputs and technologies aimed at precision agriculture.",
     "nt": "Natural da Terra is an ecommerce application in the hortifruit sector, developed with React Native.",
     "ht": "Hortifruti is an ecommerce application in the hortifruit sector, developed with React Native.",
-    "brokenOut": "Broken Out is a website that aims to facilitate access to game information, whether it's mobile, console, or desktop. We provide a huge variety of registered games. However, you can add any game that is not registered, thus helping other users find the desired game on the site. Project link:",
+    "brokenOut": "Broken Out is a website that aims to facilitate access to game information, whether it's mobile, console, or desktop. We provide a huge variety of registered games. However, you can add any game that is not registered, thus helping other users find the desired game on the site.",
     "todoList": "Todo List is an application developed with React native whose main objective is to create a list of tasks, where the user can add, edit, delete and mark as completed",
     "initialPage": "Home page",
     "emptyListPage": "Page with empty list",
@@ -41,11 +41,11 @@
     "signInPage": "Login page",
     "signUpPage": "Registration page",
     "reportsPage": "Reports page",
-    "highPerformance": "The High Performance project is an app aimed at physical educators who want a tool to interact with their students in a simple way. The goal is to build a platform where the user has full control of their students, with a class schedule, as well as a platform where it is also possible to have financial control. Project link:",
-    "rafaels": "Rafael's Trips project is to remember the places I have been around the world! Project link:",
+    "highPerformance": "The High Performance project is an app aimed at physical educators who want a tool to interact with their students in a simple way. The goal is to build a platform where the user has full control of their students, with a class schedule, as well as a platform where it is also possible to have financial control.",
+    "rafaels": "Rafael's Trips project is to remember the places I have been around the world! ",
     "saoPauloPage": "São Paulo page",
     "salvadorPage": "Salvador page",
-    "rhoades": "The Rhoades Esthetics project is a website that aims to present a portfolio of a particular esthetics professional and a blog for students and professionals in the esthetics field. However, in a very simple way that even an enthusiast of the area can understand. Project link:",
+    "rhoades": "The Rhoades Esthetics project is a website that aims to present a portfolio of a particular esthetics professional and a blog for students and professionals in the esthetics field. However, in a very simple way that even an enthusiast of the area can understand.",
     "blogPage": "Blog Page",
     "postsPage": "Post Page",
     "techs": "Some technologies that I use",
@@ -55,7 +55,8 @@
     "enableJs2": "For a better experience on our website, please be sure to enable javascript in your browser.",
     "enableJsSite": "Website that explains how to enable JavaScript in your browser",
     "theme": "Change theme",
-    "backToTheTop": "Back to the top"
+    "backToTheTop": "Back to the top",
+    "projectLink": " Project link: "
   },
   "Notfound": {
     "notFound": "Page not found",
