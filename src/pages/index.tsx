@@ -37,8 +37,8 @@ export default function Home() {
       <main className={`${styles.main} mainHome`}>
         <div className={`${styles.languages} languages`}>
           <ChangeTheme />
-          <LanguageIcon language="pt-br" alt={t('ptLanguage')} />
-          <LanguageIcon language="en-US" alt={t('enLanguage')} />
+          <LanguageIcon language="pt" alt={t('ptLanguage')} />
+          <LanguageIcon language="en" alt={t('enLanguage')} />
         </div>
         <div className={`${styles.content} row container content`}>
           <div className="col s6 m6 l6">

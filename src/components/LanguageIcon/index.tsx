@@ -13,11 +13,11 @@ export const LanguageIcon: FC<IconProps> = ({ language, alt }) => {
   return (
     <Link
       href="/"
-      locale={language === 'en-US' ? 'en-US' : 'pt-br'}
+      locale={language === 'en' ? 'en' : 'pt'}
       className={language === locale ? styles.border : undefined}
     >
       <Image
-        src={language === 'en-US' ? '/img/usa.png' : '/img/brazil.png'}
+        src={language === 'en' ? '/img/usa.png' : '/img/brazil.png'}
         alt={alt}
         width={22}
         height={16}

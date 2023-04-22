@@ -2,12 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ['en-US', "pt-br"],
-    defaultLocale: 'pt-br',
+    locales: ['en', "pt"],
+    defaultLocale: 'pt',
     domains: [
       {
         domain: 'rafaelsantana.dev',
-        defaultLocale: 'pt-br',
+        defaultLocale: 'pt',
       },
     ],
   },

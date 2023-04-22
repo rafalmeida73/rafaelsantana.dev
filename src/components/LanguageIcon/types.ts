@@ -1,4 +1,4 @@
 export interface IconProps {
-  language: 'pt-br' | 'en-US';
+  language: 'pt' | 'en';
   alt: string;
 }
