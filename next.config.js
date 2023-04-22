@@ -10,7 +10,6 @@ const nextConfig = {
         defaultLocale: 'pt-br',
       },
     ],
-    localeDetection: false,
   },
 }
 
