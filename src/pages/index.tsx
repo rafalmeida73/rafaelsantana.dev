@@ -266,7 +266,17 @@ export default function Home() {
               description={{
                 text: 'Rocketseat',
               }}
-              full
+            />
+            <Info
+              title={{
+                text: t('factoryApp'),
+                link: 'https://fabricadeapps.club.hotmart.com/public/user-certificate/1f80f402-d6c6-4216-8c3b-781f3c7843b8/_',
+                ariaLabel: `${t('certificate')} ${t('factoryApp')}`,
+              }}
+              time={`95 ${t('hours')}`}
+              description={{
+                text: 'Sujeito Programador',
+              }}
             />
           </div>
         </section>

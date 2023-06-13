@@ -56,7 +56,8 @@
     "enableJsSite": "Site que explica como habilitar o JavaScript no seu navegador",
     "theme": "Alterar tema",
     "backToTheTop": "Voltar ao topo",
-    "projectLink": " Link do projeto: "
+    "projectLink": " Link do projeto: ",
+    "factoryApp": "Fábrica de aplicativos - React Native"
   },
   "Notfound": {
     "notFound": "Página não encontrada",
