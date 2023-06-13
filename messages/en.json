@@ -57,7 +57,10 @@
     "theme": "Change theme",
     "backToTheTop": "Back to the top",
     "projectLink": " Project link: ",
-    "factoryApp": "App factory - React Native"
+    "factoryApp": "App factory - React Native",
+    "pokemon": "Pokemon is an app developed with React Native, whose main objective is to list all pokemons, show their information and make it possible to search via images.",
+    "pokemonInfoPage": "Page that lists the information of the chosen pokemon.",
+    "splashScreen": "Application loading page."
   },
   "Notfound": {
     "notFound": "Page not found",

@@ -330,6 +330,26 @@ export default function Home() {
 
           <Carrousel
             hasMockup
+            title="Pokemon"
+            description={t('pokemon')}
+            images={[
+              {
+                image: '/img/pokemon1.png',
+                title: t('splashScreen'),
+              },
+              {
+                image: '/img/pokemon2.png',
+                title: t('pokemonInfoPage'),
+              },
+              {
+                image: '/img/pokemon3.png',
+                title: t('initialPage'),
+              },
+            ]}
+          />
+
+          <Carrousel
+            hasMockup
             title="Todo List"
             description={t('todoList')}
             images={[
