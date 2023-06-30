@@ -137,7 +137,7 @@ export default function Home() {
               title={{
                 text: t('mobileDeveloper'),
               }}
-              time={`Set/2021 - ${t('current')}`}
+              time="Set/2021 - Jul/2023"
               description={{
                 text: 'Web Jump',
                 ariaLabel: 'Web Jump',

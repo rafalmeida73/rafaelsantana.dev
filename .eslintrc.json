@@ -80,7 +80,12 @@
           }
         }
       ],
-      "prettier/prettier": "error",
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ],
       "no-unsafe-optional-chaining": "off",
       "import/no-extraneous-dependencies": "off"
     },
