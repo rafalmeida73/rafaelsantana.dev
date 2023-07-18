@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { handleAnalyticsEventTracker } from '@/utils/GA';
+
 import styles from './Info.module.scss';
 import { InfoProps } from './types';
 
@@ -26,6 +28,7 @@ export const Info: FC<InfoProps> = ({
           rel="noopener noreferrer"
           aria-label={title?.ariaLabel}
           className={`${styles.title} title`}
+          onClick={() => handleAnalyticsEventTracker(title?.text)}
         >
           {title?.text}
         </a>
@@ -39,6 +42,7 @@ export const Info: FC<InfoProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={description?.ariaLabel}
+          onClick={() => handleAnalyticsEventTracker(description?.text)}
         >
           {description?.text}
         </a>

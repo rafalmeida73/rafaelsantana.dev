@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { handleAnalyticsEventTracker } from '@/utils/GA';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -15,6 +16,9 @@ export const LanguageIcon: FC<IconProps> = ({ language, alt }) => {
       href="/"
       locale={language === 'en' ? 'en' : 'pt'}
       className={language === locale ? styles.border : undefined}
+      onClick={() =>
+        handleAnalyticsEventTracker(`${language === 'en' ? 'en' : 'pt'}`)
+      }
     >
       <Image
         src={language === 'en' ? '/img/usa.png' : '/img/brazil.png'}

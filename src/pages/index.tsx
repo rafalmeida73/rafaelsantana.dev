@@ -10,6 +10,7 @@ import { Info } from '@/components/Info';
 import { LanguageIcon } from '@/components/LanguageIcon';
 import { LinkedinIcon } from '@/components/LinkedinIcon';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
+import { handleAnalyticsEventTracker } from '@/utils/GA';
 import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -55,6 +56,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
+                onClick={() => handleAnalyticsEventTracker('GitHub')}
               >
                 <GithubIcon />
               </a>
@@ -63,6 +65,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
+                onClick={() => handleAnalyticsEventTracker('WhatsApp')}
               >
                 <WhatsAppIcon />
               </a>
@@ -71,6 +74,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Linkedin"
+                onClick={() => handleAnalyticsEventTracker('Linkedin')}
               >
                 <LinkedinIcon />
               </a>
@@ -80,6 +84,7 @@ export default function Home() {
                 className="waves-effect waves-light btn"
                 href={`mailto:${t('contact')}@rafaelsantana.dev`}
                 aria-label={t('email')}
+                onClick={() => handleAnalyticsEventTracker('Email')}
               >
                 <i className="material-icons left">email</i>
                 {t('email')}
@@ -622,6 +627,7 @@ export default function Home() {
             type="color"
             value={color}
             onChange={e => {
+              handleAnalyticsEventTracker(e.target.value);
               handleChangeColor(e.target.value);
             }}
             aria-labelledby="color"

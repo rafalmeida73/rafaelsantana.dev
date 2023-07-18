@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
+import { handleAnalyticsEventTracker } from '@/utils/GA';
 import { NextPage } from 'next';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -15,10 +16,12 @@ export const ChangeTheme: NextPage = () => {
     if (themeImage === '/img/sun.png') {
       document.documentElement.setAttribute('theme', 'light');
       localStorage.setItem('theme', 'light');
+      handleAnalyticsEventTracker(`light`);
       setThemeImage('/img/moon.png');
     } else {
       document.documentElement.setAttribute('theme', 'dark');
       localStorage.setItem('theme', 'dark');
+      handleAnalyticsEventTracker(`dark`);
       setThemeImage('/img/sun.png');
     }
   }, [themeImage]);

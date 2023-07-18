@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 
+import { handleAnalyticsEventTracker } from '@/utils/GA';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -90,6 +91,7 @@ export const Carrousel: FC<CarrouselProps> = ({
               rel="noopener noreferrer"
               aria-label={title}
               className={`${styles.link} link`}
+              onClick={() => handleAnalyticsEventTracker(`${title} site`)}
             >
               {title}
             </a>
@@ -112,6 +114,7 @@ export const Carrousel: FC<CarrouselProps> = ({
               rel="noopener noreferrer"
               aria-label="Play Store link"
               className="link"
+              onClick={() => handleAnalyticsEventTracker(`${title} Play Store`)}
             >
               Play Store
             </a>
@@ -130,6 +133,7 @@ export const Carrousel: FC<CarrouselProps> = ({
               rel="noopener noreferrer"
               aria-label="App Store link"
               className="link"
+              onClick={() => handleAnalyticsEventTracker(`${title} App Store`)}
             >
               App Store
             </a>
