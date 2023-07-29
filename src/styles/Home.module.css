@@ -1,0 +1,110 @@
+.main {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.main h1 {
+  font-size: 2rem;
+}
+
+.aboutMe {
+  margin-bottom: 7rem;
+}
+
+.aboutMe h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aboutMe p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.education h3 {
+  font-size: 2.5rem;
+}
+
+.jobsAndCourses h3 {
+  font-size: 2.5rem;
+}
+
+.projects {
+  margin-top: 7rem;
+}
+
+.projects h4 {
+  font-size: 2.5rem;
+}
+
+.techs {
+  margin: 8rem 0;
+}
+
+.techs h5 {
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.techs div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2.5rem 1.5rem;
+}
+
+.footer {
+  padding: 5rem;
+  font-size: 1.6rem;
+}
+
+.footer h5{
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.footer div {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.footer input[type='color'] {
+  border: none;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+.footer input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.footer input[type='color']::-webkit-color-swatch {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .main h1 {
+    font-size: 3.5rem;
+  }
+
+  .aboutMe h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .aboutMe p {
+    font-size: 2rem;
+  }
+
+  .techs h5 {
+    margin-bottom: 5rem;
+    font-size: 5rem;
+  }
+}

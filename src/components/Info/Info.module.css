@@ -1,0 +1,29 @@
+.container {
+  text-align: center;
+  margin: 10rem 0;
+}
+
+.container  p {
+  margin-bottom: 1rem;
+}
+
+.container a {
+  display: block !important;
+}
+
+.date {
+  font-family: Inconsolata, monospace;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  margin-top: 0.5rem;
+}
+
+.title {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.description{
+  font-size: 1.6rem;
+}

@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import styles from './LanguageIcon.module.scss';
-import { IconProps } from './types';
+import styles from './LanguageIcon.module.css';
+import { LanguageIconProps } from './types';
 
-export const LanguageIcon: FC<IconProps> = ({ language, alt }) => {
+export const LanguageIcon: FC<LanguageIconProps> = ({ language, alt }) => {
   const { locale } = useRouter();
 
   return (

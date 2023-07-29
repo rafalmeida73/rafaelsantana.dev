@@ -1,11 +1,11 @@
-/* eslint-disable no-unused-expressions */
+'use client';
+
 import { useEffect } from 'react';
 
-import { useTranslations } from 'next-intl';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import { Fab, Tooltip } from '@mui/material';
 
 export const BackToTheTop = () => {
-  const t = useTranslations('Home');
-
   useEffect(() => {
     const handleScroll = () => {
       const mybutton = document?.getElementById?.('backToTheTop');
@@ -13,28 +13,28 @@ export const BackToTheTop = () => {
         document.body.scrollTop > 25 ||
         document.documentElement.scrollTop > 25
       ) {
+        // eslint-disable-next-line no-unused-expressions
         mybutton ? (mybutton.style.display = 'block') : null;
-        mybutton ? (mybutton.style.visibility = 'visible') : null;
       } else {
+        // eslint-disable-next-line no-unused-expressions
         mybutton ? (mybutton.style.display = 'none') : null;
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
-    <div className="fixed-action-btn">
-      <button
-        type="button"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    <Tooltip title="Voltar ao topo" placement="left">
+      <Fab
         id="backToTheTop"
-        className="btn tooltipped"
-        data-position="left"
-        data-tooltip={t('backToTheTop')}
+        color="primary"
+        variant="extended"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Voltar ao topo"
       >
-        <i className="material-icons topIcon">arrow_upward</i>
-      </button>
-    </div>
+        <NavigationIcon />
+      </Fab>
+    </Tooltip>
   );
 };

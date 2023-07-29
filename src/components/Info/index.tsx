@@ -1,51 +1,40 @@
 import { FC } from 'react';
 
-import { handleAnalyticsEventTracker } from '@/utils/GA';
-
-import styles from './Info.module.scss';
+import GALink from '../GALink';
+import styles from './Info.module.css';
 import { InfoProps } from './types';
 
-export const Info: FC<InfoProps> = ({
-  title,
-  description,
-  time,
-  full = false,
-}) => {
+export const Info: FC<InfoProps> = ({ title, description, time }) => {
   return (
-    <div
-      className={
-        full
-          ? `${styles.container} col s12 m12 l12 info`
-          : `${styles.container} col s12 m6 l6 info`
-      }
-    >
+    <div className={styles.container}>
       {!title?.link ? (
-        <p className={`${styles.title} title`}>{title?.text}</p>
+        <p className={styles.title}>{title?.text}</p>
       ) : (
-        <a
+        <GALink
           href={title?.link}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={title?.ariaLabel}
-          className={`${styles.title} title`}
-          onClick={() => handleAnalyticsEventTracker(title?.text)}
+          className={styles.title}
+          gaText={title?.text}
         >
           {title?.text}
-        </a>
+        </GALink>
       )}
-      <p className={`${styles.date} date`}>{time}</p>
+      <p className={styles.date}>{time}</p>
       {!description?.link ? (
-        <p>{description?.text}</p>
+        <p className={styles.description}>{description?.text}</p>
       ) : (
-        <a
+        <GALink
           href={description?.link}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={description?.ariaLabel}
-          onClick={() => handleAnalyticsEventTracker(description?.text)}
+          className={styles.description}
+          gaText={description?.text}
         >
           {description?.text}
-        </a>
+        </GALink>
       )}
     </div>
   );

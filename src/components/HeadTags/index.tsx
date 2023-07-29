@@ -6,8 +6,6 @@ export const HeadTags = () => {
 
   return (
     <Head>
-      <meta property="og:description" content={t('description')} />
-      <meta property="twitter:description" content={t('description')} />
       <meta name="description" content={t('description')} />
 
       <meta

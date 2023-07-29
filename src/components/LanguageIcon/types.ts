@@ -1,4 +1,4 @@
-export interface IconProps {
+export interface LanguageIconProps {
   language: 'pt' | 'en';
   alt: string;
 }

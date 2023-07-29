@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,23 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.4.4",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "13.4.10",
-    "materialize-css": "^1.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.2",
     "next": "13.4.12",
     "next-intl": "^2.19.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lottie": "^1.2.3",
-    "sass": "^1.63.6",
+    "react-stacked-center-carousel": "^1.0.12",
     "typescript": "*"
   },
   "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-next": "13.4.10",
     "@types/gtag.js": "^0.0.12",
     "@types/materialize-css": "^1.0.11",
+    "@types/node": "20.4.4",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
     "@types/react-lottie": "^1.2.6",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
