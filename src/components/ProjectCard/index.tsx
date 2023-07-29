@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import Carousel from '../Carousel';
@@ -17,6 +18,8 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   ios,
   hasMockup,
 }) => {
+  const t = useTranslations('Home');
+
   return (
     <div className={styles.container}>
       <p>{title}</p>
@@ -62,8 +65,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         {description}
         {link && (
           <span>
-            {' '}
-            Link do projeto:{' '}
+            {t('projectLink')}
             <GALink
               href={link}
               target="_blank"

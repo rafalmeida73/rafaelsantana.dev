@@ -23,7 +23,8 @@ const theme = createTheme({
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
-          fontSize: '1.5em',
+          fontSize: '2em',
+          background: '#363636',
         },
       },
     },

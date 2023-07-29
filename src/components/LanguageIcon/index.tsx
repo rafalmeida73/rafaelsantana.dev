@@ -1,24 +1,24 @@
+'use client';
+
 import { FC } from 'react';
 
-import { handleAnalyticsEventTracker } from '@/utils/GA';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useParams } from 'next/navigation';
 
+import GALink from '../GALink';
 import styles from './LanguageIcon.module.css';
 import { LanguageIconProps } from './types';
 
 export const LanguageIcon: FC<LanguageIconProps> = ({ language, alt }) => {
-  const { locale } = useRouter();
+  const { locale } = useParams();
 
   return (
-    <Link
-      href="/"
-      locale={language === 'en' ? 'en' : 'pt'}
+    <GALink
+      nextLink={{
+        page: `/${language}`,
+      }}
+      gaText={language === 'en' ? 'en' : 'pt'}
       className={language === locale ? styles.border : undefined}
-      onClick={() =>
-        handleAnalyticsEventTracker(`${language === 'en' ? 'en' : 'pt'}`)
-      }
     >
       <Image
         src={language === 'en' ? '/img/usa.png' : '/img/brazil.png'}
@@ -26,6 +26,6 @@ export const LanguageIcon: FC<LanguageIconProps> = ({ language, alt }) => {
         width={22}
         height={16}
       />
-    </Link>
+    </GALink>
   );
 };

@@ -4,8 +4,11 @@ import { useEffect } from 'react';
 
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { Fab, Tooltip } from '@mui/material';
+import { useTranslations } from 'next-intl';
 
 export const BackToTheTop = () => {
+  const t = useTranslations('Home');
+
   useEffect(() => {
     const handleScroll = () => {
       const mybutton = document?.getElementById?.('backToTheTop');
@@ -25,13 +28,15 @@ export const BackToTheTop = () => {
   }, []);
 
   return (
-    <Tooltip title="Voltar ao topo" placement="left">
+    <Tooltip title={t('backToTheTop')} placement="left">
       <Fab
         id="backToTheTop"
-        color="primary"
         variant="extended"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label="Voltar ao topo"
+        aria-label={t('backToTheTop')}
+        style={{
+          backgroundColor: 'var(--primary)',
+        }}
       >
         <NavigationIcon />
       </Fab>

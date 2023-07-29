@@ -3,16 +3,24 @@ import { ChangeColor } from '@/components/ChangeColor';
 import { ImageProfile } from '@/components/ImageProfile';
 import { Info } from '@/components/Info';
 import InfoCard from '@/components/InfoCard';
+import { LanguageIcon } from '@/components/LanguageIcon';
 import ProfileInfo from '@/components/ProfileInfo';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Grid, Container, Tooltip } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
+  const t = useTranslations('Home');
+
   return (
     <>
+      <div className={styles.languages}>
+        <LanguageIcon language="pt" alt={t('ptLanguage')} />
+        <LanguageIcon language="en" alt={t('enLanguage')} />
+      </div>
       <main className={styles.main}>
         <Container>
           <Grid container spacing={2}>
@@ -29,17 +37,8 @@ export default function Home() {
       <section className={styles.aboutMe}>
         <Container>
           <InfoCard>
-            <h2>SOBRE MIM</h2>
-            <p>
-              Eu sou o Rafael Santana, Desenvolvedor Mobile e formado em Análise
-              e Desenvolvimento de Sistemas. Focado em desenvolvimento mobile
-              procuro sempre escrever código bem projetado, testável, eficiente
-              usando as melhores práticas atuais em desenvolvimento mobile e
-              aprender novas tecnologias. Se você está procurando um
-              desenvolvedor mobile talentoso e dedicado para ajudar a levar sua
-              ideia de aplicativo para o próximo nível, estou pronto para
-              conversar com você!
-            </p>
+            <h2>{t('aboutMe')}</h2>
+            <p>{t('aboutMeDescription')}</p>
           </InfoCard>
         </Container>
       </section>
@@ -47,7 +46,7 @@ export default function Home() {
       <Container>
         <InfoCard>
           <section className={styles.education}>
-            <h3>Educação</h3>
+            <h3>{t('academicFormation')}</h3>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <Info
@@ -61,22 +60,22 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Análise e Desenvolvimento de Sistemas',
+                    text: t('ads'),
                   }}
                   time="2019 - 2021"
-                  description={{ text: 'Uninove' }}
+                  description={{ text: 'UNINOVE' }}
                 />
               </Grid>
             </Grid>
           </section>
 
           <section className={styles.jobsAndCourses}>
-            <h3>Experiências</h3>
+            <h3>{t('experiences')}</h3>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Web Full Stack Node',
+                    text: t('fullStackDeveloper'),
                   }}
                   time="Fev/2021 - Set/2021"
                   description={{
@@ -89,7 +88,38 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Inglês',
+                    text: t('mobileDeveloper'),
+                  }}
+                  time="Set/2021 - Jul/2023"
+                  description={{
+                    text: 'Web Jump',
+                    ariaLabel: 'Web Jump',
+                    link: 'https://webjump.com.br/',
+                  }}
+                />
+              </Grid>
+            </Grid>
+
+            <h3>{t('courses')}</h3>
+
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <Info
+                  title={{
+                    text: 'Web Full Stack Node',
+                    link: 'https://drive.google.com/file/d/1i-797GuLtIlLSNEbPE6gFIU9RRjS1JIv/view?usp=sharing',
+                    ariaLabel: `${t('certificate')} Web Full Stack Node`,
+                  }}
+                  time={`185 ${t('hours')}`}
+                  description={{
+                    text: 'Digital House',
+                  }}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Info
+                  title={{
+                    text: t('english'),
                   }}
                   time="2016-2018"
                   description={{
@@ -102,9 +132,9 @@ export default function Home() {
                   title={{
                     text: 'Microsoft Excel',
                     link: 'https://www.udemy.com/certificate/UC-J026Q6DE/',
-                    ariaLabel: `Certificado Microsoft Excel`,
+                    ariaLabel: `${t('certificate')} Microsoft Excel`,
                   }}
-                  time="11 horas"
+                  time={`11 ${t('hours')}`}
                   description={{
                     text: 'Udemy',
                   }}
@@ -113,11 +143,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'HTML e CSS na prática',
+                    text: t('htmlAndCss'),
                     link: 'https://drive.google.com/file/d/1b9UyZWeGBx43Gm_q0H6wvBbE9eLNOjwl/view?usp=sharing',
-                    ariaLabel: `Certificado HTML e CSS na prática`,
+                    ariaLabel: `${t('certificate')} ${t('htmlAndCss')}`,
                   }}
-                  time="24 horas"
+                  time={`24 ${t('hours')}`}
                   description={{
                     text: 'Fundação Bradesco',
                   }}
@@ -126,11 +156,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Web Moderno com JavaScript',
+                    text: t('modernWeb'),
                     link: 'https://www.udemy.com/certificate/UC-N4JLM3OE/',
-                    ariaLabel: `Certificado Web Moderno com JavaScript`,
+                    ariaLabel: `${t('certificate')} ${t('modernWeb')}`,
                   }}
-                  time="76 horas"
+                  time={`76 ${t('hours')}`}
                   description={{
                     text: 'Udemy',
                   }}
@@ -139,11 +169,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Banco de dados SQL',
+                    text: t('sql'),
                     link: 'https://www.udemy.com/certificate/UC-6RK781ZN/',
-                    ariaLabel: `Certificado Banco de dados SQL`,
+                    ariaLabel: `${t('certificate')} ${t('sql')}`,
                   }}
-                  time="36 horas"
+                  time={`36 ${t('hours')}`}
                   description={{
                     text: 'Udemy',
                   }}
@@ -152,11 +182,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'React Js do zero ao avançado na pratica',
+                    text: t('reactInPractive'),
                     link: 'https://www.udemy.com/certificate/UC-0YQZQZ7Y/',
-                    ariaLabel: `Certificado React Js do zero ao avançado na pratica`,
+                    ariaLabel: `${t('certificate')} ${t('reactInPractive')}`,
                   }}
-                  time="18 horas"
+                  time={`18 ${t('hours')}`}
                   description={{
                     text: 'Udemy',
                   }}
@@ -165,11 +195,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Aplicativos mobile do zero com React Native e Redux',
+                    text: t('mobileApps'),
                     link: 'https://www.udemy.com/certificate/UC-fec333ae-cced-400f-ad23-e734934d4f71/',
-                    ariaLabel: `Certificado Aplicativos mobile do zero com React Native e Redux`,
+                    ariaLabel: `${t('certificate')} ${t('mobileApps')}`,
                   }}
-                  time="31 horas"
+                  time={`31 ${t('hours')}`}
                   description={{
                     text: 'Udemy',
                   }}
@@ -178,11 +208,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Aprenda NextJS, GraphQL e Leaflet na prática!',
+                    text: t('learnNext'),
                     link: 'https://www.udemy.com/certificate/UC-408ca299-98c6-4653-a05e-8d4a6fb61b21/',
-                    ariaLabel: `Certificado Aprenda NextJS, GraphQL e Leaflet na prática!`,
+                    ariaLabel: `${t('certificate')} ${t('learnNext')}`,
                   }}
-                  time="9 horas"
+                  time={`9 ${t('hours')}`}
                   description={{
                     text: 'Udemy',
                   }}
@@ -191,11 +221,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Trilha React Native do programa Ignite',
+                    text: t('igniteRn'),
                     link: 'https://app.rocketseat.com.br/api/certificates/pdf/fece1ed0-e703-4253-9b39-b667120b0a32',
-                    ariaLabel: `Certificado Trilha React Native do programa Ignite`,
+                    ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
                   }}
-                  time="100 horas"
+                  time={`100 ${t('hours')}`}
                   description={{
                     text: 'Rocketseat',
                   }}
@@ -204,11 +234,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Trilha React do programa Ignite',
+                    text: t('igniteR'),
                     link: 'https://app.rocketseat.com.br/api/certificates/pdf/14a5304c-b6bb-43aa-9d97-db267aa8c405',
-                    ariaLabel: `Certificado Trilha React do programa Ignite`,
+                    ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
                   }}
-                  time="100 horas"
+                  time={`100 ${t('hours')}`}
                   description={{
                     text: 'Rocketseat',
                   }}
@@ -217,11 +247,11 @@ export default function Home() {
               <Grid item xs={12} sm={6}>
                 <Info
                   title={{
-                    text: 'Fábrica de aplicativos - React Native',
+                    text: t('factoryApp'),
                     link: 'https://fabricadeapps.club.hotmart.com/public/user-certificate/1f80f402-d6c6-4216-8c3b-781f3c7843b8/_',
-                    ariaLabel: `Certificado Fábrica de aplicativos - React Native`,
+                    ariaLabel: `${t('certificate')} ${t('factoryApp')}`,
                   }}
-                  time="95 horas"
+                  time={`95 ${t('hours')}`}
                   description={{
                     text: 'Sujeito Programador',
                   }}
@@ -235,10 +265,10 @@ export default function Home() {
       <section className={styles.projects}>
         <Container>
           <InfoCard>
-            <h4>Projetos</h4>
+            <h4>{t('projects')}</h4>
             <ProjectCard
               title="Broto"
-              description="O Broto é um aplicativo, onde você encontra máquinas, implementos, equipamentos de energia, irrigação e armazenagem, serviços, insumos e tecnologias voltadas à agricultura de precisão."
+              description={t('broto')}
               app
               android="https://play.google.com/store/apps/details?id=broto.mobile.app"
               ios="https://apps.apple.com/br/app/broto/id1619769755"
@@ -251,7 +281,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Natural da terra"
-              description="O Natural da terra é um aplicativo de ecommerce do ramo de hortifrutigranjeiro, desenvolvido com React native."
+              description={t('nt')}
               app
               android="https://play.google.com/store/apps/details?id=br.com.naturaldaterra.app"
               ios="https://apps.apple.com/br/app/natural-da-terra-novo/id1583935893"
@@ -264,7 +294,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Hortifruti"
-              description="O Hortifruti é um aplicativo de ecommerce do ramo de hortifrutigranjeiro, desenvolvido com React native."
+              description={t('ht')}
               app
               android="https://play.google.com/store/apps/details?id=br.com.hortifruti.app"
               ios="https://apps.apple.com/br/app/hortifruti-novo/id1583936154"
@@ -278,21 +308,21 @@ export default function Home() {
             <ProjectCard
               hasMockup
               title="Pokemon"
-              description="Pokemon é app desenvolvido com React Native, que tem como objetivo principal, listar todos os pokemons, mostrar suas informações e que seja possível realizar pesquisa via imagens."
+              description={t('pokemon')}
               images={[
                 {
                   image: '/img/pokemon1.png',
-                  text: 'Página de carregamento do aplicativo.',
+                  text: t('splashScreen'),
                   mockup: true,
                 },
                 {
                   image: '/img/pokemon2.png',
-                  text: '"Página que lista as informações do pokemon escolhido."',
+                  text: t('pokemonInfoPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/pokemon3.png',
-                  text: 'Página inical',
+                  text: t('initialPage'),
                   mockup: true,
                 },
               ]}
@@ -300,140 +330,140 @@ export default function Home() {
             <ProjectCard
               hasMockup
               title="Todo List"
-              description="O Todo List é um aplicativo desenvolvido com React native que tem como objetivo principal, criar uma lista de tarefas, onde o usuário pode adicionar, editar, excluir e marcar como concluída"
+              description={t('todoList')}
               images={[
                 {
                   image: '/img/todo1.png',
-                  text: 'Página inical',
+                  text: t('initialPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo2.png',
-                  text: 'Página login',
+                  text: t('signInPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo3.png',
-                  text: 'Página cadastro',
+                  text: t('signUpPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo4.png',
-                  text: 'Página com lista vazia',
+                  text: t('emptyListPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo6.png',
-                  text: 'Página com lista vazia',
+                  text: t('listPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo5.png',
-                  text: 'Página de perfil',
+                  text: t('profilePage'),
                   mockup: true,
                 },
               ]}
             />
             <ProjectCard
               title="Broken Out"
-              description="O Broken Out é um site que visa facilitar o acesso a informações de jogos, seja do celular, console ou desktop. Disponibilizamos uma imensa variedade de jogos cadastrados. Contudo, você pode adicionar qualquer jogo que não esteja cadastrado. Ajudando assim, outros usuários a encontrar o jogo desejado no site."
+              description={t('brokenOut')}
               link="https://broken-out.vercel.app"
               images={[
                 {
                   image: '/img/brokenOut1.png',
-                  text: 'Página inical',
+                  text: t('initialPage'),
                 },
                 {
                   image: '/img/brokenOut2.png',
-                  text: 'Página sobre',
+                  text: t('aboutPage'),
                 },
                 {
                   image: '/img/brokenOut3.png',
-                  text: 'Página jogos',
+                  text: t('gamesPage'),
                 },
                 {
                   image: '/img/brokenOut4.png',
-                  text: 'Página jogo selecionado',
+                  text: t('selectedGamePage'),
                 },
                 {
                   image: '/img/brokenOut5.png',
-                  text: 'Página login',
+                  text: t('signInPage'),
                 },
                 {
                   image: '/img/brokenOut6.png',
-                  text: 'Página cadastro',
+                  text: t('signUpPage'),
                 },
               ]}
             />
             <ProjectCard
               title="High Performance"
-              description="O projeto High Performance é um app voltado para educadores físicos que desejam uma ferramenta de interação com seus alunos de uma maneira simples. O objetivo é a construção de uma plataforma onde o usuário tenha total controle dos seus alunos, com uma agenda de aulas, além de uma plataforma onde seja possível também um controle financeiro."
+              description={t('highPerformance')}
               link="https://highperformance.herokuapp.com/"
               images={[
                 {
                   image: '/img/high1.png',
-                  text: 'Página inical',
+                  text: t('initialPage'),
                 },
                 {
                   image: '/img/high2.png',
-                  text: 'Página sobre',
+                  text: t('aboutPage'),
                 },
                 {
                   image: '/img/high5.png',
-                  text: 'Página de relatórios',
+                  text: t('reportsPage'),
                 },
                 {
                   image: '/img/high4.png',
-                  text: 'Página cadastro',
+                  text: t('signUpPage'),
                 },
                 {
                   image: '/img/high3.png',
-                  text: 'Página login',
+                  text: t('signInPage'),
                 },
               ]}
             />
             <ProjectCard
               title="Rafael's Trips"
-              description="O projeto Rafael's Trips é um para relembrar os lugares que eu já estive pelo mundo!"
+              description={t('rafaels')}
               images={[
                 {
                   image: '/img/trip1.png',
-                  text: 'Página inical',
+                  text: t('initialPage'),
                 },
                 {
                   image: '/img/trip2.png',
-                  text: 'Página Salvador',
+                  text: t('salvadorPage'),
                 },
                 {
                   image: '/img/trip3.png',
-                  text: 'Página São Paulo',
+                  text: t('saoPauloPage'),
                 },
               ]}
             />
             <ProjectCard
               title="Estética Rhoades"
-              description="O projeto Estética Rhoades é um web site que tem como o objetivo de apresentar um portifólio de uma determindada profissional de estética e um blog para estudante e profissionais da área de estética. Contudo, de uma forma bem simples em que até um entusiasta da área possa entender."
+              description={t('rhoades')}
               link="https://estetica-rhoades.vercel.app"
               images={[
                 {
                   image: '/img/rhoades1.png',
-                  text: 'Página inical',
+                  text: t('initialPage'),
                 },
                 {
                   image: '/img/rhoades2.png',
-                  text: 'Página sobre',
+                  text: t('aboutPage'),
                 },
                 {
                   image: '/img/rhoades4.png',
-                  text: 'Página do Blog',
+                  text: t('blogPage'),
                 },
                 {
                   image: '/img/rhoades5.png',
-                  text: 'Página login',
+                  text: t('signInPage'),
                 },
                 {
                   image: '/img/rhoades3.png',
-                  text: 'Página de Post',
+                  text: t('postsPage'),
                 },
               ]}
             />
@@ -442,7 +472,7 @@ export default function Home() {
       </section>
 
       <section className={styles.techs}>
-        <h5>Algumas tecnologias que utilizo</h5>
+        <h5>{t('techs')}</h5>
         <div>
           <Tooltip title="PostgreSQL">
             <Image

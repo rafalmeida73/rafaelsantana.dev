@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+const withNextIntl = require('next-intl/plugin')(
+  // This is the default (also the `src` folder is supported out of the box)
+  './src/i18n.ts'
+);
+
+module.exports = withNextIntl({
   reactStrictMode: true,
   swcMinify: true,
   modularizeImports: {
@@ -7,16 +13,5 @@ const nextConfig = {
       transform: '@mui/icons-material/{{member}}',
     },
   },
-  i18n: {
-    locales: ['en', "pt"],
-    defaultLocale: 'pt',
-    domains: [
-      {
-        domain: 'rafaelsantana.dev',
-        defaultLocale: 'pt',
-      },
-    ],
-  },
-}
+})
 
-module.exports = nextConfig

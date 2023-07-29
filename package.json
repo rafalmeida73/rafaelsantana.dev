@@ -14,7 +14,7 @@
     "@mui/icons-material": "^5.14.1",
     "@mui/material": "^5.14.2",
     "next": "13.4.12",
-    "next-intl": "^2.19.0",
+    "next-intl": "3.0.0-beta.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lottie": "^1.2.3",
@@ -22,8 +22,6 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "eslint": "^8.45.0",
-    "eslint-config-next": "13.4.10",
     "@types/gtag.js": "^0.0.12",
     "@types/materialize-css": "^1.0.11",
     "@types/node": "20.4.4",
@@ -32,7 +30,9 @@
     "@types/react-lottie": "^1.2.6",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "13.4.10",
     "eslint-config-prettier": "^8.7.0",
     "eslint-config-standard-with-typescript": "^36.0.0",
     "eslint-import-resolver-typescript": "^3.5.5",

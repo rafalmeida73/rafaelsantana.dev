@@ -1,20 +1,18 @@
 import EmailIcon from '@mui/icons-material/Email';
 import Button from '@mui/material/Button';
+import { useTranslations } from 'next-intl';
 
 import { ProfileIcons } from '../ProfileIcons';
 import styles from './ProfileInfo.module.css';
 
 export default function ProfileInfo() {
+  const t = useTranslations('Home');
+
   return (
     <div className={styles.container}>
       <h1>Rafael Santana</h1>
-      <p>Zona Sul, São Paulo</p>
-      <p>
-        Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de
-        desafios e projeto para ter um aprendizado constante. Focado atualmente
-        em desenvolvimento mobile que é uma área com bastante novidades e
-        diversos conhecimentos que pretendo aprender.
-      </p>
+      <p>{t('city')}</p>
+      <p>{t('description')}</p>
 
       <div className={styles.icons}>
         <ProfileIcons type="github" />
@@ -25,13 +23,13 @@ export default function ProfileInfo() {
       <Button
         variant="contained"
         startIcon={<EmailIcon />}
-        href="mailto:contato@rafaelsantana.dev"
-        aria-label="email"
+        href={`mailto:${t('contact')}@rafaelsantana.dev`}
+        aria-label={t('email')}
         style={{
           backgroundColor: 'var(--primary)',
         }}
       >
-        Enviar e-mail
+        {t('email')}
       </Button>
     </div>
   );

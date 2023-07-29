@@ -1,12 +1,15 @@
 'use client';
 
-import React, { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 
 import { handleAnalyticsEventTracker } from '@/utils/GA';
+import { useTranslations } from 'next-intl';
 
 export const ChangeColor = () => {
   const [color, setColor] = useState('#3bbbe8');
   const [loading, setLoading] = useState(true);
+
+  const t = useTranslations('Home');
 
   const handleChangeColor = useCallback((colorValue: string) => {
     setColor(colorValue);
@@ -31,7 +34,7 @@ export const ChangeColor = () => {
           handleAnalyticsEventTracker(e.target.value);
         }}
         aria-labelledby="color"
-        aria-label="Alterar cor principal do site"
+        aria-label={t('changeColor')}
       />
     </div>
   );
