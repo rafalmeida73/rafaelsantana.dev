@@ -1,0 +1,42 @@
+.container {
+  height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--light);
+}
+
+.container button {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.container i {
+  color: var(--primary);
+}
+
+.lottieImg {
+  height: 20rem;
+}
+
+@media (min-width: 768px) {
+  .container h1 {
+    font-size: 3rem;
+  }
+
+  .lottieImg {
+    height: 60rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .container h1 {
+    font-size: 3rem;
+  }
+}

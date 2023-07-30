@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './ImageProfile.module.scss';
+import styles from './ImageProfile.module.css';
 import { ImageProfileProps } from './types';
 
 export const ImageProfile: FC<ImageProfileProps> = ({
@@ -8,7 +8,7 @@ export const ImageProfile: FC<ImageProfileProps> = ({
 }) => {
   return (
     <svg
-      className={`${styles.image} imageProfile`}
+      className={styles.image}
       width="567"
       height="870"
       viewBox="0 0 567 870"

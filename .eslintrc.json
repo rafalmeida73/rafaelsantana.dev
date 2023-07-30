@@ -25,6 +25,7 @@
     ],
     "rules": {
       "react/jsx-props-no-spreading": "off",
+      "import/order": "off",
       "camelcase": "off",
       "consistent-return": "off",
       "react/prop-types": "off",

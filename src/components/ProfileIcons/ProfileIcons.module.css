@@ -1,0 +1,7 @@
+.icon:hover path {
+  fill: var(--primary);
+}
+
+.icon:focus path {
+  fill: var(--primary);
+}

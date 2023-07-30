@@ -1,6 +1,9 @@
-/* eslint-disable no-unused-expressions */
+'use client';
+
 import { useEffect } from 'react';
 
+import NavigationIcon from '@mui/icons-material/Navigation';
+import { Fab } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 export const BackToTheTop = () => {
@@ -13,28 +16,28 @@ export const BackToTheTop = () => {
         document.body.scrollTop > 25 ||
         document.documentElement.scrollTop > 25
       ) {
+        // eslint-disable-next-line no-unused-expressions
         mybutton ? (mybutton.style.display = 'block') : null;
-        mybutton ? (mybutton.style.visibility = 'visible') : null;
       } else {
+        // eslint-disable-next-line no-unused-expressions
         mybutton ? (mybutton.style.display = 'none') : null;
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
-    <div className="fixed-action-btn">
-      <button
-        type="button"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        id="backToTheTop"
-        className="btn tooltipped"
-        data-position="left"
-        data-tooltip={t('backToTheTop')}
-      >
-        <i className="material-icons topIcon">arrow_upward</i>
-      </button>
-    </div>
+    <Fab
+      id="backToTheTop"
+      variant="extended"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      aria-label={t('backToTheTop')}
+      style={{
+        backgroundColor: 'var(--primary)',
+      }}
+    >
+      <NavigationIcon />
+    </Fab>
   );
 };
