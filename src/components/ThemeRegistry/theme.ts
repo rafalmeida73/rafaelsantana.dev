@@ -1,8 +1,4 @@
-import { Inter } from 'next/font/google';
-
 import { createTheme } from '@mui/material/styles';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 const theme = createTheme({
   palette: {
@@ -15,9 +11,12 @@ const theme = createTheme({
     text: {
       primary: '#FFFFFF',
     },
+    background: {
+      default: '#141414',
+    },
   },
   typography: {
-    fontFamily: inter.variable,
+    fontFamily: 'Inter, sans-serif',
   },
   components: {
     MuiTooltip: {
