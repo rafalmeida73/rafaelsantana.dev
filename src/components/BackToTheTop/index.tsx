@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 
 import NavigationIcon from '@mui/icons-material/Navigation';
-import { Fab, Tooltip } from '@mui/material';
+import { Fab } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
 export const BackToTheTop = () => {
@@ -28,18 +28,16 @@ export const BackToTheTop = () => {
   }, []);
 
   return (
-    <Tooltip title={t('backToTheTop')} placement="left">
-      <Fab
-        id="backToTheTop"
-        variant="extended"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label={t('backToTheTop')}
-        style={{
-          backgroundColor: 'var(--primary)',
-        }}
-      >
-        <NavigationIcon />
-      </Fab>
-    </Tooltip>
+    <Fab
+      id="backToTheTop"
+      variant="extended"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      aria-label={t('backToTheTop')}
+      style={{
+        backgroundColor: 'var(--primary)',
+      }}
+    >
+      <NavigationIcon />
+    </Fab>
   );
 };
