@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 
 import './globals.css';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
-import { Metadata } from 'next';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata } from 'next/font/google';
 import Script from 'next/script';
@@ -12,10 +11,6 @@ const inconsolata = Inconsolata({
   subsets: ['latin'],
   variable: '--font-Inconsolata',
 });
-
-export const metadata: Metadata = {
-  title: 'Rafael Santana',
-};
 
 export default async function RootLayout({
   children,
@@ -32,6 +27,18 @@ export default async function RootLayout({
     <html lang={locale}>
       <head>
         <title>Rafael Santana</title>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
