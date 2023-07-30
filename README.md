@@ -4,6 +4,6 @@
 
 ####  Tecnologias utilizadas
 - Next
-- Sass
+- Material UI
 
 
