@@ -1,8 +1,10 @@
 .main {
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   display: flex;
+  margin-bottom: 10rem;
+  padding: 2rem;
 }
 
 .main h1 {
