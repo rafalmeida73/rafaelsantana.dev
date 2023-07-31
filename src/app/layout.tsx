@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import './globals.css';
+import '../styles/globals.css';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata } from 'next/font/google';
