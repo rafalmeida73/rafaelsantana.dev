@@ -1,5 +1,6 @@
 import { BackToTheTop } from '@/components/BackToTheTop';
 import { ChangeColor } from '@/components/ChangeColor';
+import GithubInfo from '@/components/GithubInfo';
 import { ImageProfile } from '@/components/ImageProfile';
 import { Info } from '@/components/Info';
 import InfoCard from '@/components/InfoCard';
@@ -588,6 +589,8 @@ export default function Home() {
       <footer className={styles.footer}>
         <h5>Developed by Rafael Santana</h5>
         <ChangeColor />
+
+        <GithubInfo />
       </footer>
 
       <BackToTheTop />
