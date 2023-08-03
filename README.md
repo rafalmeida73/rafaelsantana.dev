@@ -2,8 +2,20 @@
 
 <img src="https://rafaelsantana.dev/img/index.png" />
 
-####  Tecnologias utilizadas
+#### Technologies used
 - Next
 - Material UI
 
+## 🛠 Installation & Set Up
 
+1. Install dependencies
+
+   ```sh
+   yarn
+   ```
+
+4. Start the development server
+
+   ```sh
+   yarn start
+   ```
