@@ -59,8 +59,33 @@
   position: absolute;
 }
 
+.techLists {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.techLists li {
+  font-family: Inconsolata, monospace;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 1rem 0;
+}
+
 @media (min-width: 768px) {
   .description p {
     font-size: 2.5rem;
+  }
+
+  .techLists {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .techLists li {
+    margin: 0;
   }
 }

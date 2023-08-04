@@ -11,4 +11,5 @@ export interface ProjectCardProps {
   android?: string;
   ios?: string;
   hasMockup?: boolean;
+  techs?: Array<string>;
 }

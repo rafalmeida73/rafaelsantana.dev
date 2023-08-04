@@ -17,6 +17,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   android,
   ios,
   hasMockup,
+  techs,
 }) => {
   const t = useTranslations('Home');
 
@@ -79,6 +80,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           </span>
         )}
       </p>
+
+      {techs && (
+        <ul className={styles.techLists}>
+          {techs?.map(tech => <li key={tech}>{tech}</li>)}
+        </ul>
+      )}
+
       {app && (
         <section className={styles.app}>
           <div>
