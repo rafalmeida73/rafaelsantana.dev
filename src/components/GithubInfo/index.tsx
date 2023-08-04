@@ -46,7 +46,7 @@ export const GithubInfo = () => {
                 <StarBorderIcon
                   style={{
                     color: 'var(--primary)',
-                    fontSize: '2rem',
+                    fontSize: '1.5rem',
                   }}
                 />
                 <p>{githubInfo?.stars}</p>
