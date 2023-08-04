@@ -60,19 +60,23 @@
 }
 
 .techLists {
-  list-style-type: none;
+  list-style-type: '|';
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 3rem;
+}
+
+.techLists :nth-child(1) {
+  list-style-type: none;
 }
 
 .techLists li {
   font-family: Inconsolata, monospace;
   font-size: 1.2rem;
   color: var(--primary);
-  margin: 1rem 0;
+  padding: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -81,11 +85,10 @@
   }
 
   .techLists {
-    flex-direction: row;
-    justify-content: space-around;
+    list-style-type: none;
   }
 
   .techLists li {
-    margin: 0;
+    padding: 0;
   }
 }
