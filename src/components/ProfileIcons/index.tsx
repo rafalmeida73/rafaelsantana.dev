@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { useTranslations } from 'next-intl';
+
 import GALink from '../GALink';
 import styles from './ProfileIcons.module.css';
 import { IconProps } from './types';
@@ -8,6 +10,8 @@ export const ProfileIcons: FC<IconProps> = ({
   color = '#fff',
   type = 'linkedin',
 }) => {
+  const t = useTranslations('Links');
+
   if (type === 'github') {
     return (
       <GALink
@@ -116,7 +120,7 @@ export const ProfileIcons: FC<IconProps> = ({
 
   return (
     <GALink
-      href="https://www.linkedin.com/in/rafalmeida73/"
+      href={t('linkedin')}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Linkedin"

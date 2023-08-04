@@ -279,6 +279,13 @@ export default function Home() {
                   text: 'Broto logo',
                 },
               ]}
+              techs={[
+                'React Native',
+                'Styled Components',
+                'Firebase',
+                'Magento',
+                'Graphql',
+              ]}
             />
             <ProjectCard
               title="Natural da terra"
@@ -292,6 +299,13 @@ export default function Home() {
                   text: 'Natural da terra logo',
                 },
               ]}
+              techs={[
+                'React Native',
+                'Styled Components',
+                'Firebase',
+                'Magento',
+                'Graphql',
+              ]}
             />
             <ProjectCard
               title="Hortifruti"
@@ -304,6 +318,13 @@ export default function Home() {
                   image: '/img/ht.png',
                   text: 'Hortifruti Logo',
                 },
+              ]}
+              techs={[
+                'React Native',
+                'Styled Components',
+                'Firebase',
+                'Magento',
+                'Graphql',
               ]}
             />
             <ProjectCard
@@ -327,6 +348,7 @@ export default function Home() {
                   mockup: true,
                 },
               ]}
+              techs={['React Native', 'Styled Components', 'Firebase']}
             />
             <ProjectCard
               hasMockup
@@ -364,6 +386,7 @@ export default function Home() {
                   mockup: true,
                 },
               ]}
+              techs={['React Native', 'Styled Components', 'Firebase']}
             />
             <ProjectCard
               title="Broken Out"
@@ -395,6 +418,7 @@ export default function Home() {
                   text: t('signUpPage'),
                 },
               ]}
+              techs={['React', 'Sass', 'Materialize']}
             />
             <ProjectCard
               title="High Performance"
@@ -422,6 +446,7 @@ export default function Home() {
                   text: t('signInPage'),
                 },
               ]}
+              techs={['HTML5 - ejs', 'Materialize', 'expressJS']}
             />
             <ProjectCard
               title="Rafael's Trips"
@@ -440,6 +465,7 @@ export default function Home() {
                   text: t('saoPauloPage'),
                 },
               ]}
+              techs={['Next Js', 'Styled Components', 'leaflet']}
             />
             <ProjectCard
               title="Estética Rhoades"
@@ -467,6 +493,7 @@ export default function Home() {
                   text: t('postsPage'),
                 },
               ]}
+              techs={['Javascript', 'Firebase', 'Materialize']}
             />
           </InfoCard>
         </Container>
