@@ -43,6 +43,6 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^5.0.0-next-987292815-20221019",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.1"
   }
 }
