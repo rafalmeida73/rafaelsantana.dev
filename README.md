@@ -17,5 +17,5 @@
 4. Start the development server
 
    ```sh
-   yarn start
+   yarn dev
    ```
