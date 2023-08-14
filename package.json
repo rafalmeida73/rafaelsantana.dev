@@ -22,7 +22,7 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/gtag.js": "^0.0.12",
+    "@types/gtag.js": "^0.0.13",
     "@types/materialize-css": "^1.0.11",
     "@types/node": "20.4.4",
     "@types/react": "18.2.17",
