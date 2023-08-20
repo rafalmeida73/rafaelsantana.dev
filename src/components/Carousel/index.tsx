@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 
+import Image from 'next/image';
 import {
   StackedCarousel,
   ResponsiveContainer,
@@ -11,7 +12,7 @@ import { Slide } from '../Slide';
 import styles from './Carousel.module.css';
 import { CarouselProps } from './types';
 
-export const Carousel: FC<CarouselProps> = ({ images }) => {
+export const Carousel: FC<CarouselProps> = ({ images, hasMockup }) => {
   return (
     <div className={styles.container}>
       <ResponsiveContainer
@@ -35,6 +36,25 @@ export const Carousel: FC<CarouselProps> = ({ images }) => {
           );
         }}
       />
+
+      <noscript>
+        <div
+          className={`${styles.carousel} ${hasMockup && styles.carouselMockup}`}
+        >
+          <div className={`${images?.length > 1 && styles.carouselContent}`}>
+            {images?.map(image => (
+              <div className={styles.carouselItem} key={image?.image}>
+                <Image
+                  src={image?.image}
+                  width={200}
+                  height={hasMockup ? 405.02 : 200}
+                  alt={image?.text}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </noscript>
     </div>
   );
 };

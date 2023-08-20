@@ -25,42 +25,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
     <div className={styles.container}>
       <p>{title}</p>
 
-      <Carousel images={images} />
-
-      <noscript>
-        <section>
-          <div className={styles.slides}>
-            {images?.[1] && (
-              <div className={styles.slidesItem}>
-                <Image
-                  src={images?.[1]?.image}
-                  width={200}
-                  height={hasMockup ? 405.02 : 200}
-                  alt={images?.[1]?.text}
-                />
-              </div>
-            )}
-            <div className={`${styles.slidesItem} ${styles.centerImg}`}>
-              <Image
-                src={images?.[0]?.image}
-                width={200}
-                height={hasMockup ? 405.02 : 200}
-                alt={images?.[0]?.text}
-              />
-            </div>
-            {images?.[1] && (
-              <div className={styles.slidesItem}>
-                <Image
-                  src={images?.[2]?.image}
-                  width={200}
-                  height={hasMockup ? 405.02 : 200}
-                  alt={images?.[2]?.text}
-                />
-              </div>
-            )}
-          </div>
-        </section>
-      </noscript>
+      <Carousel images={images} hasMockup={hasMockup} />
 
       <p className={styles.description}>
         {description}

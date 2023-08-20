@@ -1,4 +1,51 @@
 .container {
   width: 100%;
   margin: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carousel {
+  width: 19rem;
+  height: 20rem;
+  margin: 0;
+  -webkit-perspective: 80rem;
+  perspective: 80rem;
+}
+
+.carouselMockup {
+  height: 40.6rem;
+}
+
+.carouselItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carouselItem:nth-child(1) {
+  -webkit-transform: rotateY(0) translateZ(182px);
+  transform: rotateY(0) translateZ(182px);
+}
+
+.carouselItem:nth-child(2) {
+  -webkit-transform: rotateY(120deg) translateZ(182px);
+  transform: rotateY(120deg) translateZ(182px);
+}
+
+.carouselItem:nth-child(3) {
+  -webkit-transform: rotateY(240deg) translateZ(182px);
+  transform: rotateY(240deg) translateZ(182px);
+}
+
+.carouselContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-182px) rotateY(0);
+  transform: translateZ(-182px) rotateY(0);
 }

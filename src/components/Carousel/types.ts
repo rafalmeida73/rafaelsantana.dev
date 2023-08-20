@@ -3,4 +3,5 @@ export interface CarouselProps {
     text: string;
     image: string;
   }>;
+  hasMockup?: boolean;
 }
