@@ -505,10 +505,10 @@
     "@types/jquery" "*"
     cash-dom "*"
 
-"@types/node@20.4.4":
-  version "20.4.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.4.tgz#c79c7cc22c9d0e97a7944954c9e663bcbd92b0cb"
-  integrity sha512-CukZhumInROvLq3+b5gLev+vgpsIqC2D0deQr/yS1WnxvmYLlJXZpaQrQiseMY+6xusl79E04UjWoqyr+t1/Ew==
+"@types/node@20.5.1":
+  version "20.5.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.1.tgz#178d58ee7e4834152b0e8b4d30cbfab578b9bb30"
+  integrity sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -2198,15 +2198,15 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-next-intl@3.0.0-beta.9:
-  version "3.0.0-beta.9"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.0.0-beta.9.tgz#e5b384f9fe1eccdd45fa85b8544488e0e028517e"
-  integrity sha512-pLDcRFWNCGSlYE9Mbm8fD19EtAgRoe5Fg579kr9NYiVZK8FfpObhrDMQzz9gVnqOOOoFUIgVqyQRFtXxmuU2IQ==
+next-intl@3.0.0-beta.10:
+  version "3.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.0.0-beta.10.tgz#67635669d602046dd11e7d598a8e3bc903111ee2"
+  integrity sha512-CTe8oAEl0+PbAJf9Y53DLD2B9fD0BHqjuYn5vmlv1spNEhsth4faN1zBnTUotZqbAucyD9Dv3RKTLE0e4hNrWA==
   dependencies:
     "@formatjs/intl-localematcher" "^0.2.32"
     negotiator "^0.6.3"
     server-only "0.0.1"
-    use-intl "^2.19.0"
+    use-intl "^3.0.0-beta.1"
 
 next@13.4.13:
   version "13.4.13"
@@ -2933,10 +2933,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-intl@^2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.19.0.tgz#8c365391fef4da2456a6063cde0fea077ce0a5a2"
-  integrity sha512-ox3CibkJ/nhAorujY6gwS+jO/dCxn8zzo7Pf5D+OIKQZpBUpQATe2ldlqv9lgc4/PBiKDVUQI/GCG0TBkno3vA==
+use-intl@^3.0.0-beta.1:
+  version "3.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-3.0.0-beta.1.tgz#ca2f8d64d019db436921dc18711c23687ed0c937"
+  integrity sha512-CS6B/r8WKiQFkmc9MxZBSXof9UHB0UGTVnJvFb1d6WrNYz+x+9FBi5gjq2RMUBqKArhzB2PpzHiqC9sNs0m1Aw==
   dependencies:
     "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^9.3.18"
