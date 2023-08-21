@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 'use client';
 
 import { useEffect } from 'react';
@@ -5,6 +7,7 @@ import { useEffect } from 'react';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { Fab } from '@mui/material';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export const BackToTheTop = () => {
   const t = useTranslations('Home');
@@ -12,6 +15,7 @@ export const BackToTheTop = () => {
   useEffect(() => {
     const handleScroll = () => {
       const mybutton = document?.getElementById?.('backToTheTop');
+
       if (
         document.body.scrollTop > 25 ||
         document.documentElement.scrollTop > 25
@@ -28,16 +32,33 @@ export const BackToTheTop = () => {
   }, []);
 
   return (
-    <Fab
-      id="backToTheTop"
-      variant="extended"
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      aria-label={t('backToTheTop')}
-      style={{
-        backgroundColor: 'var(--primary)',
-      }}
-    >
-      <NavigationIcon />
-    </Fab>
+    <>
+      <Fab
+        id="backToTheTop"
+        variant="extended"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label={t('backToTheTop')}
+        style={{
+          backgroundColor: 'var(--primary)',
+        }}
+      >
+        <NavigationIcon />
+      </Fab>
+
+      <noscript>
+        <Link href="#" role="button" aria-label="Scroll to top">
+          <Fab
+            id="backToTheTopNoJS"
+            variant="extended"
+            aria-label={t('backToTheTop')}
+            style={{
+              backgroundColor: 'var(--primary)',
+            }}
+          >
+            <NavigationIcon />
+          </Fab>
+        </Link>
+      </noscript>
+    </>
   );
 };
