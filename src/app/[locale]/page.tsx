@@ -258,6 +258,21 @@ export default function Home() {
                   }}
                 />
               </Grid>
+              <Grid item xs={12}>
+                <Info
+                  title={{
+                    text: t('reactNativePractice'),
+                    link: 'https://www.udemy.com/certificate/UC-89fdfce6-5353-4336-a1f9-b815382adb64/',
+                    ariaLabel: `${t('certificate')} ${t(
+                      'reactNativePractice',
+                    )}`,
+                  }}
+                  time={`41 ${t('hours')}`}
+                  description={{
+                    text: 'Udemy',
+                  }}
+                />
+              </Grid>
             </Grid>
           </section>
         </InfoCard>

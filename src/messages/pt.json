@@ -61,7 +61,8 @@
     "factoryApp": "Fábrica de aplicativos - React Native",
     "pokemon": "Pokemon é app desenvolvido com React Native, que tem como objetivo principal, listar todos os pokemons, mostrar suas informações e que seja possível realizar pesquisa via imagens.",
     "pokemonInfoPage": "Página que lista as informações do pokemon escolhido.",
-    "splashScreen": "Página de carregamento do aplicativo."
+    "splashScreen": "Página de carregamento do aplicativo.",
+    "reactNativePractice": "React Native na Prática: Apps para iOS e Android [2023]"
   },
   "Notfound": {
     "notFound": "Página não encontrada",
