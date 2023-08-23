@@ -46,7 +46,7 @@ export const BackToTheTop = () => {
       </Fab>
 
       <noscript>
-        <Link href="#" role="button" aria-label="Scroll to top">
+        <Link href="#" role="button" aria-label={t('backToTheTop')}>
           <Fab
             id="backToTheTopNoJS"
             variant="extended"

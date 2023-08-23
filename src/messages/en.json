@@ -31,7 +31,7 @@
     "nt": "Natural da Terra is an ecommerce application in the hortifruit sector, developed with React Native.",
     "ht": "Hortifruti is an ecommerce application in the hortifruit sector, developed with React Native.",
     "brokenOut": "Broken Out is a website that aims to facilitate access to game information, whether it's mobile, console, or desktop. We provide a huge variety of registered games. However, you can add any game that is not registered, thus helping other users find the desired game on the site.",
-    "todoList": "Todo List is an application developed with React native whose main objective is to create a list of tasks, where the user can add, edit, delete and mark as completed",
+    "todoList": "Todo List is an application developed with React native whose main objective is to create a list of tasks, where the user can add, edit, delete and mark as completed.",
     "initialPage": "Home page",
     "emptyListPage": "Page with empty list",
     "listPage": "To-do list page",
