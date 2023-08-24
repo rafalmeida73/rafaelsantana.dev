@@ -3,6 +3,7 @@
 import { useCallback, useState, useEffect } from 'react';
 
 import { handleAnalyticsEventTracker } from '@/utils/GA';
+import * as Sentry from '@sentry/nextjs';
 import { useTranslations } from 'next-intl';
 
 export const ChangeColor = () => {
@@ -12,8 +13,14 @@ export const ChangeColor = () => {
   const t = useTranslations('Home');
 
   const handleChangeColor = useCallback((colorValue: string) => {
-    setColor(colorValue);
-    document.documentElement.style.setProperty('--primary', colorValue);
+    try {
+      setColor(colorValue);
+      document.documentElement.style.setProperty('--primary', colorValue);
+    } catch (error) {
+      Sentry.captureException(error);
+      // eslint-disable-next-line no-console
+      console.error(error);
+    }
   }, []);
 
   useEffect(() => {
