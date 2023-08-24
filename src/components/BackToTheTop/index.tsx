@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { Fab } from '@mui/material';
+import * as Sentry from '@sentry/nextjs';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -14,17 +15,23 @@ export const BackToTheTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const mybutton = document?.getElementById?.('backToTheTop');
+      try {
+        const mybutton = document?.getElementById?.('backToTheTop');
 
-      if (
-        document.body.scrollTop > 25 ||
-        document.documentElement.scrollTop > 25
-      ) {
-        // eslint-disable-next-line no-unused-expressions
-        mybutton ? (mybutton.style.display = 'block') : null;
-      } else {
-        // eslint-disable-next-line no-unused-expressions
-        mybutton ? (mybutton.style.display = 'none') : null;
+        if (
+          document.body.scrollTop > 25 ||
+          document.documentElement.scrollTop > 25
+        ) {
+          // eslint-disable-next-line no-unused-expressions
+          mybutton ? (mybutton.style.display = 'block') : null;
+        } else {
+          // eslint-disable-next-line no-unused-expressions
+          mybutton ? (mybutton.style.display = 'none') : null;
+        }
+      } catch (error) {
+        Sentry.captureException(error);
+        // eslint-disable-next-line no-console
+        console.error(error);
       }
     };
 
