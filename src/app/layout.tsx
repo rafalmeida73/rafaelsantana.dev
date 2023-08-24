@@ -45,6 +45,7 @@ export default async function RootLayout({
           sizes="180x180"
           href="apple-touch-icon.png"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={messages?.Document?.description} />
         <meta
           name="keywords"
