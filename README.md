@@ -1,4 +1,4 @@
-# [Portfólio Rafael Santana](https://rafaelsantana.dev/)
+# [Portfolio Rafael Santana](https://rafaelsantana.dev/)
 
 <img src="https://rafaelsantana.dev/img/index.png" />
 
