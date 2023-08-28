@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { Fab } from '@mui/material';
-import * as Sentry from '@sentry/nextjs';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -29,7 +28,6 @@ export const BackToTheTop = () => {
           mybutton ? (mybutton.style.display = 'none') : null;
         }
       } catch (error) {
-        Sentry.captureException(error);
         // eslint-disable-next-line no-console
         console.error(error);
       }

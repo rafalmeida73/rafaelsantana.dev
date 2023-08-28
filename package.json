@@ -13,7 +13,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
-    "@sentry/nextjs": "^7.64.0",
     "next": "13.4.13",
     "next-intl": "3.0.0-beta.12",
     "react": "18.2.0",

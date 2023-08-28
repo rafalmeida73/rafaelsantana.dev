@@ -3,7 +3,6 @@
 import { useCallback, useState, useEffect } from 'react';
 
 import { handleAnalyticsEventTracker } from '@/utils/GA';
-import * as Sentry from '@sentry/nextjs';
 import { useTranslations } from 'next-intl';
 
 export const ChangeColor = () => {
@@ -17,7 +16,6 @@ export const ChangeColor = () => {
       setColor(colorValue);
       document.documentElement.style.setProperty('--primary', colorValue);
     } catch (error) {
-      Sentry.captureException(error);
       // eslint-disable-next-line no-console
       console.error(error);
     }
