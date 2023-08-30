@@ -22,6 +22,14 @@ export const ChangeColor = () => {
   }, []);
 
   useEffect(() => {
+    const primaryColor = getComputedStyle(
+      document.documentElement,
+    ).getPropertyValue('--primary');
+
+    setColor(primaryColor);
+  }, []);
+
+  useEffect(() => {
     setLoading(false);
   }, []);
 
