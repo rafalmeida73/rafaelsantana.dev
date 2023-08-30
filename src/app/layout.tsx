@@ -3,10 +3,14 @@ import { ReactNode } from 'react';
 import '../styles/globals.css';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { Inter, Inconsolata } from 'next/font/google';
+import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+});
 const inconsolata = Inconsolata({
   subsets: ['latin'],
   variable: '--font-Inconsolata',
@@ -78,7 +82,9 @@ export default async function RootLayout({
         {/* SEO */}
         <link rel="canonical" href="https://rafaelsantana.dev/" />
       </head>
-      <body className={`${inter.variable} ${inconsolata.variable}`}>
+      <body
+        className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
+      >
         <ThemeRegistry>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <div>{children}</div>

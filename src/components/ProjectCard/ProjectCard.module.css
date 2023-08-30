@@ -52,7 +52,7 @@
 }
 
 .techLists li {
-  font-family: Inconsolata, monospace;
+  font-family: var(--font-Inconsolata);
   font-size: 1.2rem;
   color: var(--primary);
   padding: 0.5rem;

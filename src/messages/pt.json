@@ -62,7 +62,9 @@
     "pokemon": "Pokemon é app desenvolvido com React Native, que tem como objetivo principal, listar todos os pokemons, mostrar suas informações e que seja possível realizar pesquisa via imagens.",
     "pokemonInfoPage": "Página que lista as informações do pokemon escolhido.",
     "splashScreen": "Página de carregamento do aplicativo.",
-    "reactNativePractice": "React Native na Prática: Apps para iOS e Android [2023]"
+    "reactNativePractice": "React Native na Prática: Apps para iOS e Android [2023]",
+    "profileImageAlt": "Foto de perfil do Rafael Santana"
+
   },
   "Notfound": {
     "notFound": "Página não encontrada",
