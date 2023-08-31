@@ -22,11 +22,16 @@ export const ChangeColor = () => {
   }, []);
 
   useEffect(() => {
-    const primaryColor = getComputedStyle(
-      document.documentElement,
-    ).getPropertyValue('--primary');
+    try {
+      const primaryColor = getComputedStyle(
+        document.documentElement,
+      ).getPropertyValue('--primary');
 
-    setColor(primaryColor);
+      setColor(primaryColor);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(error);
+    }
   }, []);
 
   useEffect(() => {
