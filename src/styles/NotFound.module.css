@@ -9,7 +9,7 @@
 .container h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--light);
+  color: var(--mui-palette-primary-contrastText);
 }
 
 .container button {
@@ -18,7 +18,7 @@
 }
 
 .container i {
-  color: var(--primary);
+  color: var(--mui-palette-primary-main);
 }
 
 .lottieImg {

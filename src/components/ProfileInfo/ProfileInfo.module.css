@@ -21,7 +21,7 @@
 }
 
 .container a {
-  color: var(--light);
+  color: var(--mui-palette-grey-50);
 }
 
 .icons {

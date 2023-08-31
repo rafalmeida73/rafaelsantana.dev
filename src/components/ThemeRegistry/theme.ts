@@ -1,18 +1,23 @@
-import { createTheme } from '@mui/material/styles';
+import { experimental_extendTheme as extendTheme } from '@mui/material/styles';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#3bbbe8',
-    },
-    secondary: {
-      main: '#494c7d',
-    },
-    text: {
-      primary: '#FFFFFF',
-    },
-    background: {
-      default: '#141414',
+const theme = extendTheme({
+  colorSchemes: {
+    light: {
+      palette: {
+        primary: {
+          main: '#3bbbe8',
+        },
+        grey: {
+          '900': '#363636',
+        },
+        text: {
+          primary: '#FFFFFF',
+          secondary: '#141414',
+        },
+        background: {
+          default: '#141414',
+        },
+      },
     },
   },
   typography: {

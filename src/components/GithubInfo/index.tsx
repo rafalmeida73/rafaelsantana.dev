@@ -43,12 +43,7 @@ export const GithubInfo = () => {
           <div>
             {githubInfo?.stars !== 0 && (
               <span>
-                <StarBorderIcon
-                  style={{
-                    color: 'var(--primary)',
-                    fontSize: '1.5rem',
-                  }}
-                />
+                <StarBorderIcon color="primary" fontSize="large" />
                 <p>{githubInfo?.stars}</p>
               </span>
             )}

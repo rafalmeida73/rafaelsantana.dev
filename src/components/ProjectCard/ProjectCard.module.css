@@ -11,7 +11,7 @@
 }
 
 .container a {
-  color: var(--primary);
+  color: var(--mui-palette-primary-main);
 }
 
 .description {
@@ -34,7 +34,7 @@
 }
 
 .link {
-  color: var(--primary);
+  color: var(--mui-palette-primary-main);
   font-size: 1.7rem;
 }
 
@@ -54,7 +54,7 @@
 .techLists li {
   font-family: var(--font-Inconsolata);
   font-size: 1.2rem;
-  color: var(--primary);
+  color: var(--mui-palette-primary-main);
   padding: 0.5rem;
 }
 

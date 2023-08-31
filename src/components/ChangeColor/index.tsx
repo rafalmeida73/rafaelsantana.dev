@@ -14,7 +14,15 @@ export const ChangeColor = () => {
   const handleChangeColor = useCallback((colorValue: string) => {
     try {
       setColor(colorValue);
-      document.documentElement.style.setProperty('--primary', colorValue);
+      document.documentElement.style.setProperty(
+        '--mui-palette-primary-main',
+        colorValue,
+      );
+
+      document.documentElement.style.setProperty(
+        '--mui-palette-primary-dark',
+        colorValue,
+      );
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error);
@@ -25,7 +33,7 @@ export const ChangeColor = () => {
     try {
       const primaryColor = getComputedStyle(
         document.documentElement,
-      ).getPropertyValue('--primary');
+      ).getPropertyValue('--mui-palette-primary-main');
 
       setColor(primaryColor);
     } catch (error) {

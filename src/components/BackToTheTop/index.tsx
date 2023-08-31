@@ -43,9 +43,7 @@ export const BackToTheTop = () => {
         variant="extended"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label={t('backToTheTop')}
-        style={{
-          backgroundColor: 'var(--primary)',
-        }}
+        color="primary"
       >
         <NavigationIcon />
       </Fab>
@@ -56,9 +54,7 @@ export const BackToTheTop = () => {
             id="backToTheTopNoJS"
             variant="extended"
             aria-label={t('backToTheTop')}
-            style={{
-              backgroundColor: 'var(--primary)',
-            }}
+            color="primary"
           >
             <NavigationIcon />
           </Fab>

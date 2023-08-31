@@ -25,9 +25,7 @@ export default function ProfileInfo() {
         startIcon={<EmailIcon />}
         href={`mailto:${t('contact')}@rafaelsantana.dev`}
         aria-label={t('email')}
-        style={{
-          backgroundColor: 'var(--primary)',
-        }}
+        color="primary"
       >
         {t('email')}
       </Button>
