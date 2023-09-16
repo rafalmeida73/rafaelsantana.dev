@@ -5,6 +5,7 @@ import { FC } from 'react';
 import { handleAnalyticsEventTracker } from '@/utils/GA';
 import Link from 'next/link';
 
+import styles from './GALink.module.css';
 import { GALinkProps } from './types';
 
 const GALink: FC<GALinkProps> = ({
@@ -19,6 +20,7 @@ const GALink: FC<GALinkProps> = ({
       <Link
         href={nextLink?.page}
         onClick={() => handleAnalyticsEventTracker(gaText)}
+        className={styles.link}
         {...props}
       >
         {children}
@@ -29,6 +31,7 @@ const GALink: FC<GALinkProps> = ({
     <a
       href={href}
       onClick={() => handleAnalyticsEventTracker(gaText)}
+      className={styles.link}
       {...props}
     >
       {children}
