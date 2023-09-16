@@ -6,7 +6,7 @@
 }
 
 .container h1,
-.container h1 + p{
+.container h1 + p {
   margin-bottom: 1.5rem;
 }
 
@@ -16,6 +16,8 @@
 
 .container :nth-child(3n) {
   text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 
   margin-bottom: 2rem;
 }
