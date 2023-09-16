@@ -97,7 +97,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   padding-right: 2%;
   gap: 0.5rem;
 }
@@ -118,5 +118,9 @@
   .techs h5 {
     margin-bottom: 5rem;
     font-size: 5rem;
+  }
+
+  .languages {
+    padding-top: 3rem;
   }
 }
