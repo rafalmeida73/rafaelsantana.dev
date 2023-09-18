@@ -4,21 +4,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5rem;
 }
 
 .container h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--mui-palette-primary-contrastText);
+  color: var(--text);
 }
 
 .container button {
   margin-top: 2rem;
   font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: var(--primary);
+  border: none;
+  cursor: pointer;
 }
 
 .container i {
-  color: var(--mui-palette-primary-main);
+  color: var(--primary);
 }
 
 .lottieImg {

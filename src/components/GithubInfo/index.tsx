@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { Star } from 'lucide-react';
 
 import GALink from '../GALink';
 import IconFork from '../IconFork';
@@ -43,7 +43,7 @@ export const GithubInfo = () => {
           <div>
             {githubInfo?.stars !== 0 && (
               <span>
-                <StarBorderIcon color="primary" fontSize="large" />
+                <Star size={20} />
                 <p>{githubInfo?.stars}</p>
               </span>
             )}

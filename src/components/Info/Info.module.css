@@ -19,7 +19,7 @@
 }
 
 .title {
-  color: var(--mui-palette-primary-main);
+  color: var(--primary);
   font-weight: bold;
   font-size: 1.8rem;
 }

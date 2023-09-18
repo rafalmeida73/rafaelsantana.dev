@@ -1,7 +1,7 @@
-import EmailIcon from '@mui/icons-material/Email';
-import Button from '@mui/material/Button';
+import { Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
+import GALink from '../GALink';
 import { ProfileIcons } from '../ProfileIcons';
 import styles from './ProfileInfo.module.css';
 
@@ -20,15 +20,14 @@ export default function ProfileInfo() {
         <ProfileIcons type="linkedin" />
       </div>
 
-      <Button
-        variant="contained"
-        startIcon={<EmailIcon />}
+      <GALink
+        gaText="email"
+        className={styles.button}
         href={`mailto:${t('contact')}@rafaelsantana.dev`}
-        aria-label={t('email')}
-        color="primary"
       >
+        <Mail size={20} />
         {t('email')}
-      </Button>
+      </GALink>
     </div>
   );
 }
