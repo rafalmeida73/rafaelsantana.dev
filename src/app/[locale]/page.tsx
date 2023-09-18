@@ -593,7 +593,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <h5>Developed by Rafael Santana</h5>
+        <h5>Copyright © Rafael Santana · 2023 </h5>
         <ChangeColor />
 
         <GithubInfo />
