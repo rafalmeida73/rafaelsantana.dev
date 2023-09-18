@@ -7,11 +7,6 @@ const withNextIntl = require('next-intl/plugin')(
 
 module.exports = withNextIntl({
   reactStrictMode: true,
-  swcMinify: true,
-  modularizeImports: {
-    '@mui/icons-material': {
-      transform: '@mui/icons-material/{{member}}',
-    },
-  },
+  swcMinify: true
 })
 

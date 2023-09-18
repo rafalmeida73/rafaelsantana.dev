@@ -1,5 +1,6 @@
 import { BackToTheTop } from '@/components/BackToTheTop';
 import { ChangeColor } from '@/components/ChangeColor';
+import { Container } from '@/components/Container';
 import GithubInfo from '@/components/GithubInfo';
 import { ImageProfile } from '@/components/ImageProfile';
 import { Info } from '@/components/Info';
@@ -7,7 +8,7 @@ import InfoCard from '@/components/InfoCard';
 import { LanguageIcon } from '@/components/LanguageIcon';
 import ProfileInfo from '@/components/ProfileInfo';
 import { ProjectCard } from '@/components/ProjectCard';
-import { Grid, Container, Tooltip } from '@mui/material';
+import { Tooltip } from '@/components/ToolTip';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -24,14 +25,10 @@ export default function Home() {
       </div>
       <main className={styles.main}>
         <Container>
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <ImageProfile />
-            </Grid>
-            <Grid item xs={6}>
-              <ProfileInfo />
-            </Grid>
-          </Grid>
+          <div className={styles.mainContent}>
+            <ImageProfile />
+            <ProfileInfo />
+          </div>
         </Container>
       </main>
 
@@ -48,232 +45,199 @@ export default function Home() {
         <InfoCard>
           <section className={styles.education}>
             <h3>{t('academicFormation')}</h3>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: 'Full-stack Developer',
-                  }}
-                  time="2022 - 2023"
-                  description={{ text: 'SENAC' }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('ads'),
-                  }}
-                  time="2019 - 2021"
-                  description={{ text: 'UNINOVE' }}
-                />
-              </Grid>
-            </Grid>
+            <div className={styles.educationContent}>
+              <Info
+                title={{
+                  text: 'Full-stack Developer',
+                }}
+                time="2022 - 2023"
+                description={{ text: 'SENAC' }}
+              />
+              <Info
+                title={{
+                  text: t('ads'),
+                }}
+                time="2019 - 2021"
+                description={{ text: 'UNINOVE' }}
+              />
+            </div>
           </section>
 
           <section className={styles.jobsAndCourses}>
             <h3>{t('experiences')}</h3>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('fullStackDeveloper'),
-                  }}
-                  time="Fev/2021 - Set/2021"
-                  description={{
-                    text: 'Valiant Group',
-                    ariaLabel: 'Valiant Group',
-                    link: 'https://valiantgroup.com.br/',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('mobileDeveloper'),
-                  }}
-                  time="Set/2021 - Jul/2023"
-                  description={{
-                    text: 'Web Jump',
-                    ariaLabel: 'Web Jump',
-                    link: 'https://webjump.com.br/',
-                  }}
-                />
-              </Grid>
-            </Grid>
+            <div className={styles.jobsAndCoursesContent}>
+              <Info
+                title={{
+                  text: t('fullStackDeveloper'),
+                }}
+                time="Fev/2021 - Set/2021"
+                description={{
+                  text: 'Valiant Group',
+                  ariaLabel: 'Valiant Group',
+                  link: 'https://valiantgroup.com.br/',
+                }}
+              />
+
+              <Info
+                title={{
+                  text: t('mobileDeveloper'),
+                }}
+                time="Set/2021 - Jul/2023"
+                description={{
+                  text: 'Web Jump',
+                  ariaLabel: 'Web Jump',
+                  link: 'https://webjump.com.br/',
+                }}
+              />
+            </div>
 
             <h3>{t('courses')}</h3>
 
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: 'Web Full Stack Node',
-                    link: 'https://drive.google.com/file/d/1i-797GuLtIlLSNEbPE6gFIU9RRjS1JIv/view?usp=sharing',
-                    ariaLabel: `${t('certificate')} Web Full Stack Node`,
-                  }}
-                  time={`185 ${t('hours')}`}
-                  description={{
-                    text: 'Digital House',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('english'),
-                  }}
-                  time="2016-2018"
-                  description={{
-                    text: 'Cidadão Pró-Mundo',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: 'Microsoft Excel',
-                    link: 'https://www.udemy.com/certificate/UC-J026Q6DE/',
-                    ariaLabel: `${t('certificate')} Microsoft Excel`,
-                  }}
-                  time={`11 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('htmlAndCss'),
-                    link: 'https://drive.google.com/file/d/1b9UyZWeGBx43Gm_q0H6wvBbE9eLNOjwl/view?usp=sharing',
-                    ariaLabel: `${t('certificate')} ${t('htmlAndCss')}`,
-                  }}
-                  time={`24 ${t('hours')}`}
-                  description={{
-                    text: 'Fundação Bradesco',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('modernWeb'),
-                    link: 'https://www.udemy.com/certificate/UC-N4JLM3OE/',
-                    ariaLabel: `${t('certificate')} ${t('modernWeb')}`,
-                  }}
-                  time={`76 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('sql'),
-                    link: 'https://www.udemy.com/certificate/UC-6RK781ZN/',
-                    ariaLabel: `${t('certificate')} ${t('sql')}`,
-                  }}
-                  time={`36 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('reactInPractive'),
-                    link: 'https://www.udemy.com/certificate/UC-0YQZQZ7Y/',
-                    ariaLabel: `${t('certificate')} ${t('reactInPractive')}`,
-                  }}
-                  time={`18 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('mobileApps'),
-                    link: 'https://www.udemy.com/certificate/UC-fec333ae-cced-400f-ad23-e734934d4f71/',
-                    ariaLabel: `${t('certificate')} ${t('mobileApps')}`,
-                  }}
-                  time={`31 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('learnNext'),
-                    link: 'https://www.udemy.com/certificate/UC-408ca299-98c6-4653-a05e-8d4a6fb61b21/',
-                    ariaLabel: `${t('certificate')} ${t('learnNext')}`,
-                  }}
-                  time={`9 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('igniteRn'),
-                    link: 'https://app.rocketseat.com.br/api/certificates/pdf/fece1ed0-e703-4253-9b39-b667120b0a32',
-                    ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
-                  }}
-                  time={`100 ${t('hours')}`}
-                  description={{
-                    text: 'Rocketseat',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('igniteR'),
-                    link: 'https://app.rocketseat.com.br/api/certificates/pdf/14a5304c-b6bb-43aa-9d97-db267aa8c405',
-                    ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
-                  }}
-                  time={`100 ${t('hours')}`}
-                  description={{
-                    text: 'Rocketseat',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Info
-                  title={{
-                    text: t('factoryApp'),
-                    link: 'https://fabricadeapps.club.hotmart.com/public/user-certificate/1f80f402-d6c6-4216-8c3b-781f3c7843b8/_',
-                    ariaLabel: `${t('certificate')} ${t('factoryApp')}`,
-                  }}
-                  time={`95 ${t('hours')}`}
-                  description={{
-                    text: 'Sujeito Programador',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Info
-                  title={{
-                    text: t('reactNativePractice'),
-                    link: 'https://www.udemy.com/certificate/UC-89fdfce6-5353-4336-a1f9-b815382adb64/',
-                    ariaLabel: `${t('certificate')} ${t(
-                      'reactNativePractice',
-                    )}`,
-                  }}
-                  time={`41 ${t('hours')}`}
-                  description={{
-                    text: 'Udemy',
-                  }}
-                />
-              </Grid>
-            </Grid>
+            <div className={styles.coursesContent}>
+              <Info
+                title={{
+                  text: 'Web Full Stack Node',
+                  link: 'https://drive.google.com/file/d/1i-797GuLtIlLSNEbPE6gFIU9RRjS1JIv/view?usp=sharing',
+                  ariaLabel: `${t('certificate')} Web Full Stack Node`,
+                }}
+                time={`185 ${t('hours')}`}
+                description={{
+                  text: 'Digital House',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('english'),
+                }}
+                time="2016-2018"
+                description={{
+                  text: 'Cidadão Pró-Mundo',
+                }}
+              />
+              <Info
+                title={{
+                  text: 'Microsoft Excel',
+                  link: 'https://www.udemy.com/certificate/UC-J026Q6DE/',
+                  ariaLabel: `${t('certificate')} Microsoft Excel`,
+                }}
+                time={`11 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('htmlAndCss'),
+                  link: 'https://drive.google.com/file/d/1b9UyZWeGBx43Gm_q0H6wvBbE9eLNOjwl/view?usp=sharing',
+                  ariaLabel: `${t('certificate')} ${t('htmlAndCss')}`,
+                }}
+                time={`24 ${t('hours')}`}
+                description={{
+                  text: 'Fundação Bradesco',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('modernWeb'),
+                  link: 'https://www.udemy.com/certificate/UC-N4JLM3OE/',
+                  ariaLabel: `${t('certificate')} ${t('modernWeb')}`,
+                }}
+                time={`76 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('sql'),
+                  link: 'https://www.udemy.com/certificate/UC-6RK781ZN/',
+                  ariaLabel: `${t('certificate')} ${t('sql')}`,
+                }}
+                time={`36 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('reactInPractive'),
+                  link: 'https://www.udemy.com/certificate/UC-0YQZQZ7Y/',
+                  ariaLabel: `${t('certificate')} ${t('reactInPractive')}`,
+                }}
+                time={`18 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('mobileApps'),
+                  link: 'https://www.udemy.com/certificate/UC-fec333ae-cced-400f-ad23-e734934d4f71/',
+                  ariaLabel: `${t('certificate')} ${t('mobileApps')}`,
+                }}
+                time={`31 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('learnNext'),
+                  link: 'https://www.udemy.com/certificate/UC-408ca299-98c6-4653-a05e-8d4a6fb61b21/',
+                  ariaLabel: `${t('certificate')} ${t('learnNext')}`,
+                }}
+                time={`9 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('igniteRn'),
+                  link: 'https://app.rocketseat.com.br/api/certificates/pdf/fece1ed0-e703-4253-9b39-b667120b0a32',
+                  ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
+                }}
+                time={`100 ${t('hours')}`}
+                description={{
+                  text: 'Rocketseat',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('igniteR'),
+                  link: 'https://app.rocketseat.com.br/api/certificates/pdf/14a5304c-b6bb-43aa-9d97-db267aa8c405',
+                  ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
+                }}
+                time={`100 ${t('hours')}`}
+                description={{
+                  text: 'Rocketseat',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('factoryApp'),
+                  link: 'https://fabricadeapps.club.hotmart.com/public/user-certificate/1f80f402-d6c6-4216-8c3b-781f3c7843b8/_',
+                  ariaLabel: `${t('certificate')} ${t('factoryApp')}`,
+                }}
+                time={`95 ${t('hours')}`}
+                description={{
+                  text: 'Sujeito Programador',
+                }}
+              />
+            </div>
+            <div className={styles.centerGrid}>
+              <Info
+                title={{
+                  text: t('reactNativePractice'),
+                  link: 'https://www.udemy.com/certificate/UC-89fdfce6-5353-4336-a1f9-b815382adb64/',
+                  ariaLabel: `${t('certificate')} ${t('reactNativePractice')}`,
+                }}
+                time={`41 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+            </div>
           </section>
         </InfoCard>
       </Container>
@@ -517,7 +481,7 @@ export default function Home() {
       <section className={styles.techs}>
         <h5>{t('techs')}</h5>
         <div>
-          <Tooltip title="PostgreSQL">
+          <Tooltip text="PostgreSQL">
             <Image
               src="/img/postgresql.webp"
               width="40"
@@ -526,7 +490,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Html">
+          <Tooltip text="Html">
             <Image
               src="/img/html.webp"
               width="40"
@@ -535,7 +499,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Css">
+          <Tooltip text="Css">
             <Image
               src="/img/css.webp"
               width="40"
@@ -544,7 +508,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="MySql">
+          <Tooltip text="MySql">
             <Image
               src="/img/mysql.webp"
               width="40"
@@ -553,7 +517,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Javascript">
+          <Tooltip text="Javascript">
             <Image
               src="/img/js.png"
               width="40"
@@ -562,7 +526,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="React">
+          <Tooltip text="React">
             <Image
               src="/img/react.webp"
               width="40"
@@ -571,7 +535,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="React Native">
+          <Tooltip text="React Native">
             <Image
               src="/img/reactNative.png"
               width="40"
@@ -580,7 +544,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Typescript">
+          <Tooltip text="Typescript">
             <Image
               src="/img/ts.png"
               width="40"
@@ -589,7 +553,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Firebase">
+          <Tooltip text="Firebase">
             <Image
               src="/img/firebase.webp"
               width="40"
@@ -598,7 +562,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Git">
+          <Tooltip text="Git">
             <Image
               src="/img/git.webp"
               width="40"
@@ -607,7 +571,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Jira">
+          <Tooltip text="Jira">
             <Image
               src="/img/jira.png"
               width="40"
@@ -616,7 +580,7 @@ export default function Home() {
               loading="lazy"
             />
           </Tooltip>
-          <Tooltip title="Figma">
+          <Tooltip text="Figma">
             <Image
               src="/img/figma.png"
               width="40"
@@ -629,7 +593,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <h5>Developed by Rafael Santana</h5>
+        <h5>Copyright © Rafael Santana · 2023 </h5>
         <ChangeColor />
 
         <GithubInfo />

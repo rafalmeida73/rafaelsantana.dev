@@ -7,7 +7,7 @@ import styles from './ProfileIcons.module.css';
 import { IconProps } from './types';
 
 export const ProfileIcons: FC<IconProps> = ({
-  color = '#fff',
+  color = 'var(--text)',
   type = 'linkedin',
 }) => {
   const t = useTranslations('Links');

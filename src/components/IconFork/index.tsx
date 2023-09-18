@@ -4,7 +4,7 @@ export const IconFork = () => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
-    stroke="var(--mui-palette-primary-main)"
+    stroke="var(--primary)"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import '../styles/globals.css';
-import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
+import 'tippy.js/dist/tippy.css';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import Script from 'next/script';
@@ -85,11 +85,9 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
       >
-        <ThemeRegistry>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <div>{children}</div>
-          </NextIntlClientProvider>
-        </ThemeRegistry>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <div>{children}</div>
+        </NextIntlClientProvider>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
           strategy="lazyOnload"
