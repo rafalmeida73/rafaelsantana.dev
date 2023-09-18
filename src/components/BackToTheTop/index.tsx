@@ -4,8 +4,7 @@
 
 import { useEffect } from 'react';
 
-import NavigationIcon from '@mui/icons-material/Navigation';
-import { Fab } from '@mui/material';
+import { ChevronUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -38,26 +37,27 @@ export const BackToTheTop = () => {
 
   return (
     <>
-      <Fab
+      <button
+        type="button"
         id="backToTheTop"
-        variant="extended"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label={t('backToTheTop')}
         color="primary"
       >
-        <NavigationIcon />
-      </Fab>
+        <ChevronUp />
+      </button>
 
       <noscript>
         <Link href="#" role="button" aria-label={t('backToTheTop')}>
-          <Fab
+          <button
+            type="button"
             id="backToTheTopNoJS"
-            variant="extended"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label={t('backToTheTop')}
             color="primary"
           >
-            <NavigationIcon />
-          </Fab>
+            <ChevronUp />
+          </button>
         </Link>
       </noscript>
     </>

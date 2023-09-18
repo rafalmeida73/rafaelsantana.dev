@@ -1,3 +1,10 @@
+:root {
+  --primary: #3bbbe8;
+  --secondary: #363636;
+  --text: #ffffff;
+  --background: #141414;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +14,7 @@
 
 html {
   font-size: 62.5%;
+  color: var(--text);
 }
 
 html,
@@ -20,12 +28,14 @@ body {
   /* background by SVGBackgrounds.com */
   background-attachment: fixed;
   background-size: cover;
+  background-color: var(--background);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-inter), sans-serif;
 }
 
 ::selection {
-  background: var(--mui-palette-primary-main);
+  background: var(--primary);
 }
 
 a {
@@ -35,7 +45,7 @@ a {
 
 * {
   scrollbar-width: auto;
-  scrollbar-color: var(--mui-palette-primary-main) var(--mui-palette-grey-900);
+  scrollbar-color: var(--primary) var(--secondary);
 }
 
 *::-webkit-scrollbar {
@@ -44,11 +54,11 @@ a {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--mui-palette-grey-900);
+  background: var(--secondary);
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--mui-palette-primary-main);
+  background: var(--primary);
   border-radius: 0.5rem;
 }
 
@@ -59,6 +69,17 @@ a {
   right: 2.3rem;
   bottom: 2.3rem;
   z-index: 997;
+  background: var(--primary);
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  box-shadow: none;
+  border: none;
+}
+
+#backToTheTop:hover,
+#backToTheTopNoJS:hover {
+  opacity: 0.8;
 }
 
 #backToTheTopNoJS {
@@ -67,6 +88,12 @@ a {
   right: 2.3rem;
   bottom: 2.3rem;
   z-index: 997;
+  background: var(--primary);
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  box-shadow: none;
+  border: none;
 }
 
 //slider

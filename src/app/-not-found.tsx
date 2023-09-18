@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import Button from '@mui/material/Button';
+import { ChevronLeft } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -49,13 +48,10 @@ const Custom404 = () => {
         />
       </noscript>
       <h1>{t('notFound')}</h1>
-      <Button
-        variant="text"
-        startIcon={<ArrowLeftIcon />}
-        onClick={() => router.back()}
-      >
+      <button type="button" onClick={() => router.back()}>
+        <ChevronLeft />
         {t('goBack')}
-      </Button>
+      </button>
     </main>
   );
 };

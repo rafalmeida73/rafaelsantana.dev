@@ -15,17 +15,17 @@
   text-orientation: upright;
   text-transform: uppercase;
   left: -2rem;
-  color: var(--mui-palette-text-secondary);
-  -webkit-text-stroke: 1.5px var(--mui-palette-primary-main);
+  color: var(--background);
+  -webkit-text-stroke: 1.5px var(--primary);
 }
 
 .container p::after {
   content: attr(data-text);
-  color: var(--mui-palette-text-secondary);
+  color: var(--background);
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-text-stroke: 0 var(--mui-palette-text-secondary);
+  -webkit-text-stroke: 0 var(--background);
   font-family: var(--font-montserrat) !important;
 }
 
@@ -33,7 +33,7 @@
   height: unset;
   max-width: 100%;
   border-radius: 50%;
-  background-color: var(--mui-palette-primary-main);
+  background-color: var(--primary);
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;

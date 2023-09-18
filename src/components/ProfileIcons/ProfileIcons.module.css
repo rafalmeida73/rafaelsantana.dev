@@ -1,7 +1,7 @@
 .icon:hover path {
-  fill: var(--mui-palette-primary-main);
+  fill: var(--primary);
 }
 
 .icon:focus path {
-  fill: var(--mui-palette-primary-main);
+  fill: var(--primary);
 }

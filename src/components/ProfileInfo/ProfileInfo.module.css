@@ -19,7 +19,7 @@
 }
 
 .container a {
-  color: var(--mui-palette-grey-50);
+  color: var(--text);
 }
 
 .icons {
@@ -27,6 +27,23 @@
   justify-content: space-around;
   width: 100%;
   margin-bottom: 3rem;
+}
+
+.button {
+  background-color: var(--primary);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 4vw;
+  border-radius: 0.4rem;
+  padding: 6px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.button svg {
+  margin-right: 0.8rem;
 }
 
 @media (min-width: 768px) {

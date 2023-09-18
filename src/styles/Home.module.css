@@ -26,7 +26,7 @@
 }
 
 .education h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .jobsAndCourses h3 {
@@ -106,6 +106,48 @@
   margin-right: 2rem;
 }
 
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 0px;
+}
+
+.educationContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.jobsAndCoursesContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.coursesContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.centerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .main h1 {
     font-size: 3.5rem;
@@ -122,5 +164,29 @@
 
   .languages {
     padding-top: 3rem;
+  }
+
+  .mainContent {
+    grid-column-gap: 8rem;
+  }
+
+  .educationContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jobsAndCoursesContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coursesContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .education h3 {
+    font-size: 3rem;
   }
 }
