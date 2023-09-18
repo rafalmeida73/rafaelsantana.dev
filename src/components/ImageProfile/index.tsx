@@ -16,6 +16,7 @@ export const ImageProfile = () => {
         src="/img/profileImage.webp"
         alt={t('profileImageAlt')}
         draggable={false}
+        priority
       />
     </div>
   );
