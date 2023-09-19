@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   height: 100%;
   position: relative;
@@ -14,7 +14,7 @@
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-transform: uppercase;
-  left: -2rem;
+  left: -1.5rem;
   color: var(--background);
   -webkit-text-stroke: 1.5px var(--primary);
 }
@@ -44,7 +44,7 @@
 @media (min-width: 768px) {
   .container p {
     font-size: 6vmax;
-    left: -3.5rem;
+    left: -2.5rem;
   }
 }
 
