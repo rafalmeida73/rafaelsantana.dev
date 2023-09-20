@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 import '../styles/globals.css';
-import 'tippy.js/dist/tippy.css';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import Script from 'next/script';

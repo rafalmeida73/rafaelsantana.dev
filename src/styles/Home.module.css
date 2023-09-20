@@ -55,7 +55,7 @@
 .techs div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2.5rem 1.5rem;
@@ -67,7 +67,7 @@
 }
 
 .footer h5 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -188,5 +188,9 @@
 
   .education h3 {
     font-size: 3rem;
+  }
+
+  .footer h5 {
+    font-size: 2rem;
   }
 }
