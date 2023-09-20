@@ -30,7 +30,7 @@ export const Carousel: FC<CarouselProps> = ({ images, hasMockup }) => {
                 images?.length > 3 ? [1, 0.85, 0.7, 0.55] : undefined
               }
               transitionTime={450}
-              fadeDistance={0.7}
+              fadeDistance={0.85}
               disableSwipe={images?.length === 1}
             />
           );
