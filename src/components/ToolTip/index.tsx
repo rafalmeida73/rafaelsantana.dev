@@ -1,14 +1,13 @@
 'use client';
 
-import Tippy from '@tippyjs/react';
-
 import styles from './Tooltip.module.css';
 import { TooltipProps } from './types';
 
-export function Tooltip({ children, text, position = 'bottom' }: TooltipProps) {
+export function Tooltip({ children, text }: TooltipProps) {
   return (
-    <Tippy content={text} placement={position} className={styles.tooltip}>
+    <div className={styles.container}>
       {children}
-    </Tippy>
+      <span className={styles.tooltip}>{text}</span>
+    </div>
   );
 }
