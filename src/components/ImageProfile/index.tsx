@@ -10,8 +10,8 @@ export const ImageProfile = () => {
     <div className={styles.container}>
       <p data-text="Rafael">Rafael</p>
       <Image
-        width={550}
-        height={550}
+        width={650}
+        height={650}
         className={styles.image}
         src="/img/profileImage.webp"
         alt={t('profileImageAlt')}
