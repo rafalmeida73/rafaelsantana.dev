@@ -45,6 +45,7 @@ const Custom404 = () => {
           className="lottieImg"
           height={200}
           width={1000}
+          loading="lazy"
         />
       </noscript>
       <h1>{t('notFound')}</h1>

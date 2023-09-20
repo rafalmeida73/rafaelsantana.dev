@@ -49,6 +49,7 @@ export const Carousel: FC<CarouselProps> = ({ images, hasMockup }) => {
                   width={200}
                   height={hasMockup ? 405.02 : 200}
                   alt={image?.text}
+                  loading="lazy"
                 />
               </div>
             ))}

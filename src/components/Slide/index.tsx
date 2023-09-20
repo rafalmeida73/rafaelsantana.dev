@@ -33,6 +33,7 @@ export const Slide = memo(function slideCard(
             alt={textImage}
             className="cover-image"
             src={coverImage}
+            loading="lazy"
           />
         </div>
       </div>
