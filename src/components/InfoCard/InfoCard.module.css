@@ -1,5 +1,5 @@
 .container {
   background-color: var(--secondary);
-  border-radius: 0.4rem;
-  padding: 1.5rem;
+  border-radius: 1rem;
+  padding: 3rem ;
 }
