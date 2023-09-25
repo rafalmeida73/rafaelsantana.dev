@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
 
-import '../styles/globals.css';
+import '../../styles/globals.css';
+import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
+import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -14,16 +16,25 @@ const inconsolata = Inconsolata({
   variable: '--font-Inconsolata',
 });
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
+  params,
 }: {
   children: ReactNode;
   params: { locale: string };
 }) {
+  const locale = useLocale();
+
+  if (params.locale !== locale) {
+    notFound();
+  }
+
   const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <title>Rafael Santana</title>
         <link
@@ -45,8 +56,16 @@ export default async function RootLayout({
           href="apple-touch-icon.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <meta name="description" content={messages?.Document?.description} />
+        <meta
+          name="keywords"
+          content={`${messages?.Document?.developer}, Mobile, React Js, React Native, Rafael Santana, developer, mobile developer, web developer, front-end developer, back-end developer, full-stack developer `}
+        />
         {/* Open Graph / Facebook */}
+        <meta
+          property="og:description"
+          content={messages?.Document?.description}
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rafaelsantana.dev/" />
         <meta property="og:title" content="Rafael Santana" />
@@ -55,6 +74,10 @@ export default async function RootLayout({
           content="https://rafaelsantana.dev/img/index.png"
         />
         {/* Twitter */}
+        <meta
+          property="twitter:description"
+          content={messages?.Document?.description}
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://rafaelsantana.dev" />
         <meta property="twitter:title" content="Rafael Santana" />
@@ -68,19 +91,21 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
       >
-        <div>{children}</div>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <div>{children}</div>
+        </NextIntlClientProvider>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
           strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="lazyOnload">
           {`
-         window.dataLayer = window.dataLayer || [];
-         function gtag() { dataLayer.push(arguments); }
-         gtag('js', new Date());
-     
-         gtag('config', '${analyticsId}');
-      `}
+           window.dataLayer = window.dataLayer || [];
+           function gtag() { dataLayer.push(arguments); }
+           gtag('js', new Date());
+       
+           gtag('config', '${analyticsId}');
+        `}
         </Script>
       </body>
     </html>

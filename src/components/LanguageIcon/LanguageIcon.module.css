@@ -1,3 +1,7 @@
 .border {
   border-bottom: 0.3rem solid var(--primary);
 }
+
+.image {
+  margin-bottom: 0.2rem;
+}

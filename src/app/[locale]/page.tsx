@@ -9,19 +9,28 @@ import { LanguageIcon } from '@/components/LanguageIcon';
 import ProfileInfo from '@/components/ProfileInfo';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Tooltip } from '@/components/ToolTip';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
   const t = useTranslations('Home');
+  const currentLocale = useLocale();
 
   return (
     <>
       <div className={styles.languages}>
-        <LanguageIcon language="pt" alt={t('ptLanguage')} />
-        <LanguageIcon language="en" alt={t('enLanguage')} />
+        <LanguageIcon
+          currentLocale={currentLocale}
+          language="pt"
+          alt={t('ptLanguage')}
+        />
+        <LanguageIcon
+          currentLocale={currentLocale}
+          language="en"
+          alt={t('enLanguage')}
+        />
       </div>
       <main className={styles.main}>
         <Container>
