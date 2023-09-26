@@ -57,17 +57,17 @@ export default function Home() {
             <div className={styles.educationContent}>
               <Info
                 title={{
-                  text: 'Full-stack Developer',
-                }}
-                time="2022 - 2023"
-                description={{ text: 'SENAC' }}
-              />
-              <Info
-                title={{
                   text: t('ads'),
                 }}
                 time="2019 - 2021"
                 description={{ text: 'UNINOVE' }}
+              />
+              <Info
+                title={{
+                  text: 'Full-stack Developer',
+                }}
+                time="2022 - 2023"
+                description={{ text: 'SENAC' }}
               />
             </div>
           </section>
