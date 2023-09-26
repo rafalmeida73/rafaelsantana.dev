@@ -27,7 +27,7 @@ const Custom404 = () => {
         autoplay
         loop
         src="/lottie/404.json"
-        style={{ height: 'unset', width: 'unset' }}
+        style={{ height: '70vh', width: 'unset' }}
       />
       <noscript>
         <Image
