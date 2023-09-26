@@ -33,10 +33,10 @@ const Custom404 = () => {
         <Image
           src="/img/lottie.gif"
           alt={locale?.notFound}
-          className="lottieImg"
-          height={200}
+          height={500}
           width={1000}
           loading="lazy"
+          className={styles.lottieImg}
         />
       </noscript>
       <h1>{locale?.notFound}</h1>

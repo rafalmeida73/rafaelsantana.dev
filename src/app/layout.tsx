@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 import '../styles/globals.css';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
+import { cookies } from 'next/headers';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -18,12 +19,13 @@ export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
-  params: { locale: string };
 }) {
+  const cookieStore = cookies();
+  const locale = cookieStore?.get('NEXT_LOCALE') || 'pt';
   const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
   return (
-    <html lang="en">
+    <html lang={typeof locale === 'object' ? locale?.value : locale}>
       <head>
         <title>Rafael Santana</title>
         <link
@@ -68,7 +70,7 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
       >
-        <div>{children}</div>
+        {children}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
           strategy="lazyOnload"

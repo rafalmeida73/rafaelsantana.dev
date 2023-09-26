@@ -32,7 +32,8 @@
 }
 
 .lottieImg {
-  height: 20rem;
+  height: 35vh;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -41,7 +42,7 @@
   }
 
   .lottieImg {
-    height: 60rem;
+    height: 60vh;
   }
 }
 
