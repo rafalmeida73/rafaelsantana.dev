@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { Player as Lottie } from '@lottiefiles/react-lottie-player';
 import { ChevronLeft } from 'lucide-react';
@@ -16,19 +16,27 @@ const Custom404 = () => {
   const router = useRouter();
   const pathname = usePathname();
 
+  const [loading, setLoading] = useState(true);
+
   const locale = useMemo(() => {
     if (pathname?.includes('/en')) return en?.Notfound;
     return pt?.Notfound;
   }, [pathname]);
 
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <main className={styles.container}>
-      <Lottie
-        autoplay
-        loop
-        src="/lottie/404.json"
-        style={{ height: '70vh', width: 'unset' }}
-      />
+      {!loading && (
+        <Lottie
+          autoplay
+          loop
+          src="/lottie/404.json"
+          style={{ height: '70vh', width: 'unset' }}
+        />
+      )}
       <noscript>
         <Image
           src="/img/lottie.gif"
