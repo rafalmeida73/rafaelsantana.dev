@@ -3,8 +3,7 @@
 <img src="https://rafaelsantana.dev/img/index.png" />
 
 #### Technologies used
-- Next
-- Material UI
+- Next.Js
 
 ## 🛠 Installation & Set Up
 
