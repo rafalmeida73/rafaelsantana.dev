@@ -191,7 +191,7 @@ a {
 .card-card .video {
   width: 20%;
 }
-.card-card .discription {
+.card-card .description {
   display: flex;
   flex-direction: column;
 }

@@ -100,6 +100,20 @@ export default function Home() {
               />
             </div>
 
+            <div className={styles.centerGrid}>
+              <Info
+                title={{
+                  text: t('fullStackDeveloper'),
+                }}
+                time={`Out/2023 - ${t('current')}`}
+                description={{
+                  text: 'MedSystems',
+                  ariaLabel: 'MedSystems',
+                  link: 'https://www.medsystems.com.br/',
+                }}
+              />
+            </div>
+
             <h3>{t('courses')}</h3>
 
             <div className={styles.coursesContent}>

@@ -26,7 +26,7 @@ export const Slide = memo(function slideCard(
         />
       </div>
       <div className="detail fill">
-        <div className="discription">
+        <div className="description">
           <Image
             width={200}
             height={isMockup ? 406 : 200}
