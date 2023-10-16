@@ -2048,10 +2048,10 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-next-intl@3.0.0-rc.2:
-  version "3.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.0.0-rc.2.tgz#6f4581cfb87dfa05d418827293c395dc49f5216e"
-  integrity sha512-nYDn7ZuIiqX5XrBvf8bqdNVthPkkbbEN4HwDRY2SbFLkjCW2ceyP9aomJ6yfeOa1Vluy3sbEcHw8jJn/qmsqhA==
+next-intl@3.0.0-rc.4:
+  version "3.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.0.0-rc.4.tgz#6b568e88d545f3233d07880eb15980df6dc6ef01"
+  integrity sha512-laPDCJh+WMHHJ6ARI/qI2rvVa4UoPMK2cCqB021h6Iq8ip/+QgAn8AwnGxHODJcWJRNKU/DrR9s8DHH/7naf1g==
   dependencies:
     "@formatjs/intl-localematcher" "^0.2.32"
     negotiator "^0.6.3"
