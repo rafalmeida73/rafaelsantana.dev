@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^9.7.2",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "lucide-react": "^0.279.0",
     "next": "13.5.3",
@@ -38,6 +39,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^5.0.0-next-987292815-20221019",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "webpack": "^5.89.0"
   }
 }

@@ -5,8 +5,14 @@ const withNextIntl = require('next-intl/plugin')(
   './src/i18n.ts'
 );
 
-module.exports = withNextIntl({
+const withPWA = require("@ducanh2912/next-pwa").default({
+  dest: "public",
+});
+
+module.exports = withPWA(
+  withNextIntl({
   reactStrictMode: true,
   swcMinify: true
-})
+  })
+)
 
