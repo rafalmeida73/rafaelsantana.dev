@@ -11,7 +11,7 @@
   "dependencies": {
     "@ducanh2912/next-pwa": "^9.7.2",
     "@lottiefiles/react-lottie-player": "^3.5.3",
-    "lucide-react": "^0.287.0",
+    "lucide-react": "^0.290.0",
     "next": "13.5.4",
     "next-intl": "3.0.0-rc.6",
     "react": "18.2.0",
