@@ -73,25 +73,29 @@ export const ProjectCard: FC<ProjectCardProps> = ({
               Play Store
             </GALink>
           </div>
-          <div>
-            <Image
-              src="/img/ios.png"
-              width="45"
-              height="39"
-              alt="Apple logo"
-              loading="lazy"
-            />
-            <GALink
-              href={ios}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="App Store link"
-              className={styles.link}
-              gaText={`${title} App Store`}
-            >
-              App Store
-            </GALink>
-          </div>
+          
+          {ios && (
+            <div>
+              <Image
+                src="/img/ios.png"
+                width="45"
+                height="39"
+                alt="Apple logo"
+                loading="lazy"
+              />
+              <GALink
+                href={ios}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="App Store link"
+                className={styles.link}
+                gaText={`${title} App Store`}
+              >
+                App Store
+              </GALink>
+            </div>
+          )}
+
         </section>
       )}
     </div>

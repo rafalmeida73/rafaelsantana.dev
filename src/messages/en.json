@@ -63,7 +63,8 @@
     "pokemonInfoPage": "Page that lists the information of the chosen pokemon.",
     "splashScreen": "Application loading page.",
     "reactNativePractice": "React Native in Practice: Apps for iOS and Android [2023]",
-    "profileImageAlt": "Profile image of Rafael Santana"
+    "profileImageAlt": "Profile image of Rafael Santana",
+    "medEntregas": "MedEntregas is a solution that simplifies and improves the way employees manage their deliveries. With an intuitive interface and powerful features, we offer users the ability to track, record, and monitor their deliveries efficiently."
   },
   "Notfound": {
     "notFound": "Page not found",
@@ -73,7 +74,7 @@
     "description": "Mobile Developer, passionate about technology, always looking for challenges and project to have constant learning.",
     "developer": "Developer"
   },
-  "Links":{
+  "Links": {
     "linkedin": "https://www.linkedin.com/in/rafalmeida73/?locale=en_US"
   }
 }

@@ -270,6 +270,23 @@ export default function Home() {
           <InfoCard>
             <h4>{t('projects')}</h4>
             <ProjectCard
+              title="MedEntregas"
+              description={t('medEntregas')}
+              app
+              android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
+              images={[
+                {
+                  image: '/img/medEntregas.png',
+                  text: 'MedEntregas logo',
+                },
+              ]}
+              techs={[
+                'React Native',
+                'Styled Components',
+                'Express.JS',
+              ]}
+            />
+            <ProjectCard
               title="Broto"
               description={t('broto')}
               app
