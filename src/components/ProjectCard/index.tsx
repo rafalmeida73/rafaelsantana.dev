@@ -73,7 +73,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
               Play Store
             </GALink>
           </div>
-          
+
           {ios && (
             <div>
               <Image
@@ -95,7 +95,6 @@ export const ProjectCard: FC<ProjectCardProps> = ({
               </GALink>
             </div>
           )}
-
         </section>
       )}
     </div>

@@ -41,19 +41,65 @@ export const Carousel: FC<CarouselProps> = ({ images, hasMockup }) => {
         <div
           className={`${styles.carousel} ${hasMockup && styles.carouselMockup}`}
         >
-          <div className={`${images?.length > 1 && styles.carouselContent}`}>
-            {images?.map(image => (
-              <div className={styles.carouselItem} key={image?.image}>
+          {images?.length === 1 ? (
+            <div className={styles.onlyOneImage}>
+              <Image
+                src={images?.[0]?.image}
+                width={200}
+                height={hasMockup ? 405.02 : 200}
+                alt={images?.[0]?.text}
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div className={`${images?.length > 1 && styles.carouselContent}`}>
+              <div className={styles.carouselItem}>
+                <div className={`${styles?.cover} ${styles?.fill}`}>
+                  <div
+                    className={`${styles?.cardOverlay} ${styles?.fill} ${
+                      hasMockup && styles?.cardOverlayRadius
+                    }`}
+                    aria-hidden="true"
+                  ></div>
+                </div>
                 <Image
-                  src={image?.image}
-                  width={200}
-                  height={hasMockup ? 405.02 : 200}
-                  alt={image?.text}
+                  src={images?.[2]?.image}
+                  width={170}
+                  height={hasMockup ? 345 : 200}
+                  alt={images?.[2]?.text}
                   loading="lazy"
                 />
               </div>
-            ))}
-          </div>
+
+              <div className={styles.carouselItem}>
+                <Image
+                  src={images?.[0]?.image}
+                  width={200}
+                  height={hasMockup ? 405.02 : 200}
+                  alt={images?.[0]?.text}
+                  loading="lazy"
+                />
+              </div>
+
+              <div className={styles.carouselItem}>
+                <div className={`${styles?.cover} ${styles?.fill}`}>
+                  <div
+                    className={`${styles?.cardOverlay} ${styles?.fill} ${
+                      hasMockup && styles?.cardOverlayRadius
+                    }`}
+                    aria-hidden="true"
+                  ></div>
+                </div>
+                <Image
+                  src={images?.[1]?.image}
+                  width={170}
+                  height={hasMockup ? 345 : 200}
+                  alt={images?.[1]?.text}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </noscript>
     </div>

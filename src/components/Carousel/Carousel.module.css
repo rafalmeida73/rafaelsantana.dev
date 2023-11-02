@@ -1,51 +1,61 @@
 .container {
   width: 100%;
   margin: 6rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .carousel {
-  width: 19rem;
-  height: 20rem;
-  margin: 0;
-  -webkit-perspective: 80rem;
-  perspective: 80rem;
+  width: 100%;
+}
+
+.carouselContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carouselMockup {
   height: 40.6rem;
 }
 
-.carouselItem {
-  position: absolute;
-  top: 0;
-  left: 0;
+.onlyOneImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carouselItem:nth-child(1) {
-  -webkit-transform: rotateY(0) translateZ(182px);
-  transform: rotateY(0) translateZ(182px);
+  position: absolute;
+  left: calc(45% - 10rem);
 }
 
 .carouselItem:nth-child(2) {
-  -webkit-transform: rotateY(120deg) translateZ(182px);
-  transform: rotateY(120deg) translateZ(182px);
+  z-index: 1;
 }
 
 .carouselItem:nth-child(3) {
-  -webkit-transform: rotateY(240deg) translateZ(182px);
-  transform: rotateY(240deg) translateZ(182px);
+  position: absolute;
+  right: calc(45% - 10rem);
 }
 
-.carouselContent {
+.cover {
   position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+.fill {
   width: 100%;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: translateZ(-182px) rotateY(0);
-  transform: translateZ(-182px) rotateY(0);
+  height: 99.5%;
+}
+
+.cardOverlay {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  background-color: #00000099;
+  transition: all 0.3s ease;
+}
+
+.cardOverlayRadius {
+  border-radius: 4rem;
 }

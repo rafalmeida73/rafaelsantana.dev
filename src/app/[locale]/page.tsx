@@ -280,11 +280,7 @@ export default function Home() {
                   text: 'MedEntregas logo',
                 },
               ]}
-              techs={[
-                'React Native',
-                'Styled Components',
-                'Express.JS',
-              ]}
+              techs={['React Native', 'Styled Components', 'Express.JS']}
             />
             <ProjectCard
               title="Broto"

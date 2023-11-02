@@ -4,7 +4,6 @@
     },
     "extends": [
       "plugin:react/recommended",
-      "airbnb",
       "plugin:@typescript-eslint/recommended",
       "plugin:prettier/recommended"
     ],
@@ -21,7 +20,8 @@
       "@typescript-eslint",
       "react-hooks",
       "eslint-plugin-import-helpers",
-      "prettier"
+      "prettier",
+      "import"
     ],
     "rules": {
       "react/jsx-props-no-spreading": "off",
