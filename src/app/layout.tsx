@@ -23,6 +23,7 @@ export default async function RootLayout({
   const cookieStore = cookies();
   const locale = cookieStore?.get('NEXT_LOCALE') || 'pt';
   const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
+  const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
   return (
     <html lang={typeof locale === 'object' ? locale?.value : locale}>
@@ -84,6 +85,21 @@ export default async function RootLayout({
          gtag('config', '${analyticsId}');
       `}
         </Script>
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+         (function(c,l,a,r,i,t,y){
+             c[a] = c[a] || function () { (c[a].q = c[a].q || 
+             []).push(arguments) };
+             t=l.createElement(r);
+             t.async=1;
+             t.src="https://www.clarity.ms/tag/"+i;
+             y=l.getElementsByTagName(r)[0];
+             y.parentNode.insertBefore(t,y);
+         })(window, document, "clarity", "script", "${clarityId}");`,
+          }}
+        />
+        ;
       </body>
     </html>
   );
