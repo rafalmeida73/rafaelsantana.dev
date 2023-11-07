@@ -86,6 +86,7 @@ export default async function RootLayout({
       `}
         </Script>
         <Script
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
          (function(c,l,a,r,i,t,y){
