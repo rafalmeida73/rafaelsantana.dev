@@ -100,7 +100,6 @@ export default async function RootLayout({
          })(window, document, "clarity", "script", "${clarityId}");`,
           }}
         />
-        ;
       </body>
     </html>
   );
