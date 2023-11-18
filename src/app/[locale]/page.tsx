@@ -273,6 +273,7 @@ export default function Home() {
               title="MedEntregas"
               description={t('medEntregas')}
               app
+              ios="https://apps.apple.com/br/app/medentregas/id6471966535"
               android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
               images={[
                 {
