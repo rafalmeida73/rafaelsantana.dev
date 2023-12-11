@@ -4102,10 +4102,10 @@ react-resize-detector@^7.1.2:
   dependencies:
     lodash "^4.17.21"
 
-react-stacked-center-carousel@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/react-stacked-center-carousel/-/react-stacked-center-carousel-1.0.12.tgz#b4528789a93e5646dbc181660ab39263a19e4e22"
-  integrity sha512-4Rt4f5DREWvPxwfCSLPsAyTF7ssWBqNwgS9+YGRWFOrZTUibG7w2GdZxULwAbdlh6/S0vRcwoGmTXl5nlBpbIA==
+react-stacked-center-carousel@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/react-stacked-center-carousel/-/react-stacked-center-carousel-1.0.13.tgz#3d4efa7071fee2312f10c1e49ac5903b5b3742b2"
+  integrity sha512-tZTqSWqJS4LGoG40870GZAHNG0llOYl5zJpyMfdBmVFqf8wJEKesGSlGm7zY6uuK5Ao+wwJZLaL+xIr25zBPxg==
   dependencies:
     react-resize-detector "^7.1.2"
 
