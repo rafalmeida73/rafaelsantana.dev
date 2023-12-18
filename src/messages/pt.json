@@ -64,7 +64,9 @@
     "splashScreen": "Página de carregamento do aplicativo.",
     "reactNativePractice": "React Native na Prática: Apps para iOS e Android [2023]",
     "profileImageAlt": "Foto de perfil do Rafael Santana",
-    "medEntregas": "MedEntregas é uma solução que simplifica e aprimora a forma como os colaboradores gerenciam suas entregas. Com uma interface intuitiva e recursos poderosos, oferecemos aos usuários a capacidade de acompanhar, registrar e monitorar suas entregas de maneira eficiente."
+    "medEntregas": "MedEntregas é uma solução que simplifica e aprimora a forma como os colaboradores gerenciam suas entregas. Com uma interface intuitiva e recursos poderosos, oferecemos aos usuários a capacidade de acompanhar, registrar e monitorar suas entregas de maneira eficiente.",
+    "medInventory": "MedInventory é uma solução que simplifica e aprimora a forma como os nossos colaboradores gerenciam o inventário.",
+    "medSales": "Gerador de propostas de vendas para os colaboradores da Medsystems"
   },
   "Notfound": {
     "notFound": "Página não encontrada",
