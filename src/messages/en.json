@@ -66,7 +66,8 @@
     "profileImageAlt": "Profile image of Rafael Santana",
     "medEntregas": "MedEntregas is a solution that simplifies and improves the way employees manage their deliveries. With an intuitive interface and powerful features, we offer users the ability to track, record, and monitor their deliveries efficiently.",
     "medInventory": "MedInventory is a solution that simplifies and improves the way our employees manage inventory.",
-    "medSales": "Sales proposal generator for Medsystems employees"
+    "medSales": "Sales proposal generator for Medsystems employees",
+    "detox": "Detox & Cucumber: React Native E2E - Beginner to Advanced"
   },
   "Notfound": {
     "notFound": "Page not found",
