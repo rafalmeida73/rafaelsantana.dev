@@ -269,20 +269,7 @@ export default function Home() {
         <Container>
           <InfoCard>
             <h4>{t('projects')}</h4>
-            <ProjectCard
-              title="MedEntregas"
-              description={t('medEntregas')}
-              app
-              ios="https://apps.apple.com/br/app/medentregas/id6471966535"
-              android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
-              images={[
-                {
-                  image: '/img/medEntregas.png',
-                  text: 'MedEntregas logo',
-                },
-              ]}
-              techs={['React Native', 'Styled Components', 'Express.JS']}
-            />
+
             <ProjectCard
               title="Broto"
               description={t('broto')}
@@ -342,6 +329,48 @@ export default function Home() {
                 'Magento',
                 'Graphql',
               ]}
+            />
+            <ProjectCard
+              title="MedInventory"
+              description={t('medInventory')}
+              app
+              ios="https://apps.apple.com/br/app/medinventory/id6474357759"
+              android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.medinventory"
+              images={[
+                {
+                  image: '/img/medInventory.png',
+                  text: 'MedInventory logo',
+                },
+              ]}
+              techs={['React Native', 'Styled Components', 'Express.JS']}
+            />
+            <ProjectCard
+              title="MedEntregas"
+              description={t('medEntregas')}
+              app
+              ios="https://apps.apple.com/br/app/medentregas/id6471966535"
+              android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
+              images={[
+                {
+                  image: '/img/medEntregas.png',
+                  text: 'MedEntregas logo',
+                },
+              ]}
+              techs={['React Native', 'Styled Components', 'Express.JS']}
+            />
+            <ProjectCard
+              title="MedSales"
+              description={t('medSales')}
+              app
+              ios="https://apps.apple.com/br/app/medsales/id6471970812"
+              android="https://play.google.com/store/apps/details?id=com.medsystems.propostasvendas"
+              images={[
+                {
+                  image: '/img/medSales.png',
+                  text: 'MedSales logo',
+                },
+              ]}
+              techs={['React Native', 'Styled Components', 'Express.JS']}
             />
             <ProjectCard
               hasMockup
