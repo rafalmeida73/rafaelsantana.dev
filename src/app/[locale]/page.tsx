@@ -247,8 +247,6 @@ export default function Home() {
                   text: 'Sujeito Programador',
                 }}
               />
-            </div>
-            <div className={styles.centerGrid}>
               <Info
                 title={{
                   text: t('reactNativePractice'),
@@ -256,6 +254,17 @@ export default function Home() {
                   ariaLabel: `${t('certificate')} ${t('reactNativePractice')}`,
                 }}
                 time={`41 ${t('hours')}`}
+                description={{
+                  text: 'Udemy',
+                }}
+              />
+              <Info
+                title={{
+                  text: t('detox'),
+                  link: 'https://www.udemy.com/certificate/UC-900bef79-7462-4ffc-90eb-3516e553a6e1/',
+                  ariaLabel: `${t('certificate')} ${t('detox')}`,
+                }}
+                time={`14 ${t('hours')}`}
                 description={{
                   text: 'Udemy',
                 }}

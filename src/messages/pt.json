@@ -66,7 +66,8 @@
     "profileImageAlt": "Foto de perfil do Rafael Santana",
     "medEntregas": "MedEntregas é uma solução que simplifica e aprimora a forma como os colaboradores gerenciam suas entregas. Com uma interface intuitiva e recursos poderosos, oferecemos aos usuários a capacidade de acompanhar, registrar e monitorar suas entregas de maneira eficiente.",
     "medInventory": "MedInventory é uma solução que simplifica e aprimora a forma como os nossos colaboradores gerenciam o inventário.",
-    "medSales": "Gerador de propostas de vendas para os colaboradores da Medsystems"
+    "medSales": "Gerador de propostas de vendas para os colaboradores da Medsystems",
+    "detox": "Detox & Cucumber: React Native E2E - Beginner to Advanced"
   },
   "Notfound": {
     "notFound": "Página não encontrada",
