@@ -1,4 +1,4 @@
-.main {
+.container {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
   padding: 2rem 0;
 }
 
-.main h1 {
+.container h1 {
   font-size: 2rem;
 }
 
@@ -149,7 +149,7 @@
 }
 
 @media (min-width: 768px) {
-  .main h1 {
+  .container h1 {
     font-size: 3.5rem;
   }
 

@@ -14,7 +14,7 @@ export const ImageProfile = () => {
         height={650}
         className={styles.image}
         src="/img/profileImage.webp"
-        alt={t('profileImageAlt')}
+        alt={t('mainContent.profileImageAlt')}
         draggable={false}
         priority
       />

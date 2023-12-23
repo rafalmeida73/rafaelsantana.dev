@@ -11,8 +11,8 @@ export default function ProfileInfo() {
   return (
     <div className={styles.container}>
       <h1>Rafael Santana</h1>
-      <p>{t('city')}</p>
-      <p>{t('description')}</p>
+      <p>{t('mainContent.city')}</p>
+      <p>{t('mainContent.description')}</p>
 
       <div className={styles.icons}>
         <ProfileIcons type="github" />
@@ -23,10 +23,10 @@ export default function ProfileInfo() {
       <GALink
         gaText="email"
         className={styles.button}
-        href={`mailto:${t('contact')}@rafaelsantana.dev`}
+        href={`mailto:${t('mainContent.contact')}@rafaelsantana.dev`}
       >
         <Mail size={20} />
-        {t('email')}
+        {t('mainContent.email')}
       </GALink>
     </div>
   );

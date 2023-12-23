@@ -19,33 +19,33 @@ export default function Home() {
   const currentLocale = useLocale();
 
   return (
-    <>
+    <main>
       <div className={styles.languages}>
         <LanguageIcon
           currentLocale={currentLocale}
           language="pt"
-          alt={t('ptLanguage')}
+          alt={t('languages.ptLanguage')}
         />
         <LanguageIcon
           currentLocale={currentLocale}
           language="en"
-          alt={t('enLanguage')}
+          alt={t('languages.enLanguage')}
         />
       </div>
-      <main className={styles.main}>
+      <section className={styles.container}>
         <Container>
           <div className={styles.mainContent}>
             <ImageProfile />
             <ProfileInfo />
           </div>
         </Container>
-      </main>
+      </section>
 
       <section className={styles.aboutMe}>
         <Container>
           <InfoCard>
-            <h2>{t('aboutMe')}</h2>
-            <p>{t('aboutMeDescription')}</p>
+            <h2>{t('aboutMe.title')}</h2>
+            <p>{t('aboutMe.description')}</p>
           </InfoCard>
         </Container>
       </section>
@@ -53,11 +53,11 @@ export default function Home() {
       <Container>
         <InfoCard>
           <section className={styles.education}>
-            <h3>{t('academicFormation')}</h3>
+            <h3>{t('academicFormation.title')}</h3>
             <div className={styles.educationContent}>
               <Info
                 title={{
-                  text: t('ads'),
+                  text: t('academicFormation.ads'),
                 }}
                 time="2019 - 2021"
                 description={{ text: 'UNINOVE' }}
@@ -73,11 +73,11 @@ export default function Home() {
           </section>
 
           <section className={styles.jobsAndCourses}>
-            <h3>{t('experiences')}</h3>
+            <h3>{t('experiences.title')}</h3>
             <div className={styles.jobsAndCoursesContent}>
               <Info
                 title={{
-                  text: t('fullStackDeveloper'),
+                  text: t('experiences.valiant.title'),
                 }}
                 time="Fev/2021 - Set/2021"
                 description={{
@@ -89,7 +89,7 @@ export default function Home() {
 
               <Info
                 title={{
-                  text: t('mobileDeveloper'),
+                  text: t('experiences.webjump.title'),
                 }}
                 time="Set/2021 - Jul/2023"
                 description={{
@@ -103,9 +103,9 @@ export default function Home() {
             <div className={styles.centerGrid}>
               <Info
                 title={{
-                  text: t('fullStackDeveloper'),
+                  text: t('experiences.medsystems.title'),
                 }}
-                time={`Out/2023 - ${t('current')}`}
+                time={`Out/2023 - ${t('experiences.medsystems.current')}`}
                 description={{
                   text: 'MedSystems',
                   ariaLabel: 'MedSystems',
@@ -114,23 +114,23 @@ export default function Home() {
               />
             </div>
 
-            <h3>{t('courses')}</h3>
+            <h3>{t('courses.title')}</h3>
 
             <div className={styles.coursesContent}>
               <Info
                 title={{
                   text: 'Web Full Stack Node',
                   link: 'https://drive.google.com/file/d/1i-797GuLtIlLSNEbPE6gFIU9RRjS1JIv/view?usp=sharing',
-                  ariaLabel: `${t('certificate')} Web Full Stack Node`,
+                  ariaLabel: `${t('courses.certificate')} Web Full Stack Node`,
                 }}
-                time={`185 ${t('hours')}`}
+                time={`185 ${t('courses.hours')}`}
                 description={{
                   text: 'Digital House',
                 }}
               />
               <Info
                 title={{
-                  text: t('english'),
+                  text: t('courses.english'),
                 }}
                 time="2016-2018"
                 description={{
@@ -141,130 +141,150 @@ export default function Home() {
                 title={{
                   text: 'Microsoft Excel',
                   link: 'https://www.udemy.com/certificate/UC-J026Q6DE/',
-                  ariaLabel: `${t('certificate')} Microsoft Excel`,
+                  ariaLabel: `${t('courses.certificate')} Microsoft Excel`,
                 }}
-                time={`11 ${t('hours')}`}
+                time={`11 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('htmlAndCss'),
+                  text: t('courses.htmlAndCss'),
                   link: 'https://drive.google.com/file/d/1b9UyZWeGBx43Gm_q0H6wvBbE9eLNOjwl/view?usp=sharing',
-                  ariaLabel: `${t('certificate')} ${t('htmlAndCss')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.htmlAndCss',
+                  )}`,
                 }}
-                time={`24 ${t('hours')}`}
+                time={`24 ${t('courses.hours')}`}
                 description={{
                   text: 'Fundação Bradesco',
                 }}
               />
               <Info
                 title={{
-                  text: t('modernWeb'),
+                  text: t('courses.modernWeb'),
                   link: 'https://www.udemy.com/certificate/UC-N4JLM3OE/',
-                  ariaLabel: `${t('certificate')} ${t('modernWeb')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.modernWeb',
+                  )}`,
                 }}
-                time={`76 ${t('hours')}`}
+                time={`76 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('sql'),
+                  text: t('courses.sql'),
                   link: 'https://www.udemy.com/certificate/UC-6RK781ZN/',
-                  ariaLabel: `${t('certificate')} ${t('sql')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t('courses.sql')}`,
                 }}
-                time={`36 ${t('hours')}`}
+                time={`36 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('reactInPractive'),
+                  text: t('courses.reactInPractive'),
                   link: 'https://www.udemy.com/certificate/UC-0YQZQZ7Y/',
-                  ariaLabel: `${t('certificate')} ${t('reactInPractive')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.reactInPractive',
+                  )}`,
                 }}
-                time={`18 ${t('hours')}`}
+                time={`18 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('mobileApps'),
+                  text: t('courses.mobileApps'),
                   link: 'https://www.udemy.com/certificate/UC-fec333ae-cced-400f-ad23-e734934d4f71/',
-                  ariaLabel: `${t('certificate')} ${t('mobileApps')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.mobileApps',
+                  )}`,
                 }}
-                time={`31 ${t('hours')}`}
+                time={`31 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('learnNext'),
+                  text: t('courses.learnNext'),
                   link: 'https://www.udemy.com/certificate/UC-408ca299-98c6-4653-a05e-8d4a6fb61b21/',
-                  ariaLabel: `${t('certificate')} ${t('learnNext')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.learnNext',
+                  )}`,
                 }}
-                time={`9 ${t('hours')}`}
+                time={`9 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('igniteRn'),
+                  text: t('courses.igniteRn'),
                   link: 'https://app.rocketseat.com.br/api/certificates/pdf/fece1ed0-e703-4253-9b39-b667120b0a32',
-                  ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.igniteRn',
+                  )}`,
                 }}
-                time={`100 ${t('hours')}`}
+                time={`100 ${t('courses.hours')}`}
                 description={{
                   text: 'Rocketseat',
                 }}
               />
               <Info
                 title={{
-                  text: t('igniteR'),
+                  text: t('courses.igniteR'),
                   link: 'https://app.rocketseat.com.br/api/certificates/pdf/14a5304c-b6bb-43aa-9d97-db267aa8c405',
-                  ariaLabel: `${t('certificate')} ${t('igniteRn')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.igniteRn',
+                  )}`,
                 }}
-                time={`100 ${t('hours')}`}
+                time={`100 ${t('courses.hours')}`}
                 description={{
                   text: 'Rocketseat',
                 }}
               />
               <Info
                 title={{
-                  text: t('factoryApp'),
+                  text: t('courses.factoryApp'),
                   link: 'https://fabricadeapps.club.hotmart.com/public/user-certificate/1f80f402-d6c6-4216-8c3b-781f3c7843b8/_',
-                  ariaLabel: `${t('certificate')} ${t('factoryApp')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.factoryApp',
+                  )}`,
                 }}
-                time={`95 ${t('hours')}`}
+                time={`95 ${t('courses.hours')}`}
                 description={{
                   text: 'Sujeito Programador',
                 }}
               />
               <Info
                 title={{
-                  text: t('reactNativePractice'),
+                  text: t('courses.reactNativePractice'),
                   link: 'https://www.udemy.com/certificate/UC-89fdfce6-5353-4336-a1f9-b815382adb64/',
-                  ariaLabel: `${t('certificate')} ${t('reactNativePractice')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.reactNativePractice',
+                  )}`,
                 }}
-                time={`41 ${t('hours')}`}
+                time={`41 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
               />
               <Info
                 title={{
-                  text: t('detox'),
+                  text: t('courses.detox'),
                   link: 'https://www.udemy.com/certificate/UC-900bef79-7462-4ffc-90eb-3516e553a6e1/',
-                  ariaLabel: `${t('certificate')} ${t('detox')}`,
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.detox',
+                  )}`,
                 }}
-                time={`14 ${t('hours')}`}
+                time={`14 ${t('courses.hours')}`}
                 description={{
                   text: 'Udemy',
                 }}
@@ -277,11 +297,11 @@ export default function Home() {
       <section className={styles.projects}>
         <Container>
           <InfoCard>
-            <h4>{t('projects')}</h4>
+            <h4>{t('projects.title')}</h4>
 
             <ProjectCard
               title="Broto"
-              description={t('broto')}
+              description={t('projects.broto.description')}
               app
               android="https://play.google.com/store/apps/details?id=broto.mobile.app"
               ios="https://apps.apple.com/br/app/broto/id1619769755"
@@ -301,7 +321,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Natural da terra"
-              description={t('nt')}
+              description={t('projects.nt.description')}
               app
               android="https://play.google.com/store/apps/details?id=br.com.naturaldaterra.app"
               ios="https://apps.apple.com/br/app/natural-da-terra-novo/id1583935893"
@@ -321,7 +341,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Hortifruti"
-              description={t('ht')}
+              description={t('projects.ht.description')}
               app
               android="https://play.google.com/store/apps/details?id=br.com.hortifruti.app"
               ios="https://apps.apple.com/br/app/hortifruti-novo/id1583936154"
@@ -341,7 +361,7 @@ export default function Home() {
             />
             <ProjectCard
               title="MedInventory"
-              description={t('medInventory')}
+              description={t('projects.medInventory.description')}
               app
               ios="https://apps.apple.com/br/app/medinventory/id6474357759"
               android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.medinventory"
@@ -355,7 +375,7 @@ export default function Home() {
             />
             <ProjectCard
               title="MedEntregas"
-              description={t('medEntregas')}
+              description={t('projects.medEntregas.description')}
               app
               ios="https://apps.apple.com/br/app/medentregas/id6471966535"
               android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
@@ -369,7 +389,7 @@ export default function Home() {
             />
             <ProjectCard
               title="MedSales"
-              description={t('medSales')}
+              description={t('projects.medSales.description')}
               app
               ios="https://apps.apple.com/br/app/medsales/id6471970812"
               android="https://play.google.com/store/apps/details?id=com.medsystems.propostasvendas"
@@ -384,21 +404,21 @@ export default function Home() {
             <ProjectCard
               hasMockup
               title="Pokemon"
-              description={t('pokemon')}
+              description={t('projects.pokemon.description')}
               images={[
                 {
                   image: '/img/pokemon1.png',
-                  text: t('splashScreen'),
+                  text: t('projects.splashScreen'),
                   mockup: true,
                 },
                 {
                   image: '/img/pokemon2.png',
-                  text: t('pokemonInfoPage'),
+                  text: t('projects.pokemon.infoPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/pokemon3.png',
-                  text: t('initialPage'),
+                  text: t('projects.initialPage'),
                   mockup: true,
                 },
               ]}
@@ -407,36 +427,36 @@ export default function Home() {
             <ProjectCard
               hasMockup
               title="Todo List"
-              description={t('todoList')}
+              description={t('projects.todoList.description')}
               images={[
                 {
                   image: '/img/todo1.png',
-                  text: t('initialPage'),
+                  text: t('projects.initialPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo2.png',
-                  text: t('signInPage'),
+                  text: t('projects.signInPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo3.png',
-                  text: t('signUpPage'),
+                  text: t('projects.signUpPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo4.png',
-                  text: t('emptyListPage'),
+                  text: t('projects.todoList.emptyListPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo6.png',
-                  text: t('listPage'),
+                  text: t('projects.todoList.listPage'),
                   mockup: true,
                 },
                 {
                   image: '/img/todo5.png',
-                  text: t('profilePage'),
+                  text: t('projects.todoList.profilePage'),
                   mockup: true,
                 },
               ]}
@@ -444,107 +464,107 @@ export default function Home() {
             />
             <ProjectCard
               title="Broken Out"
-              description={t('brokenOut')}
+              description={t('projects.brokenOut.description')}
               link="https://broken-out.vercel.app"
               images={[
                 {
                   image: '/img/brokenOut1.png',
-                  text: t('initialPage'),
+                  text: t('projects.initialPage'),
                 },
                 {
                   image: '/img/brokenOut2.png',
-                  text: t('aboutPage'),
+                  text: t('projects.aboutPage'),
                 },
                 {
                   image: '/img/brokenOut3.png',
-                  text: t('gamesPage'),
+                  text: t('projects.brokenOut.gamesPage'),
                 },
                 {
                   image: '/img/brokenOut4.png',
-                  text: t('selectedGamePage'),
+                  text: t('projects.brokenOut.selectedGamePage'),
                 },
                 {
                   image: '/img/brokenOut5.png',
-                  text: t('signInPage'),
+                  text: t('projects.signInPage'),
                 },
                 {
                   image: '/img/brokenOut6.png',
-                  text: t('signUpPage'),
+                  text: t('projects.signUpPage'),
                 },
               ]}
               techs={['React', 'Sass', 'Materialize']}
             />
             <ProjectCard
               title="High Performance"
-              description={t('highPerformance')}
+              description={t('projects.highPerformance.description')}
               link="https://highperformance.herokuapp.com/"
               images={[
                 {
                   image: '/img/high1.png',
-                  text: t('initialPage'),
+                  text: t('projects.initialPage'),
                 },
                 {
                   image: '/img/high2.png',
-                  text: t('aboutPage'),
+                  text: t('projects.aboutPage'),
                 },
                 {
                   image: '/img/high5.png',
-                  text: t('reportsPage'),
+                  text: t('projects.highPerformance.reportsPage'),
                 },
                 {
                   image: '/img/high4.png',
-                  text: t('signUpPage'),
+                  text: t('projects.signUpPage'),
                 },
                 {
                   image: '/img/high3.png',
-                  text: t('signInPage'),
+                  text: t('projects.signInPage'),
                 },
               ]}
               techs={['HTML5 - ejs', 'Materialize', 'expressJS']}
             />
             <ProjectCard
               title="Rafael's Trips"
-              description={t('rafaels')}
+              description={t('projects.rafaels.description')}
               images={[
                 {
                   image: '/img/trip1.png',
-                  text: t('initialPage'),
+                  text: t('projects.initialPage'),
                 },
                 {
                   image: '/img/trip2.png',
-                  text: t('salvadorPage'),
+                  text: t('projects.rafaels.salvadorPage'),
                 },
                 {
                   image: '/img/trip3.png',
-                  text: t('saoPauloPage'),
+                  text: t('projects.rafaels.saoPauloPage'),
                 },
               ]}
               techs={['Next Js', 'Styled Components', 'leaflet']}
             />
             <ProjectCard
               title="Estética Rhoades"
-              description={t('rhoades')}
+              description={t('projects.rhoades.description')}
               link="https://estetica-rhoades.vercel.app"
               images={[
                 {
                   image: '/img/rhoades1.png',
-                  text: t('initialPage'),
+                  text: t('projects.initialPage'),
                 },
                 {
                   image: '/img/rhoades2.png',
-                  text: t('aboutPage'),
+                  text: t('projects.aboutPage'),
                 },
                 {
                   image: '/img/rhoades4.png',
-                  text: t('blogPage'),
+                  text: t('projects.rhoades.blogPage'),
                 },
                 {
                   image: '/img/rhoades5.png',
-                  text: t('signInPage'),
+                  text: t('projects.signInPage'),
                 },
                 {
                   image: '/img/rhoades3.png',
-                  text: t('postsPage'),
+                  text: t('projects.rhoades.postsPage'),
                 },
               ]}
               techs={['Javascript', 'Firebase', 'Materialize']}
@@ -554,7 +574,7 @@ export default function Home() {
       </section>
 
       <section className={styles.techs}>
-        <h5>{t('techs')}</h5>
+        <h5>{t('techs.title')}</h5>
         <div>
           <Tooltip text="PostgreSQL">
             <Image
@@ -675,6 +695,6 @@ export default function Home() {
       </footer>
 
       <BackToTheTop />
-    </>
+    </main>
   );
 }

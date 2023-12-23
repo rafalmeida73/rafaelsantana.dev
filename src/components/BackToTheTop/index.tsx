@@ -39,19 +39,19 @@ export const BackToTheTop = () => {
         type="button"
         id="backToTheTop"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label={t('backToTheTop')}
+        aria-label={t('backToTheTop.title')}
         color="primary"
       >
         <ChevronUp />
       </button>
 
       <noscript>
-        <Link href="#" role="button" aria-label={t('backToTheTop')}>
+        <Link href="#" role="button" aria-label={t('backToTheTop.title')}>
           <button
             type="button"
             id="backToTheTopNoJS"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            aria-label={t('backToTheTop')}
+            aria-label={t('backToTheTop.title')}
             color="primary"
           >
             <ChevronUp />

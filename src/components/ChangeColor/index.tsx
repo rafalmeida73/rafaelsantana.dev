@@ -52,7 +52,7 @@ export const ChangeColor = () => {
           handleAnalyticsEventTracker(e.target.value);
         }}
         aria-labelledby="color"
-        aria-label={t('changeColor')}
+        aria-label={t('changeColor.title')}
       />
     </div>
   );
