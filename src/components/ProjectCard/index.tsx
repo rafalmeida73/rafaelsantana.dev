@@ -31,7 +31,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         {description}
         {link && (
           <span>
-            {t('projectLink')}
+            {t('projects.projectLink')}
             <GALink
               href={link}
               target="_blank"
