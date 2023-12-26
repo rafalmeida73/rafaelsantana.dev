@@ -5,7 +5,6 @@ import { locales } from '@/middleware';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const montserrat = Montserrat({
@@ -24,13 +23,11 @@ export default async function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  if (!locales.includes?.(params.locale)) {
+  if (!locales?.includes?.(params.locale)) {
     notFound();
   }
 
   const locale = useLocale();
-
-  const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
@@ -95,19 +92,6 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div>{children}</div>
         </NextIntlClientProvider>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-           window.dataLayer = window.dataLayer || [];
-           function gtag() { dataLayer.push(arguments); }
-           gtag('js', new Date());
-       
-           gtag('config', '${analyticsId}');
-        `}
-        </Script>
       </body>
     </>
   );
