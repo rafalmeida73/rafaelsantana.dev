@@ -20,7 +20,7 @@ export const LanguageIcon: FC<LanguageIconProps> = ({
       className={language === currentLocale ? styles.border : undefined}
     >
       <Image
-        src={language === 'en' ? '/img/usa.png' : '/img/brazil.png'}
+        src={language === 'en' ? '/img/icons/usa.png' : '/img/icons/brazil.png'}
         alt={alt}
         width={22}
         height={16}

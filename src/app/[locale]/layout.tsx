@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import '../../styles/globals.css';
+import { locales } from '@/middleware';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
@@ -23,11 +24,11 @@ export default async function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const locale = useLocale();
-
-  if (params.locale !== locale) {
+  if (!locales.includes?.(params.locale)) {
     notFound();
   }
+
+  const locale = useLocale();
 
   const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
 

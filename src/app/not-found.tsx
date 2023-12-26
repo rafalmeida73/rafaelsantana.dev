@@ -39,7 +39,7 @@ const Custom404 = () => {
       )}
       <noscript>
         <Image
-          src="/img/lottie.gif"
+          src="/lottie/404.gif"
           alt={locale?.notFound}
           height={500}
           width={1000}

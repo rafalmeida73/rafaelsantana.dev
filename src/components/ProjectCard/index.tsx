@@ -56,7 +56,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         <section className={styles.app}>
           <div>
             <Image
-              src="/img/android.png"
+              src="/img/icons/android.png"
               width="50"
               height="50"
               alt="Android Logo"
@@ -77,7 +77,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           {ios && (
             <div>
               <Image
-                src="/img/ios.png"
+                src="/img/icons/ios.png"
                 width="45"
                 height="39"
                 alt="Apple logo"
