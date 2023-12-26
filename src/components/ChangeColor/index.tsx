@@ -6,7 +6,7 @@ import { handleAnalyticsEventTracker } from '@/utils/GA';
 import { useTranslations } from 'next-intl';
 
 export const ChangeColor = () => {
-  const [color, setColor] = useState('#3bbbe8');
+  const [color, setColor] = useState('var(--primary)');
   const [loading, setLoading] = useState(true);
 
   const t = useTranslations('Home');
