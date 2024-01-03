@@ -188,7 +188,7 @@ export default function Home() {
               <Info
                 title={{
                   text: t('courses.reactInPractive'),
-                  link: 'https://www.udemy.com/certificate/UC-0YQZQZ7Y/',
+                  link: 'https://www.udemy.com/certificate/UC-5d02fcb1-33b9-4880-abdc-2e2a420df627/',
                   ariaLabel: `${t('courses.certificate')} ${t(
                     'courses.reactInPractive',
                   )}`,
