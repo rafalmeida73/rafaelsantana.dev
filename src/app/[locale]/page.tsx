@@ -227,7 +227,7 @@ export default function Home() {
               <Info
                 title={{
                   text: t('courses.igniteRn'),
-                  link: 'https://app.rocketseat.com.br/api/certificates/pdf/fece1ed0-e703-4253-9b39-b667120b0a32',
+                  link: 'https://app.rocketseat.com.br/certificates/fece1ed0-e703-4253-9b39-b667120b0a32',
                   ariaLabel: `${t('courses.certificate')} ${t(
                     'courses.igniteRn',
                   )}`,
@@ -240,7 +240,7 @@ export default function Home() {
               <Info
                 title={{
                   text: t('courses.igniteR'),
-                  link: 'https://app.rocketseat.com.br/api/certificates/pdf/14a5304c-b6bb-43aa-9d97-db267aa8c405',
+                  link: 'https://app.rocketseat.com.br/certificates/14a5304c-b6bb-43aa-9d97-db267aa8c405',
                   ariaLabel: `${t('courses.certificate')} ${t(
                     'courses.igniteRn',
                   )}`,
