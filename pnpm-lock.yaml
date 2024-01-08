@@ -87,7 +87,7 @@ devDependencies:
     version: 7.33.2(eslint@8.56.0)
   eslint-plugin-react-hooks:
     specifier: ^5.0.0-next-987292815-20221019
-    version: 5.0.0-next-fecc288b7-20221025(eslint@8.56.0)
+    version: 5.0.0-next-987292815-20221019(eslint@8.56.0)
   prettier:
     specifier: ^3.1.1
     version: 3.1.1
@@ -1295,8 +1295,8 @@ packages:
       eslint: 8.56.0
     dev: true
 
-  /eslint-plugin-react-hooks@5.0.0-next-fecc288b7-20221025(eslint@8.56.0):
-    resolution: {integrity: sha512-uxKmkZ9xrQKJ3GbHDGsmMUO5XFzP4bTP3xiLwEmfvi16FIedz24q7czcREQbdQ+MRKcHUA9u247qAVYhsUM1yQ==}
+  /eslint-plugin-react-hooks@5.0.0-next-987292815-20221019(eslint@8.56.0):
+    resolution: {integrity: sha512-xVn54zq9mjABeavC0RotlqDEwnebFfiv7zj7qzTAL7Ld5am7NPhhaO5mSw5kFuKsCxZtfFisonlS4bpRVZPKPw==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
