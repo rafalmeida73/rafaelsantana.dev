@@ -24,8 +24,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-stacked-center-carousel:
-    specifier: ^1.0.13
-    version: 1.0.13(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.14
+    version: 1.0.14(react-dom@18.2.0)(react@18.2.0)
   sharp:
     specifier: ^0.33.1
     version: 0.33.1
@@ -2467,8 +2467,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-stacked-center-carousel@1.0.13(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-tZTqSWqJS4LGoG40870GZAHNG0llOYl5zJpyMfdBmVFqf8wJEKesGSlGm7zY6uuK5Ao+wwJZLaL+xIr25zBPxg==}
+  /react-stacked-center-carousel@1.0.14(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-JErpZGv7O/j8N/gJQF1Sa6KUTAhEaVHQEpnBN3/PHr8T6p2m9/NJtuHgdd9ogfRSQeNXOXEiSOKVhC2xjs2WsA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16'
