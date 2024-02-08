@@ -47,7 +47,8 @@
       "igniteR": "Trilha React do programa Ignite",
       "factoryApp": "Fábrica de aplicativos - React Native",
       "reactNativePractice": "React Native na Prática: Apps para iOS e Android [2023]",
-      "detox": "Detox & Cucumber: React Native E2E - Beginner to Advanced"
+      "detox": "Detox & Cucumber: React Native E2E - Beginner to Advanced",
+      "threeJourney": "Three.js Journey"
     },
     "projects": {
       "title": "PROJETOS",
@@ -124,6 +125,6 @@
     "developer": "Desenvolvedor"
   },
   "Links": {
-    "linkedin": "https://www.linkedin.com/in/rafalmeida73/?locale=pt_BR"
+    "linkedin": "https://www.linkedin.com/in/rafalmeida73/"
   }
 }

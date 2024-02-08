@@ -290,6 +290,21 @@ export default function Home() {
                 }}
               />
             </div>
+            <div className={styles.centerGrid}>
+              <Info
+                title={{
+                  text: t('courses.threeJourney'),
+                  link: 'https://threejs-journey.com/certificate/view/37128',
+                  ariaLabel: `${t('courses.certificate')} ${t(
+                    'courses.threeJourney',
+                  )}`,
+                }}
+                time={`70 ${t('courses.hours')}`}
+                description={{
+                  text: t('courses.threeJourney'),
+                }}
+              />
+            </div>
           </section>
         </InfoCard>
       </Container>
