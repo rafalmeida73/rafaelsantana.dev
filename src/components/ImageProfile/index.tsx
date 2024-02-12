@@ -42,12 +42,11 @@ export const ImageProfile = () => {
             <Image
               url="/img/profileImage.webp"
               transparent
-              scale={3.45}
-              radius={1.69}
+              scale={3.6}
+              radius={1.84}
             />
-             
             <Text3D
-              position={[-1.6, 1.7, 0.04]}
+              position={[-1.685, 1.7, 0.04]}
               scale={[-0.2, 0.2, 0.3]}
               font={'/fonts/inter.json'}
               bevelEnabled
