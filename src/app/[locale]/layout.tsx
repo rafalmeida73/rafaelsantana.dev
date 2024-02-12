@@ -3,14 +3,11 @@ import { ReactNode } from 'react';
 import '../../styles/globals.css';
 import { locales } from '@/middleware';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { Inter, Inconsolata, Montserrat } from 'next/font/google';
+import { Inter, Inconsolata } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-});
+
 const inconsolata = Inconsolata({
   subsets: ['latin'],
   variable: '--font-Inconsolata',
@@ -86,9 +83,7 @@ export default async function LocaleLayout({
         {/* SEO */}
         <link rel="canonical" href="https://rafaelsantana.dev/" />
       </head>
-      <body
-        className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
-      >
+      <body className={`${inter.variable} ${inconsolata.variable} `}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div>{children}</div>
         </NextIntlClientProvider>

@@ -2,15 +2,12 @@ import { ReactNode } from 'react';
 
 import '../styles/globals.css';
 import { ColorProvider } from '@/hooks/useColor';
-import { Inter, Inconsolata, Montserrat } from 'next/font/google';
+import { Inter, Inconsolata } from 'next/font/google';
 import { cookies } from 'next/headers';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-});
+
 const inconsolata = Inconsolata({
   subsets: ['latin'],
   variable: '--font-Inconsolata',
@@ -69,9 +66,7 @@ export default async function RootLayout({
         {/* SEO */}
         <link rel="canonical" href="https://rafaelsantana.dev/" />
       </head>
-      <body
-        className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
-      >
+      <body className={`${inter.variable} ${inconsolata.variable} `}>
         <ColorProvider>{children}</ColorProvider>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
