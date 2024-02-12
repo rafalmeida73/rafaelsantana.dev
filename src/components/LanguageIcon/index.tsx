@@ -24,8 +24,8 @@ export const LanguageIcon: FC<LanguageIconProps> = ({
         alt={alt}
         width={22}
         height={16}
-        loading="lazy"
         className={language === currentLocale ? styles.image : undefined}
+        priority
       />
     </GALink>
   );
