@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import '../styles/globals.css';
+import { ColorProvider } from '@/hooks/useColor';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { cookies } from 'next/headers';
 import Script from 'next/script';
@@ -71,7 +72,7 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${inconsolata.variable}  ${montserrat.variable}`}
       >
-        {children}
+        <ColorProvider>{children}</ColorProvider>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
           strategy="lazyOnload"

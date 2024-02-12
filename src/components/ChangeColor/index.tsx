@@ -2,24 +2,29 @@
 
 import { useCallback, useState, useEffect } from 'react';
 
+import { useColor } from '@/hooks/useColor';
 import { handleAnalyticsEventTracker } from '@/utils/GA';
 import { useTranslations } from 'next-intl';
 
 export const ChangeColor = () => {
-  const [color, setColor] = useState('var(--primary)');
   const [loading, setLoading] = useState(true);
+
+  const { color, setColor } = useColor();
 
   const t = useTranslations('Home');
 
-  const handleChangeColor = useCallback((colorValue: string) => {
-    try {
-      setColor(colorValue);
-      document.documentElement.style.setProperty('--primary', colorValue);
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error(error);
-    }
-  }, []);
+  const handleChangeColor = useCallback(
+    (colorValue: string) => {
+      try {
+        setColor(colorValue);
+        document.documentElement.style.setProperty('--primary', colorValue);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error(error);
+      }
+    },
+    [setColor],
+  );
 
   useEffect(() => {
     try {
@@ -32,7 +37,7 @@ export const ChangeColor = () => {
       // eslint-disable-next-line no-console
       console.error(error);
     }
-  }, []);
+  }, [setColor]);
 
   useEffect(() => {
     setLoading(false);

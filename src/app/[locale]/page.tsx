@@ -1,4 +1,5 @@
 import { BackToTheTop } from '@/components/BackToTheTop';
+import { Canvas } from '@/components/Canvas';
 import { ChangeColor } from '@/components/ChangeColor';
 import { Container } from '@/components/Container';
 import GithubInfo from '@/components/GithubInfo';
@@ -35,7 +36,9 @@ export default function Home() {
       <section className={styles.container}>
         <Container>
           <div className={styles.mainContent}>
-            <ImageProfile />
+            <Canvas>
+              <ImageProfile />
+            </Canvas>
             <ProfileInfo />
           </div>
         </Container>
