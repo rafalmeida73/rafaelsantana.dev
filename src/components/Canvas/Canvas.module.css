@@ -1,5 +1,5 @@
 .r3f{
-  touch-action: pan-y;
+  touch-action: none;
   position: fixed;
   top: 0;
   left: 0;
