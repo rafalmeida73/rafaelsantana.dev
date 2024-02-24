@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { useTranslations } from 'next-intl';
 
-import GALink from '../GALink';
+import Links from '../Links';
 import styles from './ProfileIcons.module.css';
 import { IconProps } from './types';
 
@@ -14,12 +14,11 @@ export const ProfileIcons: FC<IconProps> = ({
 
   if (type === 'github') {
     return (
-      <GALink
+      <Links
         href="https://github.com/rafalmeida73"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
-        gaText="GitHub"
       >
         <svg
           width="48"
@@ -80,18 +79,17 @@ export const ProfileIcons: FC<IconProps> = ({
             />
           </g>
         </svg>
-      </GALink>
+      </Links>
     );
   }
 
   if (type === 'whatsapp') {
     return (
-      <GALink
+      <Links
         href="https://wa.me/5511963335067"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
-        gaText="WhatsApp"
       >
         <svg
           width="48"
@@ -114,17 +112,16 @@ export const ProfileIcons: FC<IconProps> = ({
             fill={color}
           />
         </svg>
-      </GALink>
+      </Links>
     );
   }
 
   return (
-    <GALink
+    <Links
       href={t('linkedin')}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Linkedin"
-      gaText="Linkedin"
     >
       <svg
         width="48"
@@ -141,6 +138,6 @@ export const ProfileIcons: FC<IconProps> = ({
           fill={color}
         />
       </svg>
-    </GALink>
+    </Links>
   );
 };

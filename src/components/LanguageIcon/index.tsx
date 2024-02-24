@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import Image from 'next/image';
 
-import GALink from '../GALink';
+import Links from '../Links';
 import styles from './LanguageIcon.module.css';
 import { LanguageIconProps } from './types';
 
@@ -12,11 +12,10 @@ export const LanguageIcon: FC<LanguageIconProps> = ({
   currentLocale,
 }) => {
   return (
-    <GALink
+    <Links
       nextLink={{
         page: `/${language}`,
       }}
-      gaText={language === 'en' ? 'en' : 'pt'}
       className={language === currentLocale ? styles.border : undefined}
     >
       <Image
@@ -27,6 +26,6 @@ export const LanguageIcon: FC<LanguageIconProps> = ({
         className={language === currentLocale ? styles.image : undefined}
         priority
       />
-    </GALink>
+    </Links>
   );
 };

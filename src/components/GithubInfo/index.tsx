@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 
 import { Star } from 'lucide-react';
 
-import GALink from '../GALink';
 import IconFork from '../IconFork';
+import Links from '../Links';
 import styles from './GithubInfo.module.css';
 import { GithubInfoProps } from './types';
 
@@ -33,12 +33,11 @@ export const GithubInfo = () => {
   if (githubInfo?.stars || githubInfo?.forks)
     return (
       <div className={styles.container}>
-        <GALink
+        <Links
           href="https://github.com/rafalmeida73/portfolio"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Portfolio GitHub"
-          gaText="Portfolio GitHub"
         >
           <div>
             {githubInfo?.stars !== 0 && (
@@ -54,7 +53,7 @@ export const GithubInfo = () => {
               </span>
             )}
           </div>
-        </GALink>
+        </Links>
       </div>
     );
 };

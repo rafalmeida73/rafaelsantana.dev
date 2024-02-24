@@ -3,7 +3,6 @@
 import { useCallback, useState, useEffect } from 'react';
 
 import { useColor } from '@/hooks/useColor';
-import { handleAnalyticsEventTracker } from '@/utils/GA';
 import { useTranslations } from 'next-intl';
 
 export const ChangeColor = () => {
@@ -54,7 +53,6 @@ export const ChangeColor = () => {
         value={color}
         onChange={e => {
           handleChangeColor(e.target.value);
-          handleAnalyticsEventTracker(e.target.value);
         }}
         aria-labelledby="color"
         aria-label={t('changeColor.title')}

@@ -25,7 +25,6 @@ export default async function RootLayout({
 }) {
   const cookieStore = cookies();
   const locale = cookieStore?.get('NEXT_LOCALE') || 'pt';
-  const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
   return (
@@ -75,19 +74,6 @@ export default async function RootLayout({
         className={`${inter.variable} ${inconsolata.variable} ${montserrat.variable}`}
       >
         <ColorProvider>{children}</ColorProvider>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}}`}
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-         window.dataLayer = window.dataLayer || [];
-         function gtag() { dataLayer.push(arguments); }
-         gtag('js', new Date());
-     
-         gtag('config', '${analyticsId}');
-      `}
-        </Script>
         <Script
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{

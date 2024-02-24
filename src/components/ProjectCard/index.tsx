@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import Carousel from '../Carousel';
-import GALink from '../GALink';
+import Links from '../Links';
 import styles from './ProjectCard.module.css';
 import { ProjectCardProps } from './types';
 
@@ -32,16 +32,15 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         {link && (
           <span>
             {t('projects.projectLink')}
-            <GALink
+            <Links
               href={link}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={title}
               className={styles.link}
-              gaText={title}
             >
               {title}
-            </GALink>
+            </Links>
           </span>
         )}
       </p>
@@ -62,16 +61,15 @@ export const ProjectCard: FC<ProjectCardProps> = ({
               alt="Android Logo"
               loading="lazy"
             />
-            <GALink
+            <Links
               href={android}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Play Store link"
               className={styles.link}
-              gaText={`${title} Play Store`}
             >
               Play Store
-            </GALink>
+            </Links>
           </div>
 
           {ios && (
@@ -83,16 +81,15 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                 alt="Apple logo"
                 loading="lazy"
               />
-              <GALink
+              <Links
                 href={ios}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="App Store link"
                 className={styles.link}
-                gaText={`${title} App Store`}
               >
                 App Store
-              </GALink>
+              </Links>
             </div>
           )}
         </section>

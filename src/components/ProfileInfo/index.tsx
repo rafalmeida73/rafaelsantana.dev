@@ -1,7 +1,7 @@
 import { Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-import GALink from '../GALink';
+import Links from '../Links';
 import { ProfileIcons } from '../ProfileIcons';
 import styles from './ProfileInfo.module.css';
 
@@ -20,14 +20,13 @@ export default function ProfileInfo() {
         <ProfileIcons type="linkedin" />
       </div>
 
-      <GALink
-        gaText="email"
+      <Links
         className={styles.button}
         href={`mailto:${t('mainContent.contact')}@rafaelsantana.dev`}
       >
         <Mail size={20} />
         {t('mainContent.email')}
-      </GALink>
+      </Links>
     </div>
   );
 }
