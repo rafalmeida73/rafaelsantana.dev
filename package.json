@@ -12,7 +12,7 @@
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@react-three/drei": "^9.98.0",
     "@react-three/fiber": "^8.15.16",
-    "lucide-react": "^0.334.0",
+    "lucide-react": "^0.340.0",
     "next": "14.1.0",
     "next-intl": "3.7.0",
     "react": "18.2.0",
