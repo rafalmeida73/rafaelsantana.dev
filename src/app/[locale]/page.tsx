@@ -19,6 +19,8 @@ export default function Home() {
   const t = useTranslations('Home');
   const currentLocale = useLocale();
 
+  const year = new Date()?.getFullYear?.();
+
   return (
     <main>
       <div className={styles.languages}>
@@ -706,7 +708,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <h5>Copyright © Rafael Santana · 2023 </h5>
+        <h5>Copyright © Rafael Santana · {year} </h5>
         <ChangeColor />
 
         <GithubInfo />
