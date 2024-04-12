@@ -380,6 +380,20 @@ export default function Home() {
               ]}
             />
             <ProjectCard
+              title="MedSales"
+              description={t('projects.medSales.description')}
+              app
+              ios="https://apps.apple.com/br/app/medsales/id6471970812"
+              android="https://play.google.com/store/apps/details?id=com.medsystems.propostasvendas"
+              images={[
+                {
+                  image: '/img/medSales/medSales.png',
+                  text: 'MedSales logo',
+                },
+              ]}
+              techs={['React Native', 'Styled Components']}
+            />
+            <ProjectCard
               title="MedInventory"
               description={t('projects.medInventory.description')}
               app
@@ -391,7 +405,7 @@ export default function Home() {
                   text: 'MedInventory logo',
                 },
               ]}
-              techs={['React Native', 'Styled Components', 'Express.JS']}
+              techs={['React Native', 'Styled Components']}
             />
             <ProjectCard
               title="MedEntregas"
@@ -405,21 +419,7 @@ export default function Home() {
                   text: 'MedEntregas logo',
                 },
               ]}
-              techs={['React Native', 'Styled Components', 'Express.JS']}
-            />
-            <ProjectCard
-              title="MedSales"
-              description={t('projects.medSales.description')}
-              app
-              ios="https://apps.apple.com/br/app/medsales/id6471970812"
-              android="https://play.google.com/store/apps/details?id=com.medsystems.propostasvendas"
-              images={[
-                {
-                  image: '/img/medSales/medSales.png',
-                  text: 'MedSales logo',
-                },
-              ]}
-              techs={['React Native', 'Styled Components', 'Express.JS']}
+              techs={['React Native', 'Styled Components']}
             />
             <ProjectCard
               hasMockup
