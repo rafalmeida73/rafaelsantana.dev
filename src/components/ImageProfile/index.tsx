@@ -12,12 +12,14 @@ import {
   Outlines,
   PresentationControls,
   Text3D,
-  useMatcapTexture,
+  useTexture,
 } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 
 export const ImageProfile = () => {
-  const [matcapTexture] = useMatcapTexture('BEE2E9_7E6A53_9AA09C_87837E', 256);
+  const matcapTexture = useTexture(
+    '/img/matcap/BEE2E9_7E6A53_9AA09C_87837E.png',
+  );
 
   const { viewport } = useThree();
 
