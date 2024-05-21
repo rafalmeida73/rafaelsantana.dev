@@ -1,16 +1,16 @@
 import { FC } from 'react';
 
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import Links from '../Links';
 import styles from './ProfileIcons.module.css';
 import { IconProps } from './types';
 
-export const ProfileIcons: FC<IconProps> = ({
+export const ProfileIcons: FC<IconProps> = async ({
   color = 'var(--text)',
   type = 'linkedin',
 }) => {
-  const t = useTranslations('Links');
+  const t = await getTranslations('Links');
 
   if (type === 'github') {
     return (

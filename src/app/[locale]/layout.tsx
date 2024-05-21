@@ -2,7 +2,8 @@ import { ReactNode } from 'react';
 
 import '../../styles/globals.css';
 import { locales } from '@/middleware';
-import { NextIntlClientProvider, useLocale } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
@@ -29,9 +30,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const locale = useLocale();
+  const locale = await getLocale();
 
-  const messages = (await import(`../../messages/${locale}.json`)).default;
+  const messages =
+    (await getMessages()) as unknown as typeof import('@/messages/en.json');
 
   return (
     <>

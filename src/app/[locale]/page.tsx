@@ -10,14 +10,14 @@ import { LanguageIcon } from '@/components/LanguageIcon';
 import ProfileInfo from '@/components/ProfileInfo';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Tooltip } from '@/components/ToolTip';
-import { useLocale, useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
-export default function Home() {
-  const t = useTranslations('Home');
-  const currentLocale = useLocale();
+export default async function Home() {
+  const t = await getTranslations('Home');
+  const currentLocale = await getLocale();
 
   const year = new Date()?.getFullYear?.();
 

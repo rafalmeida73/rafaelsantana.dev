@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import Carousel from '../Carousel';
@@ -8,7 +8,7 @@ import Links from '../Links';
 import styles from './ProjectCard.module.css';
 import { ProjectCardProps } from './types';
 
-export const ProjectCard: FC<ProjectCardProps> = ({
+export const ProjectCard: FC<ProjectCardProps> = async ({
   title,
   images,
   description,
@@ -19,7 +19,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   hasMockup,
   techs,
 }) => {
-  const t = useTranslations('Home');
+  const t = await getTranslations('Home');
 
   return (
     <div className={styles.container}>
