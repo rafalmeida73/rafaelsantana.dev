@@ -2,10 +2,13 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { Player as Lottie } from '@lottiefiles/react-lottie-player';
 import { ChevronLeft } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
+const NotFoundAnimation = dynamic(() => import('@/components/404'), {
+  ssr: false,
+});
 
 import en from '../messages/en.json';
 import pt from '../messages/pt.json';
@@ -29,14 +32,7 @@ const Custom404 = () => {
 
   return (
     <main className={styles.container}>
-      {!loading && (
-        <Lottie
-          autoplay
-          loop
-          src="/lottie/404.json"
-          style={{ height: '70vh', width: 'unset' }}
-        />
-      )}
+      {!loading && <NotFoundAnimation />}
       <noscript>
         <Image
           src="/lottie/404.gif"
