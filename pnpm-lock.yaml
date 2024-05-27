@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@lottiefiles/react-lottie-player':
-    specifier: ^3.5.3
-    version: 3.5.3(react@18.3.1)
+    specifier: ^3.5.4
+    version: 3.5.4(react@18.3.1)
   '@react-three/drei':
     specifier: ^9.105.6
     version: 9.105.6(@react-three/fiber@8.16.6)(@types/react@18.3.2)(@types/three@0.164.0)(react-dom@18.3.1)(react@18.3.1)(three@0.164.1)
@@ -419,8 +419,8 @@ packages:
       wrap-ansi-cjs: /wrap-ansi@7.0.0
     dev: true
 
-  /@lottiefiles/react-lottie-player@3.5.3(react@18.3.1):
-    resolution: {integrity: sha512-6pGbiTMjGnPddR1ur8M/TIDCiogZMc1aKIUbMEKXKAuNeYwZ2hvqwBJ+w5KRm88ccdcU88C2cGyLVsboFlSdVQ==}
+  /@lottiefiles/react-lottie-player@3.5.4(react@18.3.1):
+    resolution: {integrity: sha512-2FptWtHQ+o7MzdsMKSvNZ1Mz7xtKSYI0WL9HjZ1r+CvsXR3lbLQUDp7Pwx6qhg0Akm4VluQ+8/D1S1fcr1Ao4w==}
     peerDependencies:
       react: 16 - 18
     dependencies:
