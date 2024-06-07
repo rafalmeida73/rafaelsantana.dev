@@ -2,7 +2,6 @@ import { BackToTheTop } from '@/components/BackToTheTop';
 import { Canvas } from '@/components/Canvas';
 import { ChangeColor } from '@/components/ChangeColor';
 import { Container } from '@/components/Container';
-import GithubInfo from '@/components/GithubInfo';
 import { ImageProfile } from '@/components/ImageProfile';
 import { Info } from '@/components/Info';
 import InfoCard from '@/components/InfoCard';
@@ -710,8 +709,6 @@ export default async function Home() {
       <footer className={styles.footer}>
         <h5>Copyright © Rafael Santana · {year} </h5>
         <ChangeColor />
-
-        <GithubInfo />
       </footer>
 
       <BackToTheTop />
