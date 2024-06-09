@@ -1,23 +1,9 @@
 import { ReactNode } from 'react';
 
-import '../../styles/globals.css';
 import { locales } from '@/middleware';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
-import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-
-const inconsolata = Inconsolata({
-  subsets: ['latin'],
-  variable: '--font-Inconsolata',
-});
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-});
 
 export default async function LocaleLayout({
   children,
@@ -38,25 +24,6 @@ export default async function LocaleLayout({
   return (
     <>
       <head>
-        <title>Rafael Santana</title>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="apple-touch-icon.png"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={messages?.Document?.description} />
         <meta
@@ -90,9 +57,7 @@ export default async function LocaleLayout({
         {/* SEO */}
         <link rel="canonical" href="https://rafaelsantana.dev/" />
       </head>
-      <body
-        className={`${inter.variable} ${inconsolata.variable} ${montserrat.variable}`}
-      >
+      <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div>{children}</div>
         </NextIntlClientProvider>
