@@ -6,16 +6,22 @@ import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { cookies } from 'next/headers';
 import Script from 'next/script';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],
   variable: '--font-Inconsolata',
+  display: 'swap',
 });
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
+  display: 'swap',
 });
 
 export default async function RootLayout({
