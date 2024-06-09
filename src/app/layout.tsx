@@ -55,6 +55,7 @@ export default async function RootLayout({
       >
         <ColorProvider>{children}</ColorProvider>
         <Script
+          id="clarity-script"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
