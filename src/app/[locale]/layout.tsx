@@ -27,6 +27,10 @@ export default async function LocaleLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={messages?.Document?.description} />
         <meta
+          property="og:site_name"
+          content={messages?.Document?.description}
+        />
+        <meta
           name="keywords"
           content={`${messages?.Document?.developer}, Mobile, React Js, React Native, Rafael Santana, developer, mobile developer, web developer, front-end developer, back-end developer, full-stack developer `}
         />

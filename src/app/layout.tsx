@@ -37,18 +37,6 @@ export default async function RootLayout({
     <html lang={typeof locale === 'object' ? locale?.value : locale}>
       <head>
         <title>Rafael Santana</title>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
       </head>
       <body
         className={`${inter.variable} ${inconsolata.variable} ${montserrat.variable}`}
