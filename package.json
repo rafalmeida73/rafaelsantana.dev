@@ -13,7 +13,7 @@
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
     "lucide-react": "^0.395.0",
-    "next": "14.2.3",
+    "next": "14.2.4",
     "next-intl": "^3.15.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
