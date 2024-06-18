@@ -1,6 +1,6 @@
 # [Portfolio Rafael Santana](https://rafaelsantana.dev/)
 
-<img src="https://rafaelsantana.dev/img/index.png" />
+<img src="https://rafaelsantana.dev/img/index.webp" />
 
 #### Technologies used
 - Next.Js

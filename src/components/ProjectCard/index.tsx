@@ -55,7 +55,7 @@ export const ProjectCard: FC<ProjectCardProps> = async ({
         <section className={styles.app}>
           <div>
             <Image
-              src="/img/icons/android.png"
+              src="/img/icons/android.webp"
               width="50"
               height="50"
               alt="Android Logo"
@@ -75,7 +75,7 @@ export const ProjectCard: FC<ProjectCardProps> = async ({
           {ios && (
             <div>
               <Image
-                src="/img/icons/ios.png"
+                src="/img/icons/ios.webp"
                 width="45"
                 height="39"
                 alt="Apple logo"

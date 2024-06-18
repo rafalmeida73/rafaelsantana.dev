@@ -18,7 +18,7 @@ import { useThree } from '@react-three/fiber';
 
 export const ImageProfile = () => {
   const matcapTexture = useTexture(
-    '/img/matcap/BEE2E9_7E6A53_9AA09C_87837E.png',
+    '/img/matcap/BEE2E9_7E6A53_9AA09C_87837E.webp',
   );
 
   const { viewport } = useThree();

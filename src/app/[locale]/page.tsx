@@ -326,7 +326,7 @@ export default async function Home() {
               ios="https://apps.apple.com/br/app/broto/id1619769755"
               images={[
                 {
-                  image: '/img/broto/broto.png',
+                  image: '/img/broto/broto.webp',
                   text: 'Broto logo',
                 },
               ]}
@@ -346,7 +346,7 @@ export default async function Home() {
               ios="https://apps.apple.com/br/app/natural-da-terra-novo/id1583935893"
               images={[
                 {
-                  image: '/img/naturalTerra/nt.png',
+                  image: '/img/naturalTerra/nt.webp',
                   text: 'Natural da terra logo',
                 },
               ]}
@@ -366,7 +366,7 @@ export default async function Home() {
               ios="https://apps.apple.com/br/app/hortifruti-novo/id1583936154"
               images={[
                 {
-                  image: '/img/hortifruti/ht.png',
+                  image: '/img/hortifruti/ht.webp',
                   text: 'Hortifruti Logo',
                 },
               ]}
@@ -386,7 +386,7 @@ export default async function Home() {
               android="https://play.google.com/store/apps/details?id=com.medsystems.propostasvendas"
               images={[
                 {
-                  image: '/img/medSales/medSales.png',
+                  image: '/img/medSales/medSales.webp',
                   text: 'MedSales logo',
                 },
               ]}
@@ -400,7 +400,7 @@ export default async function Home() {
               android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.medinventory"
               images={[
                 {
-                  image: '/img/medInventory/medInventory.png',
+                  image: '/img/medInventory/medInventory.webp',
                   text: 'MedInventory logo',
                 },
               ]}
@@ -414,7 +414,7 @@ export default async function Home() {
               android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
               images={[
                 {
-                  image: '/img/medEntregas/medEntregas.png',
+                  image: '/img/medEntregas/medEntregas.webp',
                   text: 'MedEntregas logo',
                 },
               ]}
@@ -426,17 +426,17 @@ export default async function Home() {
               description={t('projects.pokemon.description')}
               images={[
                 {
-                  image: '/img/pokemon/pokemon1.png',
+                  image: '/img/pokemon/pokemon1.webp',
                   text: t('projects.splashScreen'),
                   mockup: true,
                 },
                 {
-                  image: '/img/pokemon/pokemon2.png',
+                  image: '/img/pokemon/pokemon2.webp',
                   text: t('projects.pokemon.infoPage'),
                   mockup: true,
                 },
                 {
-                  image: '/img/pokemon/pokemon3.png',
+                  image: '/img/pokemon/pokemon3.webp',
                   text: t('projects.initialPage'),
                   mockup: true,
                 },
@@ -449,32 +449,32 @@ export default async function Home() {
               description={t('projects.todoList.description')}
               images={[
                 {
-                  image: '/img/todo/todo1.png',
+                  image: '/img/todo/todo1.webp',
                   text: t('projects.initialPage'),
                   mockup: true,
                 },
                 {
-                  image: '/img/todo/todo2.png',
+                  image: '/img/todo/todo2.webp',
                   text: t('projects.signInPage'),
                   mockup: true,
                 },
                 {
-                  image: '/img/todo/todo3.png',
+                  image: '/img/todo/todo3.webp',
                   text: t('projects.signUpPage'),
                   mockup: true,
                 },
                 {
-                  image: '/img/todo/todo4.png',
+                  image: '/img/todo/todo4.webp',
                   text: t('projects.todoList.emptyListPage'),
                   mockup: true,
                 },
                 {
-                  image: '/img/todo/todo6.png',
+                  image: '/img/todo/todo6.webp',
                   text: t('projects.todoList.listPage'),
                   mockup: true,
                 },
                 {
-                  image: '/img/todo/todo5.png',
+                  image: '/img/todo/todo5.webp',
                   text: t('projects.todoList.profilePage'),
                   mockup: true,
                 },
@@ -487,27 +487,27 @@ export default async function Home() {
               link="https://broken-out.vercel.app"
               images={[
                 {
-                  image: '/img/brokenOut/brokenOut1.png',
+                  image: '/img/brokenOut/brokenOut1.webp',
                   text: t('projects.initialPage'),
                 },
                 {
-                  image: '/img/brokenOut/brokenOut2.png',
+                  image: '/img/brokenOut/brokenOut2.webp',
                   text: t('projects.aboutPage'),
                 },
                 {
-                  image: '/img/brokenOut/brokenOut3.png',
+                  image: '/img/brokenOut/brokenOut3.webp',
                   text: t('projects.brokenOut.gamesPage'),
                 },
                 {
-                  image: '/img/brokenOut/brokenOut4.png',
+                  image: '/img/brokenOut/brokenOut4.webp',
                   text: t('projects.brokenOut.selectedGamePage'),
                 },
                 {
-                  image: '/img/brokenOut/brokenOut5.png',
+                  image: '/img/brokenOut/brokenOut5.webp',
                   text: t('projects.signInPage'),
                 },
                 {
-                  image: '/img/brokenOut/brokenOut6.png',
+                  image: '/img/brokenOut/brokenOut6.webp',
                   text: t('projects.signUpPage'),
                 },
               ]}
@@ -519,23 +519,23 @@ export default async function Home() {
               link="https://highperformance.herokuapp.com/"
               images={[
                 {
-                  image: '/img/highPerformance/high1.png',
+                  image: '/img/highPerformance/high1.webp',
                   text: t('projects.initialPage'),
                 },
                 {
-                  image: '/img/highPerformance/high2.png',
+                  image: '/img/highPerformance/high2.webp',
                   text: t('projects.aboutPage'),
                 },
                 {
-                  image: '/img/highPerformance/high5.png',
+                  image: '/img/highPerformance/high5.webp',
                   text: t('projects.highPerformance.reportsPage'),
                 },
                 {
-                  image: '/img/highPerformance/high4.png',
+                  image: '/img/highPerformance/high4.webp',
                   text: t('projects.signUpPage'),
                 },
                 {
-                  image: '/img/highPerformance/high3.png',
+                  image: '/img/highPerformance/high3.webp',
                   text: t('projects.signInPage'),
                 },
               ]}
@@ -546,15 +546,15 @@ export default async function Home() {
               description={t('projects.rafaels.description')}
               images={[
                 {
-                  image: '/img/trips/trip1.png',
+                  image: '/img/trips/trip1.webp',
                   text: t('projects.initialPage'),
                 },
                 {
-                  image: '/img/trips/trip2.png',
+                  image: '/img/trips/trip2.webp',
                   text: t('projects.rafaels.salvadorPage'),
                 },
                 {
-                  image: '/img/trips/trip3.png',
+                  image: '/img/trips/trip3.webp',
                   text: t('projects.rafaels.saoPauloPage'),
                 },
               ]}
@@ -566,23 +566,23 @@ export default async function Home() {
               link="https://estetica-rhoades.vercel.app"
               images={[
                 {
-                  image: '/img/rhoades/rhoades1.png',
+                  image: '/img/rhoades/rhoades1.webp',
                   text: t('projects.initialPage'),
                 },
                 {
-                  image: '/img/rhoades/rhoades2.png',
+                  image: '/img/rhoades/rhoades2.webp',
                   text: t('projects.aboutPage'),
                 },
                 {
-                  image: '/img/rhoades/rhoades4.png',
+                  image: '/img/rhoades/rhoades4.webp',
                   text: t('projects.rhoades.blogPage'),
                 },
                 {
-                  image: '/img/rhoades/rhoades5.png',
+                  image: '/img/rhoades/rhoades5.webp',
                   text: t('projects.signInPage'),
                 },
                 {
-                  image: '/img/rhoades/rhoades3.png',
+                  image: '/img/rhoades/rhoades3.webp',
                   text: t('projects.rhoades.postsPage'),
                 },
               ]}
@@ -633,7 +633,7 @@ export default async function Home() {
           </Tooltip>
           <Tooltip text="Javascript">
             <Image
-              src="/img/icons/js.png"
+              src="/img/icons/js.webp"
               width="40"
               height="40"
               alt="Javascript"
@@ -651,7 +651,7 @@ export default async function Home() {
           </Tooltip>
           <Tooltip text="React Native">
             <Image
-              src="/img/icons/reactNative.png"
+              src="/img/icons/reactNative.webp"
               width="40"
               height="40"
               alt="React Native"
@@ -660,7 +660,7 @@ export default async function Home() {
           </Tooltip>
           <Tooltip text="Typescript">
             <Image
-              src="/img/icons/ts.png"
+              src="/img/icons/ts.webp"
               width="40"
               height="40"
               alt="Typescript"
@@ -687,7 +687,7 @@ export default async function Home() {
           </Tooltip>
           <Tooltip text="Jira">
             <Image
-              src="/img/icons/jira.png"
+              src="/img/icons/jira.webp"
               width="40"
               height="40"
               alt="Jira"
@@ -696,7 +696,7 @@ export default async function Home() {
           </Tooltip>
           <Tooltip text="Figma">
             <Image
-              src="/img/icons/figma.png"
+              src="/img/icons/figma.webp"
               width="40"
               height="40"
               alt="Figma"

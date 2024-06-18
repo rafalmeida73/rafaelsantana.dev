@@ -44,7 +44,7 @@ export default async function LocaleLayout({
         <meta property="og:title" content="Rafael Santana" />
         <meta
           property="og:image"
-          content="https://rafaelsantana.dev/img/index.png"
+          content="https://rafaelsantana.dev/img/index.webp"
         />
         {/* Twitter */}
         <meta
@@ -56,7 +56,7 @@ export default async function LocaleLayout({
         <meta property="twitter:title" content="Rafael Santana" />
         <meta
           property="twitter:image"
-          content="https://rafaelsantana.dev/img/index.png"
+          content="https://rafaelsantana.dev/img/index.webp"
         />
         {/* SEO */}
         <link rel="canonical" href="https://rafaelsantana.dev/" />

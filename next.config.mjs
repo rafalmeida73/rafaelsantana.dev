@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  optimizeFonts: true,
 };
 
 export default withNextIntl(nextConfig);
