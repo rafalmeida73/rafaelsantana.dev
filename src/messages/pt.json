@@ -32,24 +32,6 @@
         "current": "Atual"
       }
     },
-    "courses": {
-      "title": "Cursos",
-      "certificate": "Certificado",
-      "hours": "horas",
-      "english": "Inglês",
-      "htmlAndCss": "HTML e CSS na prática",
-      "modernWeb": "Web Moderno com JavaScript",
-      "sql": "Banco de dados SQL",
-      "reactInPractive": "React Js do zero ao avançado na pratica",
-      "mobileApps": "Aplicativos mobile do zero com React Native e Redux",
-      "learnNext": "Aprenda NextJS, GraphQL e Leaflet na prática!",
-      "igniteRn": "Trilha React Native do programa Ignite",
-      "igniteR": "Trilha React do programa Ignite",
-      "factoryApp": "Fábrica de aplicativos - React Native",
-      "reactNativePractice": "React Native na Prática: Apps para iOS e Android [2023]",
-      "detox": "Detox & Cucumber: React Native E2E - Beginner to Advanced",
-      "threeJourney": "Three.js Journey"
-    },
     "projects": {
       "title": "PROJETOS",
       "splashScreen": "Página de carregamento do aplicativo.",
