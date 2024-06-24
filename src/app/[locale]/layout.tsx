@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 import { locales } from '@/middleware';
-import { Partytown } from '@builder.io/partytown/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -25,7 +24,6 @@ export default async function LocaleLayout({
   return (
     <>
       <head>
-        <Partytown forward={['dataLayer.push']} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={messages?.Document?.description} />
         <meta
