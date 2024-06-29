@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { Mail } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
@@ -15,9 +17,15 @@ export default async function ProfileInfo() {
       <p>{t('mainContent.description')}</p>
 
       <div className={styles.icons}>
-        <ProfileIcons type="github" />
-        <ProfileIcons type="whatsapp" />
-        <ProfileIcons type="linkedin" />
+        <Suspense fallback={null}>
+          <ProfileIcons type="github" />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ProfileIcons type="whatsapp" />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ProfileIcons type="linkedin" />
+        </Suspense>
       </div>
 
       <Links
