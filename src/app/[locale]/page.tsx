@@ -108,6 +108,7 @@ export default async function Home() {
                 ]}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="Natural da terra"
@@ -130,6 +131,7 @@ export default async function Home() {
                 ]}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="Hortifruti"
@@ -152,6 +154,7 @@ export default async function Home() {
                 ]}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="MedSales"
@@ -168,6 +171,7 @@ export default async function Home() {
                 techs={['React Native', 'Styled Components']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="MedInventory"
@@ -184,6 +188,7 @@ export default async function Home() {
                 techs={['React Native', 'Styled Components']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="MedEntregas"
@@ -200,6 +205,7 @@ export default async function Home() {
                 techs={['React Native', 'Styled Components']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 hasMockup
@@ -225,6 +231,7 @@ export default async function Home() {
                 techs={['React Native', 'Styled Components', 'Firebase']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 hasMockup
@@ -265,6 +272,7 @@ export default async function Home() {
                 techs={['React Native', 'Styled Components', 'Firebase']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="Broken Out"
@@ -299,6 +307,7 @@ export default async function Home() {
                 techs={['React', 'Sass', 'Materialize']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="High Performance"
@@ -329,6 +338,7 @@ export default async function Home() {
                 techs={['HTML5 - ejs', 'Materialize', 'expressJS']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="Rafael's Trips"
@@ -350,6 +360,7 @@ export default async function Home() {
                 techs={['Next Js', 'Styled Components', 'leaflet']}
               />
             </Suspense>
+
             <Suspense fallback={null}>
               <ProjectCard
                 title="Estética Rhoades"
@@ -396,6 +407,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Html">
             <Image
               src="/img/icons/html.webp"
@@ -405,6 +417,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Css">
             <Image
               src="/img/icons/css.webp"
@@ -414,6 +427,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="MySql">
             <Image
               src="/img/icons/mysql.webp"
@@ -423,6 +437,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Javascript">
             <Image
               src="/img/icons/js.webp"
@@ -432,6 +447,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="React">
             <Image
               src="/img/icons/react.webp"
@@ -441,6 +457,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="React Native">
             <Image
               src="/img/icons/reactNative.webp"
@@ -450,6 +467,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Typescript">
             <Image
               src="/img/icons/ts.webp"
@@ -459,6 +477,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Firebase">
             <Image
               src="/img/icons/firebase.webp"
@@ -468,6 +487,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Git">
             <Image
               src="/img/icons/git.webp"
@@ -477,6 +497,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Jira">
             <Image
               src="/img/icons/jira.webp"
@@ -486,6 +507,7 @@ export default async function Home() {
               loading="lazy"
             />
           </Tooltip>
+
           <Tooltip text="Figma">
             <Image
               src="/img/icons/figma.webp"
