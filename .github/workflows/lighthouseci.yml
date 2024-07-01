@@ -1,12 +1,12 @@
 name: CI
-on: 
+on:
   pull_request:
     branches:
       - main
 jobs:
   lighthouse:
+    name: Lighthouse CI
     runs-on: ubuntu-latest
-    needs: deploy
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,13 +16,15 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Build and start the project
+      - name: build
         run: yarn build && yarn start
 
-      - uses: actions/checkout@v2
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
-        with:
-          urls: http://localhost:3000
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse audits to google temporary storage
+      - name: lighthouse mobile audit
+        run: yarn lhci:mobile
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: lighthouse desktop audit
+        run: yarn lhci:desktop
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
