@@ -16,9 +16,6 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: build
-        run: yarn build && yarn start
-
       - name: lighthouse mobile audit
         run: yarn lhci:mobile
         env:
