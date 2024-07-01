@@ -9,6 +9,7 @@ import { Info } from '@/components/Info';
 import InfoCard from '@/components/InfoCard';
 import { LanguageIcon } from '@/components/LanguageIcon';
 import ProfileInfo from '@/components/ProfileInfo';
+import { ProjectCard } from '@/components/ProjectCard';
 import { Tooltip } from '@/components/ToolTip';
 import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
@@ -80,6 +81,308 @@ export default async function Home() {
           </section>
         </InfoCard>
       </Container>
+
+      <section className={styles.projects}>
+        <Container>
+          <InfoCard>
+            <h4>{t('projects.title')}</h4>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="Broto"
+                description={t('projects.broto.description')}
+                app
+                android="https://play.google.com/store/apps/details?id=broto.mobile.app"
+                ios="https://apps.apple.com/br/app/broto/id1619769755"
+                images={[
+                  {
+                    image: '/img/broto/broto.webp',
+                    text: 'Broto logo',
+                  },
+                ]}
+                techs={[
+                  'React Native',
+                  'Styled Components',
+                  'Firebase',
+                  'Magento',
+                  'Graphql',
+                ]}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="Natural da terra"
+                description={t('projects.nt.description')}
+                app
+                android="https://play.google.com/store/apps/details?id=br.com.naturaldaterra.app"
+                ios="https://apps.apple.com/br/app/natural-da-terra-novo/id1583935893"
+                images={[
+                  {
+                    image: '/img/naturalTerra/nt.webp',
+                    text: 'Natural da terra logo',
+                  },
+                ]}
+                techs={[
+                  'React Native',
+                  'Styled Components',
+                  'Firebase',
+                  'Magento',
+                  'Graphql',
+                ]}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="Hortifruti"
+                description={t('projects.ht.description')}
+                app
+                android="https://play.google.com/store/apps/details?id=br.com.hortifruti.app"
+                ios="https://apps.apple.com/br/app/hortifruti-novo/id1583936154"
+                images={[
+                  {
+                    image: '/img/hortifruti/ht.webp',
+                    text: 'Hortifruti Logo',
+                  },
+                ]}
+                techs={[
+                  'React Native',
+                  'Styled Components',
+                  'Firebase',
+                  'Magento',
+                  'Graphql',
+                ]}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="MedSales"
+                description={t('projects.medSales.description')}
+                app
+                ios="https://apps.apple.com/br/app/medsales/id6471970812"
+                android="https://play.google.com/store/apps/details?id=com.medsystems.propostasvendas"
+                images={[
+                  {
+                    image: '/img/medSales/medSales.webp',
+                    text: 'MedSales logo',
+                  },
+                ]}
+                techs={['React Native', 'Styled Components']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="MedInventory"
+                description={t('projects.medInventory.description')}
+                app
+                ios="https://apps.apple.com/br/app/medinventory/id6474357759"
+                android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.medinventory"
+                images={[
+                  {
+                    image: '/img/medInventory/medInventory.webp',
+                    text: 'MedInventory logo',
+                  },
+                ]}
+                techs={['React Native', 'Styled Components']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="MedEntregas"
+                description={t('projects.medEntregas.description')}
+                app
+                ios="https://apps.apple.com/br/app/medentregas/id6471966535"
+                android="https://play.google.com/store/apps/details?id=br.com.helpdesk.medsystems.app"
+                images={[
+                  {
+                    image: '/img/medEntregas/medEntregas.webp',
+                    text: 'MedEntregas logo',
+                  },
+                ]}
+                techs={['React Native', 'Styled Components']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                hasMockup
+                title="Pokemon"
+                description={t('projects.pokemon.description')}
+                images={[
+                  {
+                    image: '/img/pokemon/pokemon1.webp',
+                    text: t('projects.splashScreen'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/pokemon/pokemon2.webp',
+                    text: t('projects.pokemon.infoPage'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/pokemon/pokemon3.webp',
+                    text: t('projects.initialPage'),
+                    mockup: true,
+                  },
+                ]}
+                techs={['React Native', 'Styled Components', 'Firebase']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                hasMockup
+                title="Todo List"
+                description={t('projects.todoList.description')}
+                images={[
+                  {
+                    image: '/img/todo/todo1.webp',
+                    text: t('projects.initialPage'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/todo/todo2.webp',
+                    text: t('projects.signInPage'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/todo/todo3.webp',
+                    text: t('projects.signUpPage'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/todo/todo4.webp',
+                    text: t('projects.todoList.emptyListPage'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/todo/todo6.webp',
+                    text: t('projects.todoList.listPage'),
+                    mockup: true,
+                  },
+                  {
+                    image: '/img/todo/todo5.webp',
+                    text: t('projects.todoList.profilePage'),
+                    mockup: true,
+                  },
+                ]}
+                techs={['React Native', 'Styled Components', 'Firebase']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="Broken Out"
+                description={t('projects.brokenOut.description')}
+                link="https://broken-out.vercel.app"
+                images={[
+                  {
+                    image: '/img/brokenOut/brokenOut1.webp',
+                    text: t('projects.initialPage'),
+                  },
+                  {
+                    image: '/img/brokenOut/brokenOut2.webp',
+                    text: t('projects.aboutPage'),
+                  },
+                  {
+                    image: '/img/brokenOut/brokenOut3.webp',
+                    text: t('projects.brokenOut.gamesPage'),
+                  },
+                  {
+                    image: '/img/brokenOut/brokenOut4.webp',
+                    text: t('projects.brokenOut.selectedGamePage'),
+                  },
+                  {
+                    image: '/img/brokenOut/brokenOut5.webp',
+                    text: t('projects.signInPage'),
+                  },
+                  {
+                    image: '/img/brokenOut/brokenOut6.webp',
+                    text: t('projects.signUpPage'),
+                  },
+                ]}
+                techs={['React', 'Sass', 'Materialize']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="High Performance"
+                description={t('projects.highPerformance.description')}
+                link="https://highperformance.herokuapp.com/"
+                images={[
+                  {
+                    image: '/img/highPerformance/high1.webp',
+                    text: t('projects.initialPage'),
+                  },
+                  {
+                    image: '/img/highPerformance/high2.webp',
+                    text: t('projects.aboutPage'),
+                  },
+                  {
+                    image: '/img/highPerformance/high5.webp',
+                    text: t('projects.highPerformance.reportsPage'),
+                  },
+                  {
+                    image: '/img/highPerformance/high4.webp',
+                    text: t('projects.signUpPage'),
+                  },
+                  {
+                    image: '/img/highPerformance/high3.webp',
+                    text: t('projects.signInPage'),
+                  },
+                ]}
+                techs={['HTML5 - ejs', 'Materialize', 'expressJS']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="Rafael's Trips"
+                description={t('projects.rafaels.description')}
+                images={[
+                  {
+                    image: '/img/trips/trip1.webp',
+                    text: t('projects.initialPage'),
+                  },
+                  {
+                    image: '/img/trips/trip2.webp',
+                    text: t('projects.rafaels.salvadorPage'),
+                  },
+                  {
+                    image: '/img/trips/trip3.webp',
+                    text: t('projects.rafaels.saoPauloPage'),
+                  },
+                ]}
+                techs={['Next Js', 'Styled Components', 'leaflet']}
+              />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ProjectCard
+                title="Estética Rhoades"
+                description={t('projects.rhoades.description')}
+                link="https://estetica-rhoades.vercel.app"
+                images={[
+                  {
+                    image: '/img/rhoades/rhoades1.webp',
+                    text: t('projects.initialPage'),
+                  },
+                  {
+                    image: '/img/rhoades/rhoades2.webp',
+                    text: t('projects.aboutPage'),
+                  },
+                  {
+                    image: '/img/rhoades/rhoades4.webp',
+                    text: t('projects.rhoades.blogPage'),
+                  },
+                  {
+                    image: '/img/rhoades/rhoades5.webp',
+                    text: t('projects.signInPage'),
+                  },
+                  {
+                    image: '/img/rhoades/rhoades3.webp',
+                    text: t('projects.rhoades.postsPage'),
+                  },
+                ]}
+                techs={['Javascript', 'Firebase', 'Materialize']}
+              />
+            </Suspense>
+          </InfoCard>
+        </Container>
+      </section>
 
       <section className={styles.techs}>
         <h5>{t('techs.title')}</h5>
