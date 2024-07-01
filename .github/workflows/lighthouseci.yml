@@ -14,14 +14,14 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Install dependencies
-        run: pnpm i
+        run: yarn
 
       - name: lighthouse mobile audit
-        run: pnpm lhci:mobile
+        run: yarn lhci:mobile
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
       - name: lighthouse desktop audit
-        run: pnpm lhci:desktop
+        run: yarn lhci:desktop
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
