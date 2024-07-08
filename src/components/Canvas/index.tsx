@@ -1,5 +1,11 @@
 'use client';
-import React, { FC, PropsWithChildren, useEffect, useState } from 'react';
+import React, {
+  FC,
+  PropsWithChildren,
+  Suspense,
+  useEffect,
+  useState,
+} from 'react';
 
 import { Loader } from '@react-three/drei';
 import { Canvas as ThreeCanvas } from '@react-three/fiber';
@@ -18,7 +24,9 @@ export const Canvas: FC<PropsWithChildren> = ({ children }) => {
     return (
       <div className={styles.noJsContainer}>
         <noscript>
-          <ImageProfileNoJs />
+          <Suspense fallback={null}>
+            <ImageProfileNoJs />
+          </Suspense>
         </noscript>
       </div>
     );
