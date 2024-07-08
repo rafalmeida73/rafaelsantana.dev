@@ -522,7 +522,9 @@ export default async function Home() {
 
       <footer className={styles.footer}>
         <h5>Copyright © Rafael Santana · {year} </h5>
-        <ChangeColor />
+        <Suspense>
+          <ChangeColor />
+        </Suspense>
       </footer>
 
       <BackToTheTop />
