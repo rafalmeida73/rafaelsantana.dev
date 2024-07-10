@@ -4,9 +4,9 @@
   top: 0;
   left: 0;
   outline: none;
-  min-height: 100vh !important;
+  min-height: 100dvh !important;
 }
 
 .noJsContainer{
-  min-height: 100vh !important;
+  min-height: 100dvh !important;
 }

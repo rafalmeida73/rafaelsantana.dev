@@ -8,7 +8,7 @@ const NotFound: React.FC = () => {
       autoplay
       loop
       src="/lottie/404.json"
-      style={{ height: '50vh', width: 'unset' }}
+      style={{ height: '50dvh', width: 'unset' }}
     />
   );
 };
