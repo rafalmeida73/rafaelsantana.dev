@@ -2,8 +2,27 @@ import { ReactNode } from 'react';
 
 import '../styles/globals.css';
 import { ColorProvider } from '@/hooks/useColor';
+import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { cookies } from 'next/headers';
 import Script from 'next/script';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  variable: '--font-Inconsolata',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
 
 export default async function RootLayout({
   children,
@@ -19,7 +38,9 @@ export default async function RootLayout({
       <head>
         <title>Rafael Santana</title>
       </head>
-      <body>
+      <body
+        className={`${inter.variable} ${inconsolata.variable} ${montserrat.variable}`}
+      >
         <ColorProvider>{children}</ColorProvider>
         <Script
           id="clarity-script"
