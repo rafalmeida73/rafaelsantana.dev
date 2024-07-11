@@ -5,7 +5,6 @@ import { ColorProvider } from '@/hooks/useColor';
 import { Inter, Inconsolata, Montserrat } from 'next/font/google';
 import { cookies } from 'next/headers';
 import Script from 'next/script';
-export const fetchCache = 'only-cache';
 
 const inter = Inter({
   subsets: ['latin'],

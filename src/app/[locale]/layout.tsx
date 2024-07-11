@@ -4,7 +4,6 @@ import { locales } from '@/middleware';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-export const fetchCache = 'only-cache';
 
 export default async function LocaleLayout({
   children,
