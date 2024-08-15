@@ -208,6 +208,28 @@ export default async function Home() {
 
             <Suspense fallback={null}>
               <ProjectCard
+                title="MedStock"
+                description={t('projects.medStock.description')}
+                link="https://comunidade.medsystems.com.br/"
+                images={[
+                  {
+                    image: '/img/medStock/medStock.webp',
+                    text: 'MedStock logo',
+                  },
+                ]}
+                techs={[
+                  'Next.js',
+                  'MUI',
+                  'Firebase',
+                  'React Query',
+                  'TypeScript',
+                  'React Hook Form',
+                ]}
+              />
+            </Suspense>
+
+            <Suspense fallback={null}>
+              <ProjectCard
                 hasMockup
                 title="Pokemon"
                 description={t('projects.pokemon.description')}
@@ -270,28 +292,6 @@ export default async function Home() {
                   },
                 ]}
                 techs={['React Native', 'Styled Components', 'Firebase']}
-              />
-            </Suspense>
-
-            <Suspense fallback={null}>
-              <ProjectCard
-                title="MedStock"
-                description={t('projects.medStock.description')}
-                link="https://comunidade.medsystems.com.br/"
-                images={[
-                  {
-                    image: '/img/medStock/medStock.webp',
-                    text: 'MedStock logo',
-                  },
-                ]}
-                techs={[
-                  'Next.js',
-                  'MUI',
-                  'Firebase',
-                  'React Query',
-                  'TypeScript',
-                  'React Hook Form',
-                ]}
               />
             </Suspense>
 
