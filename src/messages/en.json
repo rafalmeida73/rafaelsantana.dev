@@ -58,6 +58,9 @@
       "medSales": {
         "description": "Sales proposal generator for Medsystems employees"
       },
+      "medStock": {
+        "description": "Website developed for Medsystems, where it is possible to control the customer’s stock that the product arrive in a minimum stock, the system already generates a purchase order for the company’s erp."
+      },
       "pokemon": {
         "description": "Pokemon is an app developed with React Native, whose main objective is to list all pokemons, show their information and make it possible to search via images.",
         "infoPage": "Page that lists the information of the chosen pokemon."
