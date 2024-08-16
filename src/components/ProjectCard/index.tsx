@@ -21,11 +21,16 @@ export const ProjectCard: FC<ProjectCardProps> = async ({
 }) => {
   const t = await getTranslations('Home');
 
+  const translateImages = images.map(image => ({
+    ...image,
+    text: t(image.text),
+  }));
+
   return (
     <div className={styles.container}>
       <p>{title}</p>
 
-      <Carousel images={images} hasMockup={hasMockup} />
+      <Carousel images={translateImages} hasMockup={hasMockup} />
 
       <p className={styles.description}>
         {description}
