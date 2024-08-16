@@ -128,7 +128,7 @@ export const projects = [
     title: 'MedStock',
     description: 'projects.medStock.description',
     app: false,
-    link: 'https://medstock.medsystems.com.br/',
+    link: 'https://comunidade.medsystems.com.br/',
     android: '',
     ios: '',
     images: [

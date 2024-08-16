@@ -70,7 +70,7 @@ export default async function Home() {
                 <Info
                   key={formation.description}
                   title={{
-                    text: t(`${formation.title}`),
+                    text: t(formation.title),
                   }}
                   time={formation.time}
                   description={{ text: formation.description }}
@@ -91,7 +91,7 @@ export default async function Home() {
                 <ProjectCard
                   hasMockup={project.hasMockup}
                   title={project.title}
-                  description={t(`${project.description}`)}
+                  description={t(project.description)}
                   app={project.app}
                   link={project.link}
                   android={project.android}
