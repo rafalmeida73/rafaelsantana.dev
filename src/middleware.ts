@@ -1,14 +1,8 @@
 import createMiddleware from 'next-intl/middleware';
 
-export const locales = ['en', 'pt'];
+import { routing } from './routing';
 
-export default createMiddleware({
-  locales,
-
-  defaultLocale: 'pt',
-
-  localePrefix: 'as-needed',
-});
+export default createMiddleware(routing);
 
 export const config = {
   matcher: ['/', '/(en|pt)/:path*'],
