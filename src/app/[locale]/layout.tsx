@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { locales } from '@/middleware';
+import { locales } from '@/routing';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -15,7 +15,6 @@ export default async function LocaleLayout({
   if (!locales?.includes?.(params.locale)) {
     notFound();
   }
-
   const locale = await getLocale();
 
   const messages =
