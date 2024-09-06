@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
@@ -8,7 +6,7 @@ import Links from '../Links';
 import styles from './ProjectCard.module.css';
 import { ProjectCardProps } from './types';
 
-export const ProjectCard: FC<ProjectCardProps> = async ({
+export const ProjectCard = async ({
   title,
   images,
   description,
@@ -18,7 +16,7 @@ export const ProjectCard: FC<ProjectCardProps> = async ({
   ios,
   hasMockup,
   techs,
-}) => {
+}: ProjectCardProps) => {
   const t = await getTranslations('Home');
 
   const translateImages = images.map(image => ({

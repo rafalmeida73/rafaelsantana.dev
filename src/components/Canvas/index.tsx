@@ -1,11 +1,5 @@
 'use client';
-import React, {
-  FC,
-  PropsWithChildren,
-  Suspense,
-  useEffect,
-  useState,
-} from 'react';
+import React, { PropsWithChildren, Suspense, useEffect, useState } from 'react';
 
 import { Loader } from '@react-three/drei';
 import { Canvas as ThreeCanvas } from '@react-three/fiber';
@@ -13,7 +7,7 @@ import { Canvas as ThreeCanvas } from '@react-three/fiber';
 import { ImageProfileNoJs } from '../ImageProfileNojs';
 import styles from './Canvas.module.css';
 
-export const Canvas: FC<PropsWithChildren> = ({ children }) => {
+export const Canvas = ({ children }: PropsWithChildren) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

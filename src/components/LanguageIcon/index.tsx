@@ -1,16 +1,14 @@
-import { FC } from 'react';
-
 import Image from 'next/image';
 
 import Links from '../Links';
 import styles from './LanguageIcon.module.css';
 import { LanguageIconProps } from './types';
 
-export const LanguageIcon: FC<LanguageIconProps> = ({
+export const LanguageIcon = ({
   language,
   alt,
   currentLocale,
-}) => {
+}: LanguageIconProps) => {
   return (
     <Links
       nextLink={{

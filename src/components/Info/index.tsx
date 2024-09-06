@@ -1,10 +1,8 @@
-import { FC } from 'react';
-
 import Links from '../Links';
 import styles from './Info.module.css';
 import { InfoProps } from './types';
 
-export const Info: FC<InfoProps> = ({ title, description, time }) => {
+export const Info = ({ title, description, time }: InfoProps) => {
   return (
     <div className={styles.container}>
       {!title?.link ? (

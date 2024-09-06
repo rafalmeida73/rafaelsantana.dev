@@ -6,7 +6,7 @@ import { ContextData, ContextProvider } from './types';
 
 const ConnectionContext = createContext<ContextData>({} as ContextData);
 
-const ColorProvider: React.FC<ContextProvider> = ({ children }) => {
+const ColorProvider = ({ children }: ContextProvider) => {
   const [color, setColor] = useState('#3bbbe8');
 
   return (

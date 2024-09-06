@@ -1,7 +1,5 @@
 'use client';
 
-import { FC } from 'react';
-
 import Image from 'next/image';
 import {
   StackedCarousel,
@@ -12,7 +10,7 @@ import { Slide } from '../Slide';
 import styles from './Carousel.module.css';
 import { CarouselProps } from './types';
 
-export const Carousel: FC<CarouselProps> = ({ images, hasMockup }) => {
+export const Carousel = ({ images, hasMockup }: CarouselProps) => {
   return (
     <div className={styles.container}>
       <ResponsiveContainer

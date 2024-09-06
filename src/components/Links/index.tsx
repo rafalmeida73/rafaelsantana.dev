@@ -1,13 +1,11 @@
 'use client';
 
-import { FC } from 'react';
-
 import Link from 'next/link';
 
 import styles from './Link.module.css';
 import { LinksProps } from './types';
 
-const Links: FC<LinksProps> = ({ children, href, nextLink, ...props }) => {
+const Links = ({ children, href, nextLink, ...props }: LinksProps) => {
   if (nextLink)
     return (
       <Link href={nextLink?.page} className={styles.link} {...props}>

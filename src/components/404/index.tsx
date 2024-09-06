@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Player as Lottie } from '@lottiefiles/react-lottie-player';
 
-const NotFound: React.FC = () => {
+const NotFound = () => {
   return (
     <Lottie
       autoplay
