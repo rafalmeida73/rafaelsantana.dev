@@ -28,7 +28,7 @@
     "@lhci/server": "^0.14.0",
     "@next/eslint-plugin-next": "^14.2.13",
     "@types/node": "22.8.6",
-    "@types/react": "^18.3.10",
+    "@types/react": "^18.3.12",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.57.1",
