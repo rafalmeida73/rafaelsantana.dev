@@ -1,10 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(
-  _: NextRequest,
-  { params }: { params: { color: string } },
-) {
-  const color = params.color;
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const color = searchParams.get('color');
 
   if (!color) {
     return NextResponse.json(
