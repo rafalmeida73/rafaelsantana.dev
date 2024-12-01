@@ -114,10 +114,13 @@
     "goBack": "Voltar para a página anterior"
   },
   "Document": {
-    "description": "Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de desafios e projeto para ter um aprendizado constante.",
     "developer": "Desenvolvedor"
   },
   "Links": {
     "linkedin": "https://www.linkedin.com/in/rafalmeida73/"
+  },
+  "Metadata": {
+    "title": "Rafael Santana",
+    "description": "Desenvolvedor Mobile, apaixonado por tecnologia, sempre em busca de desafios e projeto para ter um aprendizado constante."
   }
 }

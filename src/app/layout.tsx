@@ -29,15 +29,12 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const cookieStore = cookies();
-  const locale = cookieStore?.get('NEXT_LOCALE') || 'pt';
+  const cookieStore = await cookies();
+  const locale = cookieStore?.get('NEXT_LOCALE')?.value || 'pt';
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
   return (
-    <html lang={typeof locale === 'object' ? locale?.value : locale}>
-      <head>
-        <title>Rafael Santana</title>
-      </head>
+    <html lang={locale}>
       <body
         className={`${inter.variable} ${inconsolata.variable} ${montserrat.variable}`}
       >
