@@ -3403,14 +3403,14 @@ netmask@^2.0.2:
   resolved "https://registry.yarnpkg.com/netmask/-/netmask-2.0.2.tgz#8b01a07644065d536383835823bc52004ebac5e7"
   integrity sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==
 
-next-intl@^3.24.0:
-  version "3.24.0"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.24.0.tgz#464ac2829b86d5c2158bdfbb234c59402db4606e"
-  integrity sha512-48X68QsI92grir2dH1W15yhyVnEjW4c9qmwNt+du+k6mI1QtlE6GyANWHoL4/leTixHv8knZ1y9B/Ys06gmKLg==
+next-intl@^3.25.3:
+  version "3.25.3"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-3.25.3.tgz#b077e5497e40893844ed13285a7f9786e095c0ee"
+  integrity sha512-3VQ+OZdU9Z2enx5uWLYfmd/eb/gZN6QIfj59ROE/R+MTSD7ZAOPsGFnKqj5wwqm4EISGviYenkSuxypyYnhomA==
   dependencies:
     "@formatjs/intl-localematcher" "^0.5.4"
     negotiator "^1.0.0"
-    use-intl "^3.24.0"
+    use-intl "^3.25.3"
 
 next@14.2.13:
   version "14.2.13"
@@ -4848,10 +4848,10 @@ urlpattern-polyfill@10.0.0:
   resolved "https://registry.yarnpkg.com/urlpattern-polyfill/-/urlpattern-polyfill-10.0.0.tgz#f0a03a97bfb03cdf33553e5e79a2aadd22cac8ec"
   integrity sha512-H/A06tKD7sS1O1X2SshBVeA5FLycRpjqiBeqGKmBwBDBy28EnRjORxTNe269KSSr5un5qyWi1iL61wLxpd+ZOg==
 
-use-intl@^3.24.0:
-  version "3.24.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-3.24.0.tgz#3910d2e09a7fdeaa2e4b3b09df5907c377ec78bc"
-  integrity sha512-lmrARod7yjMYehbyY9xBLjjgnlNcJsl1UAltAPlgspRG7RH6H0JYaGo4C3PZW/BTy0Dgmcvcl8rH/VemzGIhgQ==
+use-intl@^3.25.3:
+  version "3.25.3"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-3.25.3.tgz#7bcb39ff6ea57fbda37df0e3487d2dd50b2b3526"
+  integrity sha512-zF+GHRx7auT1qpmiPMN+RnzSad6W5ZjhOpgC5Li/TByqCkMs4SP3xcd8C0jWxT8YI8Ucl518bnkS+gvKIvrXjw==
   dependencies:
     "@formatjs/fast-memoize" "^2.2.0"
     intl-messageformat "^10.5.14"
