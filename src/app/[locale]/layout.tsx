@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: any) {
         },
       ],
     },
+    icons: 'https://www.rafaelsantana.dev/favicon.ico',
   };
 }
 
