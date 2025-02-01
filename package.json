@@ -11,7 +11,7 @@
     "lhci:desktop": "lhci autorun --collect.settings.preset=desktop"
   },
   "dependencies": {
-    "@lottiefiles/react-lottie-player": "^3.5.4",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "@react-three/drei": "^9.120.5",
     "@react-three/fiber": "^9.0.0-rc.1",
     "lucide-react": "^0.469.0",
