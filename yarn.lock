@@ -465,10 +465,10 @@
     uuid "^9.0.1"
     zustand "^5.0.1"
 
-"@react-three/fiber@^9.0.4":
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-9.0.4.tgz#8e3652c5901128edc52f611fe5bfcd287443c621"
-  integrity sha512-Uvo7KrvecISNyg4llc9mdI0UwjTQg250zwSVwirLBlDSODcE/AsVaBS0pIdKgFao+1uMFL/WoPPD4JX/l5VOJQ==
+"@react-three/fiber@^9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-9.1.1.tgz#55adc22bb996babcb56e9eefc6b06beb874bcf78"
+  integrity sha512-S0De6e7xnlZd2QmnBm2rZVXxlknynCSAoCW1M8fF2yH93Q/cra3xwH8rAq4CMqNARsotbZSU/eNPGY/rdQaAhA==
   dependencies:
     "@babel/runtime" "^7.17.8"
     "@types/react-reconciler" "^0.28.9"
