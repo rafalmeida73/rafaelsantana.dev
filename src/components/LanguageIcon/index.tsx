@@ -11,9 +11,9 @@ export const LanguageIcon = ({
   return (
     <Links
       nextLink={{
-        page: `/${language}`,
+        page: `${language}`,
       }}
-      className={`border-b-2 border-solid ${language === currentLocale ? "border-b-picton-blue" : ""}`}
+      className={`border-b-2 border-solid ${language === currentLocale && "border-b-picton-blue"}`}
     >
       <Image
         src={
