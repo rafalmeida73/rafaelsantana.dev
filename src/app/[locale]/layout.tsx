@@ -55,7 +55,7 @@ export default async function LocaleLayout({
   const locale = await getLocale();
 
   const messages =
-    (await getMessages()) as unknown as typeof import("@/messages/en.json");
+    (await getMessages()) as unknown as typeof import("@/i18n/messages/en.json");
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
