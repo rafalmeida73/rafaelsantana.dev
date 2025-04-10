@@ -5,4 +5,5 @@ export interface LinksProps extends ComponentPropsWithoutRef<"a"> {
     page: string;
     locale?: string;
   };
+  useNavigation?: boolean;
 }
