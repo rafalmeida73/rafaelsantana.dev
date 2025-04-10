@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 import { LinksProps } from "./types";
 
-const Links = ({
+export const Links = ({
   children,
   href,
   nextLink,
@@ -40,5 +40,3 @@ const Links = ({
     </a>
   );
 };
-
-export default Links;

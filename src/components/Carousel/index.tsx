@@ -92,5 +92,3 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
     </div>
   );
 };
-
-export default Carousel;

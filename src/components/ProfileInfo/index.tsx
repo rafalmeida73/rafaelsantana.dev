@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import Links from "../Links";
+import { Links } from "../Links";
 import { ProfileIcons } from "../ProfileIcons";
 import { Mail } from "lucide-react";
 import { getTranslations } from "next-intl/server";

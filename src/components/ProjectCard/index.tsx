@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Carousel from "../Carousel";
-import Links from "../Links";
+import { Carousel } from "../Carousel";
+import { Links } from "../Links";
 import { ProjectCardProps } from "./types";
 import { getTranslations } from "next-intl/server";
 

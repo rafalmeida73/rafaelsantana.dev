@@ -1,4 +1,4 @@
-import Links from "../Links";
+import { Links } from "../Links";
 import { InfoProps } from "./types";
 
 export const Info = ({ title, description, time }: InfoProps) => {

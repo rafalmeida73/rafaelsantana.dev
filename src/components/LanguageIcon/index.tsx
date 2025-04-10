@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Links from "../Links";
+import { Links } from "../Links";
 import { LanguageIconProps } from "./types";
 
 export const LanguageIcon = ({
@@ -14,7 +14,7 @@ export const LanguageIcon = ({
       nextLink={{
         page: `${language}`,
       }}
-      className={`border-b-2 border-solid ${language === currentLocale && "border-b-picton-blue"}`}
+      className={`border-b-2 border-solid ${language === currentLocale && "border-b-picton-blue"} cursor-pointer`}
       useNavigation={useNavigation}
     >
       <Image

@@ -1,15 +1,14 @@
-import { getTranslations } from 'next-intl/server';
-
-import Links from '../Links';
-import { IconProps } from './types';
+import { Links } from "../Links";
+import { IconProps } from "./types";
+import { getTranslations } from "next-intl/server";
 
 export const ProfileIcons = async ({
-  color = 'fill-white',
-  type = 'linkedin',
+  color = "fill-white",
+  type = "linkedin",
 }: IconProps) => {
-  const t = await getTranslations('Links');
+  const t = await getTranslations("Links");
 
-  if (type === 'github') {
+  if (type === "github") {
     return (
       <Links
         href="https://github.com/rafalmeida73"
@@ -80,7 +79,7 @@ export const ProfileIcons = async ({
     );
   }
 
-  if (type === 'whatsapp') {
+  if (type === "whatsapp") {
     return (
       <Links
         href="https://wa.me/5511963335067"
@@ -115,7 +114,7 @@ export const ProfileIcons = async ({
 
   return (
     <Links
-      href={t('linkedin')}
+      href={t("linkedin")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Linkedin"
