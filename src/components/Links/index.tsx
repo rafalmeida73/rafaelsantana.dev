@@ -12,10 +12,10 @@ const Links = ({
   useNavigation = false,
   ...props
 }: LinksProps) => {
-  const router = useRouter();
+  const { push } = useRouter();
 
   const handleNavigation = () => {
-    router.push(`/${nextLink?.page}`);
+    push(`/${nextLink?.page}`);
   };
 
   if (nextLink && useNavigation) {
