@@ -39,7 +39,7 @@ export const BackToTheTop = () => {
         aria-label={t("backToTheTop.title")}
         color="primary"
         id="backToTheTop"
-        className="bg-picton-blue visible fixed right-10 bottom-5 z-50 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
+        className="bg-picton-blue visible fixed right-5 bottom-5 z-50 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
       >
         <ChevronUp />
       </button>
@@ -49,7 +49,7 @@ export const BackToTheTop = () => {
           <button
             type="button"
             id="backToTheTopNoJS"
-            className="bg-picton-blue visible fixed right-10 bottom-2.5 z-50 flex h-12 w-12 items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
+            className="bg-picton-blue visible fixed right-5 bottom-2.5 z-50 flex h-12 w-12 items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label={t("backToTheTop.title")}
             color="primary"
