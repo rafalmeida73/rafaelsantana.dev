@@ -1,9 +1,7 @@
-import { PropsWithChildren } from 'react';
-
-import styles from './InfoCard.module.css';
+import { PropsWithChildren } from "react";
 
 export const InfoCard = ({ children }: PropsWithChildren) => {
-  return <div className={styles.container}>{children}</div>;
+  return <div className="bg-jet rounded-2xl p-7">{children}</div>;
 };
 
 export default InfoCard;

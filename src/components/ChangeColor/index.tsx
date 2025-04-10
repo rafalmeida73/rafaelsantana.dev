@@ -34,7 +34,10 @@ export const ChangeColor = () => {
       try {
         setColor(colorValue);
         changeFaviconWithIcon(colorValue);
-        document.documentElement.style.setProperty("--primary", colorValue);
+        document.documentElement.style.setProperty(
+          "--color-picton-blue",
+          colorValue,
+        );
       } catch (error) {
         console.error(error);
       }
@@ -46,7 +49,7 @@ export const ChangeColor = () => {
     try {
       const primaryColor = getComputedStyle(
         document.documentElement,
-      ).getPropertyValue("--primary");
+      ).getPropertyValue("--color-picton-blue");
 
       setColor(primaryColor);
     } catch (error) {
@@ -63,7 +66,7 @@ export const ChangeColor = () => {
   }
 
   return (
-    <div>
+    <div className="mt-2">
       <input
         type="color"
         value={color}
@@ -72,6 +75,7 @@ export const ChangeColor = () => {
         }}
         aria-labelledby="color"
         aria-label={t("changeColor.title")}
+        className="color-input-wrapper color-input-swatch h-8 w-8 cursor-pointer border-none"
       />
     </div>
   );

@@ -3,12 +3,11 @@ import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const { locale } = await params;
+type Params = Promise<{ locale: string }>;
+
+export async function generateMetadata(props: { params: Params }) {
+  const params = await props.params;
+  const { locale } = params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {

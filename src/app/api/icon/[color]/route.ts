@@ -1,11 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest, { params }: { params: any }) {
-  const { color } = params;
-
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ color: string }> },
+) {
+  const { color } = await params;
   if (!color) {
     return NextResponse.json(
-      { error: 'color parameter is required' },
+      { error: "color parameter is required" },
       { status: 400 },
     );
   }

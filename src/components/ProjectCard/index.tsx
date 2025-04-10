@@ -1,10 +1,9 @@
-import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
+import Image from "next/image";
 
-import Carousel from '../Carousel';
-import Links from '../Links';
-import styles from './ProjectCard.module.css';
-import { ProjectCardProps } from './types';
+import Carousel from "../Carousel";
+import Links from "../Links";
+import { ProjectCardProps } from "./types";
+import { getTranslations } from "next-intl/server";
 
 export const ProjectCard = async ({
   title,
@@ -17,30 +16,30 @@ export const ProjectCard = async ({
   hasMockup,
   techs,
 }: ProjectCardProps) => {
-  const t = await getTranslations('Home');
+  const t = await getTranslations("Home");
 
-  const translateImages = images.map(image => ({
+  const translateImages = images.map((image) => ({
     ...image,
     text: t(image.text),
   }));
 
   return (
-    <div className={styles.container}>
-      <p>{title}</p>
+    <div className="my-[6rem] text-white">
+      <p className="text-2xl">{title}</p>
 
       <Carousel images={translateImages} hasMockup={hasMockup} />
 
-      <p className={styles.description}>
+      <p className="text-center text-[1rem] md:text-[1.2rem]">
         {description}
         {link && (
           <span>
-            {t('projects.projectLink')}
+            {t("projects.projectLink")}
             <Links
               href={link}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={title}
-              className={styles.link}
+              className="text-picton-blue text-[1rem] md:text-[1.2rem]"
             >
               {title}
             </Links>
@@ -49,14 +48,21 @@ export const ProjectCard = async ({
       </p>
 
       {techs && (
-        <ul className={styles.techLists}>
-          {techs?.map(tech => <li key={tech}>{tech}</li>)}
+        <ul className="mt-12 flex list-['|'] flex-wrap items-center justify-around md:list-none [&>*:nth-child(1)]:list-none">
+          {techs?.map((tech) => (
+            <li
+              className="text-picton-blue p-2 text-[1rem] font-[var(--font-Inconsolata)] md:p-0"
+              key={tech}
+            >
+              {tech}
+            </li>
+          ))}
         </ul>
       )}
 
       {app && (
-        <section className={styles.app}>
-          <div>
+        <section className="mt-12 flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center">
             <Image
               src="/img/icons/android.webp"
               width="50"
@@ -69,14 +75,14 @@ export const ProjectCard = async ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Play Store link"
-              className={styles.link}
+              className="text-picton-blue text-[1rem] md:text-[1.2rem]"
             >
               Play Store
             </Links>
           </div>
 
           {ios && (
-            <div>
+            <div className="flex items-center justify-center">
               <Image
                 src="/img/icons/ios.webp"
                 width="45"
@@ -89,7 +95,7 @@ export const ProjectCard = async ({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="App Store link"
-                className={styles.link}
+                className="text-picton-blue text-[1rem] md:text-[1.2rem]"
               >
                 App Store
               </Links>

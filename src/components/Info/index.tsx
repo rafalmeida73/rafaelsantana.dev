@@ -1,33 +1,36 @@
-import Links from '../Links';
-import styles from './Info.module.css';
-import { InfoProps } from './types';
+import Links from "../Links";
+import { InfoProps } from "./types";
 
 export const Info = ({ title, description, time }: InfoProps) => {
   return (
-    <div className={styles.container}>
+    <div className="my-10 text-center">
       {!title?.link ? (
-        <p className={styles.title}>{title?.text}</p>
+        <p className="text-picton-blue mb-1 text-[1.2rem] font-bold">
+          {title?.text}
+        </p>
       ) : (
         <Links
           href={title?.link}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={title?.ariaLabel}
-          className={styles.title}
+          className="text-picton-blue !block"
         >
           {title?.text}
         </Links>
       )}
-      <p className={styles.date}>{time}</p>
+      <p className="text-1 mt-2 leading-8 font-[var(--font-Inconsolata)] text-white">
+        {time}
+      </p>
       {!description?.link ? (
-        <p className={styles.description}>{description?.text}</p>
+        <p className="text-1xl text-white">{description?.text}</p>
       ) : (
         <Links
           href={description?.link}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={description?.ariaLabel}
-          className={styles.description}
+          className="text-1xl text-white"
         >
           {description?.text}
         </Links>

@@ -12,7 +12,6 @@ import InfoCard from "@/components/InfoCard";
 import { LanguageIcon } from "@/components/LanguageIcon";
 import ProfileInfo from "@/components/ProfileInfo";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Tooltip } from "@/components/ToolTip";
 import { formations } from "@/utils/formations";
 import { projects } from "@/utils/projects";
 import { techs } from "@/utils/techs";
@@ -53,21 +52,27 @@ export default async function Home() {
         </Container>
       </section>
 
-      {/* <section>
+      <section className="mb-16">
         <Container>
           <InfoCard>
-            <h2>{t("aboutMe.title")}</h2>
-            <p>{t("aboutMe.description")}</p>
+            <h2 className="mb-6 text-3xl font-bold text-white md:mb-1">
+              {t("aboutMe.title")}
+            </h2>
+            <p className="text-justify text-[1rem] text-white md:text-[1.2rem]">
+              {t("aboutMe.description")}
+            </p>
           </InfoCard>
         </Container>
-      </section> */}
+      </section>
 
-      {/* <Container>
+      <Container>
         <InfoCard>
-          <section className={styles.education}>
-            <h3>{t('academicFormation.title')}</h3>
-            <div className={styles.educationContent}>
-              {formations.map(formation => (
+          <section>
+            <h3 className="mb-2 text-3xl font-bold text-white">
+              {t("academicFormation.title")}
+            </h3>
+            <div className="grid-rols-1 grid grid-cols-1 gap-x-0 gap-y-0 md:grid-cols-2">
+              {formations.map((formation) => (
                 <Info
                   key={formation.description}
                   title={{
@@ -80,14 +85,16 @@ export default async function Home() {
             </div>
           </section>
         </InfoCard>
-      </Container> */}
+      </Container>
 
-      {/* <section className={styles.projects}>
+      <section className="mt-16">
         <Container>
           <InfoCard>
-            <h4>{t('projects.title')}</h4>
+            <h4 className="mb-2 text-3xl font-bold text-white">
+              {t("projects.title")}
+            </h4>
 
-            {projects.map(project => (
+            {projects.map((project) => (
               <Suspense key={project.title} fallback={null}>
                 <ProjectCard
                   hasMockup={project.hasMockup}
@@ -104,32 +111,35 @@ export default async function Home() {
             ))}
           </InfoCard>
         </Container>
-      </section> */}
+      </section>
 
-      {/* <section className={styles.techs}>
-        <h5>{t('techs.title')}</h5>
+      <section className="my-16">
+        <h5 className="mb-10 text-center text-3xl font-bold text-white md:mb-10 md:text-5xl">
+          {t("techs.title")}
+        </h5>
 
-        <div>
-          {techs.map(tech => (
-            <Tooltip key={tech.title} text={tech.title}>
-              <Image
-                src={tech.img}
-                width="40"
-                height="40"
-                alt={tech.title}
-                loading="lazy"
-              />
-            </Tooltip>
+        <div className="flex flex-wrap items-start justify-around gap-1.5 px-1 py-2.5">
+          {techs.map((tech) => (
+            <Image
+              src={tech.img}
+              width="40"
+              height="40"
+              alt={tech.title}
+              loading="lazy"
+              key={tech.title}
+            />
           ))}
         </div>
-      </section> */}
+      </section>
 
-      {/* <footer className={styles.footer}>
-        <h5>Copyright © Rafael Santana · {year} </h5>
+      <footer className="flex flex-col items-center justify-center py-10">
+        <h5 className="text-[1rem] font-bold text-white">
+          Copyright © Rafael Santana · {year}{" "}
+        </h5>
         <Suspense>
           <ChangeColor />
         </Suspense>
-      </footer> */}
+      </footer>
 
       <BackToTheTop />
     </main>

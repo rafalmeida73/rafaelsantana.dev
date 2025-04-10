@@ -1,20 +1,19 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
+
+import { Slide } from "../Slide";
+import { CarouselProps } from "./types";
 import {
-  StackedCarousel,
   ResponsiveContainer,
-} from 'react-stacked-center-carousel';
-
-import { Slide } from '../Slide';
-import styles from './Carousel.module.css';
-import { CarouselProps } from './types';
+  StackedCarousel,
+} from "react-stacked-center-carousel";
 
 export const Carousel = ({ images, hasMockup }: CarouselProps) => {
   return (
-    <div className={styles.container}>
+    <div className="my-12 w-full">
       <ResponsiveContainer
-        render={width => {
+        render={(width) => {
           return (
             <StackedCarousel
               slideComponent={Slide}
@@ -36,11 +35,9 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
       />
 
       <noscript>
-        <div
-          className={`${styles.carousel} ${hasMockup && styles.carouselMockup}`}
-        >
+        <div className={`w-full ${hasMockup && "h-[40rem]"}`}>
           {images?.length === 1 ? (
-            <div className={styles.onlyOneImage}>
+            <div className="flex items-center justify-center">
               <Image
                 src={images?.[0]?.image}
                 width={200}
@@ -50,15 +47,12 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
               />
             </div>
           ) : (
-            <div className={`${images?.length > 1 && styles.carouselContent}`}>
-              <div className={styles.carouselItem}>
-                <div className={`${styles?.cover} ${styles?.fill}`}>
-                  <div
-                    className={`${styles?.cardOverlay} ${styles?.fill} ${
-                      hasMockup && styles?.cardOverlayRadius
-                    }`}
-                    aria-hidden="true"
-                  ></div>
+            <div
+              className={`${images?.length > 1 && "flex items-center justify-center"}`}
+            >
+              <div className="">
+                <div className="">
+                  <div aria-hidden="true"></div>
                 </div>
                 <Image
                   src={images?.[2]?.image}
@@ -69,7 +63,7 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
                 />
               </div>
 
-              <div className={styles.carouselItem}>
+              <div>
                 <Image
                   src={images?.[0]?.image}
                   width={200}
@@ -79,14 +73,9 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
                 />
               </div>
 
-              <div className={styles.carouselItem}>
-                <div className={`${styles?.cover} ${styles?.fill}`}>
-                  <div
-                    className={`${styles?.cardOverlay} ${styles?.fill} ${
-                      hasMockup && styles?.cardOverlayRadius
-                    }`}
-                    aria-hidden="true"
-                  ></div>
+              <div>
+                <div>
+                  <div aria-hidden="true"></div>
                 </div>
                 <Image
                   src={images?.[1]?.image}
