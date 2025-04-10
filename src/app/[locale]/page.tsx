@@ -32,13 +32,11 @@ export default async function Home() {
           currentLocale={currentLocale}
           language="pt"
           alt={t("languages.ptLanguage")}
-          useNavigation
         />
         <LanguageIcon
           currentLocale={currentLocale}
           language="en"
           alt={t("languages.enLanguage")}
-          useNavigation
         />
       </div>
 

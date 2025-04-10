@@ -7,7 +7,6 @@ export const LanguageIcon = ({
   language,
   alt,
   currentLocale,
-  useNavigation = false,
 }: LanguageIconProps) => {
   return (
     <Links
@@ -15,7 +14,6 @@ export const LanguageIcon = ({
         page: `${language}`,
       }}
       className={`border-b-2 border-solid ${language === currentLocale && "border-b-picton-blue"} cursor-pointer`}
-      useNavigation={useNavigation}
     >
       <Image
         src={
