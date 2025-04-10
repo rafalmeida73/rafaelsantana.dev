@@ -12,9 +12,9 @@ import InfoCard from "@/components/InfoCard";
 import { LanguageIcon } from "@/components/LanguageIcon";
 import ProfileInfo from "@/components/ProfileInfo";
 import { ProjectCard } from "@/components/ProjectCard";
-import { formations } from "@/messages/utils/formations";
-import { projects } from "@/messages/utils/projects";
-import { techs } from "@/messages/utils/techs";
+import { formations } from "@/i18n/messages/utils/formations";
+import { projects } from "@/i18n/messages/utils/projects";
+import { techs } from "@/i18n/messages/utils/techs";
 
 import { getLocale, getTranslations } from "next-intl/server";
 
