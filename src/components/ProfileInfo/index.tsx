@@ -5,7 +5,7 @@ import { ProfileIcons } from "../ProfileIcons";
 import { Mail } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-export default async function ProfileInfo() {
+export const ProfileInfo = async () => {
   const t = await getTranslations("Home");
 
   return (
@@ -40,4 +40,4 @@ export default async function ProfileInfo() {
       </Links>
     </div>
   );
-}
+};
