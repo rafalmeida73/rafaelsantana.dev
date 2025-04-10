@@ -16,8 +16,8 @@ export const BackToTheTop = () => {
         const mybutton = document?.getElementById?.("backToTheTop");
 
         if (
-          document.body.scrollTop > 30 ||
-          document.documentElement.scrollTop > 30
+          document.body.scrollTop > 25 ||
+          document.documentElement.scrollTop > 25
         ) {
           mybutton ? (mybutton.style.display = "flex") : null;
         } else {
@@ -39,7 +39,7 @@ export const BackToTheTop = () => {
         aria-label={t("backToTheTop.title")}
         color="primary"
         id="backToTheTop"
-        className="bg-picton-blue visible fixed right-10 bottom-2.5 z-50 flex h-12 w-12 items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
+        className="bg-picton-blue visible fixed right-10 bottom-5 z-50 hidden h-12 w-12 items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
       >
         <ChevronUp />
       </button>
