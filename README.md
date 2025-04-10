@@ -4,6 +4,7 @@
 
 #### Technologies used
 - Next.Js
+- Tailwind
 
 ## 🛠 Installation & Set Up
 
