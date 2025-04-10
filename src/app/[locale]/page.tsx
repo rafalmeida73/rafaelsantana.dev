@@ -138,7 +138,7 @@ export default async function Home() {
 
       <footer className="flex flex-col items-center justify-center py-10">
         <h5 className="text-[1rem] font-bold text-white">
-          Copyright © Rafael Santana · {year}{" "}
+          Copyright © Rafael Santana · {year}
         </h5>
         <Suspense>
           <ChangeColor />
