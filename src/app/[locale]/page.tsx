@@ -12,6 +12,7 @@ import InfoCard from "@/components/InfoCard";
 import { LanguageIcon } from "@/components/LanguageIcon";
 import ProfileInfo from "@/components/ProfileInfo";
 import { ProjectCard } from "@/components/ProjectCard";
+import { ToolTip } from "@/components/Tooltip";
 import { formations } from "@/i18n/messages/utils/formations";
 import { projects } from "@/i18n/messages/utils/projects";
 import { techs } from "@/i18n/messages/utils/techs";
@@ -120,16 +121,17 @@ export default async function Home() {
           {t("techs.title")}
         </h5>
 
-        <div className="flex flex-wrap items-start justify-around gap-1.5 px-1 py-2.5">
+        <div className="flex flex-wrap items-start justify-center gap-1.5 px-1 py-2.5 md:justify-around">
           {techs.map((tech) => (
-            <Image
-              src={tech.img}
-              width="40"
-              height="40"
-              alt={tech.title}
-              loading="lazy"
-              key={tech.title}
-            />
+            <ToolTip key={tech.title} text={tech.title}>
+              <Image
+                src={tech.img}
+                width="40"
+                height="40"
+                alt={tech.title}
+                loading="lazy"
+              />
+            </ToolTip>
           ))}
         </div>
       </section>

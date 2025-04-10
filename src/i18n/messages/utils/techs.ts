@@ -1,50 +1,54 @@
 export const techs = [
   {
-    title: 'PostgreSQL',
-    img: '/img/icons/postgresql.webp',
+    title: "PostgreSQL",
+    img: "/img/icons/postgresql.webp",
   },
   {
-    title: 'Html',
-    img: '/img/icons/html.webp',
+    title: "Html",
+    img: "/img/icons/html.webp",
   },
   {
-    title: 'Css',
-    img: '/img/icons/css.webp',
+    title: "Css",
+    img: "/img/icons/css.webp",
   },
   {
-    title: 'MySql',
-    img: '/img/icons/mysql.webp',
+    title: "Tailwind",
+    img: "/img/icons/tailwindcss.webp",
   },
   {
-    title: 'Javascript',
-    img: '/img/icons/js.webp',
+    title: "MySql",
+    img: "/img/icons/mysql.webp",
   },
   {
-    title: 'React',
-    img: '/img/icons/react.webp',
+    title: "Javascript",
+    img: "/img/icons/js.webp",
   },
   {
-    title: 'React Native',
-    img: '/img/icons/reactNative.webp',
+    title: "React",
+    img: "/img/icons/react.webp",
   },
   {
-    title: 'Typescript',
-    img: '/img/icons/ts.webp',
+    title: "React Native",
+    img: "/img/icons/reactNative.webp",
   },
   {
-    title: 'Firebase',
-    img: '/img/icons/firebase.webp',
+    title: "Typescript",
+    img: "/img/icons/ts.webp",
   },
   {
-    title: 'Git',
-    img: '/img/icons/git.webp',
+    title: "Firebase",
+    img: "/img/icons/firebase.webp",
   },
   {
-    title: 'Jira',
-    img: '/img/icons/jira.webp',
+    title: "Git",
+    img: "/img/icons/git.webp",
   },
   {
-    title: 'Figma',
-    img: '/img/icons/figma.webp',
+    title: "Jira",
+    img: "/img/icons/jira.webp",
+  },
+  {
+    title: "Figma",
+    img: "/img/icons/figma.webp",
   },
 ];
