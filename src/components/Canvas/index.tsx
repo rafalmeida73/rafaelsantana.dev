@@ -16,7 +16,7 @@ export const Canvas = ({ children }: PropsWithChildren) => {
 
   if (loading)
     return (
-      <div className="!min-h-[100dvh]">
+      <div className="!h-[100dvh]">
         <noscript>
           <Suspense fallback={null}>
             <ImageProfileNoJs />
@@ -28,7 +28,7 @@ export const Canvas = ({ children }: PropsWithChildren) => {
   return (
     <>
       <ThreeCanvas
-        className="fixed top-0 left-0 min-h-[100dvh] touch-none outline-none"
+        className="fixed top-0 left-0 !h-[100dvh] touch-none outline-none"
         camera={{
           fov: 70,
           near: 0.1,
