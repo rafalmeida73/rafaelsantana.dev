@@ -1,11 +1,11 @@
-'use client';
-import React, { PropsWithChildren, Suspense, useEffect, useState } from 'react';
+"use client";
 
-import { Loader } from '@react-three/drei';
-import { Canvas as ThreeCanvas } from '@react-three/fiber';
+import { PropsWithChildren, Suspense, useEffect, useState } from "react";
 
-import { ImageProfileNoJs } from '../ImageProfileNojs';
-import styles from './Canvas.module.css';
+import { Loader } from "@react-three/drei";
+import { Canvas as ThreeCanvas } from "@react-three/fiber";
+
+import { ImageProfileNoJs } from "../ImageProfileNojs";
 
 export const Canvas = ({ children }: PropsWithChildren) => {
   const [loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ export const Canvas = ({ children }: PropsWithChildren) => {
 
   if (loading)
     return (
-      <div className={styles.noJsContainer}>
+      <div className="!min-h-[100dvh]">
         <noscript>
           <Suspense fallback={null}>
             <ImageProfileNoJs />
@@ -28,7 +28,7 @@ export const Canvas = ({ children }: PropsWithChildren) => {
   return (
     <>
       <ThreeCanvas
-        className={styles.r3f}
+        className="fixed top-0 left-0 min-h-[100dvh] touch-none outline-none"
         camera={{
           fov: 70,
           near: 0.1,

@@ -1,28 +1,29 @@
-'use client';
+"use client";
 
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from "react";
 
-import { useColor } from '@/hooks/useColor';
-import { useTranslations } from 'next-intl';
+import { useColor } from "@/hooks/useColor";
+
+import { useTranslations } from "next-intl";
 
 export const ChangeColor = () => {
   const [loading, setLoading] = useState(true);
 
   const { color, setColor } = useColor();
 
-  const t = useTranslations('Home');
+  const t = useTranslations("Home");
 
   // Function to update the favicon with the given SVG
   const changeFaviconWithIcon = useCallback(async (color: string) => {
-    const response = await fetch(`/api/icon/${color.replace('#', '')}`);
+    const response = await fetch(`/api/icon/${color.replace("#", "")}`);
     const { data: icon } = await response.json();
 
     let link = document.querySelector("link[rel*='icon']") as HTMLLinkElement;
 
     if (!link) {
-      link = document.createElement('link');
-      link.rel = 'icon';
-      document.getElementsByTagName('head')[0].appendChild(link);
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.getElementsByTagName("head")[0].appendChild(link);
     }
 
     link.href = icon;
@@ -33,9 +34,8 @@ export const ChangeColor = () => {
       try {
         setColor(colorValue);
         changeFaviconWithIcon(colorValue);
-        document.documentElement.style.setProperty('--primary', colorValue);
+        document.documentElement.style.setProperty("--primary", colorValue);
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error(error);
       }
     },
@@ -46,11 +46,10 @@ export const ChangeColor = () => {
     try {
       const primaryColor = getComputedStyle(
         document.documentElement,
-      ).getPropertyValue('--primary');
+      ).getPropertyValue("--primary");
 
       setColor(primaryColor);
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error(error);
     }
   }, [setColor]);
@@ -68,11 +67,11 @@ export const ChangeColor = () => {
       <input
         type="color"
         value={color}
-        onChange={e => {
+        onChange={(e) => {
           handleChangeColor(e.target.value);
         }}
         aria-labelledby="color"
-        aria-label={t('changeColor.title')}
+        aria-label={t("changeColor.title")}
       />
     </div>
   );

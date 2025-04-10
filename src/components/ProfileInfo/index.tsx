@@ -1,22 +1,25 @@
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
-import { Mail } from 'lucide-react';
-import { getTranslations } from 'next-intl/server';
-
-import Links from '../Links';
-import { ProfileIcons } from '../ProfileIcons';
-import styles from './ProfileInfo.module.css';
+import Links from "../Links";
+import { ProfileIcons } from "../ProfileIcons";
+import { Mail } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 export default async function ProfileInfo() {
-  const t = await getTranslations('Home');
+  const t = await getTranslations("Home");
 
   return (
-    <div className={styles.container}>
-      <h1>Rafael Santana</h1>
-      <p>{t('mainContent.city')}</p>
-      <p>{t('mainContent.description')}</p>
-
-      <div className={styles.icons}>
+    <div className="grid h-full content-center justify-center">
+      <h1 className="mb-4 text-2xl font-bold text-white md:text-4xl">
+        Rafael Santana
+      </h1>
+      <p className="mb-4 text-[1rem] text-white md:text-2xl">
+        {t("mainContent.city")}
+      </p>
+      <p className="mb-8 text-[1rem] text-white md:text-justify md:text-2xl">
+        {t("mainContent.description")}
+      </p>
+      <div className="mb-10 flex w-full justify-around">
         <Suspense fallback={null}>
           <ProfileIcons type="github" />
         </Suspense>
@@ -29,11 +32,11 @@ export default async function ProfileInfo() {
       </div>
 
       <Links
-        className={styles.button}
-        href={`mailto:${t('mainContent.contact')}@rafaelsantana.dev`}
+        className="bg-picton-blue flex items-center justify-center rounded-[0.5rem] px-4 py-4 text-[.7rem] font-semibold text-white uppercase no-underline lg:text-[1rem]"
+        href={`mailto:${t("mainContent.contact")}@rafaelsantana.dev`}
       >
-        <Mail size={20} />
-        {t('mainContent.email')}
+        <Mail className="mr-2 text-2xl text-white" />
+        {t("mainContent.email")}
       </Links>
     </div>
   );

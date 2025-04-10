@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
-
-import styles from './Container.module.css';
+import { ReactNode } from "react";
 
 export const Container = ({ children }: { children: ReactNode }) => {
-  return <div className={styles.container}>{children}</div>;
+  return (
+    <div className="px-[4vw] py-[0] md:px-[10vw] md:py-[0]">{children}</div>
+  );
 };

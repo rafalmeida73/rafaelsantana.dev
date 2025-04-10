@@ -1,47 +1,48 @@
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
-import { BackToTheTop } from '@/components/BackToTheTop';
-import { Canvas } from '@/components/Canvas';
-import { ChangeColor } from '@/components/ChangeColor';
-import { Container } from '@/components/Container';
-import { ImageProfile } from '@/components/ImageProfile';
-import { Info } from '@/components/Info';
-import InfoCard from '@/components/InfoCard';
-import { LanguageIcon } from '@/components/LanguageIcon';
-import ProfileInfo from '@/components/ProfileInfo';
-import { ProjectCard } from '@/components/ProjectCard';
-import { Tooltip } from '@/components/ToolTip';
-import { formations } from '@/utils/formations';
-import { projects } from '@/utils/projects';
-import { techs } from '@/utils/techs';
-import { getLocale, getTranslations } from 'next-intl/server';
-import Image from 'next/image';
+import Image from "next/image";
 
-import styles from '@/styles/Home.module.css';
+import { BackToTheTop } from "@/components/BackToTheTop";
+import { Canvas } from "@/components/Canvas";
+import { ChangeColor } from "@/components/ChangeColor";
+import { Container } from "@/components/Container";
+import { ImageProfile } from "@/components/ImageProfile";
+import { Info } from "@/components/Info";
+import InfoCard from "@/components/InfoCard";
+import { LanguageIcon } from "@/components/LanguageIcon";
+import ProfileInfo from "@/components/ProfileInfo";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Tooltip } from "@/components/ToolTip";
+import { formations } from "@/utils/formations";
+import { projects } from "@/utils/projects";
+import { techs } from "@/utils/techs";
+
+import { getLocale, getTranslations } from "next-intl/server";
 
 export default async function Home() {
-  const t = await getTranslations('Home');
+  const t = await getTranslations("Home");
   const currentLocale = await getLocale();
 
   const year = new Date()?.getFullYear?.();
 
   return (
     <main>
-      <div className={styles.languages}>
+      <div className="absolute top-0 right-0 flex w-full justify-end gap-0.5 p-4 md:pt-3">
         <LanguageIcon
           currentLocale={currentLocale}
           language="pt"
-          alt={t('languages.ptLanguage')}
+          alt={t("languages.ptLanguage")}
         />
         <LanguageIcon
           currentLocale={currentLocale}
           language="en"
-          alt={t('languages.enLanguage')}
+          alt={t("languages.enLanguage")}
         />
       </div>
-      <section className={styles.container}>
+
+      <section className="mb-10 flex min-h-[100dvh] items-center justify-center">
         <Container>
-          <div className={styles.mainContent}>
+          <div className="grid grid-cols-2 grid-rows-1 gap-x-1.5 gap-y-0 md:gap-x-8">
             <Canvas>
               <ImageProfile />
             </Canvas>
@@ -52,16 +53,16 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section className={styles.aboutMe}>
+      {/* <section>
         <Container>
           <InfoCard>
-            <h2>{t('aboutMe.title')}</h2>
-            <p>{t('aboutMe.description')}</p>
+            <h2>{t("aboutMe.title")}</h2>
+            <p>{t("aboutMe.description")}</p>
           </InfoCard>
         </Container>
-      </section>
+      </section> */}
 
-      <Container>
+      {/* <Container>
         <InfoCard>
           <section className={styles.education}>
             <h3>{t('academicFormation.title')}</h3>
@@ -79,9 +80,9 @@ export default async function Home() {
             </div>
           </section>
         </InfoCard>
-      </Container>
+      </Container> */}
 
-      <section className={styles.projects}>
+      {/* <section className={styles.projects}>
         <Container>
           <InfoCard>
             <h4>{t('projects.title')}</h4>
@@ -103,9 +104,9 @@ export default async function Home() {
             ))}
           </InfoCard>
         </Container>
-      </section>
+      </section> */}
 
-      <section className={styles.techs}>
+      {/* <section className={styles.techs}>
         <h5>{t('techs.title')}</h5>
 
         <div>
@@ -121,14 +122,14 @@ export default async function Home() {
             </Tooltip>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <h5>Copyright © Rafael Santana · {year} </h5>
         <Suspense>
           <ChangeColor />
         </Suspense>
-      </footer>
+      </footer> */}
 
       <BackToTheTop />
     </main>

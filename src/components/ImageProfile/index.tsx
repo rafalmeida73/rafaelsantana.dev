@@ -1,9 +1,8 @@
-/* eslint-disable react/no-unknown-property */
-'use client';
+"use client";
 
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
-import { useColor } from '@/hooks/useColor';
+import { useColor } from "@/hooks/useColor";
 import {
   Center,
   Cylinder,
@@ -13,12 +12,14 @@ import {
   PresentationControls,
   Text3D,
   useTexture,
-} from '@react-three/drei';
-import { useThree } from '@react-three/fiber';
+} from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
+
+/* eslint-disable react/no-unknown-property */
 
 export const ImageProfile = () => {
   const matcapTexture = useTexture(
-    '/img/matcap/BEE2E9_7E6A53_9AA09C_87837E.webp',
+    "/img/matcap/BEE2E9_7E6A53_9AA09C_87837E.webp",
   );
 
   const { viewport } = useThree();
@@ -36,7 +37,7 @@ export const ImageProfile = () => {
             config={{ mass: 2, tension: 400 }}
             snap={{ mass: 4, tension: 400 }}
           >
-            <Float rotationIntensity={0.4}>
+            <Float rotationIntensity={0.9}>
               <Cylinder
                 position={[0, 0, -0.1]}
                 scale={[1.8, 0.1, 1.8]}
@@ -53,7 +54,7 @@ export const ImageProfile = () => {
               <Text3D
                 position={[-1.685, 1.7, 0.04]}
                 scale={[-0.2, 0.2, 0.3]}
-                font={'/fonts/inter.json'}
+                font={"/fonts/inter.json"}
                 bevelEnabled
                 bevelSize={0.08}
                 bevelThickness={0.03}
@@ -63,7 +64,7 @@ export const ImageProfile = () => {
                 rotation={[0, 3, 0]}
                 size={2.2}
               >
-                R{'\n'}A{'\n'}F{'\n'}A{'\n'}E{'\n'}L
+                R{"\n"}A{"\n"}F{"\n"}A{"\n"}E{"\n"}L
                 <meshMatcapMaterial color={color} matcap={matcapTexture} />
                 <Outlines thickness={0.02} color="#141414" />
               </Text3D>

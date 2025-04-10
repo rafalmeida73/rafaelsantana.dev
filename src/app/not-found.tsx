@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
-import { ChevronLeft } from 'lucide-react';
-import dynamic from 'next/dynamic';
-import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
-const NotFoundAnimation = dynamic(() => import('@/components/404'), {
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+
+import styles from "@/styles/NotFound.module.css";
+
+import en from "../messages/en.json";
+import pt from "../messages/pt.json";
+import { ChevronLeft } from "lucide-react";
+
+const NotFoundAnimation = dynamic(() => import("@/components/404"), {
   ssr: false,
 });
-
-import en from '../messages/en.json';
-import pt from '../messages/pt.json';
-
-import styles from '@/styles/NotFound.module.css';
 
 const Custom404 = () => {
   const router = useRouter();
@@ -22,7 +23,8 @@ const Custom404 = () => {
   const [loading, setLoading] = useState(true);
 
   const locale = useMemo(() => {
-    if (pathname?.includes('/en')) return en?.Notfound;
+    if (pathname?.includes("/en")) return en?.Notfound;
+
     return pt?.Notfound;
   }, [pathname]);
 

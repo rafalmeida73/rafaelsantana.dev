@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { memo } from 'react';
+import { memo } from "react";
 
-import Image from 'next/image';
-import { StackedCarouselSlideProps } from 'react-stacked-center-carousel';
+import Image from "next/image";
+
+import { StackedCarouselSlideProps } from "./types";
 
 export const Slide = memo(function slideCard(
   SlideProps: StackedCarouselSlideProps,
@@ -16,9 +17,9 @@ export const Slide = memo(function slideCard(
 
   return (
     <div className="card-card" draggable={false}>
-      <div className={`cover fill ${isCenterSlide ? 'off' : 'on'}`}>
+      <div className={`cover fill ${isCenterSlide ? "off" : "on"}`}>
         <div
-          className={`${isMockup && 'card-overlay-mockup'} card-overlay fill`}
+          className={`${isMockup && "card-overlay-mockup"} card-overlay fill`}
           onClick={() => {
             if (!isCenterSlide) swipeTo(slideIndex);
           }}

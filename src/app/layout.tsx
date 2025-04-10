@@ -1,27 +1,29 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import '../styles/globals.css';
-import { ColorProvider } from '@/hooks/useColor';
-import { Inter, Inconsolata, Montserrat } from 'next/font/google';
-import { cookies } from 'next/headers';
-import Script from 'next/script';
+import { Inconsolata, Inter, Montserrat } from "next/font/google";
+import { cookies } from "next/headers";
+import Script from "next/script";
+
+import { ColorProvider } from "@/hooks/useColor";
+
+import "./globals.css";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 const inconsolata = Inconsolata({
-  subsets: ['latin'],
-  variable: '--font-Inconsolata',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-Inconsolata",
+  display: "swap",
 });
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
 export default async function RootLayout({
@@ -30,13 +32,13 @@ export default async function RootLayout({
   children: ReactNode;
 }) {
   const cookieStore = await cookies();
-  const locale = cookieStore?.get('NEXT_LOCALE')?.value || 'pt';
+  const locale = cookieStore?.get("NEXT_LOCALE")?.value || "pt";
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable} ${inconsolata.variable} ${montserrat.variable}`}
+        className={` ${inter.variable} ${inconsolata.variable} ${montserrat.variable} bg-custom bg-chinese-black scrollbar bg-cover bg-fixed font-[var(--font-inter)] text-[optimizelegibility]`}
       >
         <ColorProvider>{children}</ColorProvider>
         <Script

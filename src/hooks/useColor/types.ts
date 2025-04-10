@@ -1,8 +1,10 @@
+import { Dispatch, ReactNode, SetStateAction } from "react";
+
 export interface ContextData {
   color: string;
-  setColor: React.Dispatch<React.SetStateAction<string>>;
+  setColor: Dispatch<SetStateAction<string>>;
 }
 
 export interface ContextProvider {
-  children: React.ReactNode;
+  children: ReactNode;
 }
