@@ -16,8 +16,8 @@ export const BackToTheTop = () => {
         const mybutton = document?.getElementById?.("backToTheTop");
 
         if (
-          document.body.scrollTop > 25 ||
-          document.documentElement.scrollTop > 25
+          document.body.scrollTop > 30 ||
+          document.documentElement.scrollTop > 30
         ) {
           mybutton ? (mybutton.style.display = "flex") : null;
         } else {
