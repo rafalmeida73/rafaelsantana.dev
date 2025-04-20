@@ -39,7 +39,7 @@ export const ProjectCard = async ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={title}
-              className="text-picton-blue text-[1rem] md:text-[1.2rem]"
+              className="text-primary text-[1rem] md:text-[1.2rem]"
             >
               {title}
             </Links>
@@ -54,7 +54,7 @@ export const ProjectCard = async ({
         >
           {techs?.map((tech) => (
             <li
-              className="text-picton-blue p-2 text-[1rem] font-[var(--font-Inconsolata)] md:p-0"
+              className="text-primary p-2 text-[1rem] font-[var(--font-Inconsolata)] md:p-0"
               key={tech}
             >
               {tech}
@@ -78,7 +78,7 @@ export const ProjectCard = async ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Play Store link"
-              className="text-picton-blue text-[1rem] md:text-[1.2rem]"
+              className="text-primary text-[1rem] md:text-[1.2rem]"
             >
               Play Store
             </Links>
@@ -98,7 +98,7 @@ export const ProjectCard = async ({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="App Store link"
-                className="text-picton-blue text-[1rem] md:text-[1.2rem]"
+                className="text-primary text-[1rem] md:text-[1.2rem]"
               >
                 App Store
               </Links>

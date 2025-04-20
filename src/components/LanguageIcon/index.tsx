@@ -14,7 +14,7 @@ export const LanguageIcon = ({
         page: `${language}`,
       }}
       className={`border-b-2 border-solid
-        ${language === currentLocale ? "border-b-picton-blue" : "border-b-transparent"}
+        ${language === currentLocale ? "border-b-primary" : "border-b-transparent"}
         cursor-pointer`}
     >
       <Image

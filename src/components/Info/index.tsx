@@ -5,7 +5,7 @@ export const Info = ({ title, description, time }: InfoProps) => {
   return (
     <div className="my-10 text-center">
       {!title?.link ? (
-        <p className="text-picton-blue mb-1 text-[1.2rem] font-bold">
+        <p className="text-primary mb-1 text-[1.2rem] font-bold">
           {title?.text}
         </p>
       ) : (
@@ -14,7 +14,7 @@ export const Info = ({ title, description, time }: InfoProps) => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={title?.ariaLabel}
-          className="text-picton-blue !block"
+          className="text-primary !block"
         >
           {title?.text}
         </Links>

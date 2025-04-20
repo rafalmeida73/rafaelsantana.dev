@@ -9,7 +9,7 @@ export const ImageProfileNoJs = () => {
     <div className="relative flex h-full items-center">
       <p
         data-text="Rafael"
-        className="text-vertical text-chinese-black absolute left-1.5 text-4xl
+        className="text-vertical text-background absolute left-1.5 text-4xl
           font-[var(--font-montserrat)] md:text-8xl"
       >
         Rafael
@@ -17,7 +17,7 @@ export const ImageProfileNoJs = () => {
       <Image
         width={650}
         height={650}
-        className="bg-picton-blue rounded-full object-cover"
+        className="bg-primary rounded-full object-cover"
         src="/img/profileImage.webp"
         alt={t("mainContent.profileImageAlt")}
         draggable={false}

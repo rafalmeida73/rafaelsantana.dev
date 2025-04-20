@@ -35,7 +35,7 @@ export const ChangeColor = () => {
         setColor(colorValue);
         changeFaviconWithIcon(colorValue);
         document.documentElement.style.setProperty(
-          "--color-picton-blue",
+          "--color-primary",
           colorValue,
         );
       } catch (error) {
@@ -49,7 +49,7 @@ export const ChangeColor = () => {
     try {
       const primaryColor = getComputedStyle(
         document.documentElement,
-      ).getPropertyValue("--color-picton-blue");
+      ).getPropertyValue("--color-primary");
 
       setColor(primaryColor);
     } catch (error) {
