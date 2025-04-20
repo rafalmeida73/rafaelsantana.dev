@@ -35,7 +35,7 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
       />
 
       <noscript>
-        <div className={`w-full ${hasMockup && "h-[40rem]"}`}>
+        <div className={"w-full"}>
           {images?.length === 1 ? (
             <div className="flex items-center justify-center">
               <Image
