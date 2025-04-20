@@ -13,7 +13,8 @@ export const LanguageIcon = ({
       nextLink={{
         page: `${language}`,
       }}
-      className={`border-b-2 border-solid ${language === currentLocale && "border-b-picton-blue"} cursor-pointer`}
+      className={`border-b-2 border-solid ${language === currentLocale && "border-b-picton-blue"}
+        cursor-pointer`}
     >
       <Image
         src={

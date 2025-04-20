@@ -1,4 +1,4 @@
 export interface IconProps {
   color?: string;
-  type?: 'github' | 'linkedin' | 'whatsapp';
+  type?: "github" | "linkedin" | "whatsapp";
 }

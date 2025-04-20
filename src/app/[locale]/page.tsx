@@ -119,7 +119,10 @@ export default async function Home() {
           {t("techs.title")}
         </h5>
 
-        <div className="flex flex-wrap items-start justify-center gap-1.5 px-8 py-2.5 md:justify-around md:px-1">
+        <div
+          className="flex flex-wrap items-start justify-center gap-1.5 px-8 py-2.5 md:justify-around
+            md:px-1"
+        >
           {techs.map((tech) => (
             <ToolTip key={tech.title} text={tech.title}>
               <Image

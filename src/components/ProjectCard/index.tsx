@@ -48,7 +48,10 @@ export const ProjectCard = async ({
       </p>
 
       {techs && (
-        <ul className="mt-12 flex list-['|'] flex-wrap items-center justify-around md:list-none [&>*:nth-child(1)]:list-none">
+        <ul
+          className="mt-12 flex list-['|'] flex-wrap items-center justify-around md:list-none
+            [&>*:nth-child(1)]:list-none"
+        >
           {techs?.map((tech) => (
             <li
               className="text-picton-blue p-2 text-[1rem] font-[var(--font-Inconsolata)] md:p-0"

@@ -32,7 +32,8 @@ export const ProfileInfo = async () => {
       </div>
 
       <Links
-        className="bg-picton-blue flex items-center justify-center rounded-[0.5rem] px-4 py-4 text-[.7rem] font-semibold text-white uppercase no-underline lg:text-[1rem]"
+        className="bg-picton-blue flex items-center justify-center rounded-[0.5rem] px-4 py-4
+          text-[.7rem] font-semibold text-white uppercase no-underline lg:text-[1rem]"
         href={`mailto:${t("mainContent.contact")}@rafaelsantana.dev`}
       >
         <Mail className="mr-2 text-2xl text-white" />

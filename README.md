@@ -3,6 +3,7 @@
 <img src="https://rafaelsantana.dev/img/index.webp" />
 
 #### Technologies used
+
 - Next.Js
 - Tailwind
 
@@ -14,7 +15,7 @@
    yarn
    ```
 
-4. Start the development server
+2. Start the development server
 
    ```sh
    yarn dev

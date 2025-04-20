@@ -9,7 +9,8 @@ export const ImageProfileNoJs = () => {
     <div className="relative flex h-full items-center">
       <p
         data-text="Rafael"
-        className="text-vertical text-chinese-black absolute left-1.5 text-4xl font-[var(--font-montserrat)] md:text-8xl"
+        className="text-vertical text-chinese-black absolute left-1.5 text-4xl
+          font-[var(--font-montserrat)] md:text-8xl"
       >
         Rafael
       </p>

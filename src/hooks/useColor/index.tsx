@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
-import { ContextData, ContextProvider } from './types';
+import { ContextData, ContextProvider } from "./types";
 
 const ConnectionContext = createContext<ContextData>({} as ContextData);
 
 const ColorProvider = ({ children }: ContextProvider) => {
-  const [color, setColor] = useState('#3bbbe8');
+  const [color, setColor] = useState("#3bbbe8");
 
   return (
     <ConnectionContext.Provider
@@ -25,7 +25,7 @@ function useColor(): ContextData {
   const context = useContext(ConnectionContext);
 
   if (!context) {
-    throw new Error('useColor must be used within an ColorProvider.');
+    throw new Error("useColor must be used within an ColorProvider.");
   }
 
   return context;
