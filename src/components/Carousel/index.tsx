@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 
+import { ResponsiveContainer } from "../ResponsiveContainerProps";
 import { Slide } from "../Slide";
+import { StackedCarousel } from "../StackedCarousel";
 import { CarouselProps } from "./types";
-import {
-  ResponsiveContainer,
-  StackedCarousel,
-} from "react-stacked-center-carousel";
 
 export const Carousel = ({ images, hasMockup }: CarouselProps) => {
   return (
@@ -29,6 +27,7 @@ export const Carousel = ({ images, hasMockup }: CarouselProps) => {
               transitionTime={450}
               fadeDistance={0.85}
               disableSwipe={images?.length === 1}
+              height={hasMockup ? 405.02 : 200}
             />
           );
         }}
