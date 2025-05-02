@@ -3012,10 +3012,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-classnames@^0.7.7:
-  version "0.7.7"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-classnames/-/prettier-plugin-classnames-0.7.7.tgz#933fa06aee308afa0258defa96883fdcc7f2a4a7"
-  integrity sha512-qn+hhpru++ieZ6B6mKt7j6ETPvgOQnJvJ51Yl4rnHneK/vnFxEFOpzFmp1Urcs7Zd/JgUKiaoHIiSSw3LmPy/Q==
+prettier-plugin-classnames@^0.7.8:
+  version "0.7.8"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-classnames/-/prettier-plugin-classnames-0.7.8.tgz#09901bf4b92b67d9b9355e05ac42383f6d974b4b"
+  integrity sha512-TC2a9n/kQKF1Zv1nQTpbIwJJJDLaiRO0BGqEMTmRRfROofbigM4e5zHLsv5Nl6xV53WU1xpjPoRdoaLemLt/oA==
 
 prettier-plugin-merge@^0.7.3:
   version "0.7.3"
