@@ -3044,10 +3044,10 @@ react-reconciler@^0.31.0:
   dependencies:
     scheduler "^0.25.0"
 
-react-resize-detector@^12.0.2:
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-12.0.2.tgz#5e65f906a85835d246de57dbf608bf22ab333cad"
-  integrity sha512-aAI4WxWAysWLhA8wKDpsS+PnnxQ0lWCkTlk2t+2ijalWvoSa7vPxmcKRLURkH+PU84QE4KP4dO58oVP3ypWkKA==
+react-resize-detector@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-12.1.0.tgz#c704c1241512271c752d7dbdd262d7fa44c5d7a7"
+  integrity sha512-yiGIFSLymRz/ujDDXjaAssz9wampLn1FH89JtL9kq9Ql8NFHppqEtgRYUkJni1xwM0CtpSiYsBxEgctMnTHV0Q==
   dependencies:
     lodash "^4.17.21"
 
