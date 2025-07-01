@@ -18,7 +18,7 @@ export const ImageProfileNoJs = () => {
         width={650}
         height={650}
         className="bg-primary rounded-full object-cover"
-        src="/img/profileImage.webp"
+        src="/img/profileImage.png"
         alt={t("mainContent.profileImageAlt")}
         draggable={false}
         priority

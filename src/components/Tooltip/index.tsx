@@ -1,8 +1,8 @@
 import { TooltipProps } from "./types";
 
-export const ToolTip = ({ children, text }: TooltipProps) => {
+export const ToolTip = ({ children, text, ref }: TooltipProps) => {
   return (
-    <div className="group relative inline-block">
+    <div className="group relative inline-block" ref={ref}>
       {children}
 
       <div

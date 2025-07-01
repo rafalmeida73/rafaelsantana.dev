@@ -65,9 +65,17 @@
         "description": "Sales proposal generator for Medsystems employees",
         "imageAlt": "MedSales logo"
       },
+      "portalCliente": {
+        "description": "MedSystems Customer Portal is a platform exclusively for customers who have acquired aesthetic and dermatological technologies from the company. Its objective is to centralize in a single environment several services to ensure more efficient management and complete support.",
+        "imageAlt": "Portal do cliente - MedSystems logo"
+      },
       "medStock": {
         "description": "Website developed for Medsystems, where it is possible to control the customer’s stock that the product arrive in a minimum stock, the system already generates a purchase order for the company’s erp.",
         "imageAlt": "MedStock logo"
+      },
+      "signature": {
+        "description": "Custom email signature for the Medsystems Group",
+        "imageAlt": "Assinatura de E-mail  logo"
       },
       "pokemon": {
         "description": "Pokemon is an app developed with React Native, whose main objective is to list all pokemons, show their information and make it possible to search via images.",

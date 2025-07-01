@@ -1,34 +1,38 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Link from "next/link";
 
+import { useGSAP } from "@gsap/react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronUp } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const BackToTheTop = () => {
   const t = useTranslations("Home");
+  const buttonRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      try {
-        const mybutton = document?.getElementById?.("backToTheTop");
-
-        if (
-          document.body.scrollTop > 25 ||
-          document.documentElement.scrollTop > 25
-        ) {
-          mybutton ? (mybutton.style.display = "flex") : null;
-        } else {
-          mybutton ? (mybutton.style.display = "none") : null;
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
+  useGSAP(() => {
+    gsap.fromTo(
+      buttonRef.current,
+      {
+        y: 100,
+        ease: "power1.inOut",
+      },
+      {
+        display: "flex",
+        y: -20,
+        scrollTrigger: {
+          trigger: buttonRef.current,
+          scrub: true,
+        },
+      },
+    );
   }, []);
 
   return (
@@ -42,6 +46,7 @@ export const BackToTheTop = () => {
         className="bg-primary visible fixed right-5 bottom-5 z-50 hidden h-12 w-12 cursor-pointer
           items-center justify-center rounded-[50%] border-[none] text-center
           [box-shadow:none] hover:opacity-80"
+        ref={buttonRef}
       >
         <ChevronUp />
       </button>
@@ -51,7 +56,7 @@ export const BackToTheTop = () => {
           <button
             type="button"
             id="backToTheTopNoJS"
-            className="bg-primary visible fixed right-5 bottom-2.5 z-50 flex h-12 w-12 items-center
+            className="bg-primary visible fixed right-5 bottom-2.5 z-50 hidden h-12 w-12 items-center
               justify-center rounded-[50%] border-[none] text-center [box-shadow:none]
               hover:opacity-80"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

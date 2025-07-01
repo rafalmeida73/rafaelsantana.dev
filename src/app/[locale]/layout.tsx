@@ -43,7 +43,7 @@ export async function generateMetadata(props: { params: Params }) {
         },
       ],
     },
-    icons: "https://www.rafaelsantana.dev/favicon.ico",
+    icons: "/favicon.ico",
   };
 }
 

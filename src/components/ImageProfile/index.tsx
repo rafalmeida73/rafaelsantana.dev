@@ -46,7 +46,7 @@ export const ImageProfile = () => {
                 <meshMatcapMaterial color={color} matcap={matcapTexture} />
               </Cylinder>
               <Image
-                url="/img/profileImage.webp"
+                url="/img/profileImage.png"
                 transparent
                 scale={3.6}
                 radius={1.84}

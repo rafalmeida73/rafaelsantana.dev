@@ -10,7 +10,7 @@
 @layer utilities {
   * {
     scrollbar-width: auto;
-    scrollbar-color: var(--color-primary) var(--color-secondary);
+    scrollbar-color: var(--color-primary) transparent;
   }
 
   .color-input-wrapper::-webkit-color-swatch-wrapper {

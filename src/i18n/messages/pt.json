@@ -65,9 +65,17 @@
         "description": "Gerador de propostas de vendas para os colaboradores da Medsystems",
         "imageAlt": "MedSales logo"
       },
+      "portalCliente": {
+        "description": "O Portal do Cliente da MedSystems é uma plataforma voltada exclusivamente para clientes que adquiriram tecnologias estéticas e dermatológicas da empresa. Seu objetivo é centralizar em um único ambiente diversos serviços para assegurar uma gestão mais eficiente e suporte completo.",
+        "imageAlt": "Portal do cliente - MedSystems logo"
+      },
       "medStock": {
         "description": "Site desenvolvido para a Medsystems, onde é possível controlar o estoque do cliente que ao produto chegar em um estoque mínimo, o sistema já gera uma ordem de compra para o erp da empresa.",
         "imageAlt": "MedStock logo"
+      },
+      "signature": {
+        "description": "Assinatura de e-mail personalizada para o Grupo Medsystems",
+        "imageAlt": "Assinatura de E-mail  logo"
       },
       "pokemon": {
         "description": "Pokemon é app desenvolvido com React Native, que tem como objetivo principal, listar todos os pokemons, mostrar suas informações e que seja possível realizar pesquisa via imagens.",

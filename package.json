@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-three/drei": "^9.121.1",
     "@react-three/fiber": "^9.1.1",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.511.0",
     "next": "15.3.3",
     "next-intl": "^4.1.0",

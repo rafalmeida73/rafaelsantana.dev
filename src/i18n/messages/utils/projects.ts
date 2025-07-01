@@ -71,6 +71,24 @@ export const projects = [
   },
   {
     hasMockup: false,
+    title: "Portal do cliente - MedSystems",
+    description: "projects.portalCliente.description",
+    app: true,
+    link: "",
+    android:
+      "https://play.google.com/store/apps/details?id=com.medsystems.portalcliente",
+    ios: "https://apps.apple.com/br/app/portal-do-cliente-medsystems/id6747050166",
+    images: [
+      {
+        image: "/img/portalClienteApp/portal.webp",
+        text: "projects.portalCliente.imageAlt",
+        mockup: false,
+      },
+    ],
+    techs: ["React Native", "Styled Components", "Firebase", "TypeScript"],
+  },
+  {
+    hasMockup: false,
     title: "MedSales",
     description: "projects.medSales.description",
     app: true,
@@ -85,7 +103,7 @@ export const projects = [
         mockup: false,
       },
     ],
-    techs: ["React Native", "Styled Components"],
+    techs: ["React Native", "Styled Components", "Firebase", "TypeScript"],
   },
   {
     hasMockup: false,
@@ -145,6 +163,27 @@ export const projects = [
       "React Query",
       "TypeScript",
       "React Hook Form",
+    ],
+  },
+  {
+    hasMockup: false,
+    title: "Assinatura de E-mail - Grupo Medsystems",
+    description: "projects.signature.description",
+    app: false,
+    link: "https://medsystemsassinatura.vercel.app/",
+    android: "",
+    ios: "",
+    images: [
+      {
+        image: "/img/signature/signature.webp",
+        text: "projects.signature.imageAlt",
+        mockup: false,
+      },
+    ],
+    techs: [
+      "Next.js",
+      "MUI",
+      "TypeScript",
     ],
   },
   {

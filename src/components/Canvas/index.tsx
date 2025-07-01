@@ -29,12 +29,6 @@ export const Canvas = ({ children }: PropsWithChildren) => {
     <>
       <ThreeCanvas
         className="fixed top-0 left-0 !h-[100dvh] touch-none outline-none"
-        camera={{
-          fov: 70,
-          near: 0.1,
-          far: 2000,
-          position: [-2, 0.5, 4],
-        }}
       >
         {children}
       </ThreeCanvas>

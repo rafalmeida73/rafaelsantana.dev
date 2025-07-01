@@ -54,7 +54,6 @@ export default async function Home() {
       </section>
 
       <section className="mb-16">
-        <Container>
           <InfoCard>
             <h2 className="mb-6 text-3xl font-bold text-white md:mb-1">
               {t("aboutMe.title")}
@@ -63,10 +62,8 @@ export default async function Home() {
               {t("aboutMe.description")}
             </p>
           </InfoCard>
-        </Container>
       </section>
 
-      <Container>
         <InfoCard>
           <section>
             <h3 className="mb-2 text-3xl font-bold text-white">
@@ -86,10 +83,8 @@ export default async function Home() {
             </div>
           </section>
         </InfoCard>
-      </Container>
 
       <section className="mt-16">
-        <Container>
           <InfoCard>
             <h4 className="mb-2 text-3xl font-bold text-white">
               {t("projects.title")}
@@ -111,7 +106,6 @@ export default async function Home() {
               </Suspense>
             ))}
           </InfoCard>
-        </Container>
       </section>
 
       <section className="my-16">
