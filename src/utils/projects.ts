@@ -2,7 +2,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Broto",
-    description: "projects.broto.description",
+    description:
+      "Broto is an application where you can find machines, implements, energy equipment, irrigation and storage, services, inputs and technologies aimed at precision agriculture.",
     app: true,
     link: "",
     android: "https://play.google.com/store/apps/details?id=broto.mobile.app",
@@ -10,7 +11,7 @@ export const projects = [
     images: [
       {
         image: "/img/broto/broto.webp",
-        text: "projects.broto.imageAlt",
+        text: "Broto logo",
         mockup: false,
       },
     ],
@@ -25,7 +26,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Natural da terra",
-    description: "projects.nt.description",
+    description:
+      "Natural da Terra is an ecommerce application in the hortifruit sector, developed with React Native.",
     app: true,
     link: "",
     android:
@@ -34,7 +36,7 @@ export const projects = [
     images: [
       {
         image: "/img/naturalTerra/nt.webp",
-        text: "projects.nt.imageAlt",
+        text: "Natural da Terra logo",
         mockup: false,
       },
     ],
@@ -49,7 +51,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Hortifruti",
-    description: "projects.ht.description",
+    description:
+      "Hortifruti is an ecommerce application in the hortifruit sector, developed with React Native.",
     app: true,
     link: "",
     android:
@@ -58,7 +61,7 @@ export const projects = [
     images: [
       {
         image: "/img/hortifruti/ht.webp",
-        text: "projects.ht.imageAlt",
+        text: "Hortifruti logo",
       },
     ],
     techs: [
@@ -72,7 +75,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Portal do cliente - MedSystems",
-    description: "projects.portalCliente.description",
+    description:
+      "MedSystems Customer Portal is a platform exclusively for customers who have acquired aesthetic and dermatological technologies from the company. Its objective is to centralize in a single environment several services to ensure more efficient management and complete support.",
     app: true,
     link: "",
     android:
@@ -81,7 +85,7 @@ export const projects = [
     images: [
       {
         image: "/img/portalClienteApp/portal.webp",
-        text: "projects.portalCliente.imageAlt",
+        text: "Portal do cliente - MedSystems logo",
         mockup: false,
       },
     ],
@@ -90,7 +94,7 @@ export const projects = [
   {
     hasMockup: false,
     title: "MedSales",
-    description: "projects.medSales.description",
+    description: "Sales proposal generator for Medsystems employees",
     app: true,
     link: "",
     android:
@@ -99,7 +103,7 @@ export const projects = [
     images: [
       {
         image: "/img/medSales/medSales.webp",
-        text: "projects.medSales.imageAlt",
+        text: "MedSales logo",
         mockup: false,
       },
     ],
@@ -108,7 +112,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "MedInventory",
-    description: "projects.medInventory.description",
+    description:
+      "MedInventory is a solution that simplifies and improves the way our employees manage inventory.",
     app: true,
     link: "",
     android:
@@ -117,7 +122,7 @@ export const projects = [
     images: [
       {
         image: "/img/medInventory/medInventory.webp",
-        text: "projects.medInventory.imageAlt",
+        text: "MedInventory logo",
         mockup: false,
       },
     ],
@@ -126,7 +131,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "MedEntregas",
-    description: "projects.medEntregas.description",
+    description:
+      "MedEntregas is a solution that simplifies and improves the way employees manage their deliveries. With an intuitive interface and powerful features, we offer users the ability to track, record, and monitor their deliveries efficiently.",
     app: true,
     link: "",
     android:
@@ -135,7 +141,7 @@ export const projects = [
     images: [
       {
         image: "/img/medEntregas/medEntregas.webp",
-        text: "projects.medEntregas.imageAlt",
+        text: "MedEntregas logo",
         mockup: false,
       },
     ],
@@ -144,7 +150,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "MedStock",
-    description: "projects.medStock.description",
+    description:
+      "Website developed for Medsystems, where it is possible to control the customer’s stock that the product arrive in a minimum stock, the system already generates a purchase order for the company’s erp.",
     app: false,
     link: "https://comunidade.medsystems.com.br/",
     android: "",
@@ -152,7 +159,7 @@ export const projects = [
     images: [
       {
         image: "/img/medStock/medStock.webp",
-        text: "projects.medStock.imageAlt",
+        text: "MedStock logo",
         mockup: false,
       },
     ],
@@ -168,7 +175,7 @@ export const projects = [
   {
     hasMockup: false,
     title: "Assinatura de E-mail - Grupo Medsystems",
-    description: "projects.signature.description",
+    description: "Custom email signature for the Medsystems Group",
     app: false,
     link: "https://medsystemsassinatura.vercel.app/",
     android: "",
@@ -176,20 +183,17 @@ export const projects = [
     images: [
       {
         image: "/img/signature/signature.webp",
-        text: "projects.signature.imageAlt",
+        text: "Email signature logo",
         mockup: false,
       },
     ],
-    techs: [
-      "Next.js",
-      "MUI",
-      "TypeScript",
-    ],
+    techs: ["Next.js", "MUI", "TypeScript"],
   },
   {
     hasMockup: true,
     title: "Pokemon",
-    description: "projects.pokemon.description",
+    description:
+      "Pokemon is an app developed with React Native, whose main objective is to list all pokemons, show their information and make it possible to search via images.",
     app: false,
     link: "",
     android: "",
@@ -197,17 +201,17 @@ export const projects = [
     images: [
       {
         image: "/img/pokemon/pokemon1.webp",
-        text: "projects.splashScreen",
+        text: "Application loading page.",
         mockup: true,
       },
       {
         image: "/img/pokemon/pokemon2.webp",
-        text: "projects.pokemon.infoPage",
+        text: "Page that lists the information of the chosen pokemon.",
         mockup: true,
       },
       {
         image: "/img/pokemon/pokemon3.webp",
-        text: "projects.initialPage",
+        text: "Home page",
         mockup: true,
       },
     ],
@@ -216,7 +220,8 @@ export const projects = [
   {
     hasMockup: true,
     title: "Todo List",
-    description: "projects.todoList.description",
+    description:
+      "Todo List is an application developed with React native whose main objective is to create a list of tasks, where the user can add, edit, delete and mark as completed.",
     app: false,
     link: "",
     android: "",
@@ -224,32 +229,17 @@ export const projects = [
     images: [
       {
         image: "/img/todo/todo1.webp",
-        text: "projects.initialPage",
+        text: "Home page",
         mockup: true,
       },
       {
         image: "/img/todo/todo2.webp",
-        text: "projects.signInPage",
+        text: "Login page",
         mockup: true,
       },
       {
         image: "/img/todo/todo3.webp",
-        text: "projects.signUpPage",
-        mockup: true,
-      },
-      {
-        image: "/img/todo/todo4.webp",
-        text: "projects.todoList.emptyListPage",
-        mockup: true,
-      },
-      {
-        image: "/img/todo/todo6.webp",
-        text: "projects.todoList.listPage",
-        mockup: true,
-      },
-      {
-        image: "/img/todo/todo5.webp",
-        text: "projects.todoList.profilePage",
+        text: "Registration page",
         mockup: true,
       },
     ],
@@ -258,7 +248,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Broken Out",
-    description: "projects.brokenOut.description",
+    description:
+      "Broken Out is a website that aims to facilitate access to game information, whether it's mobile, console, or desktop. We provide a huge variety of registered games. However, you can add any game that is not registered, thus helping other users find the desired game on the site.",
     app: false,
     link: "https://broken-out.vercel.app",
     android: "",
@@ -266,32 +257,17 @@ export const projects = [
     images: [
       {
         image: "/img/brokenOut/brokenOut1.webp",
-        text: "projects.initialPage",
+        text: "Home page",
         mockup: false,
       },
       {
         image: "/img/brokenOut/brokenOut2.webp",
-        text: "projects.aboutPage",
+        text: "About page",
         mockup: false,
       },
       {
         image: "/img/brokenOut/brokenOut3.webp",
-        text: "projects.brokenOut.gamesPage",
-        mockup: false,
-      },
-      {
-        image: "/img/brokenOut/brokenOut4.webp",
-        text: "projects.brokenOut.selectedGamePage",
-        mockup: false,
-      },
-      {
-        image: "/img/brokenOut/brokenOut5.webp",
-        text: "projects.signInPage",
-        mockup: false,
-      },
-      {
-        image: "/img/brokenOut/brokenOut6.webp",
-        text: "projects.signUpPage",
+        text: "Games page",
         mockup: false,
       },
     ],
@@ -300,7 +276,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "High Performance",
-    description: "projects.highPerformance.description",
+    description:
+      "The High Performance project is an app aimed at physical educators who want a tool to interact with their students in a simple way. The goal is to build a platform where the user has full control of their students, with a class schedule, as well as a platform where it is also possible to have financial control.",
     app: false,
     link: "https://highperformance.herokuapp.com/",
     android: "",
@@ -308,27 +285,17 @@ export const projects = [
     images: [
       {
         image: "/img/highPerformance/high1.webp",
-        text: "projects.initialPage",
+        text: "Home page",
         mockup: false,
       },
       {
         image: "/img/highPerformance/high2.webp",
-        text: "projects.aboutPage",
+        text: "About page",
         mockup: false,
       },
       {
         image: "/img/highPerformance/high5.webp",
-        text: "projects.highPerformance.reportsPage",
-        mockup: false,
-      },
-      {
-        image: "/img/highPerformance/high4.webp",
-        text: "projects.signUpPage",
-        mockup: false,
-      },
-      {
-        image: "/img/highPerformance/high3.webp",
-        text: "projects.signInPage",
+        text: "Reports page",
         mockup: false,
       },
     ],
@@ -337,7 +304,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Rafael's Trips",
-    description: "projects.rafaels.description",
+    description:
+      "Rafael's Trips project is to remember the places I have been around the world!",
     app: false,
     link: "",
     android: "",
@@ -345,17 +313,17 @@ export const projects = [
     images: [
       {
         image: "/img/trips/trip1.webp",
-        text: "projects.initialPage",
+        text: "Home page",
         mockup: false,
       },
       {
         image: "/img/trips/trip2.webp",
-        text: "projects.rafaels.salvadorPage",
+        text: "Salvador page",
         mockup: false,
       },
       {
         image: "/img/trips/trip3.webp",
-        text: "projects.rafaels.saoPauloPage",
+        text: "São Paulo page",
         mockup: false,
       },
     ],
@@ -364,7 +332,8 @@ export const projects = [
   {
     hasMockup: false,
     title: "Estética Rhoades",
-    description: "projects.rhoades.description",
+    description:
+      "The Rhoades Esthetics project is a website that aims to present a portfolio of a particular esthetics professional and a blog for students and professionals in the esthetics field. However, in a very simple way that even an enthusiast of the area can understand.",
     app: false,
     link: "https://estetica-rhoades.vercel.app",
     android: "",
@@ -372,27 +341,17 @@ export const projects = [
     images: [
       {
         image: "/img/rhoades/rhoades1.webp",
-        text: "projects.initialPage",
+        text: "Home page",
         mockup: false,
       },
       {
         image: "/img/rhoades/rhoades2.webp",
-        text: "projects.aboutPage",
+        text: "About page",
         mockup: false,
       },
       {
         image: "/img/rhoades/rhoades4.webp",
-        text: "projects.rhoades.blogPage",
-        mockup: false,
-      },
-      {
-        image: "/img/rhoades/rhoades5.webp",
-        text: "projects.signInPage",
-        mockup: false,
-      },
-      {
-        image: "/img/rhoades/rhoades3.webp",
-        text: "projects.rhoades.postsPage",
+        text: "Blog Page",
         mockup: false,
       },
     ],

@@ -1,40 +1,17 @@
-import pluginJs from "@eslint/js";
-import nextPlugin from "@next/eslint-plugin-next";
-
-import eslintConfigPrettier from "eslint-config-prettier";
+import { FlatCompat } from "@eslint/eslintrc";
 import importPlugin from "eslint-plugin-import";
-import pluginPromise from "eslint-plugin-promise";
-import pluginReact from "eslint-plugin-react";
-import globals from "globals";
-import tseslint from "typescript-eslint";
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+});
 
-export default [
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals"),
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
-  },
-  {
-    languageOptions: {
-      ecmaVersion: "latest",
-      globals: { ...globals.browser, ...globals.node },
+    plugins: {
+      import: importPlugin,
     },
-  },
-  {
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-  },
-  pluginJs.configs.recommended, // ? https://github.com/eslint/eslint
-  importPlugin.flatConfigs.recommended, // ? https://github.com/import-js/eslint-plugin-import
-  ...tseslint.configs.recommended, // ? https://github.com/typescript-eslint/typescript-eslint
-  pluginPromise.configs["flat/recommended"], // ? https://github.com/eslint-community/eslint-plugin-promise
-  pluginReact.configs.flat.recommended, // ? https://github.com/jsx-eslint/eslint-plugin-react
-  pluginReact.configs.flat["jsx-runtime"], // ? https://github.com/jsx-eslint/eslint-plugin-react
-  eslintConfigPrettier, // ? https://github.com/prettier/eslint-config-prettier
-  {
     rules: {
-      "no-unused-vars": "off",
+      "no-unused-vars": "warn",
       "react/react-in-jsx-scope": "off",
       "react-hooks/exhaustive-deps": "off",
       "react/display-name": "off",
@@ -46,19 +23,68 @@ export default [
       "tailwindcss/migration-from-tailwind-2": "off",
       "import/no-unresolved": "off",
       "import/no-named-as-default": "off",
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off",
+      semi: ["error", "always"],
+      quotes: ["error", "double"],
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "prefer-arrow-callback": ["error"],
+      "prefer-template": ["error"],
+      "padding-line-between-statements": [
+        "error",
+        {
+          blankLine: "always",
+          prev: "expression",
+          next: "expression",
+        },
+        {
+          blankLine: "always",
+          prev: "*",
+          next: "return",
+        },
+      ],
+      "import/order": [
+        "error",
+        {
+          groups: [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+          ],
+          pathGroups: [
+            {
+              pattern: "react",
+              group: "external",
+              position: "before",
+            },
+            {
+              pattern: "next/**",
+              group: "external",
+              position: "after",
+            },
+            {
+              pattern: "next-themes",
+              group: "external",
+              position: "after",
+            },
+            {
+              pattern: "@/**",
+              group: "internal",
+              position: "before",
+            },
+          ],
+          pathGroupsExcludedImportTypes: ["react"],
+          alphabetize: {
+            order: "asc",
+            caseInsensitive: true,
+          },
+        },
+      ],
     },
-  },
-  {
-    plugins: {
-      "@next/next": nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs["core-web-vitals"].rules,
-      "@next/next/no-img-element": "off",
-    },
-  },
-  {
-    ignores: [".next/*"],
   },
 ];
+
+export default eslintConfig;

@@ -1,19 +1,20 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-
+import { useCallback, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useColor } from "@/hooks/useColor";
 
-import { useTranslations } from "next-intl";
+gsap.registerPlugin(ScrollTrigger);
 
 export const ChangeColor = () => {
-  const [loading, setLoading] = useState(true);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const year = new Date()?.getFullYear?.();
 
   const { color, setColor } = useColor();
 
-  const t = useTranslations("Home");
-
-  // Function to update the favicon with the given SVG
   const changeFaviconWithIcon = useCallback(async (color: string) => {
     const response = await fetch(`/api/icon/${color.replace("#", "")}`);
     const { data: icon } = await response.json();
@@ -22,7 +23,9 @@ export const ChangeColor = () => {
 
     if (!link) {
       link = document.createElement("link");
+
       link.rel = "icon";
+
       document.getElementsByTagName("head")[0].appendChild(link);
     }
 
@@ -33,7 +36,9 @@ export const ChangeColor = () => {
     (colorValue: string) => {
       try {
         setColor(colorValue);
+
         changeFaviconWithIcon(colorValue);
+
         document.documentElement.style.setProperty(
           "--color-primary",
           colorValue,
@@ -58,24 +63,49 @@ export const ChangeColor = () => {
   }, [setColor]);
 
   useEffect(() => {
-    setLoading(false);
+    gsap.set(containerRef.current, {
+      opacity: 0,
+    });
+
+    gsap.set(inputRef.current, {
+      opacity: 1,
+    });
+
+    gsap.to(containerRef.current, {
+      opacity: 1,
+      y: -10,
+      duration: 0.8,
+      delay: 1.4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 100%",
+        toggleActions: "play none none reverse",
+      },
+    });
   }, []);
 
-  if (loading) {
-    return null;
-  }
-
   return (
-    <div className="mt-2">
+    <div
+      ref={containerRef}
+      className="mt-8 flex flex-col items-center justify-center"
+      style={{ willChange: "opacity, transform" }}
+    >
+      <h5 className="mb-5 text-[1rem] font-bold text-white">
+        Copyright © Rafael Santana · {year}
+      </h5>
+
       <input
+        ref={inputRef}
         type="color"
         value={color}
         onChange={(e) => {
           handleChangeColor(e.target.value);
         }}
         aria-labelledby="color"
-        aria-label={t("changeColor.title")}
-        className="color-input-wrapper color-input-swatch h-8 w-8 cursor-pointer border-none"
+        aria-label="Change main site color"
+        className="color-input-wrapper color-input-swatch h-8 w-8 cursor-pointer border-none opacity-0"
+        style={{ willChange: "opacity" }}
       />
     </div>
   );

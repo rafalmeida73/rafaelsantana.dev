@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-
+import { Metadata } from "next";
 import { Inconsolata, Inter, Montserrat } from "next/font/google";
-import { cookies } from "next/headers";
 import Script from "next/script";
 
 import { ColorProvider } from "@/hooks/useColor";
@@ -26,21 +25,54 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+const description =
+  "Mobile Developer, passionate about technology, always looking for challenges and project to have constant learning.";
+export const metadata: Metadata = {
+  title: "Rafael Santana",
+  description,
+  keywords:
+    "Mobile, React Js, React Native, Rafael Santana, developer, mobile developer, web developer, front-end developer, back-end developer, full-stack developer",
+  openGraph: {
+    type: "website",
+    url: "https://rafaelsantana.dev/",
+    title: "Rafael Santana",
+    description,
+    images: [
+      {
+        url: "https://rafaelsantana.dev/img/index.webp",
+        width: 800,
+        height: 600,
+        alt: "Rafael Santana",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rafael Santana",
+    description,
+    images: [
+      {
+        url: "https://rafaelsantana.dev/img/index.webp",
+        width: 800,
+        height: 600,
+        alt: "Rafael Santana",
+      },
+    ],
+  },
+  icons: "/favicon.ico",
+};
+
 export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const locale = cookieStore?.get("NEXT_LOCALE")?.value || "pt";
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
   return (
-    <html lang={locale}>
+    <html lang="en">
       <body
-        className={` ${inter.variable} ${inconsolata.variable} ${montserrat.variable} bg-custom
-          bg-background scrollbar bg-cover bg-fixed font-[var(--font-inter)]
-          text-[optimizelegibility]`}
+        className={` ${inter.variable} ${inconsolata.variable} ${montserrat.variable} bg-custom bg-background scrollbar bg-cover bg-fixed font-[var(--font-inter)] text-[optimizelegibility]`}
       >
         <ColorProvider>{children}</ColorProvider>
         <Script
