@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: "https://rafaelsantana.dev/img/index.webp",
+        url: "https://rafaelsantana.dev/img/metaTag.png",
         width: 800,
         height: 600,
         alt: "Rafael Santana",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: "https://rafaelsantana.dev/img/index.webp",
+        url: "https://rafaelsantana.dev/img/metaTag.png",
         width: 800,
         height: 600,
         alt: "Rafael Santana",

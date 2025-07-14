@@ -1,6 +1,6 @@
 # [Portfolio Rafael Santana](https://rafaelsantana.dev/)
 
-<img src="https://rafaelsantana.dev/img/index.webp" />
+<img src="https://rafaelsantana.dev/img/metaTag.png" />
 
 #### Technologies used
 
