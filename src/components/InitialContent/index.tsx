@@ -103,8 +103,9 @@ export const InitialContent = () => {
 
         <div
           ref={linksRef}
-          className="absolute bottom-[10%] left-2/4 flex w-full -translate-x-1/2 translate-y-[0%] justify-center gap-8 text-center"
+          className="absolute bottom-[10%] left-2/4 flex w-full -translate-x-1/2 translate-y-[0%] items-center justify-center gap-8 text-center"
         >
+          <ProfileIcons type="email" />
           <ProfileIcons type="github" />
           <ProfileIcons type="linkedin" />
           <ProfileIcons type="whatsapp" />

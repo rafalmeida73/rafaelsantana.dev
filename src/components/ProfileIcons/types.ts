@@ -1,3 +1,3 @@
 export interface IconProps {
-  type?: "github" | "linkedin" | "whatsapp";
+  type?: "github" | "linkedin" | "whatsapp" | "email";
 }
