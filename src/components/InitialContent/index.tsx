@@ -12,8 +12,12 @@ export const InitialContent = () => {
   const linksRef = useRef(null);
 
   useEffect(() => {
-    gsap.set(titleRef.current, {
+    gsap.set([titleRef.current, imageRef.current], {
       display: "block",
+    });
+
+    gsap.set(linksRef.current, {
+      display: "flex",
     });
 
     gsap.set(transitionRef.current, {
@@ -66,7 +70,7 @@ export const InitialContent = () => {
       <section className="h-screen w-screen overflow-hidden">
         <div
           ref={imageRef}
-          className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 h-[500px] w-[350px] -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-gradient-to-t"
+          className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 hidden h-[500px] w-[350px] -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-gradient-to-t"
           style={{ willChange: "transform" }}
         >
           <Image
@@ -78,6 +82,23 @@ export const InitialContent = () => {
             id="ZXRLUG80UTJNRw=="
           />
         </div>
+
+        <noscript>
+          <div
+            ref={imageRef}
+            className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 h-[500px] w-[350px] -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-gradient-to-t"
+            style={{ willChange: "transform" }}
+          >
+            <Image
+              src="/img/profile.png"
+              alt="Foto Rafael Santana"
+              width={350}
+              height={500}
+              className="h-full w-full object-cover"
+              id="ZXRLUG80UTJNRw=="
+            />
+          </div>
+        </noscript>
 
         <div className="absolute top-[70%] left-2/4 z-0 -translate-x-1/2 -translate-y-1/2 text-center md:top-2/4">
           <div className="clip-path mx-[0] my-[0.5em]">
@@ -103,13 +124,25 @@ export const InitialContent = () => {
 
         <div
           ref={linksRef}
-          className="absolute bottom-[10%] left-2/4 flex w-full -translate-x-1/2 translate-y-[0%] items-center justify-center gap-8 text-center"
+          className="absolute bottom-[10%] left-2/4 hidden w-full -translate-x-1/2 translate-y-[0%] items-center justify-center gap-8 text-center"
         >
           <ProfileIcons type="email" />
           <ProfileIcons type="github" />
           <ProfileIcons type="linkedin" />
           <ProfileIcons type="whatsapp" />
         </div>
+
+        <noscript>
+          <div
+            ref={linksRef}
+            className="absolute bottom-[10%] left-2/4 flex w-full -translate-x-1/2 translate-y-[0%] items-center justify-center gap-8 text-center"
+          >
+            <ProfileIcons type="email" />
+            <ProfileIcons type="github" />
+            <ProfileIcons type="linkedin" />
+            <ProfileIcons type="whatsapp" />
+          </div>
+        </noscript>
       </section>
     </>
   );
