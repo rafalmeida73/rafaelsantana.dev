@@ -66,7 +66,6 @@ export default async function Home() {
                   hasMockup={project.hasMockup}
                   title={project.title}
                   description={project.description}
-                  app={project.app}
                   link={project.link}
                   android={project.android}
                   ios={project.ios}

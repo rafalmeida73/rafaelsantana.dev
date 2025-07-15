@@ -15,7 +15,6 @@ export const ProjectCard = ({
   images,
   description,
   link,
-  app = false,
   android,
   ios,
   hasMockup,
@@ -168,7 +167,7 @@ export const ProjectCard = ({
         </ul>
       )}
 
-      {app && (
+      {(android || ios) && (
         <section className="mt-12 flex flex-col items-center justify-center gap-5">
           <div className="flex items-center justify-center">
             <Image
@@ -189,26 +188,24 @@ export const ProjectCard = ({
             </Links>
           </div>
 
-          {ios && (
-            <div className="flex items-center justify-center">
-              <Image
-                src="/img/icons/ios.png"
-                width="45"
-                height="45"
-                alt="Apple logo"
-                loading="lazy"
-              />
-              <Links
-                href={ios}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="App Store link"
-                className="text-primary ml-5 text-[1rem] md:text-[1.2rem]"
-              >
-                App Store
-              </Links>
-            </div>
-          )}
+          <div className="flex items-center justify-center">
+            <Image
+              src="/img/icons/ios.png"
+              width="45"
+              height="45"
+              alt="Apple logo"
+              loading="lazy"
+            />
+            <Links
+              href={ios}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="App Store link"
+              className="text-primary ml-5 text-[1rem] md:text-[1.2rem]"
+            >
+              App Store
+            </Links>
+          </div>
         </section>
       )}
     </div>
