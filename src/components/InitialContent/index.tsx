@@ -96,6 +96,7 @@ export const InitialContent = () => {
               height={500}
               className="h-full w-full object-cover"
               id="ZXRLUG80UTJNRw=="
+              priority
             />
           </div>
         </noscript>
