@@ -138,20 +138,6 @@ export const ProjectCard = ({
 
       <p className="px-5 text-center text-[1rem] md:text-[1.2rem]">
         {description}
-        {link && (
-          <span>
-            {" "}
-            <Links
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={title}
-              className="text-primary text-[1rem] md:text-[1.2rem]"
-            >
-              {title}
-            </Links>
-          </span>
-        )}
       </p>
 
       {techs && (
@@ -167,8 +153,8 @@ export const ProjectCard = ({
         </ul>
       )}
 
-      {(android || ios) && (
-        <section className="mt-12 flex flex-col items-center justify-center gap-5">
+      <section className="mt-12 flex flex-col items-center justify-center gap-5">
+        {android && (
           <div className="flex items-center justify-center">
             <Image
               src="/img/icons/android.png"
@@ -187,7 +173,9 @@ export const ProjectCard = ({
               Play Store
             </Links>
           </div>
+        )}
 
+        {ios && (
           <div className="flex items-center justify-center">
             <Image
               src="/img/icons/ios.png"
@@ -206,8 +194,29 @@ export const ProjectCard = ({
               App Store
             </Links>
           </div>
-        </section>
-      )}
+        )}
+
+        {link && (
+          <div className="flex items-center justify-center">
+            <Image
+              src="/img/icons/link.png"
+              width="45"
+              height="45"
+              alt="Apple logo"
+              loading="lazy"
+            />
+            <Links
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="App Store link"
+              className="text-primary ml-5 text-[1rem] md:text-[1.2rem]"
+            >
+              View Project
+            </Links>
+          </div>
+        )}
+      </section>
     </div>
   );
 };

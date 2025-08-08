@@ -177,7 +177,7 @@ export const projects = [
   {
     hasMockup: false,
     title: "MedCalendar",
-    description: "Scheduling of equipment demonstrations",
+    description: "Scheduling of equipment demonstrations.",
     link: "https://med-calendar.vercel.app/",
     android: "",
     ios: "",
