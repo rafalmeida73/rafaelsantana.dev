@@ -187,7 +187,7 @@ export const projects = [
         text: "MedCalendar logo",
       },
     ],
-    techs: ["Next.js", "MUI", "TypeScript"],
+    techs: ["Next.js", "MUI", "TypeScript", "React calendar"],
   },
   {
     hasMockup: false,
