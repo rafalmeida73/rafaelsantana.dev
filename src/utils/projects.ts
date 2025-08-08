@@ -84,7 +84,7 @@ export const projects = [
     ],
     techs: ["React Native", "Styled Components", "Firebase", "TypeScript"],
   },
-   {
+  {
     hasMockup: false,
     title: "Portal Vendedor - MedSystems",
     description:
@@ -173,6 +173,21 @@ export const projects = [
       "TypeScript",
       "React Hook Form",
     ],
+  },
+  {
+    hasMockup: false,
+    title: "MedCalendar",
+    description: "Scheduling of equipment demonstrations",
+    link: "https://med-calendar.vercel.app/",
+    android: "",
+    ios: "",
+    images: [
+      {
+        image: "/img/medCalendar/logo.png",
+        text: "MedCalendar logo",
+      },
+    ],
+    techs: ["Next.js", "MUI", "TypeScript"],
   },
   {
     hasMockup: false,
