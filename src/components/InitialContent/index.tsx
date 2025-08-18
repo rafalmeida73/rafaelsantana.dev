@@ -76,8 +76,8 @@ export const InitialContent = () => {
           <Image
             src="/img/profile.png"
             alt="Foto Rafael Santana"
-            width={350}
-            height={500}
+            width={1920}
+            height={2560}
             className="h-full w-full object-cover"
             id="ZXRLUG80UTJNRw=="
           />
