@@ -79,7 +79,6 @@ export const InitialContent = () => {
             width={1920}
             height={2560}
             className="h-full w-full object-cover"
-            id="ZXRLUG80UTJNRw=="
           />
         </div>
 
@@ -95,7 +94,6 @@ export const InitialContent = () => {
               width={350}
               height={500}
               className="h-full w-full object-cover"
-              id="ZXRLUG80UTJNRw=="
               priority
             />
           </div>
