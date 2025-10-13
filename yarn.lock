@@ -1742,6 +1742,11 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+heart-switch-react-native@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/heart-switch-react-native/-/heart-switch-react-native-0.16.0.tgz#f022c7736263797223374dc53a36d78ca9839cfb"
+  integrity sha512-ffYczrWE8mO9qtsaxmBqXM/gRtB+AhznigepTbUaEwRWKhr2DU7mHLPCDBMOXefO0Tny0PfofzUDhHKPDN6QvQ==
+
 ignore@^5.2.0:
   version "5.3.2"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz"

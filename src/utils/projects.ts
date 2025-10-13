@@ -153,6 +153,20 @@ export const projects = [
   },
   {
     hasMockup: false,
+    title: "heart-switch-react-native",
+    description:
+      "A heart-shaped toggle switch component for React Native applications.",
+    link: "https://www.npmjs.com/package/heart-switch-react-native",
+    images: [
+      {
+        image: "/img/heartSwitch/ios.gif",
+        text: "Heart switch examples",
+      },
+    ],
+    techs: ["React Native", "Reanimated", "TypeScript"],
+  },
+  {
+    hasMockup: false,
     title: "MedStock",
     description:
       "Website developed for Medsystems, where it is possible to control the customer’s stock that the product arrive in a minimum stock, the system already generates a purchase order for the company’s erp.",
