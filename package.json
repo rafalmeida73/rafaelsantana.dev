@@ -13,7 +13,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
-    "lucide-react": "^0.544.0",
+    "lucide-react": "^0.552.0",
     "next": "15.5.4",
     "react": "19.1.1",
     "react-dom": "19.1.1",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.1.13",
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "typescript": "^5",
-    "prettier-plugin-tailwindcss": "^0.6.14",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "prettier": "^3.6.2"
   }
 }
