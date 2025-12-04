@@ -36,18 +36,18 @@ export default async function Home() {
               <p className="text-primary">System analyst & developer</p>
               <div className="mt-2 flex items-center justify-center">
                 <p>UNINOVE</p>
-                <div className="mx-2 h-[4px] w-[4px] rounded-full bg-white" />
+                <div className="mx-2 h-1 w-1 rounded-full bg-white" />
                 <p>2019 - 2021</p>
               </div>
             </div>
 
-            <div className="md:from-primary/0 md:to-primary/0 md:via-primary/40 w-[1px] md:h-[5.2rem] md:bg-gradient-to-r" />
+            <div className="md:from-primary/0 md:to-primary/0 md:via-primary/40 w-px md:h-[5.2rem] md:bg-linear-to-r" />
 
             <div>
               <p className="text-primary">Full Stack Developer</p>
               <div className="mt-2 flex items-center">
                 <p>SENAC </p>
-                <div className="mx-2 h-[4px] w-[4px] rounded-full bg-white" />
+                <div className="mx-2 h-1 w-1 rounded-full bg-white" />
                 <p>2022 - 2023</p>
               </div>
             </div>
@@ -60,20 +60,18 @@ export default async function Home() {
           <Title title="My Recent" focusText="Projects" />
 
           {projects.map((project) => (
-            <Suspense key={project.title} fallback={null}>
-              <InfoCard>
-                <ProjectCard
-                  hasMockup={project.hasMockup}
-                  title={project.title}
-                  description={project.description}
-                  link={project.link}
-                  android={project.android}
-                  ios={project.ios}
-                  images={project.images}
-                  techs={project.techs}
-                />
-              </InfoCard>
-            </Suspense>
+            <InfoCard>
+              <ProjectCard
+                hasMockup={project.hasMockup}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                android={project.android}
+                ios={project.ios}
+                images={project.images}
+                techs={project.techs}
+              />
+            </InfoCard>
           ))}
         </section>
 
