@@ -33,7 +33,7 @@ export default async function Home() {
 
           <div className="mt-7 flex flex-col items-center justify-center gap-8 md:flex-row">
             <div>
-              <p className="text-primary">System analyst & developer</p>
+              <p className="text-primary">Associate Degree in Systems Analysis and Development.</p>
               <div className="mt-2 flex items-center justify-center">
                 <p>UNINOVE</p>
                 <div className="mx-2 h-1 w-1 rounded-full bg-white" />
@@ -44,7 +44,7 @@ export default async function Home() {
             <div className="md:from-primary/0 md:to-primary/0 md:via-primary/40 w-px md:h-[5.2rem] md:bg-linear-to-r" />
 
             <div>
-              <p className="text-primary">Full Stack Developer</p>
+              <p className="text-primary">Postgraduate Diploma in Full-Stack Development</p>
               <div className="mt-2 flex items-center">
                 <p>SENAC </p>
                 <div className="mx-2 h-1 w-1 rounded-full bg-white" />
