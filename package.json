@@ -2,6 +2,7 @@
   "name": "rafaelsantana.dev",
   "version": "3.0.0",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
