@@ -4,6 +4,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["icon-library"],
   },
+  turbopack: {
+    root: process.cwd(),
+  },
 };
 
 export default nextConfig;
