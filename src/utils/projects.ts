@@ -1,6 +1,20 @@
 export const projects = [
   {
     hasMockup: false,
+    title: "heart-switch-react-native",
+    description:
+      "A heart-shaped toggle switch component for React Native applications.",
+    link: "https://www.npmjs.com/package/heart-switch-react-native",
+    images: [
+      {
+        image: "/img/heartSwitch/ios.gif",
+        text: "Heart switch examples",
+      },
+    ],
+    techs: ["React Native", "Reanimated", "TypeScript"],
+  },
+  {
+    hasMockup: false,
     title: "Broto",
     description:
       "Broto is an application where you can find machines, implements, energy equipment, irrigation and storage, services, inputs and technologies aimed at precision agriculture.",
@@ -150,20 +164,6 @@ export const projects = [
       },
     ],
     techs: ["React Native", "Styled Components"],
-  },
-  {
-    hasMockup: false,
-    title: "heart-switch-react-native",
-    description:
-      "A heart-shaped toggle switch component for React Native applications.",
-    link: "https://www.npmjs.com/package/heart-switch-react-native",
-    images: [
-      {
-        image: "/img/heartSwitch/ios.gif",
-        text: "Heart switch examples",
-      },
-    ],
-    techs: ["React Native", "Reanimated", "TypeScript"],
   },
   {
     hasMockup: false,
