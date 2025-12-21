@@ -88,7 +88,7 @@ export const ProjectCard = ({
   }, []);
 
   return (
-    <div className="relative my-[6rem] w-[80dvw] py-10 text-white md:p-7">
+    <div className="relative my-24 w-[80dvw] py-10 text-white md:p-7">
       <div
         ref={containerRef}
         className={`relative flex w-full items-center justify-center overflow-hidden rounded-lg ${
@@ -103,7 +103,7 @@ export const ProjectCard = ({
           width={200}
           height={hasMockup ? 406 : 200}
           loading="lazy"
-          className="absolute top-1/2 left-1/2 z-[3] -translate-x-1/2 -translate-y-1/2 scale-110"
+          className="absolute top-1/2 left-1/2 z-3 -translate-x-1/2 -translate-y-1/2 scale-110"
           style={{ willChange: "transform" }}
         />
 
@@ -115,7 +115,7 @@ export const ProjectCard = ({
             width={200}
             height={200}
             loading="lazy"
-            className="absolute top-1/2 left-[35%] z-[2] -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-[35%] z-2 -translate-x-1/2 -translate-y-1/2"
             style={{ willChange: "transform" }}
           />
         )}
@@ -128,7 +128,7 @@ export const ProjectCard = ({
             width={200}
             height={200}
             loading="lazy"
-            className="absolute top-1/2 left-[65%] z-[1] -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-[65%] z-1 -translate-x-1/2 -translate-y-1/2"
             style={{ willChange: "transform" }}
           />
         )}
@@ -144,7 +144,7 @@ export const ProjectCard = ({
         <ul className="mt-12 flex list-['|'] flex-wrap items-center justify-around px-5 md:list-none [&>*:nth-child(1)]:list-none">
           {techs?.map((tech) => (
             <li
-              className="text-primary p-2 text-[1rem] font-[var(--font-Inconsolata)] md:p-0"
+              className="text-primary p-2 text-[1rem] font-(--font-Inconsolata) md:p-0"
               key={tech}
             >
               {tech}

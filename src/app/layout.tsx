@@ -72,7 +72,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.variable} ${inconsolata.variable} ${montserrat.variable} bg-custom bg-background scrollbar bg-cover bg-fixed font-[var(--font-inter)] text-[optimizelegibility]`}
+        className={` ${inter.variable} ${inconsolata.variable} ${montserrat.variable} bg-custom bg-background scrollbar bg-cover bg-fixed font-(--font-inter) text-[optimizelegibility]`}
       >
         <ColorProvider>{children}</ColorProvider>
         <Script
