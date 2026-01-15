@@ -115,6 +115,21 @@ export const projects = [
     ],
     techs: ["React Native", "Styled Components", "TypeScript"],
   },
+   {
+    hasMockup: false,
+    title: "SkinSales",
+    description: "Sales proposal generator for Medsystems employees",
+    link: "",
+    android:
+      "https://play.google.com/store/apps/details?id=com.aeskins.propostasvendas",
+    images: [
+      {
+        image: "/img/skinSales/skinSales.png",
+        text: "SkinSales logo",
+      },
+    ],
+    techs: ["React Native", "Styled Components", "Firebase", "TypeScript"],
+  },
   {
     hasMockup: false,
     title: "MedSales",
