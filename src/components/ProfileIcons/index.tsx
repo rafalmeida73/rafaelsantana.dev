@@ -34,7 +34,7 @@ export const ProfileIcons = ({ type = "linkedin" }: IconProps) => {
   if (type === "email") {
     return (
       <Links
-        href="mailto:contact@rafaelsantana.dev"
+        href="mailto:hello@rafaelsantana.dev"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Email"
