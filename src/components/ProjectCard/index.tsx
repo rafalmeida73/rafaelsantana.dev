@@ -25,18 +25,6 @@ export const ProjectCard = ({
   const image2Ref = useRef(null);
   const image3Ref = useRef(null);
 
-  const imageContainerHeight = useMemo(() => {
-    if (hasMockup) {
-      return "h-[600px]";
-    }
-
-    if (!images[1]?.image) {
-      return "h-[250px]";
-    }
-
-    return "h-[450px]";
-  }, [hasMockup, images]);
-
   useEffect(() => {
     if (!image2Ref.current) return;
 
@@ -91,19 +79,16 @@ export const ProjectCard = ({
     <div className="relative my-24 w-[80dvw] py-10 text-white md:p-7">
       <div
         ref={containerRef}
-        className={`relative flex w-full items-center justify-center overflow-hidden rounded-lg ${
-          imageContainerHeight
-        }`}
+        className={`relative flex w-full items-center justify-center overflow-hidden rounded-lg`}
         style={{ willChange: "transform" }}
       >
         <Image
           ref={image1Ref}
           src={images[0]?.image}
           alt={images[0]?.text}
-          width={200}
-          height={hasMockup ? 406 : 200}
+          width={images[0]?.width || 200}
+          height={images[0]?.height || hasMockup ? 406 : 200}
           loading="lazy"
-          className="absolute top-1/2 left-1/2 z-3 -translate-x-1/2 -translate-y-1/2 scale-110"
           style={{ willChange: "transform" }}
         />
 
@@ -134,7 +119,7 @@ export const ProjectCard = ({
         )}
       </div>
 
-      <p className="mb-5 w-full text-center text-2xl font-bold">{title}</p>
+      <p className="mb-5 mt-5 w-full text-center text-2xl font-bold">{title}</p>
 
       <p className="px-5 text-center text-[1rem] md:text-[1.2rem]">
         {description}

@@ -1,6 +1,22 @@
 export const projects = [
   {
     hasMockup: false,
+    title: "Photo generator for MedSystems Group events",
+    description:
+      "This project is a photo generator for events of the MedSystems Group. It allows users to create personalized photos for events, making it easier to share and promote the company's activities on social media.",
+    link: "https://euvou.volnewmer.com.br/?event=1",
+    images: [
+      {
+        image: "/img/events/event-image.png",
+        text: "Example of the generated image for the event.",
+        width: 500,
+        height: 500,
+      },
+    ],
+    techs: ["Next.js", "MUI", "TypeScript", "ExpressJS"],
+  },
+  {
+    hasMockup: false,
     title: "heart-switch-react-native",
     description:
       "A heart-shaped toggle switch component for React Native applications.",
@@ -115,7 +131,7 @@ export const projects = [
     ],
     techs: ["React Native", "Styled Components", "TypeScript"],
   },
-   {
+  {
     hasMockup: false,
     title: "SkinSales",
     description: "Sales proposal generator for Medsystems employees",
@@ -327,7 +343,7 @@ export const projects = [
         text: "Reports page",
       },
     ],
-    techs: ["HTML5 - ejs", "Materialize", "expressJS"],
+    techs: ["HTML5 - ejs", "Materialize", "ExpressJS"],
   },
   {
     hasMockup: false,

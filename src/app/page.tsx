@@ -31,10 +31,10 @@ export default async function Home() {
             performance & user experience.
           </p>
 
-          <div className="mt-7 flex flex-col items-center justify-center gap-8 md:flex-row">
+          <div className="mt-7 flex flex-col items-center justify-center gap-8 md:flex-row text-center">
             <div>
               <p className="text-primary">Associate Degree in Systems Analysis and Development.</p>
-              <div className="mt-2 flex items-center justify-center">
+              <div className="mt-2 flex items-center sm:justify-end justify-center">
                 <p>UNINOVE</p>
                 <div className="mx-2 h-1 w-1 rounded-full bg-white" />
                 <p>2019 - 2021</p>
@@ -45,7 +45,7 @@ export default async function Home() {
 
             <div>
               <p className="text-primary">Postgraduate Diploma in Full-Stack Development</p>
-              <div className="mt-2 flex items-center">
+              <div className="w-full flex items-center sm:justify-start justify-center">
                 <p>SENAC </p>
                 <div className="mx-2 h-1 w-1 rounded-full bg-white" />
                 <p>2022 - 2023</p>

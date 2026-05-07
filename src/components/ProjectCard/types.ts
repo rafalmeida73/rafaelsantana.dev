@@ -3,6 +3,8 @@ export interface ProjectCardProps {
   images: Array<{
     text: string;
     image: string;
+    width?: number;
+    height?: number;
   }>;
   description: string;
   link?: string;
