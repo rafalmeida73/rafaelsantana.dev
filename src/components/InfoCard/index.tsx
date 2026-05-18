@@ -6,8 +6,8 @@ export const InfoCard = ({ children }: PropsWithChildren) => {
   const cardRef = useRef(null);
 
   return (
-    <div>
-      <div className="bg-secondary rounded-[10px]" ref={cardRef}>
+    <div className="flex justify-center">
+      <div className="bg-secondary rounded-[10px] max-w-[2000]" ref={cardRef}>
         {children}
       </div>
     </div>
