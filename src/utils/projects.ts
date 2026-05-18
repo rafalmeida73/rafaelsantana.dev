@@ -85,11 +85,11 @@ export const projects = [
       },
       {
         image: "/img/portalClienteApp/scene.gif",
-        text: "Broto screens",
+        text: "Portal do cliente - Screens animation",
       },
       {
         image: "/img/portalClienteApp/screens.png",
-        text: "Broto screens",
+        text: "Portal do cliente - Screens",
       },
     ],
     year: 2025,
@@ -137,11 +137,11 @@ export const projects = [
       },
       {
         image: "/img/skinSales/screens.png",
-        text: "Portal Vendedor - MedSystems logo",
+        text: "SkinSales - Screens animation",
       },
       {
         image: "/img/skinSales/scene.gif",
-        text: "Portal Vendedor - MedSystems logo",
+        text: "SkinSales - Screens",
       },
     ],
     year: 2025,
@@ -180,11 +180,11 @@ export const projects = [
       },
       {
         image: "/img/medStock/scene.gif",
-        text: "MedStock logo",
+        text: "MedStock - Screens animation",
       },
       {
         image: "/img/medStock/screens.png",
-        text: "MedStock logo",
+        text: "MedStock - Screens",
       },
     ],
     year: 2025,
@@ -206,18 +206,18 @@ export const projects = [
     ios: "https://apps.apple.com/br/app/medsales/id6471970812",
     images: [
       {
-        image: "/img/medSales/medSales.png",
+        image: "/img/medSales/medsales.png",
         text: "MedSales logo",
         width: 1905,
         height: 500,
       },
       {
         image: "/img/medSales/scene.gif",
-        text: "MedSales logo",
+        text: "MedSales - Screens animation",
       },
       {
         image: "/img/medSales/screens.png",
-        text: "MedSales logo",
+        text: "MedSales - Screens",
       },
     ],
     year: 2024,
@@ -240,11 +240,11 @@ export const projects = [
       },
       {
         image: "/img/medInventory/screens.png",
-        text: "MedInventory logo",
+        text: "MedInventory - Screens",
       },
       {
         image: "/img/medInventory/scene.gif",
-        text: "MedInventory logo",
+        text: "MedInventory - Screens animation",
       },
     ],
     year: 2024,
@@ -267,11 +267,11 @@ export const projects = [
       },
       {
         image: "/img/medEntregas/scene.gif",
-        text: "MedEntregas logo",
+        text: "MedEntregas - Screens animation",
       },
       {
         image: "/img/medEntregas/screens.png",
-        text: "MedEntregas logo",
+        text: "MedEntregas - Screens",
       },
     ],
     year: 2024,
@@ -318,11 +318,11 @@ export const projects = [
       },
       {
         image: "/img/broto/screens.png",
-        text: "Broto screens",
+        text: "Broto - Screens",
       },
       {
         image: "/img/broto/scene.gif",
-        text: "Broto screens",
+        text: "Broto - Screens animation",
       },
     ],
     year: 2023,
