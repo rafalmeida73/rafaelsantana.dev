@@ -10,6 +10,6 @@ export interface ProjectCardProps {
   link?: string;
   android?: string;
   ios?: string;
-  hasMockup?: boolean;
-  techs?: Array<string>;
+  year: number;
+  techs: Array<string>;
 }

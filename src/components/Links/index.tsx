@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { LinksProps } from "./types";
 
-export const Links = ({ children, href, nextLink, ...props }: LinksProps) => {
+export const Links = ({ children, href, nextLink, rightIcon, className, ...props }: LinksProps) => {
   if (nextLink) {
     return (
       <Link href={nextLink?.page} className="h-fit" {...props}>
@@ -14,8 +14,12 @@ export const Links = ({ children, href, nextLink, ...props }: LinksProps) => {
   }
 
   return (
-    <a href={href} className="h-fit" {...props}>
+    <a href={href} className="flex items-center gap-2" {...props}>
+     <div className={`h-fit ${className}`}>
       {children}
+    </div>
+      {rightIcon}
     </a>
+   
   );
 };

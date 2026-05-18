@@ -19,7 +19,6 @@ export default async function Home() {
         <InitialContent />
       </div>
 
-      <Line />
 
       <Container>
         <section className="mt-10 mb-16">
@@ -54,15 +53,14 @@ export default async function Home() {
           </div>
         </section>
 
-        <Line />
 
         <section className="mt-10">
           <Title title="My Recent" focusText="Projects" />
 
           {projects.map((project) => (
+            <div key={project.title} className="my-5">
             <InfoCard>
               <ProjectCard
-                hasMockup={project.hasMockup}
                 title={project.title}
                 description={project.description}
                 link={project.link}
@@ -70,8 +68,10 @@ export default async function Home() {
                 ios={project.ios}
                 images={project.images}
                 techs={project.techs}
+                year={project.year}
               />
             </InfoCard>
+            </div>
           ))}
         </section>
 

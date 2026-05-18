@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import { Links } from "../Links";
 import { ProjectCardProps } from "./types";
+import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,204 +18,122 @@ export const ProjectCard = ({
   link,
   android,
   ios,
-  hasMockup,
   techs,
+  year,
 }: ProjectCardProps) => {
-  const containerRef = useRef(null);
-  const image1Ref = useRef(null);
-  const image2Ref = useRef(null);
-  const image3Ref = useRef(null);
-
-  const imageContainerHeight = useMemo(() => {
-    if (hasMockup) {
-      return "h-[600px]";
-    }
-
-    if (!images[1]?.image) {
-      return "h-[250px]";
-    }
-
-    return "h-[450px]";
-  }, [hasMockup, images]);
-
-  useEffect(() => {
-    if (!image2Ref.current) return;
-
-    gsap.set([image1Ref.current, image2Ref.current, image3Ref.current], {
-      left: "50%",
-      scale: 1,
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    tl.to(image1Ref.current, {
-      x: -100,
-      y: -50,
-      rotation: -15,
-      duration: 1,
-    })
-      .to(
-        image2Ref.current,
-        {
-          scale: 1.2,
-          duration: 1,
-        },
-        0,
-      )
-      .to(
-        image3Ref.current,
-        {
-          x: 100,
-          y: 50,
-          rotation: 15,
-          duration: 1,
-        },
-        0,
-      );
-
-    return () => {
-      ScrollTrigger.refresh();
-
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
-    <div className="relative my-24 w-[80dvw] py-10 text-white md:p-7">
-      <div
-        ref={containerRef}
-        className={`relative flex w-full items-center justify-center overflow-hidden rounded-lg ${ images?.length > 1 ? imageContainerHeight : ""}`}
-        style={{ willChange: "transform" }}
-      >
-        <Image
-          ref={image1Ref}
-          src={images[0]?.image}
-          alt={images[0]?.text}
-          width={images[0]?.width || 200}
-          height={hasMockup ? 406 : 200}
-          loading="lazy"
-          className={images?.length > 1 ? "absolute top-1/2 left-[50%] z-3 -translate-x-1/2 -translate-y-1/2" : ""}
-          style={{ willChange: "transform" }}
-        />
+    <div className="flex flex-wrap pb-3">
+      <div className="grid grid-rows-1 gap-12 p-2 md:grid-cols-3">
+        <div>
+          <p className="mt-5 mb-4 text-2xl font-bold">{title}</p>
+          <p className="w-fit rounded-2xl border p-1 px-3 text-sm text-white">
+            {year}
+          </p>
 
-        {images[1]?.image && (
-          <Image
-            ref={image2Ref}
-            src={images[1]?.image || images[0]?.image}
-            alt={images[1]?.text || images[0]?.text}
-            width={200}
-            height={200}
-            loading="lazy"
-            className="absolute top-1/2 left-[35%] z-2 -translate-x-1/2 -translate-y-1/2"
-            style={{ willChange: "transform" }}
-          />
-        )}
+          <div className="mt-5 flex flex-wrap gap-4">
+            {android && (
+              <div className="mt-5 flex items-center justify-center gap-2">
+                <Links
+                  href={android}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Play Store link"
+                  className="bg-overlay rounded-3xl p-1 px-3 text-lg text-white"
+                  rightIcon={
+                    <Image
+                      src="/img/icons/android.png"
+                      width="30"
+                      height="30"
+                      alt="Android Logo"
+                      loading="lazy"
+                    />
+                  }
+                >
+                  Play Store
+                </Links>
+              </div>
+            )}
 
-        {images[2]?.image && (
-          <Image
-            ref={image3Ref}
-            src={images[2]?.image || images[0]?.image}
-            alt={images[2]?.text || images[0]?.text}
-            width={200}
-            height={200}
-            loading="lazy"
-            className="absolute top-1/2 left-[65%] z-1 -translate-x-1/2 -translate-y-1/2"
-            style={{ willChange: "transform" }}
-          />
-        )}
+            {ios && (
+              <div className="mt-5 flex items-center justify-center gap-2">
+                <Links
+                  href={ios}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="App Store link"
+                  className="bg-overlay rounded-3xl p-1 px-3 text-lg text-white"
+                  rightIcon={
+                    <Image
+                      src="/img/icons/ios.png"
+                      width="30"
+                      height="30"
+                      alt="Apple logo"
+                      loading="lazy"
+                    />
+                  }
+                >
+                  App Store
+                </Links>
+              </div>
+            )}
+
+            {link && (
+              <div className="mt-5 flex items-center justify-center gap-2">
+                <Links
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="App Store link"
+                  className="bg-overlay rounded-3xl p-1 px-3 text-lg text-white"
+                  rightIcon={
+                    <ArrowUpRight
+                      className="text-primary rounded-3xl bg-white"
+                      size={30}
+                    />
+                  }
+                >
+                  See it live
+                </Links>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div>
+          <p className="mt-5 mb-4 text-[1rem] font-bold">Challenge</p>
+          <p className="text-[1rem]">{description}</p>
+        </div>
+
+        <div>
+          <p className="mt-5 mb-4 text-[1rem] font-bold">Techs</p>
+          <div className="flex flex-wrap gap-2">
+            {techs.map((tech) => (
+              <p
+                key={tech}
+                className="w-fit rounded-2xl border p-1 px-3 text-sm text-white"
+              >
+                {tech}
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
 
- <p className="mb-5 mt-5 w-full text-center text-2xl font-bold">{title}</p>
-
-      <p className="px-5 text-center text-[1rem] md:text-[1.2rem]">
-        {description}
-      </p>
-
-      {techs && (
-        <ul className="mt-12 flex list-['|'] flex-wrap items-center justify-around px-5 md:list-none [&>*:nth-child(1)]:list-none">
-          {techs?.map((tech) => (
-            <li
-              className="text-primary p-2 text-[1rem] font-(--font-Inconsolata) md:p-0"
-              key={tech}
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <section className="mt-12 flex flex-col items-center justify-center gap-5">
-        {android && (
-          <div className="flex items-center justify-center">
-            <Image
-              src="/img/icons/android.png"
-              width="45"
-              height="45"
-              alt="Android Logo"
-              loading="lazy"
-            />
-            <Links
-              href={android}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Play Store link"
-              className="text-primary ml-5 text-[1rem] md:text-[1.2rem]"
-            >
-              Play Store
-            </Links>
-          </div>
-        )}
-
-        {ios && (
-          <div className="flex items-center justify-center">
-            <Image
-              src="/img/icons/ios.png"
-              width="45"
-              height="45"
-              alt="Apple logo"
-              loading="lazy"
-            />
-            <Links
-              href={ios}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="App Store link"
-              className="text-primary ml-5 text-[1rem] md:text-[1.2rem]"
-            >
-              App Store
-            </Links>
-          </div>
-        )}
-
-        {link && (
-          <div className="flex items-center justify-center">
-            <Image
-              src="/img/icons/link.png"
-              width="45"
-              height="45"
-              alt="Apple logo"
-              loading="lazy"
-            />
-            <Links
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="App Store link"
-              className="text-primary ml-5 text-[1rem] md:text-[1.2rem]"
-            >
-              View Project
-            </Links>
-          </div>
-        )}
-      </section>
+      {images?.map((img, i) => (
+        <div
+          key={img.image + i}
+          className={i === 0 ? "w-full p-2" : "w-full p-2 md:w-1/2"}
+        >
+          <Image
+            src={img.image}
+            alt={img.text}
+            width={img.width || 800}
+            height={img.height || 600}
+            loading="lazy"
+            className="h-auto w-full object-contain"
+          />
+        </div>
+      ))}
     </div>
   );
 };
