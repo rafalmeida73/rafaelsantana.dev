@@ -25,7 +25,7 @@ export const projects = [
       },
     ],
     year: 2026,
-    techs: ["Next.js", "MUI", "TypeScript", "ExpressJS"],
+    techs: ["Next.js", "GSAP", "MUI", "TypeScript", "ExpressJS"],
   },
   {
     title: "Assinatura de E-mail - Grupo Medsystems",
