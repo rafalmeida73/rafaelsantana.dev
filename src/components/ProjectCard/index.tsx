@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -21,8 +21,36 @@ export const ProjectCard = ({
   techs,
   year,
 }: ProjectCardProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current || !images || images.length === 0) return;
+
+    const imageElements = containerRef.current.querySelectorAll(".reveal-image");
+
+    imageElements.forEach((el) => {
+      gsap.set(el, { opacity: 0, y: 50 });
+
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%", 
+          toggleActions: "play none none none", 
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [images]);
+
   return (
-    <div className="flex flex-wrap pb-3">
+    <div ref={containerRef} className="flex flex-wrap pb-3">
       <div className="grid grid-rows-1 gap-12 p-2 md:grid-cols-3">
         <div>
           <p className="mt-5 mb-4 text-2xl font-bold">{title}</p>
@@ -122,7 +150,9 @@ export const ProjectCard = ({
       {images?.map((img, i) => (
         <div
           key={img.image + i}
-          className={i === 0 ? "w-full p-2" : "w-full p-2 md:w-1/2"}
+          className={`reveal-image ${
+            i === 0 ? "w-full p-2" : "w-full p-2 md:w-1/2"
+          }`}
         >
           <Image
             src={img.image}

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   title: "Rafael Santana",
   description,
   keywords:
-    "Mobile, React Js, React Native, Rafael Santana, developer, mobile developer, web developer, front-end developer, back-end developer, full-stack developer",
+    "Mobile, React Js, React Native, Rafael Santana, developer, Full-Stack Developer, web developer, front-end developer, back-end developer, full-stack developer",
   openGraph: {
     type: "website",
     url: "https://rafaelsantana.dev/",

@@ -4,73 +4,76 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import { ProfileIcons } from "@/components/ProfileIcons";
+import { SplitText } from "gsap/all";
+
+gsap.registerPlugin(SplitText);
 
 export const InitialContent = () => {
-  const transitionRef = useRef(null);
   const titleRef = useRef(null);
+  const subTitleRef = useRef(null);
   const imageRef = useRef(null);
   const linksRef = useRef(null);
 
-  useEffect(() => {
-    gsap.set([titleRef.current, imageRef.current], {
-      display: "block",
-    });
+useEffect(() => {
+  gsap.set([titleRef.current, imageRef.current, subTitleRef.current], {
+    display: "block",
+  });
+  gsap.set(linksRef.current, {
+    display: "flex",
+  });
 
-    gsap.set(linksRef.current, {
-      display: "flex",
-    });
+  const split = SplitText.create(titleRef.current, { type: "words,chars" });
 
-    gsap.set(transitionRef.current, {
-      height: "100vh",
-      duration: 0,
-    });
+  const tl = gsap.timeline();
 
-    gsap.to(transitionRef.current, {
-      height: "0vh",
-      duration: 1,
-      ease: "power3.out",
-      delay: 0.2,
-    });
+  tl.to(titleRef.current, {
+    top: "0",
+    opacity: 1,
+    duration: 0.5,
+    ease: "power3.out",
+  })
+  .from(split.chars, {
+    y: 40,
+    color: "var(--color-primary)",
+    opacity: 0,
+    stagger: { each: 0.05, from: "start" },
+    duration: 0.8,
+    ease: "sine.out",
+  }, "-=0.2") 
+  
+  .to(subTitleRef.current, {
+    opacity: 1,
+    top: "0",
+    duration: 0.8,
+    ease: "power3.out",
+  }, "-=0.6")
 
-    gsap.to(titleRef.current, {
-      opacity: 1,
-      top: "0",
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-      delay: 0.5,
-    });
+  .from(imageRef.current, {
+    opacity: 0,
+    y: 1000,
+    rotate: -10,
+    duration: 1,
+    ease: "power3.out",
+  }, "-=0.8")
 
-    gsap.from(imageRef.current, {
-      opacity: 0,
-      y: "1000",
-      rotate: -10,
-      duration: 1,
-      ease: "power3.out",
-      delay: 0.75,
-    });
+  .from(linksRef.current, {
+    opacity: 0,
+    bottom: "-5%",
+    duration: 1,
+    ease: "power3.out",
+  }, "-=0.8");
 
-    gsap.from(linksRef.current, {
-      opacity: 0,
-      bottom: "-5%",
-      duration: 1,
-      ease: "power3.out",
-      delay: 1,
-    });
-  }, []);
+  return () => {
+    split.revert();
+  };
+}, []);
 
   return (
     <>
-      <div
-        ref={transitionRef}
-        className="bg-primary absolute z-10 w-screen overflow-hidden"
-        style={{ willChange: "height" }}
-      />
-
       <section className="h-screen w-screen overflow-hidden">
         <div
           ref={imageRef}
-          className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 hidden h-[500px] w-[350px] -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-linear-to-t"
+          className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 hidden h-125 w-87.5 -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-linear-to-t"
           style={{ willChange: "transform" }}
         >
           <Image
@@ -85,7 +88,7 @@ export const InitialContent = () => {
         <noscript>
           <div
             ref={imageRef}
-            className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 h-[500px] w-[350px] -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-linear-to-t"
+            className="from-primary to-primary/20 relative top-2/4 left-4/5 z-0 h-125 w-87.5 -translate-x-1/2 -translate-y-1/2 rotate-[5deg] bg-linear-to-t"
             style={{ willChange: "transform" }}
           >
             <Image
@@ -103,20 +106,34 @@ export const InitialContent = () => {
           <div className="clip-path mx-0 my-[0.5em]">
             <h1
               ref={titleRef}
-              className="relative top-[300px] hidden text-[5rem] md:text-[7rem] lg:text-[12rem]"
+              className="relative top-75 hidden text-[5rem] whitespace-nowrap md:text-[7rem] lg:text-[12rem]"
               style={{ willChange: "opacity, top" }}
             >
               Rafael
             </h1>
+            <h2
+              ref={subTitleRef}
+              className="relative top-75 hidden text-[1.3rem] md:text-[2rem] lg:text-[2rem]"
+              style={{ willChange: "opacity, top" }}
+            >
+              Full-Stack Developer
+            </h2>
 
             <noscript>
               <h1
                 ref={titleRef}
-                className="top-[300px] text-[5rem] md:text-[7rem] lg:text-[12rem]"
+                className="top-75 text-[5rem] md:text-[7rem] lg:text-[12rem]"
                 style={{ willChange: "opacity, top" }}
               >
                 Rafael
               </h1>
+              <h2
+                ref={subTitleRef}
+                className="relative top-75 hidden text-[1.3rem] md:text-[2rem] lg:text-[2rem]"
+                style={{ willChange: "opacity, top" }}
+              >
+                Full-Stack Developer
+              </h2>
             </noscript>
           </div>
         </div>

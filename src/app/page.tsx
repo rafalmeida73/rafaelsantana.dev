@@ -25,7 +25,7 @@ export default async function Home() {
           <Title title="About" focusText="Me" />
 
           <p className="text-center text-[1rem] text-white">
-            Mobile developer speacialised in React Native, with passion for
+            Full-Stack Developer speacialised in React Native, with passion for
             creating elegant & functional solutions. Focused on clean code,
             performance & user experience.
           </p>
