@@ -5,6 +5,15 @@
   --color-secondary: #363636;
   --color-background: #141414;
   --color-overlay: #00000099;
+
+  --color-coral: #d64034;
+  --color-lime: #b7e62b;
+  --color-plum: #9c4774;
+  --color-neon: #7afc62;
+  --color-olive: #646c13;
+  --color-teal: #3fcdab;
+  --color-forest: #236820;
+  --color-petrol: #012d32;
 }
 
 @layer utilities {
