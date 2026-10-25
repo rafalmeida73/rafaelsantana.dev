@@ -14,59 +14,75 @@ export const InitialContent = () => {
   const imageRef = useRef(null);
   const linksRef = useRef(null);
 
-useEffect(() => {
-  gsap.set([titleRef.current, imageRef.current, subTitleRef.current], {
-    display: "block",
-  });
-  gsap.set(linksRef.current, {
-    display: "flex",
-  });
+  useEffect(() => {
+    gsap.set([titleRef.current, imageRef.current, subTitleRef.current], {
+      display: "block",
+    });
+    gsap.set(linksRef.current, {
+      display: "flex",
+    });
 
-  const split = SplitText.create(titleRef.current, { type: "words,chars" });
+    const split = SplitText.create(titleRef.current, { type: "words,chars" });
 
-  const tl = gsap.timeline();
+    const tl = gsap.timeline();
 
-  tl.to(titleRef.current, {
-    top: "0",
-    opacity: 1,
-    duration: 0.5,
-    ease: "power3.out",
-  })
-  .from(split.chars, {
-    y: 40,
-    color: "var(--color-primary)",
-    opacity: 0,
-    stagger: { each: 0.05, from: "start" },
-    duration: 0.8,
-    ease: "sine.out",
-  }, "-=0.2") 
-  
-  .to(subTitleRef.current, {
-    opacity: 1,
-    top: "0",
-    duration: 0.8,
-    ease: "power3.out",
-  }, "-=0.6")
+    tl.to(titleRef.current, {
+      top: "0",
+      opacity: 1,
+      duration: 0.5,
+      ease: "power3.out",
+    })
+      .from(
+        split.chars,
+        {
+          y: 40,
+          color: "var(--color-primary)",
+          opacity: 0,
+          stagger: { each: 0.05, from: "start" },
+          duration: 0.8,
+          ease: "sine.out",
+        },
+        "-=0.2",
+      )
 
-  .from(imageRef.current, {
-    opacity: 0,
-    y: 1000,
-    rotate: -10,
-    duration: 1,
-    ease: "power3.out",
-  }, "-=0.8")
+      .to(
+        subTitleRef.current,
+        {
+          opacity: 1,
+          top: "0",
+          duration: 0.8,
+          ease: "power3.out",
+        },
+        "-=0.6",
+      )
 
-  .from(linksRef.current, {
-    opacity: 0,
-    bottom: "-5%",
-    duration: 1,
-    ease: "power3.out",
-  }, "-=0.8");
+      .from(
+        imageRef.current,
+        {
+          opacity: 0,
+          y: 1000,
+          rotate: -10,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.8",
+      )
 
-  return () => {
-    split.revert();
-  };
-}, []);
+      .from(
+        linksRef.current,
+        {
+          opacity: 0,
+          bottom: "-5%",
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.8",
+      );
+
+    return () => {
+      split.revert();
+    };
+  }, []);
 
   return (
     <>

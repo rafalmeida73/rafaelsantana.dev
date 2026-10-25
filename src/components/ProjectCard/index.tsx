@@ -161,6 +161,7 @@ export const ProjectCard = ({
             height={img.height || 600}
             loading="lazy"
             className="h-auto w-full object-contain"
+            unoptimized={img.image.endsWith(".gif")}
           />
         </div>
       ))}

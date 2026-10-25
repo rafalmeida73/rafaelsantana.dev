@@ -39,7 +39,7 @@ export const BackToTheTop = () => {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Back to the top"
         id="backToTheTop"
-        className="bg-primary visible fixed right-5 bottom-5 z-50 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
+        className="bg-primary fixed right-5 bottom-5 z-50 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-[50%] border-[none] text-center [box-shadow:none] hover:opacity-80"
         ref={buttonRef}
         style={{ willChange: "transform" }}
       >

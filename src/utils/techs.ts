@@ -51,4 +51,12 @@ export const techs = [
     title: "Figma",
     img: "/img/icons/figma.webp",
   },
+  {
+    title: "Sankhya",
+    img: "/img/icons/sankhya.png",
+  },
+  {
+    title: "Bitrix24",
+    img: "/img/icons/bitrix24.png",
+  },
 ];

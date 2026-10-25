@@ -26,7 +26,7 @@ const montserrat = Montserrat({
 });
 
 const description =
-  "Mobile Developer, passionate about technology, always looking for challenges and project to have constant learning.";
+  "Mobile Developer, passionate about technology, always looking for challenges and projects to have constant learning.";
 export const metadata: Metadata = {
   title: "Rafael Santana",
   description,
